@@ -1,0 +1,24 @@
+ul.checklist {
+    list-style-type: none;
+    width: fit-content;
+    background-color: bisque;
+    padding: 0.25em;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    border-radius: 3px;
+    color:rgb(26, 26, 26)
+}
+
+ul.checklist li {
+    padding: 0.25em 0.25em 0.25em 2em;
+    position: relative;
+    margin-bottom: 5px;
+    border-bottom: 1px solid rgb(146, 146, 146) !important
+}
+
+ul.checklist li:before {
+    position: absolute;
+    left: 5px;
+    content: "\25A1";
+    color: rgb(0, 0, 0);
+}

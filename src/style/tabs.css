@@ -1,0 +1,29 @@
+.tabular .item:hover {
+    cursor: pointer;
+}
+
+.tabular .item.active {
+    font-size: 1.5em;
+    background-color: #d6eae0 !important;
+}
+
+.tab.segment {
+    background-color: #bfdace;
+    color: rgb(26, 26, 26)
+}
+
+.tab.segment.active {
+    font-size: 1em;
+}
+
+@media only screen and (max-width: 1300px) {
+    .tabular .item {
+        color: rgb(59, 89, 124) !important;
+        text-decoration: underline !important;
+    }
+
+    .tabular .item.active {
+        color: black !important;
+        text-decoration: none !important;
+    }
+}

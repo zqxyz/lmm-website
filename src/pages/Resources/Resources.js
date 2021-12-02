@@ -1,5 +1,6 @@
 import './resources.css'
-import React, { useState } from 'react'
+import React, { useState, Fragment } from 'react'
+import Tabs from '../../components/Tabs'
 
 const Resources = () => {
   const [activeTab, setActiveTab] = useState(0)
@@ -14,7 +15,7 @@ const Resources = () => {
             backgroundPosition: 'center',
             minHeight: '175px'
           }
-}
+        }
       >
         <div className='page'>
           <h1>Resources</h1><br />
@@ -67,97 +68,50 @@ const Resources = () => {
             </div>
 
             <div className='eleven wide column'>
-              <div className='ui top attached tabular menu stackable'>
-                <div
-                  className={(activeTab === 0) ? 'active item' : 'item'}
-                  onClick={() => { setActiveTab(0) }}
-                >
-                  Moving
-                </div>
-                <div
-                  className={(activeTab === 1) ? 'active item' : 'item'}
-                  onClick={() => { setActiveTab(1) }}
-                >
-                  Rearranging
-                </div>
-                <div
-                  className={(activeTab === 2) ? 'active item' : 'item'}
-                  onClick={() => { setActiveTab(2) }}
-                >
-                  Hoisting
-                </div>
-                <div
-                  className={(activeTab === 3) ? 'active item' : 'item'}
-                  onClick={() => { setActiveTab(3) }}
-                >
-                  Heavy Items
-                </div>
-              </div>
 
-              <div /* MOVING */
-                className={(activeTab === 0)
-                  ? 'ui bottom attached tab segment active'
-                  : 'ui bottom attached tab segment'}
-                id='movingServices'
-              >
-                <p>
-                  We'll move you from your current location to your next.
-                  We have years of experience providing excellent service.
-                </p>
-                <ul>
-                  <li>
-                    Trustworthiness is among the most important traits we look for
-                    when hiring new movers. We understand the sensitivity involved
-                    with allowing us into your home and handling your posessions.
-                    We train our team to high standards of careful handling as well
-                    as courteous conduct.
-                  </li>
-                </ul>
-              </div>
-
-              <div /* REARRANGING */
-                className={(activeTab === 1)
-                  ? 'ui bottom attached tab segment active'
-                  : 'ui bottom attached tab segment'}
-                id='rearrangingServices'
-              >
-                <p>
-                  We can help move your furniture out of one room, or all your
-                  rooms, so you can get your floors redone. And then we'll put it back.
-                </p>
-              </div>
-
-              <div /* Hoisting */
-                className={(activeTab === 2)
-                  ? 'ui bottom attached tab segment active'
-                  : 'ui bottom attached tab segment'}
-                id='hoistingServices'
-              >
-                <p>
-                  In many cases, we'll be able to get large items into the second
-                  floor of your home over the side of your deck if your staircase
-                  is too narrow.
-                </p>
-              </div>
-
-              <div /* Heavy Item Fee */
-                className={(activeTab === 3)
-                  ? 'ui bottom attached tab segment active'
-                  : 'ui bottom attached tab segment'}
-                id='hifServices'
-              >
-                <p>
-                  Local Muscle has loads of experience moving items
-                  up to 500 pounds, including most pianos. Just ask!
-                </p>
-              </div>
+              <Tabs defaultTab="Moving">
+                <Fragment title="Moving">
+                  <p>
+                    We'll move you from your current location to your next.
+                    We have years of experience providing excellent service.
+                  </p>
+                  <ul>
+                    <li>
+                      Trustworthiness is among the most important traits we look for
+                      when hiring new movers.We understand the sensitivity involved
+                      with allowing us into your home and handling your posessions.
+                      We train our team to high standards of careful handling as well
+                      as courteous conduct.
+                    </li>
+                  </ul>
+                </Fragment>
+                <Fragment title="Rearrangement">
+                  <p>
+                    We can help move your furniture out of one room, or all your
+                    rooms, so you can get your floors redone.And then we'll put it back.
+                  </p>
+                </Fragment>
+                <Fragment title="Hoisting">
+                  <p>
+                    In many cases, we'll be able to get large items into the second
+                    floor of your home over the side of your deck if your staircase
+                    is too narrow.
+                  </p>
+                </Fragment>
+                <Fragment title="Heavy Items">
+                  <p>
+                    Local Muscle has loads of experience moving items
+                    up to 500 pounds, including most pianos.Just ask!
+                  </p>
+                </Fragment>
+              </Tabs>
 
             </div>
           </div>
         </div>
       </div>
 
-      {/* CHECKLIST */}
+      {/* POLICIES and CONTRACTS */}
       <div className='landing' style={{ backgroundColor: 'rgb(210, 239, 223)', paddingTop: '1em' }}>
         <div className='page'>
 

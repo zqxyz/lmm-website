@@ -1,5 +1,7 @@
 @import url('./navigation.css');
 @import url('./page.css');
+@import url('./checklist.css');
+@import url('./tabs.css');
 
 * {
     font-family: 'Rubik', sans-serif !important;
@@ -17,7 +19,7 @@
 }
 
 body {
-    background-color: white;
+    background-color: #f8f8f8;
     color: #d4d4d4;
     font-size: 1.2em;
     line-height: 140%;
