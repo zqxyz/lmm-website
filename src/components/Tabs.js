@@ -32,7 +32,7 @@ const Tabs = ({ children, defaultTab }) => {
 
   return (
     <>
-      <div className='ui top attached tabular menu'>
+      <div className='ui top attached tabular menu stackable'>
         {titles}
       </div>
       {bodies}
