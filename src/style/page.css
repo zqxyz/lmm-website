@@ -1,0 +1,23 @@
+.page {
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    border-radius: 3px;
+    margin-top: 2em;
+    padding: 1em;
+    color: #3f3f3f !important;
+    max-width: 1600px;
+    margin: 0 auto 0 auto;
+    padding: 1em;
+}
+
+@media only screen and (max-width: 1200px) {
+    .page h1 {
+        font-size: 2em;
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    .page h1 {
+        font-size: 2em;
+    }
+}
