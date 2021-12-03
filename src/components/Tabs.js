@@ -4,23 +4,23 @@ import React, { useState } from 'react';
  * Widget for information sorted by tabs
  * @prop {string} defaultTab title of tab to display by
  * default upon page load
- * @children pass `Fragment` elements containing `title`
- * prop each. The child elements of each `Fragment` will
+ * @children pass `tab` elements containing `title`
+ * prop each. The child elements of each `tab` will
  * render when parent title is selected.
  * 
  * Usage example:
  * 
  * `<Tabs defaultTab="First Tab">`  
- * &nbsp;`<Fragment title="First Tab">`  
+ * &nbsp;`<tab title="First Tab">`  
  * &nbsp; &nbsp;`<p>`  
  * &nbsp; &nbsp; &nbsp; `Body of tab goes here.`  
  * &nbsp; &nbsp;`<p>`  
- * &nbsp;`</Fragment>`  
- * &nbsp;`<Fragment title="Second Tab">`  
+ * &nbsp;`</tab>`  
+ * &nbsp;`<tab title="Second Tab">`  
  * &nbsp; &nbsp;`<p>`  
  * &nbsp; &nbsp;&nbsp; `Tab 2 body goes here.`  
  * &nbsp; &nbsp;`<p>`  
- * &nbsp;`</Fragment>`  
+ * &nbsp;`</tab>`  
  * `</Tabs>`
  * 
  */

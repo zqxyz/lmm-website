@@ -3,7 +3,9 @@ import React from 'react';
 /**
  * Container for section of page content
  * @prop {string} title - (optional) h1 title of page or banner message
- * @prop {string} bgColor - (optional) color for background
+ * @prop {string} bgColor - (optional) color for background, standard
+ * html (hex or rgb), special term 'dark' can be used for light text
+ * on dark bg
  * 
  * EXAMPLE:
  * 
@@ -23,11 +25,8 @@ const Container = ({ title, bgColor='#cbd1b6', children }) => {
   return (
     <>
       <div
-        className='container' style={
-          {
-            backgroundColor: bgColor,
-          }
-        }
+        className={(bgColor === 'dark') ? 'container dark' : 'container'}
+        style={ (bgColor !== 'dark') ? {backgroundColor: bgColor,} : null }
       >
         <div className='page'>
 

@@ -117,12 +117,22 @@ a:hover {
 }
 
 .container.dark h1 {
-    color: rgb(211, 211, 211);
-    font-family: 'rubik', serif !important;
-
+    color: rgb(230, 230, 230);
 }
 
 .container.dark p {
     color: rgb(224, 224, 224);
     font-size: 1.25em;
+}
+
+.container.dark strong {
+    color: white
+}
+
+.container.dark a {
+    color: rgb(123, 197, 231)
+}
+
+.container.dark a:visited {
+    color: rgb(178, 138, 224)
 }
