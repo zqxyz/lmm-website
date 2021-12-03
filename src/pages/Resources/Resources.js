@@ -6,6 +6,8 @@ import Tabs from '../../components/Tabs'
 import ContainerSplitLeft from '../../components/ContainerSplitLeft'
 import Columns from '../../components/Columns'
 import Checklist from '../../components/Checklist'
+import Focus from '../../components/Focus'
+import Link from '../../Link'
 
 const Resources = () => {
   return (
@@ -140,7 +142,20 @@ const Resources = () => {
         </Columns>
 
       </ContainerSplitLeft>
-      
+
+      <Focus bgColor="rgb(105, 171, 105)">
+        <h1>Start your move with us</h1>
+        <p>
+          The first step is filling out our estimate form
+        </p>
+        <br />
+        <Link href="#">
+          <button className='ui blue button huge'>
+            Get a free estimate
+          </button>
+        </Link>
+      </Focus>
+
     </>
   )
 }

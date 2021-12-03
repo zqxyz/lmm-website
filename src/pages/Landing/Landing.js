@@ -4,6 +4,7 @@ import Reviews from './Reviews'
 import Banner from '../../components/Banner'
 import Container from '../../components/Container'
 import Link from '../../Link'
+import Focus from '../../components/Focus'
 
 const Landing = () => {
   return (
@@ -11,10 +12,12 @@ const Landing = () => {
 
 
       <Banner
-        title="Let us move you"
-        height="275px"
-        imageUrl="/images/muscleMasthead.jpg"
+        // imageUrl="/images/mastheadFaded.jpg"
+        imageUrl="/images/stockBanner.jpg"
+        // title="Let us move you"
+        title="Let's get moving"
       >
+        <br />
         <Link href="#">
           <button className='ui blue button huge'>
             Get a free estimate
@@ -23,7 +26,7 @@ const Landing = () => {
       </Banner>
 
 
-      <Container bgColor="#cbd1b6">
+      <Container bgColor="rgb(128, 203, 128)">
         <div className='ui stackable grid'>
           <div className='ten wide column'>
             <h1 style={{ textAlign: 'right' }}>Trusted for over a decade</h1>
@@ -41,9 +44,6 @@ const Landing = () => {
           </div>
         </div>
       </Container>
-
-
-      <Reviews />
 
 
       <Container
@@ -65,28 +65,30 @@ const Landing = () => {
         </div>
       </Container>
 
-      {/* Closing call to action segment */}
-      <div className='container' style={{ backgroundColor: 'rgb(105, 171, 105)' }}>
-        <div
-          className='page' style={{
-            paddingTop: '5em',
-            paddingBottom: '3em',
-            marginBottom: '3em',
-            textAlign: 'center'
-          }}
-        >
-          <h1>Start your move with us</h1>
-          <p>
-            The first step is filling out our estimate form
-          </p>
-          <br />
-          <Link href="#">
-            <button className='ui blue button huge'>
-              Get a free estimate
-            </button>
-          </Link>
-        </div>
-      </div>
+
+      <Banner
+        title="Our Trucks are Equipped To Protect Your Goods"
+        imageUrl="/images/stockBanner.jpg"
+        height="350px"
+      >
+      </Banner>
+
+
+      <Reviews />
+
+
+      <Focus bgColor="rgb(105, 171, 105)">
+        <h1>Start your move with us</h1>
+        <p>
+          The first step is filling out our estimate form
+        </p>
+        <br />
+        <Link href="#">
+          <button className='ui blue button huge'>
+            Get a free estimate
+          </button>
+        </Link>
+      </Focus>
 
     </>
   )

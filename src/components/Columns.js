@@ -24,10 +24,13 @@ import React from 'react';
  * `</Columns>`
  * 
  */
-const Columns = ({ children }) => {
+const Columns = ({ style, children }) => {
   const columns = Array.from(children.map(child => {
     return (
-      <div className="column">
+      <div
+      className="column"
+      style={child.props.style}
+      >
         {child.props.children}
       </div>
     )
@@ -46,7 +49,11 @@ const Columns = ({ children }) => {
   }
   const numberWord = numberWordsKey[children.length]
   return (
-    <div className={`ui stackable grid ${numberWord} column`}>
+    <div
+    className={`ui stackable grid ${numberWord} column`}
+    style={style}
+    
+    >
       {columns}
     </div>
   )

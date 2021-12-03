@@ -36,7 +36,8 @@ const Banner = ({ title, height, imageUrl, children }) => {
       >
         <div className='page'>
 
-          <h1>{title}</h1><br /><br /><br />
+          {(title) ? <h1>{title}</h1> : null}
+          <br />
           {children}
         </div>
       </div>

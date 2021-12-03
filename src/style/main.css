@@ -1,4 +1,4 @@
-@import url('./navigation.css');
+@import url('./header.css');
 @import url('./page.css');
 @import url('./checklist.css');
 @import url('./tabs.css');
@@ -20,33 +20,36 @@
 }
 
 body {
-    background-color: #f8f8f8;
-    color: #d4d4d4;
+    background-color: #f2f3ee;
+    color: white;
     font-size: 1.2em;
     line-height: 140%;
 }
 
+#root {
+    position: relative;
+    min-height: 100vh;
+}
+
 h1 {
-    font-family: 'cowboy', serif !important;
     font-size: 3em;
-    font-weight: 400;
     color: rgb(37, 37, 37);
-}
-
-a {
-    color: rgb(40, 70, 168)
-}
-
-a:visited {
-    color: rgb(123, 33, 158)
-}
-
-a:hover {
-    text-decoration: underline;
 }
 
 .container {
     width: 100%;
+}
+
+.container a {
+    color: rgb(40, 70, 168)
+}
+
+.container a:visited {
+    color: rgb(123, 33, 158)
+}
+
+.container a:hover {
+    text-decoration: underline;
 }
 
 .container img {
@@ -91,13 +94,20 @@ a:hover {
     font-size: 1.15em;
 }
 
+/* .container.picture h1 {
+    background:rgb(52, 61, 55);
+    display: inline;
+    color: rgb(255, 255, 255);
+    font-size: 4em;
+} */
+
 .container.picture h1 {
-    -webkit-border-radius: 3px;
-    -moz-border-radius: 3px;
-    border-radius: 3px;
-    background-color: #cfa360;
-    display: inline-block;
-    padding: 0.1em;
+    background:rgb(239, 243, 234);
+    display: inline;
+    color: rgb(41, 41, 41);
+    font-size: 4em;
+    font-weight: 800;
+    padding: 0 10px 5px 10px;
 }
 
 .container.picture p {
@@ -107,9 +117,10 @@ a:hover {
     border-radius: 3px;
     color: #1d1d1d;
     padding: 5px;
-    opacity: 0.8;
-    -ms-filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=80);
-    filter: alpha(opacity=80);
+    font-size: 1.5em;
+    opacity: 0.9;
+    -ms-filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=90);
+    filter: alpha(opacity=90);
 }
 
 .container.dark {
@@ -120,9 +131,8 @@ a:hover {
     color: rgb(230, 230, 230);
 }
 
-.container.dark p {
+.container.dark * {
     color: rgb(224, 224, 224);
-    font-size: 1.25em;
 }
 
 .container.dark strong {
@@ -135,4 +145,9 @@ a:hover {
 
 .container.dark a:visited {
     color: rgb(178, 138, 224)
+}
+
+pre {
+    font-family: monospace !important;
+    font-size: 0.75em
 }

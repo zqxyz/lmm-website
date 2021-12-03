@@ -24,12 +24,9 @@ const Navigation = () => {
           <Link href='/estimate' className='link item'>
             Get an Estimate
           </Link>
-          <div id='smallMedia'>
-            {/* small screen menu */}
-          </div>
         </div>
       </div>
-    </div>
+    </div >
   )
 }
 
