@@ -20,7 +20,7 @@ const Reviews = () => {
   const reviews = shuffle(reviewJson).slice(0, 3)
 
   return (
-    <div id='reviewWrap'>
+    <div id='reviewWrap' style={{ backgroundColor: '#44663f' }}>
       <div className='page' style={{ paddingTop: '2em' }}>
         <h1>Reviews</h1>
         <div className='ui stackable grid'>

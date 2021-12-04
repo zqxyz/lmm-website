@@ -9,7 +9,7 @@ const Link = ({ className, href, children, active }) => {
     event.preventDefault()
     window.history.pushState({}, '', href)
 
-    const navEvent = new PopStateEvent('popstate')
+    const navEvent = new PopStateEvent('popstate') // eslint-disable-line
     window.dispatchEvent(navEvent)
   }
 

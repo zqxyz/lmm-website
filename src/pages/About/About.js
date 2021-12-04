@@ -7,15 +7,14 @@ import Banner from '../../components/Banner'
 import Columns from '../../components/Columns'
 import Focus from '../../components/Focus'
 
-
 const About = () => {
   return (
     <>
 
       <Banner
-        title="Banner example"
-        imageUrl="/images/truckStack.jpeg"
-        height="275px"
+        title='Banner example'
+        imageUrl='/images/truckStack.jpeg'
+        height='275px'
       >
         <p>
           Text inside a &lt;p&gt; tag is easy to see on an image
@@ -25,20 +24,20 @@ const About = () => {
       </Banner>
 
       <Focus>
-      This page shows off the Components available to you. All the background
-      colors are easily specified. Or, as in the case of this section, can be
-      undefined and will default to this color.
-    </Focus>
+        This page shows off the Components available to you. All the background
+        colors are easily specified. Or, as in the case of this section, can be
+        undefined and will default to this color.
+      </Focus>
 
       <ContainerSplitLeft
-        title="Tabs example"
-        bgColor="#4d8c57"
+        title='Tabs example'
+        bgColor='#4d8c57'
       >
         <>
           This is a ContainerSplitLeft component
         </>
-        <Tabs defaultTab="Moving">
-          <Fragment title="Moving">
+        <Tabs defaultTab='Moving'>
+          <Fragment title='Moving'>
             <p>
               We'll move you from your current location to your next.
               We have years of experience providing excellent service.
@@ -53,7 +52,7 @@ const About = () => {
               </li>
             </ul>
           </Fragment>
-          <Fragment title="Rearranging">
+          <Fragment title='Rearranging'>
             <p>
               Rearranging stuff text goes here
             </p>
@@ -62,7 +61,7 @@ const About = () => {
       </ContainerSplitLeft>
 
       <Container
-        title="Checklist example"
+        title='Checklist example'
       >
         <Checklist>
           <>Item one</>
@@ -75,10 +74,10 @@ const About = () => {
       </Container>
 
       <Container
-        title="Dark container and Columns example"
-        bgColor="dark"
+        title='Dark container and Columns example'
+        bgColor='dark'
       >
-        <Columns style={{marginTop: '2em'}}>
+        <Columns style={{ marginTop: '2em' }}>
           <column>
             <h2>You can escape the framework and use whatever JSX (~HTML) you want</h2>
             <p>
@@ -97,11 +96,11 @@ const About = () => {
             <pre style={{ color: 'black' }}>
 
               &lt;column style=&#123;&#123;<br />
-                &nbsp;backgroundColor: 'white',<br />
-                &nbsp;color: 'black',<br />
-                &nbsp;borderRadius: '20px',<br />
-                &nbsp;padding: '1.5em'<br />
-                &#125;&#125;<br />
+              &nbsp;backgroundColor: 'white',<br />
+              &nbsp;color: 'black',<br />
+              &nbsp;borderRadius: '20px',<br />
+              &nbsp;padding: '1.5em'<br />
+              &#125;&#125;<br />
               &gt;
             </pre>
           </column>
@@ -110,7 +109,7 @@ const About = () => {
             <p>
               On a mobile phone, for example
             </p>
-            <button className="ui button orange">
+            <button className='ui button orange'>
               Third Column button
             </button>
           </column>

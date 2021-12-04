@@ -1,5 +1,5 @@
-import React from 'react';
-import Container from './Container';
+import React from 'react'
+import Container from './Container'
 
 /**
  * Container for emphasized content
@@ -7,15 +7,15 @@ import Container from './Container';
  * html (hex or rgb), special term 'dark' can be used for light text
  * on dark bg
  * @children JSX elements to render
- * 
+ *
  * Usage example:
- * 
- * `<Focus bgColor="rgb(105, 171, 105)">`  
- * &nbsp;`<h1>Centered Title</h1>`  
- * &nbsp;`<p>`  
- * &nbsp;&nbsp;`Text to emphasize`  
- * &nbsp;`</p>`  
- * `</Focus>` 
+ *
+ * `<Focus bgColor="rgb(105, 171, 105)">`
+ * &nbsp;`<h1>Centered Title</h1>`
+ * &nbsp;`<p>`
+ * &nbsp;&nbsp;`Text to emphasize`
+ * &nbsp;`</p>`
+ * `</Focus>`
  */
 const Focus = ({ bgColor, children }) => {
   return (

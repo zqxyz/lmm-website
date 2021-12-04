@@ -1,23 +1,26 @@
-import React from 'react';
+import React from 'react'
 
 /**
  * Stylized checklist with checkboxes
  * @children JSX elements as checklist items
- * 
+ *
  * Usage example:
- * 
- * `<Checklist>`  
- * &nbsp;`<>List item one</>`  
- * &nbsp;`<>List item two</>`  
- * &nbsp;`<>List item three</>`  
- * &nbsp;`<>Final list item</>`  
- * `</Checklist>`  
- * 
+ *
+ * `<Checklist>`
+ * &nbsp;`<>List item one</>`
+ * &nbsp;`<>List item two</>`
+ * &nbsp;`<>List item three</>`
+ * &nbsp;`<>Final list item</>`
+ * `</Checklist>`
+ *
  */
 const Checklist = ({ children }) => {
   const items = Array.from(children.map(child => {
+    let i = 0
     return (
-      <li>
+      <li
+        key={`checklistItem${i++}`}
+      >
         {child.props.children}
       </li>
     )

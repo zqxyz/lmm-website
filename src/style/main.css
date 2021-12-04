@@ -4,7 +4,6 @@
 @import url('./tabs.css');
 
 * {
-    /* font-family: 'Rubik', sans-serif !important; */
     font-family: 'Roboto', sans-serif;
 }
 
@@ -148,4 +147,20 @@ h1 {
 pre {
     font-family: monospace !important;
     font-size: 0.75em
+}
+
+@media only screen and (max-width: 1300px) {
+    h1 {
+        font-size: 2.5em;
+    }
+
+    .container.picture h1 {
+        font-size: 2.5em;
+    }
+}
+
+@media only screen and (max-width: 767px) {
+    h1 {
+        text-align: center !important;
+    }
 }

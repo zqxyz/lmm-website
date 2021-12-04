@@ -9,24 +9,24 @@ import Container from './Container'
  * @children JSX elements to render inside component. First element
  * acts as subtitle. Buttons or widgets may be used instead.
  * Remaining child elements will render inside right column.
- * 
+ *
  * EXAMPLE:
- * 
- * 
- * `<ContainerSplitLeft`  
- * &nbsp;&nbsp;`title="Section title"`  
- * &nbsp;&nbsp;`bgColor="#d2efdf"`  
- * `>`  
- * &nbsp;&nbsp;`<>`  
- * &nbsp;&nbsp;&nbsp;`Subtitle for section`  
- * &nbsp;&nbsp;`</>`  
- * &nbsp;&nbsp;`<ul>`  
- * &nbsp;&nbsp;&nbsp;`<li>List item one</li>`  
- * &nbsp;&nbsp;&nbsp;`<li>List item two</li>`  
- * &nbsp;&nbsp;&nbsp;`<li>List item three</li>`  
- * &nbsp;&nbsp;`</ul>`  
- * `</ContainerSplitLeft>`  
- * 
+ *
+ *
+ * `<ContainerSplitLeft`
+ * &nbsp;&nbsp;`title="Section title"`
+ * &nbsp;&nbsp;`bgColor="#d2efdf"`
+ * `>`
+ * &nbsp;&nbsp;`<>`
+ * &nbsp;&nbsp;&nbsp;`Subtitle for section`
+ * &nbsp;&nbsp;`</>`
+ * &nbsp;&nbsp;`<ul>`
+ * &nbsp;&nbsp;&nbsp;`<li>List item one</li>`
+ * &nbsp;&nbsp;&nbsp;`<li>List item two</li>`
+ * &nbsp;&nbsp;&nbsp;`<li>List item three</li>`
+ * &nbsp;&nbsp;`</ul>`
+ * `</ContainerSplitLeft>`
+ *
  */
 
 const ContainerSplitLeft = ({ title, bgColor = '#cbd1b6', children }) => {
@@ -51,7 +51,7 @@ const ContainerSplitLeft = ({ title, bgColor = '#cbd1b6', children }) => {
       </div>
 
     </Container>
-  );
+  )
 }
 
-export default ContainerSplitLeft;
+export default ContainerSplitLeft

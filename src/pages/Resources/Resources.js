@@ -1,5 +1,5 @@
 import './resources.css'
-import React, { Fragment } from 'react'
+import React from 'react'
 import Banner from '../../components/Banner'
 import Container from '../../components/Container'
 import Tabs from '../../components/Tabs'
@@ -14,16 +14,15 @@ const Resources = () => {
     <>
 
       <Banner
-        title="Resources"
-        imageUrl="/images/truckStack.jpeg"
-        height="175px"
+        title='Resources'
+        imageUrl='/images/truckStack.jpeg'
+        height='175px'
       >
         <p>Resources for general moving preparation and specific information about our services.</p>
       </Banner>
 
-
       <Container
-        title="Moving Checklist"
+        title='Moving Checklist'
         bgColor='#cbd1b6'
       >
         <Checklist>
@@ -39,16 +38,15 @@ const Resources = () => {
         </a>
       </Container>
 
-
       <ContainerSplitLeft
-        title="Services Offered"
+        title='Services Offered'
         bgColor='rgb(157, 184, 155)'
       >
         <p>
           We're insured and FMCSA registered.
         </p>
-        <Tabs defaultTab="Moving">
-          <tab title="Moving">
+        <Tabs defaultTab='Moving'>
+          <tab title='Moving'>
             <>
               We'll move you from your current location to your next.
               We have years of experience providing excellent service.
@@ -63,20 +61,20 @@ const Resources = () => {
               </li>
             </ul>
           </tab>
-          <tab title="Rearrangement">
+          <tab title='Rearrangement'>
             <p>
               We can help move your furniture out of one room, or all your
               rooms, so you can get your floors redone.And then we'll put it back.
             </p>
           </tab>
-          <tab title="Hoisting">
+          <tab title='Hoisting'>
             <p>
               In many cases, we'll be able to get large items into the second
               floor of your home over the side of your deck if your staircase
               is too narrow.
             </p>
           </tab>
-          <tab title="Heavy Items">
+          <tab title='Heavy Items'>
             <p>
               Local Muscle has loads of experience moving items
               up to 500 pounds, including most pianos. Just ask!
@@ -85,9 +83,8 @@ const Resources = () => {
         </Tabs>
       </ContainerSplitLeft>
 
-
       <ContainerSplitLeft
-        title="Policies and Contracts"
+        title='Policies and Contracts'
         bgColor='rgb(210, 239, 223)'
       >
         <>
@@ -97,7 +94,7 @@ const Resources = () => {
         </>
         <Columns>
           <column>
-            <h2>In state</h2>
+            <h2>Local (in-state)</h2>
             <ul>
               <li>
                 <a
@@ -113,7 +110,7 @@ const Resources = () => {
             </ul>
           </column>
           <column>
-            <h2>For interstate</h2>
+            <h2>Interstate</h2>
             <ul>
               <li>
                 <a href='#'>Interstate Terms and Conditions</a>
@@ -143,13 +140,13 @@ const Resources = () => {
 
       </ContainerSplitLeft>
 
-      <Focus bgColor="rgb(105, 171, 105)">
+      <Focus bgColor='rgb(105, 171, 105)'>
         <h1>Start your move with us</h1>
         <p>
           The first step is filling out our estimate form
         </p>
         <br />
-        <Link href="#">
+        <Link href='#'>
           <button className='ui blue button huge'>
             Get a free estimate
           </button>

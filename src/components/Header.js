@@ -5,8 +5,8 @@ import Link from '../Link'
 const Header = () => {
   return (
     <>
-      <div id="headwrap">
-      <Navigation />
+      <div id='headwrap'>
+        <Navigation />
 
         <div className='page'>
           <div className='ui stackable grid' style={{ color: 'black' }}>
@@ -14,7 +14,7 @@ const Header = () => {
               Moving 7 days a week
             </div>
             <div className='six wide column right aligned'>
-              <Link href="/call">
+              <Link href='/call'>
                 <i class='bi bi-telephone-fill' /> Call us
               </Link> Monday-Friday, 9AM to 4PM
             </div>

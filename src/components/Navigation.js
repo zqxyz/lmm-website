@@ -6,7 +6,10 @@ const Navigation = () => {
     <div id='navWrap'>
       <div className='ui menu' id='navigation'>
         <Link href='/' className='link header item'>
-          <span id='localmuscle'>Local Muscle</span>
+          <span id='localmuscle'>
+            {/* <img src="http://localhost:3000/images/JubilatSample.png" /> */}
+            Local Muscle Movers
+          </span>
         </Link>
         <Link href='/about' className='link item'>
           About
@@ -26,7 +29,7 @@ const Navigation = () => {
           </Link>
         </div>
       </div>
-    </div >
+    </div>
   )
 }
 

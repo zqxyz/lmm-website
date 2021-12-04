@@ -10,31 +10,28 @@ const Landing = () => {
   return (
     <>
 
-
       <Banner
-        imageUrl="/images/mastheadFaded.jpg"
+        imageUrl='/images/mastheadFaded.jpg'
         title="Let's get moving"
       >
         <br />
-        <Link href="#">
+        <Link href='#'>
           <button className='ui blue button huge'>
             Get a free estimate
           </button>
         </Link>
       </Banner>
 
-
-      <Container bgColor="dark">
+      <Container bgColor='dark'>
         <p style={{ textAlign: 'center' }}>
           At Local Muscle, we understand the serious responsibility
           placed upon us by the pandemic. We closely follow
-          all state and federal guidelines, and we've implemented
+          all state and federal guidelines and we've implemented
           enhanced sanitization routines.
         </p>
       </Container>
 
-
-      <Container bgColor="#315238">
+      <Container bgColor='#315238'>
         <div className='ui stackable grid'>
           <div className='ten wide column'>
             <h1 style={{ textAlign: 'right', color: '#f0f0f0' }}>Trusted for over a decade</h1>
@@ -53,9 +50,8 @@ const Landing = () => {
         </div>
       </Container>
 
-
       <Container
-        bgColor="#4e6350"
+        bgColor='#4e6350'
       >
         <div className='ui stackable grid'>
           <div className='six wide column'>
@@ -73,31 +69,26 @@ const Landing = () => {
         </div>
       </Container>
 
-
       <Banner
-        title="Our Trucks are Equipped To Protect Your Goods"
-        imageUrl="/images/stockBanner.jpg"
-        height="350px"
-      >
-      </Banner>
-
+        title='Our Trucks are Equipped To Protect Your Goods'
+        imageUrl='/images/stockBanner.jpg'
+        height='350px'
+      />
 
       <Reviews />
 
-
-      <Focus bgColor="rgb(105, 171, 105)">
+      <Focus bgColor='rgb(105, 171, 105)'>
         <h1>Start your move with us</h1>
         <p>
           The first step is filling out our estimate form
         </p>
         <br />
-        <Link href="#">
+        <Link href='#'>
           <button className='ui blue button huge'>
             Get a free estimate
           </button>
         </Link>
       </Focus>
-      
 
     </>
   )

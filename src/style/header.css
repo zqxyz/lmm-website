@@ -17,7 +17,7 @@
 #navigation .link {
     font-weight: 500;
     font-size: 1.2em;
-    color: #464040 !important
+    color: #464040 !important;
 }
 
 #navigation .link:hover {
@@ -45,17 +45,13 @@
 
 #localmuscle {
     color: rgb(51, 47, 47);
-    /* font-family: 'cowboy', serif !important; */
-    /* font-size: 1.25em; */
+    font-size: 1.15em;
+    font-weight: 700;
     background-color: transparent;
     -webkit-border-radius: 3px;
     -moz-border-radius: 3px;
     border-radius: 3px;
     padding: 3px;
-}
-
-#localmuscle:after {
-    content: ' Movers'
 }
 
 .header:hover #localmuscle {
@@ -67,7 +63,6 @@
     #headwrap {
         background-position: bottom left 15px;
         background-size: 150px;
-
     }
 }
 
@@ -92,10 +87,6 @@
     #navigation .header.item {
         padding: 0.5em 1em 0.5em 5em;
     }
-
-    #localmuscle {
-        font-size: 1.5em;
-    }
 }
 
 @media only screen and (max-width: 1300px) {
@@ -110,12 +101,7 @@
     }
 }
 
-@media only screen and (max-width: 1050px) {
-
-    /* collapse menu */
-    #navigation .link:not(.header) {
-        display: none;
-    }
+@media only screen and (max-width: 930px) {
 
     #navigation .header.item {
         padding: 0.5em 1em 0.5em 6em;
@@ -125,9 +111,11 @@
         text-align: center;
     }
 
-    #localmuscle {
-        font-size: 1.75em;
+    /* collapse menu */
+    #navigation .link:not(.header) {
+        display: none;
     }
+
 }
 
 @media only screen and (max-width: 900px) {
