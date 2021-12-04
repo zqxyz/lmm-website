@@ -11,6 +11,11 @@ import About from './pages/About/About'
 const App = () => {
   return (
     <>
+    {/* <div style={{backgroundColor: 'green', padding: '0.2em'}}>
+      <center>
+        We will be closed on 12/24, 12/25, and 1/1
+      </center>
+    </div> */}
       <Header />
       <Route path='/'>
         <Landing />

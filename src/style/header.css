@@ -4,11 +4,8 @@
 }
 
 #navigation {
-    -webkit-box-shadow: 5px 6px 10px 8px rgba(0, 0, 0, 0.03);
-    box-shadow: 5px 6px 10px 8px rgba(0, 0, 0, 0.03);
-    background-color: #ffffff;
+    background-color: #fafcf8;
     margin: 1em auto 2em auto;
-    /* border: 1px solid #96733f; */
 }
 
 #navWrap {
@@ -24,12 +21,14 @@
 }
 
 #navigation .link:hover {
-    background-color: #417acf;
-    color: white !important
+    background-color: #ffffff;
+    color: black !important;
+    text-decoration: underline;
 }
 
 #navigation .right a.link.item:hover {
-    background-color: #417acf;
+    background-color: #2185d0;
+    color: white !important;
 }
 
 #navigation .header.item {
@@ -38,16 +37,16 @@
 
 #navigation .header:hover {
     background-size: 24%;
-    background-color: #8c97ff;
-    color: white !important;
+    background-color: #ffffff;
+    color: rgb(0, 0, 0) !important;
     background-position: 6px 7px;
+    /* text-decoration: none */
 }
 
 #localmuscle {
     color: rgb(51, 47, 47);
-    font-weight: 400;
-    font-family: 'cowboy', serif !important;
-    font-size: 2em;
+    /* font-family: 'cowboy', serif !important; */
+    /* font-size: 1.25em; */
     background-color: transparent;
     -webkit-border-radius: 3px;
     -moz-border-radius: 3px;
@@ -60,8 +59,8 @@
 }
 
 .header:hover #localmuscle {
-    color: white !important;
-    background-color: #8c97ff;
+    color: black !important;
+    background-color: #ffffff;
 }
 
 @media only screen and (max-width: 1750px) {

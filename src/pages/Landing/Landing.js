@@ -12,9 +12,7 @@ const Landing = () => {
 
 
       <Banner
-        // imageUrl="/images/mastheadFaded.jpg"
-        imageUrl="/images/stockBanner.jpg"
-        // title="Let us move you"
+        imageUrl="/images/mastheadFaded.jpg"
         title="Let's get moving"
       >
         <br />
@@ -26,11 +24,11 @@ const Landing = () => {
       </Banner>
 
 
-      <Container bgColor="rgb(128, 203, 128)">
+      <Container bgColor="#315238">
         <div className='ui stackable grid'>
           <div className='ten wide column'>
-            <h1 style={{ textAlign: 'right' }}>Trusted for over a decade</h1>
-            <p>
+            <h1 style={{ textAlign: 'right', color: '#f0f0f0' }}>Trusted for over a decade</h1>
+            <p style={{color: '#f0f0f0'}}>
               We've built a reputation throughout New England as a moving company you can trust.
               Whether you're moving halfway across the country or across the street, we've got
               you covered. Throughout our history we've seen it all, and we use that experience
@@ -47,15 +45,15 @@ const Landing = () => {
 
 
       <Container
-        bgColor="#cbd1b6"
+        bgColor="#4e6350"
       >
         <div className='ui stackable grid'>
           <div className='six wide column'>
             <img src='http://localhost:3000/images/happyCrew.jpg' alt='Team flexing with a young customer' />
           </div>
           <div className='ten wide column'>
-            <h1>Your Local Moving Team</h1>
-            <p>
+            <h1 style={{color: '#f0f0f0'}}>Your Local Moving Team</h1>
+            <p style={{color: '#f0f0f0'}}>
               We build crews that work well together, and crews that work well together keep our
               customers happy. Our staff has experience with all manner of moves, be it a top
               floor apartment in the middle of a city or a rural location with rougher terrain,

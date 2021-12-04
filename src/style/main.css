@@ -4,7 +4,8 @@
 @import url('./tabs.css');
 
 * {
-    font-family: 'Rubik', sans-serif !important;
+    /* font-family: 'Rubik', sans-serif !important; */
+    font-family: 'Roboto', sans-serif;
 }
 
 /* Cool fun wacky font */
@@ -26,6 +27,18 @@ body {
     line-height: 140%;
 }
 
+a {
+    color: rgb(40, 70, 168)
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+a:visited {
+    color: rgb(123, 33, 158)
+}
+
 #root {
     position: relative;
     min-height: 100vh;
@@ -34,18 +47,11 @@ body {
 h1 {
     font-size: 3em;
     color: rgb(37, 37, 37);
+    font-family: 'Roboto', sans-serif;
 }
 
 .container {
     width: 100%;
-}
-
-.container a {
-    color: rgb(40, 70, 168)
-}
-
-.container a:visited {
-    color: rgb(123, 33, 158)
 }
 
 .container a:hover {
@@ -94,19 +100,11 @@ h1 {
     font-size: 1.15em;
 }
 
-/* .container.picture h1 {
-    background:rgb(52, 61, 55);
-    display: inline;
-    color: rgb(255, 255, 255);
-    font-size: 4em;
-} */
-
 .container.picture h1 {
-    background:rgb(239, 243, 234);
+    background: rgb(239, 243, 234);
     display: inline;
     color: rgb(41, 41, 41);
     font-size: 4em;
-    font-weight: 800;
     padding: 0 10px 5px 10px;
 }
 
