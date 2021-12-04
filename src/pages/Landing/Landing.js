@@ -24,11 +24,21 @@ const Landing = () => {
       </Banner>
 
 
+      <Container bgColor="dark">
+        <p style={{ textAlign: 'center' }}>
+          At Local Muscle, we understand the serious responsibility
+          placed upon us by the pandemic. We closely follow
+          all state and federal guidelines, and we've implemented
+          enhanced sanitization routines.
+        </p>
+      </Container>
+
+
       <Container bgColor="#315238">
         <div className='ui stackable grid'>
           <div className='ten wide column'>
             <h1 style={{ textAlign: 'right', color: '#f0f0f0' }}>Trusted for over a decade</h1>
-            <p style={{color: '#f0f0f0'}}>
+            <p style={{ color: '#f0f0f0' }}>
               We've built a reputation throughout New England as a moving company you can trust.
               Whether you're moving halfway across the country or across the street, we've got
               you covered. Throughout our history we've seen it all, and we use that experience
@@ -52,8 +62,8 @@ const Landing = () => {
             <img src='http://localhost:3000/images/happyCrew.jpg' alt='Team flexing with a young customer' />
           </div>
           <div className='ten wide column'>
-            <h1 style={{color: '#f0f0f0'}}>Your Local Moving Team</h1>
-            <p style={{color: '#f0f0f0'}}>
+            <h1 style={{ color: '#f0f0f0' }}>Your Local Moving Team</h1>
+            <p style={{ color: '#f0f0f0' }}>
               We build crews that work well together, and crews that work well together keep our
               customers happy. Our staff has experience with all manner of moves, be it a top
               floor apartment in the middle of a city or a rural location with rougher terrain,
@@ -87,6 +97,7 @@ const Landing = () => {
           </button>
         </Link>
       </Focus>
+      
 
     </>
   )
