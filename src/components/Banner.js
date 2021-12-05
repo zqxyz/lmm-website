@@ -27,6 +27,7 @@ const Banner = ({ title, height, imageUrl, children }) => {
       <div
         className='container picture' style={
           {
+            backgroundColor: '#393939',
             backgroundImage: `url(${imageUrl})`,
             backgroundSize: 'cover',
             backgroundPosition: 'center',

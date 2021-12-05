@@ -21,16 +21,34 @@ import React from 'react'
  *
  */
 
-const Container = ({ title, bgColor = '#cbd1b6', children }) => {
+const Container = ({ title, bgColor = '#cbd1b6', lightText, children }) => {
+  // const clipboardWrite = text => {
+  //   navigator.clipboard.writeText(text).then(() => {
+  //     console.log('copied')
+  //   },
+  //     () => {
+  //       console.log('clipboard access blocked')
+  //     })
+  // }
+
   return (
     <>
       <div
-        className={(bgColor === 'dark') ? 'container dark' : 'container'}
+        className={
+          `container${(bgColor === 'dark') ? ' dark' : ''}
+          ${(lightText) ? ' lightText' : ''}`
+        }
         style={(bgColor !== 'dark') ? { backgroundColor: bgColor } : null}
       >
         <div className='page'>
 
-          {(title) ? <h1>{title}</h1> : null}
+          {(title) ?
+            <h1
+              id={`heading-${title.replace(' ', '-')}`}
+            >
+              {title}
+            </h1>
+            : null}
           {children}
         </div>
       </div>

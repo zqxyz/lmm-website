@@ -2,24 +2,32 @@ import './resources.css'
 import React from 'react'
 import Banner from '../../components/Banner'
 import Container from '../../components/Container'
-import Tabs from '../../components/Tabs'
 import ContainerSplitLeft from '../../components/ContainerSplitLeft'
 import Columns from '../../components/Columns'
 import Checklist from '../../components/Checklist'
 import Focus from '../../components/Focus'
 import Link from '../../Link'
+import Services from '../About/Services'
 
 const Resources = () => {
   return (
     <>
 
-      <Banner
+      {/* <Banner
         title='Resources'
         imageUrl='/images/fadedBoxes.jpg'
         height='175px'
       >
-        <p>Resources for general moving preparation and specific information about our services.</p>
-      </Banner>
+        <p>Resources for customers</p>
+      </Banner> */}
+
+      <Container
+        title='Resources'
+        bgColor='dark'
+      >
+        Resources for customers
+      </Container>
+
 
       <Container
         title='Moving Checklist'
@@ -33,55 +41,13 @@ const Resources = () => {
           <>Items in drawers and on shelves are be cleared</>
           <>Sites are clean, sanitary, and safe</>
         </Checklist>
-        <a href='#'>
-          Longer, printable version
+        <a
+          target='_blank' rel='noopener noreferrer'
+          href='http://localhost:3000/documents/Local_Muscle_In-State_Terms_and_Conditions-Dec2021.pdf'
+        >
+          Longer, printable version [x]
         </a>
       </Container>
-
-      <ContainerSplitLeft
-        title='Services Offered'
-        bgColor='rgb(157, 184, 155)'
-      >
-        <p>
-          We're insured and FMCSA registered.
-        </p>
-        <Tabs defaultTab='Moving'>
-          <tab title='Moving'>
-            <>
-              We'll move you from your current location to your next.
-              We have years of experience providing excellent service.
-            </>
-            <ul>
-              <li>
-                Trustworthiness is among the most important traits we look for
-                when hiring new movers.We understand the sensitivity involved
-                with allowing us into your home and handling your posessions.
-                We train our team to high standards of careful handling as well
-                as courteous conduct.
-              </li>
-            </ul>
-          </tab>
-          <tab title='Rearrangement'>
-            <p>
-              We can help move your furniture out of one room, or all your
-              rooms, so you can get your floors redone.And then we'll put it back.
-            </p>
-          </tab>
-          <tab title='Hoisting'>
-            <p>
-              In many cases, we'll be able to get large items into the second
-              floor of your home over the side of your deck if your staircase
-              is too narrow.
-            </p>
-          </tab>
-          <tab title='Heavy Items'>
-            <p>
-              Local Muscle has loads of experience moving items
-              up to 500 pounds, including most pianos. Just ask!
-            </p>
-          </tab>
-        </Tabs>
-      </ContainerSplitLeft>
 
       <ContainerSplitLeft
         title='Policies and Contracts'
@@ -99,13 +65,18 @@ const Resources = () => {
               <li>
                 <a
                   target='_blank' rel='noopener noreferrer'
-                  href='http://localhost:3000/documents/LocalMuscle_Terms_and_Conditions_Dec2021.pdf'
+                  href='http://localhost:3000/documents/Local_Muscle_In-State_Terms_and_Conditions-Dec2021.pdf'
                 >
                   In State Terms and Conditions Outline
                 </a>
               </li>
               <li>
-                <a href='#'>In State Full Value Replacement Coverage</a>
+                <a
+                  target='_blank' rel='noopener noreferrer'
+                  href='http://localhost:3000/documents/Local_Muscle_In-State_Full_Valuation_Coverage__Liability-Dec2021.pdf'
+                >
+                  In State Full Value Replacement Coverage
+                </a>
               </li>
             </ul>
           </column>
@@ -113,10 +84,20 @@ const Resources = () => {
             <h2>Interstate</h2>
             <ul>
               <li>
-                <a href='#'>Interstate Terms and Conditions</a>
+                <a
+                  target='_blank' rel='noopener noreferrer'
+                  href='http://localhost:3000/documents/Local_Muscle_In-State_Terms_and_Conditions-Dec2021.pdf'
+                >
+                  Interstate Terms and Conditions [x]
+                </a>
               </li>
               <li>
-                <a href='#'>Interstate Full Value Replacement Coverage</a>
+                <a
+                  target='_blank' rel='noopener noreferrer'
+                  href='http://localhost:3000/documents/Local_Muscle_In-State_Terms_and_Conditions-Dec2021.pdf'
+                >
+                  Interstate Full Value Replacement Coverage [x]
+                </a>
               </li>
               <li>
                 <a

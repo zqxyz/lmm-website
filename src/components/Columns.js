@@ -25,8 +25,8 @@ import React from 'react'
  *
  */
 const Columns = ({ style, children }) => {
+  let i = 0
   const columns = Array.from(children.map(child => {
-    let i = 0
     return (
       <div
         key={`column${i++}`}

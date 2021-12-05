@@ -13,11 +13,13 @@ const Landing = () => {
       <Banner
         imageUrl='/images/fadedMasthead.jpg'
         title="Let's get moving"
+        height='300px'
       >
         <br />
         <Link href='/estimate'>
           <button
             className='ui blue button huge'
+            title="Press here to go to our estimate request form"
           >
             Get a free estimate
           </button>
@@ -33,11 +35,11 @@ const Landing = () => {
         </p>
       </Container>
 
-      <Container bgColor='#315238'>
+      <Container bgColor='#315238' lightText>
         <div className='ui stackable grid'>
           <div className='ten wide column'>
-            <h1 style={{ textAlign: 'right', color: '#f0f0f0' }}>Trusted for over a decade</h1>
-            <p style={{ color: '#f0f0f0' }}>
+            <h1 style={{ textAlign: 'right' }}>Trusted for over a decade</h1>
+            <p>
               We've built a reputation throughout New England as a moving company you can trust.
               Whether you're moving halfway across the country or across the street, we've got
               you covered. Throughout our history we've seen it all, and we use that experience
@@ -52,27 +54,26 @@ const Landing = () => {
         </div>
       </Container>
 
-      <Container
-        bgColor='#4e6350'
-      >
+      <Container bgColor='#4e6350' lightText>
         <div className='ui stackable grid'>
           <div className='six wide column'>
             <img src='http://localhost:3000/images/happyCrew.jpg' alt='Team flexing with a young customer' />
           </div>
           <div className='ten wide column'>
-            <h1 style={{ color: '#f0f0f0' }}>Your Local Moving Team</h1>
-            <p style={{ color: '#f0f0f0' }}>
+            <h1>Your Local Moving Team</h1>
+            <p>
               We build crews that work well together, and crews that work well together keep our
-              customers happy. Our staff has experience with all manner of moves, be it a top
+              customers happy. Our staff has experience with all kinds of moves, be it a top
               floor apartment in the middle of a city or a rural location with rougher terrain,
-              we can handle it all!
+              we can handle it all.
             </p>
           </div>
         </div>
       </Container>
 
       <Banner
-        title='Our Trucks are Equipped To Protect Your Goods'
+        title="We're equipped to safely handle your possessions"
+        // imageUrl='/images/equipment.jpg'
         imageUrl='/images/stockBanner.jpg'
         height='350px'
       />
@@ -86,7 +87,10 @@ const Landing = () => {
         </p>
         <br />
         <Link href='#'>
-          <button className='ui blue button huge'>
+          <button
+            className='ui blue button huge'
+            title="Press here to go to our estimate request form"
+          >
             Get a free estimate
           </button>
         </Link>

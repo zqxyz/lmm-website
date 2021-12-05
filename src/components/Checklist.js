@@ -15,11 +15,11 @@ import React from 'react'
  *
  */
 const Checklist = ({ children }) => {
+  let i = 0
   const items = Array.from(children.map(child => {
-    let i = 0
     return (
       <li
-        key={`checklistItem${i++}`}
+        key={`checklistItem-${i++}`}
       >
         {child.props.children}
       </li>

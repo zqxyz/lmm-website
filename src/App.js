@@ -1,5 +1,5 @@
 import './style/main.css'
-import React, { useState } from 'react'
+import React from 'react'
 import Route from './Route'
 import Landing from './pages/Landing/Landing'
 import Resources from './pages/Resources/Resources'

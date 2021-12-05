@@ -19,7 +19,9 @@ const About = () => {
         <p>
           Text inside a &lt;p&gt; tag is easy to see on an image
           because it's given a white background when placed inside
-          the Banner component.
+          the Banner component. The header is large and darkens the
+          text behind it. Darkened images must still be used to 
+          maintain legibility of the stylized heading on the banners.
         </p>
       </Banner>
 

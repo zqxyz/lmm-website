@@ -15,7 +15,7 @@ const Header = () => {
             </div>
             <div className='six wide column right aligned'>
               <Link href='/call'>
-                <i class='bi bi-telephone-fill' /> Call us
+                <i className='bi bi-telephone-fill' /> Call us
               </Link> Monday-Friday, 9AM to 4PM
             </div>
           </div>
