@@ -11,12 +11,14 @@ const Landing = () => {
     <>
 
       <Banner
-        imageUrl='/images/mastheadFaded.jpg'
+        imageUrl='/images/fadedMasthead.jpg'
         title="Let's get moving"
       >
         <br />
-        <Link href='#'>
-          <button className='ui blue button huge'>
+        <Link href='/estimate'>
+          <button
+            className='ui blue button huge'
+          >
             Get a free estimate
           </button>
         </Link>

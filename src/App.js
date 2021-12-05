@@ -1,5 +1,5 @@
 import './style/main.css'
-import React from 'react'
+import React, { useState } from 'react'
 import Route from './Route'
 import Landing from './pages/Landing/Landing'
 import Resources from './pages/Resources/Resources'
@@ -9,20 +9,21 @@ import Footer from './components/Footer'
 import About from './pages/About/About'
 
 const App = () => {
+
   return (
     <>
       <Header />
       <Route path='/'>
-        <Landing />
+        <Landing/>
       </Route>
       <Route path='/resources'>
-        <Resources />
+        <Resources/>
       </Route>
       <Route path='/about'>
-        <About />
+        <About/>
       </Route>
       <Route path='/call'>
-        <Call />
+        <Call/>
       </Route>
       <Footer />
     </>

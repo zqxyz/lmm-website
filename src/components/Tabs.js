@@ -30,11 +30,13 @@ const Tabs = ({ children, defaultTab }) => {
   const titles = Array.from(children.map((child) => {
     return (
       <div
+        tabIndex='0'
         key={`tabOf${child.props.title}`}
         className={(activeTab === child.props.title)
           ? 'active item'
           : 'item'}
         onClick={() => { setActiveTab(child.props.title) }}
+        onKeyPress={e => { if (e.key === 'Enter') setActiveTab(child.props.title) }}
       >
         {child.props.title}
       </div>

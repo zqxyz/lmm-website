@@ -15,15 +15,20 @@
 }
 
 #navigation .link {
+    border: 1px solid transparent;
+    color: #464040 !important;
     font-weight: 500;
     font-size: 1.2em;
-    color: #464040 !important;
 }
 
 #navigation .link:hover {
     background-color: #ffffff;
     color: black !important;
     text-decoration: underline;
+}
+
+#navigation .link:focus {
+    border: 1px solid black !important;
 }
 
 #navigation .right a.link.item:hover {

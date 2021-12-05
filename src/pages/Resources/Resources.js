@@ -15,7 +15,7 @@ const Resources = () => {
 
       <Banner
         title='Resources'
-        imageUrl='/images/truckStack.jpeg'
+        imageUrl='/images/fadedBoxes.jpg'
         height='175px'
       >
         <p>Resources for general moving preparation and specific information about our services.</p>

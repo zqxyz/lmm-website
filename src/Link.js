@@ -18,6 +18,7 @@ const Link = ({ className, href, children, active }) => {
       onClick={onClick}
       href={href}
       className={className}
+      tabIndex='0'
     >
       {children}
     </a>
