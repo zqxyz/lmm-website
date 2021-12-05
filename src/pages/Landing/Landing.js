@@ -1,17 +1,17 @@
-import './landing.css'
 import React from 'react'
 import Reviews from './Reviews'
 import Banner from '../../components/Banner'
 import Container from '../../components/Container'
 import Link from '../../Link'
 import Focus from '../../components/Focus'
+import Services from './Services'
 
 const Landing = () => {
   return (
     <>
 
       <Banner
-        imageUrl='/images/fadedMasthead.jpg'
+        imageUrl={'/images/fadedMasthead.jpg'}
         title="Let's get moving"
         height='300px'
       >
@@ -71,10 +71,12 @@ const Landing = () => {
         </div>
       </Container>
 
+      <Services />
+
       <Banner
         title="We're equipped to safely handle your possessions"
-        // imageUrl='/images/equipment.jpg'
-        imageUrl='/images/stockBanner.jpg'
+        imageUrl={'/images/equipment.jpg'}
+        // imageUrl='/images/stockBanner.jpg'
         height='350px'
       />
 

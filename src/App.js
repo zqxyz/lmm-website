@@ -1,5 +1,6 @@
 import './style/main.css'
 import React from 'react'
+import Preload from './components/Preload'
 import Route from './Route'
 import Landing from './pages/Landing/Landing'
 import Resources from './pages/Resources/Resources'
@@ -25,6 +26,7 @@ const App = () => {
       <Route path='/call'>
         <Call/>
       </Route>
+      <Preload />
       <Footer />
     </>
   )

@@ -1,7 +1,9 @@
 import React from 'react'
+import Columns from '../../components/Columns';
+import Container from '../../components/Container';
 import reviewJson from '../../reviews.json'
 
-function shuffle (array) {
+function shuffle(array) {
   let currentIndex = array.length; let randomIndex
 
   while (currentIndex !== 0) {
@@ -20,21 +22,23 @@ const Reviews = () => {
   const reviews = shuffle(reviewJson).slice(0, 3)
 
   return (
-    <div id='reviewWrap' style={{ backgroundColor: '#44663f' }}>
-      <div className='page' style={{ paddingTop: '2em' }}>
-        <h1>Reviews</h1>
-        <div className='ui stackable grid'>
-          {reviews.map(review => {
-            return (
-              <div className='column five wide quote' key={review.key}>
-                "{review.quote}"
-                <div className='quoteAttr'>{review.author}</div>
+    <Container bgColor='#44663f' lightText>
+      <Columns>
+        {reviews.map(review => {
+          return (
+            <column
+              key={review.key}
+              style={{ fontStyle: 'italic' }}
+            >
+              "{review.quote}"
+              <div style={{ textAlign: 'right', fontWeight: '600' }}>
+                {review.author}
               </div>
-            )
-          })}
-        </div>
-      </div>
-    </div>
+            </column>
+          )
+        })}
+      </Columns>
+    </Container>
   )
 }
 

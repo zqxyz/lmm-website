@@ -13,7 +13,7 @@ const About = () => {
 
       <Banner
         title='Banner example'
-        imageUrl='/images/truckStack.jpeg'
+        imageUrl='/images/fadedBoxes.jpg'
         height='275px'
       >
         <p>

@@ -1,25 +1,15 @@
 import './resources.css'
 import React from 'react'
-import Banner from '../../components/Banner'
 import Container from '../../components/Container'
 import ContainerSplitLeft from '../../components/ContainerSplitLeft'
 import Columns from '../../components/Columns'
 import Checklist from '../../components/Checklist'
 import Focus from '../../components/Focus'
 import Link from '../../Link'
-import Services from '../About/Services'
 
 const Resources = () => {
   return (
     <>
-
-      {/* <Banner
-        title='Resources'
-        imageUrl='/images/fadedBoxes.jpg'
-        height='175px'
-      >
-        <p>Resources for customers</p>
-      </Banner> */}
 
       <Container
         title='Resources'
@@ -28,18 +18,24 @@ const Resources = () => {
         Resources for customers
       </Container>
 
-
       <Container
         title='Moving Checklist'
         bgColor='#cbd1b6'
       >
         <Checklist>
           <>All small and loose items are protected and boxed</>
-          <>Boxes are labeled</>
-          <>Pathways are clear, inside and outside all locations</>
-          <>In Winter, your driveway, walkways, and roads are plowed and salted/sanded</>
-          <>Items in drawers and on shelves are be cleared</>
+          <>Boxes are sealed and labeled</>
+          <>Items in drawers and on shelves are cleared</>
+          <>Appliances are detached/unhooked</>
+          <>Gas/oil is removed from equipment</>
+          <>Flammable substances, ammunitions, explosives, and alcohol, are handled seperately</>
+          <>Parking arrangements are secured</>
+          <>Property mangement/neighbors are aware of your move</>
+          <>If applicable, an elevator is explicitly reserved</>
+          <>Confirm no other work crews are scheduled at the same time as us</>
+          <>Pathways are clear, inside and outside load and unload sites</>
           <>Sites are clean, sanitary, and safe</>
+          <>In the Winter, your driveway, walkways, and roads are plowed and salted/sanded</>
         </Checklist>
         <a
           target='_blank' rel='noopener noreferrer'
