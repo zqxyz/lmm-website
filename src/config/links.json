@@ -1,0 +1,38 @@
+[
+    {
+        "name": "Local Muscle Movers",
+        "shortName": "Home",
+        "path": "/",
+        "left": true
+    },
+    {
+        "name": "About",
+        "shortName": null,
+        "path": "/about",
+        "left": true
+    },
+    {
+        "name": "Resources",
+        "shortName": null,
+        "path": "/resources",
+        "left": true
+    },
+    {
+        "name": "Join Our Crew",
+        "shortName": null,
+        "path": "/join",
+        "left": true
+    },
+    {
+        "name": "Contact",
+        "shortName": null,
+        "path": "/contact",
+        "left": true
+    },
+    {
+        "name": "Hire Us",
+        "shortName": null,
+        "path": "/estimate",
+        "left": false
+    }
+]

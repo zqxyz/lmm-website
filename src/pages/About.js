@@ -1,11 +1,11 @@
 import React, { Fragment } from 'react'
-import Tabs from '../../components/Tabs'
-import Container from '../../components/Container'
-import ContainerSplitLeft from '../../components/ContainerSplitLeft'
-import Checklist from '../../components/Checklist'
-import Banner from '../../components/Banner'
-import Columns from '../../components/Columns'
-import Focus from '../../components/Focus'
+import Tabs from '../components/Tabs'
+import Container from '../components/Container'
+import ContainerSplitLeft from '../components/ContainerSplitLeft'
+import Checklist from '../components/Checklist'
+import Banner from '../components/Banner'
+import Columns from '../components/Columns'
+import Focus from '../components/Focus'
 
 const About = () => {
   return (
@@ -39,7 +39,7 @@ const About = () => {
           This is a ContainerSplitLeft component
         </>
         <Tabs defaultTab='Moving'>
-          <Fragment title='Moving'>
+          <tab title='Moving'>
             <p>
               We'll move you from your current location to your next.
               We have years of experience providing excellent service.
@@ -53,12 +53,12 @@ const About = () => {
                 as courteous conduct.
               </li>
             </ul>
-          </Fragment>
-          <Fragment title='Rearranging'>
+          </tab>
+          <tab title='Rearranging'>
             <p>
               Rearranging stuff text goes here
             </p>
-          </Fragment>
+          </tab>
         </Tabs>
       </ContainerSplitLeft>
 

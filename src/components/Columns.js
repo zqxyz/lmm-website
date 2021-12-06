@@ -30,7 +30,7 @@ const Columns = ({ style, children }) => {
     return (
       <div
         key={`column${i++}`}
-        className='column'
+        className={`column${(child.props.className) ? ' ' + child.props.className : ''}`}
         style={child.props.style}
       >
         {child.props.children}

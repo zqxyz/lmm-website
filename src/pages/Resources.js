@@ -1,11 +1,10 @@
-import './resources.css'
 import React from 'react'
-import Container from '../../components/Container'
-import ContainerSplitLeft from '../../components/ContainerSplitLeft'
-import Columns from '../../components/Columns'
-import Checklist from '../../components/Checklist'
-import Focus from '../../components/Focus'
-import Link from '../../Link'
+import Container from '../components/Container'
+import ContainerSplitLeft from '../components/ContainerSplitLeft'
+import Columns from '../components/Columns'
+import Checklist from '../components/Checklist'
+import Focus from '../components/Focus'
+import Link from '../Link'
 
 const Resources = () => {
   return (
@@ -24,6 +23,7 @@ const Resources = () => {
       >
         <Checklist>
           <>All small and loose items are protected and boxed</>
+          <>A 'no pack' zone is designated for essentials (phone chargers, medicine, keys)</>
           <>Boxes are sealed and labeled</>
           <>Items in drawers and on shelves are cleared</>
           <>Appliances are detached/unhooked</>

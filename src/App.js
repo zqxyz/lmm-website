@@ -3,11 +3,11 @@ import React from 'react'
 import Preload from './components/Preload'
 import Route from './Route'
 import Landing from './pages/Landing/Landing'
-import Resources from './pages/Resources/Resources'
-import Call from './pages/Call/Call'
+import Resources from './pages/Resources'
+import Call from './pages/Call'
 import Header from './components/Header'
 import Footer from './components/Footer'
-import About from './pages/About/About'
+import About from './pages/About'
 
 const App = () => {
 

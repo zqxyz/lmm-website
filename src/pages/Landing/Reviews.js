@@ -1,7 +1,7 @@
 import React from 'react'
 import Columns from '../../components/Columns';
 import Container from '../../components/Container';
-import reviewJson from '../../reviews.json'
+import reviewJson from '../../config/reviews.json'
 
 function shuffle(array) {
   let currentIndex = array.length; let randomIndex

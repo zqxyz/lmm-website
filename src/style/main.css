@@ -1,5 +1,4 @@
 @import url('./header.css');
-@import url('./page.css');
 @import url('./checklist.css');
 @import url('./tabs.css');
 
@@ -17,6 +16,11 @@
 
 .cowboy {
     font-family: 'cowboy', serif !important;
+}
+
+html, body, #root {
+    padding: 0;
+    margin: 0;
 }
 
 body {
@@ -44,13 +48,35 @@ a:focus {
 
 #root {
     position: relative;
-    min-height: 100vh;
+    padding-bottom: 200px;
+    min-height: 100vh !important;
+}
+
+#footer {
+    background: url(http://localhost:3000/images/boxPlaceholder.png) no-repeat;
+    background-position: top left 15%;
+    height: 200px;
+    width: 100vw;
+    margin: 0;
+    padding: 2em;
+    text-align: center;
+    position: absolute;
+    bottom: 0;
+}
+
+.rightUnlessStacked {
+    text-align: right;
 }
 
 h1 {
     font-size: 3em;
     color: rgb(37, 37, 37);
     font-family: 'Roboto', sans-serif;
+}
+
+.bi {
+    position: relative;
+    top: 2px;
 }
 
 .container {
@@ -151,6 +177,21 @@ h1 {
     color: rgb(178, 138, 224)
 }
 
+.page {
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    border-radius: 3px;
+    margin-top: 2em;
+    padding: 1em;
+    max-width: 1300px;
+    margin: 0 auto 0 auto;
+    padding: 2em;
+}
+
+.page:not(.lightText) {
+    color: #3b3b3b;
+}
+
 pre {
     font-family: monospace !important;
     font-size: 0.75em
@@ -162,12 +203,23 @@ pre {
     }
 
     .container.picture h1 {
-        font-size: 2.5em;
+        font-size: 3em;
     }
 }
 
+/* COLLAPSE */
 @media only screen and (max-width: 767px) {
     h1 {
         text-align: center !important;
+        font-size: 2em;
+    }
+
+    .rightUnlessStacked {
+        text-align: left;
+    }
+
+    .onlyOnLargeScreens {
+        display: none !important;
+        font-weight: 900;
     }
 }

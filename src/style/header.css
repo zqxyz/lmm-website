@@ -1,6 +1,6 @@
 #headwrap {
     background: url('http://localhost:3000/images/russBg.png') bottom left 25px no-repeat;
-    background-size: 200px;
+    background-size: 155px;
 }
 
 #navigation {
@@ -16,14 +16,14 @@
 
 #navigation .link {
     border: 1px solid transparent;
-    color: #464040 !important;
+    /* color: #464040; */
     font-weight: 500;
     font-size: 1.2em;
 }
 
 #navigation .link:hover {
     background-color: #ffffff;
-    color: black !important;
+    color: black;
     text-decoration: underline;
 }
 
@@ -33,7 +33,7 @@
 
 #navigation .right a.link.item:hover {
     background-color: #2185d0;
-    color: white !important;
+    color: white;
 }
 
 #navigation .header.item {
@@ -64,17 +64,21 @@
     background-color: #ffffff;
 }
 
+.dropdown.item.active.visible::before {
+    display: none;
+}
+
 @media only screen and (max-width: 1750px) {
     #headwrap {
         background-position: bottom left 15px;
-        background-size: 150px;
+        background-size: 140px;
     }
 }
 
 @media only screen and (max-width: 1615px) {
     #headwrap {
         background-position: bottom left 12px;
-        background-size: 125px;
+        background-size: 120px;
 
     }
 }
@@ -106,36 +110,65 @@
     }
 }
 
-@media only screen and (max-width: 930px) {
+@media only screen and (max-width: 880px) {
+    #navigation {
+        font-size: 1.1em;
+
+    }
+
+    #navigation .header {
+        background-size: 4em;
+    }
+
+    #navigation .header:hover {
+        background-size: 5em;
+    }
 
     #navigation .header.item {
         padding: 0.5em 1em 0.5em 6em;
     }
-
-    #navigation {
-        text-align: center;
-    }
-
-    /* collapse menu */
-    #navigation .link:not(.header) {
-        display: none;
-    }
-
 }
 
-@media only screen and (max-width: 900px) {
-    #navigation .link {
-        font-weight: 500;
-        font-size: 1em;
-        color: #3f3f3f !important
+@media only screen and (max-width: 600px) {
+
+    #navigation {
+        margin: 1em auto 0 auto
     }
 
     #navigation .header {
-        background-size: 28%;
-        font-weight: 700;
+        background: url(http://localhost:3000/images/russBg_morefaded.png) right top -10px no-repeat;
+        background-size: 50%;
     }
-}
 
-@media only screen and (max-width: 630px) {
+    #localmuscle, #localmuscle:hover {
+        font-family: 'cowboy', serif !important;
+        font-size: 2em;
+        text-align: left;
+        width: 100%;
+        background: none !important;
+        margin: 0;
+    }
 
+    #localmuscle * {
+        font-size: 70% !important;
+    }
+
+    #localmuscle .menu {
+        border: 2px solid white
+    }
+
+    #navigation .header:hover {
+        background: url(http://localhost:3000/images/russBg_morefaded.png) right top -10px no-repeat;
+        background-size: 60%;
+    }
+
+    #navigation .header.item {
+        padding: 0.5em;
+        width: 100%;
+        text-align: center;
+    }
+
+    .menu.transition * {
+        background-color:#fcfcfb !important;
+    }
 }

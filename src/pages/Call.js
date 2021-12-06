@@ -1,7 +1,7 @@
 import React from 'react'
-import Container from '../../components/Container'
-import Link from '../../Link'
-import Columns from '../../components/Columns'
+import Container from '../components/Container'
+import Columns from '../components/Columns'
+import Link from '../Link'
 
 const Call = () => {
   return (
@@ -22,23 +22,21 @@ const Call = () => {
         </Link>
       </Container>
 
+
       <Container>
         <Columns>
-
           <column>
             <center>
               <h2>For our Portland, ME branch</h2>
               <p>Call 207-390-9090</p>
             </center>
           </column>
-
           <column>
             <center>
               <h2>For our Burlington, VT branch</h2>
               <p>Call 802-899-0908</p>
             </center>
           </column>
-
         </Columns>
       </Container>
 
