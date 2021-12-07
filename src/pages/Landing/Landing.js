@@ -49,7 +49,7 @@ const Landing = () => {
             </p>
           </div>
           <div className='six wide column'>
-            <img src='http://localhost:3000/images/movingAction.JPG' alt='Crew in action' />
+            <img src='/images/movingAction.JPG' alt='Crew in action' />
           </div>
         </div>
       </Container>
@@ -57,7 +57,7 @@ const Landing = () => {
       <Container bgColor='rgb(58, 91, 66)' lightText>
         <div className='ui stackable grid'>
           <div className='six wide column'>
-            <img src='http://localhost:3000/images/happyCrew.jpg' alt='Team flexing with a young customer' />
+            <img src='/images/happyCrew.jpg' alt='Team flexing with a young customer' />
           </div>
           <div className='ten wide column'>
             <h1>Your Local Moving Team</h1>
