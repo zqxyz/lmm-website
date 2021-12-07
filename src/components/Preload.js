@@ -6,23 +6,14 @@ import React from 'react'
  *
  * @returns discreet HTML element with multiple background images
  *
- * Add images to list of backgroundImages (in #preload div's style object
- * contained within this component) to cache upon loading of any page on
- * this site. Only images above the fold should be included here. No more
- * than ~2.5MB total images should be loaded here.
+ * Add images to `background-image` of `#preload` (in /style/main.css) to
+ * cache upon loading of any page on this site. Only images above the
+ * fold should be included here. No more than ~2.5MB total images should
+ * be loaded here.
  */
 const Preload = () => {
   return (
-    <div
-      id='preload'
-      style={{
-        height: '0px',
-        backgroundImage:
-                    'url(images/fadedBoxes.jpg),' +
-                    'url(images/fadedMasthead.jpg),' +
-                    'url(images/movingAction.JPG)'
-      }}
-    >
+    <div id='preload'>
             &nbsp;
     </div>
   )

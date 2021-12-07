@@ -30,6 +30,18 @@ body {
     line-height: 140%;
 }
 
+/* Banners and other images to preload */
+#preload {
+    background-image:
+    url(/images/fadedBoxes.jpg),
+    url(/images/fadedMasthead.jpg),
+    url(/images/movingAction.JPG),
+    url(/images/crew.jpg);
+	opacity: 0.0; 
+	-ms-filter:progid:DXImageTransform.Microsoft.Alpha(Opacity= 0); /* // for IE8 */
+	filter: alpha(opacity= 0); /* //for IE5-7 */
+}
+
 a {
     color: rgb(40, 70, 168)
 }

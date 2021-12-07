@@ -76,7 +76,6 @@ const About = () => {
 
 
       <Container
-        // title="What can you expect with Local Muscle?"
         bgColor='rgb(226, 236, 228)'
       >
         <p>
