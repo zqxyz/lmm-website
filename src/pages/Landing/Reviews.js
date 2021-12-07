@@ -1,9 +1,9 @@
 import React from 'react'
-import Columns from '../../components/Columns';
-import Container from '../../components/Container';
+import Columns from '../../components/Columns'
+import Container from '../../components/Container'
 import reviewJson from '../../config/reviews.json'
 
-function shuffle(array) {
+function shuffle (array) {
   let currentIndex = array.length; let randomIndex
 
   while (currentIndex !== 0) {

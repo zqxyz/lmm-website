@@ -1,5 +1,5 @@
 #headwrap {
-    background: url('http://localhost:3000/images/russBg.png') bottom left 25px no-repeat;
+    background: url(/images/russBg.png) bottom left 25px no-repeat;
     background-size: 155px;
 }
 
@@ -16,7 +16,6 @@
 
 #navigation .link {
     border: 1px solid transparent;
-    /* color: #464040; */
     font-weight: 500;
     font-size: 1.2em;
 }
@@ -45,7 +44,6 @@
     background-color: #ffffff;
     color: rgb(0, 0, 0) !important;
     background-position: 6px 7px;
-    /* text-decoration: none */
 }
 
 #localmuscle {
@@ -89,7 +87,7 @@
     }
 
     #navigation .header {
-        background: url('http://localhost:3000/images/musclelogo.png') 5px 5px no-repeat;
+        background: url(/images/musclelogo.png) 5px 5px no-repeat;
         background-size: 20%;
     }
 
@@ -100,9 +98,7 @@
 
 @media only screen and (max-width: 1300px) {
     #navigation .link {
-        font-weight: 500;
-        font-size: 1em;
-        color: #3f3f3f !important
+        font-size: 1.10em;
     }
 
     #navigation .header.item {
@@ -136,7 +132,7 @@
     }
 
     #navigation .header {
-        background: url(http://localhost:3000/images/russBg_morefaded.png) right top -10px no-repeat;
+        background: url(/images/russBg_morefaded.png) right top -10px no-repeat;
         background-size: 50%;
     }
 
@@ -158,7 +154,7 @@
     }
 
     #navigation .header:hover {
-        background: url(http://localhost:3000/images/russBg_morefaded.png) right top -10px no-repeat;
+        background: url(/images/russBg_morefaded.png) right top -10px no-repeat;
         background-size: 60%;
     }
 

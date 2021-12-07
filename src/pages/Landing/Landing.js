@@ -11,7 +11,7 @@ const Landing = () => {
     <>
 
       <Banner
-        imageUrl={'/images/fadedMasthead.jpg'}
+        imageUrl='/images/fadedMasthead.jpg'
         title="Let's get moving"
         height='300px'
       >
@@ -19,7 +19,7 @@ const Landing = () => {
         <Link href='/estimate'>
           <button
             className='ui blue button huge'
-            title="Press here to go to our estimate request form"
+            title='Press here to go to our estimate request form'
           >
             Get a free estimate
           </button>
@@ -38,7 +38,7 @@ const Landing = () => {
       <Container bgColor='#315238' lightText>
         <div className='ui stackable grid'>
           <div className='ten wide column'>
-            <h1 style={{ textAlign: 'right' }}>Trusted for over a decade</h1>
+            <h1 className='rightUnlessStacked'>Trusted for over a decade</h1>
             <p>
               We've built a reputation throughout New England as a moving company you can trust.
               Whether you're moving halfway across the country or across the street, we've got
@@ -54,7 +54,7 @@ const Landing = () => {
         </div>
       </Container>
 
-      <Container bgColor='#4e6350' lightText>
+      <Container bgColor='rgb(58, 91, 66)' lightText>
         <div className='ui stackable grid'>
           <div className='six wide column'>
             <img src='http://localhost:3000/images/happyCrew.jpg' alt='Team flexing with a young customer' />
@@ -75,8 +75,7 @@ const Landing = () => {
 
       <Banner
         title="We're equipped to safely handle your possessions"
-        imageUrl={'/images/equipment.jpg'}
-        // imageUrl='/images/stockBanner.jpg'
+        imageUrl='/images/equipment.jpg'
         height='350px'
       />
 
@@ -91,7 +90,7 @@ const Landing = () => {
         <Link href='#'>
           <button
             className='ui blue button huge'
-            title="Press here to go to our estimate request form"
+            title='Press here to go to our estimate request form'
           >
             Get a free estimate
           </button>

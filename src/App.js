@@ -1,4 +1,3 @@
-import './style/main.css'
 import React from 'react'
 import Preload from './components/Preload'
 import Route from './Route'
@@ -10,21 +9,20 @@ import Footer from './components/Footer'
 import About from './pages/About'
 
 const App = () => {
-
   return (
     <>
       <Header />
       <Route path='/'>
-        <Landing/>
+        <Landing />
       </Route>
       <Route path='/resources'>
-        <Resources/>
+        <Resources />
       </Route>
       <Route path='/about'>
-        <About/>
+        <About />
       </Route>
       <Route path='/call'>
-        <Call/>
+        <Call />
       </Route>
       <Preload />
       <Footer />

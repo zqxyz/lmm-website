@@ -9,7 +9,7 @@
 /* Cool fun wacky font */
 @font-face {
     font-family: 'cowboy';
-    src: url('http://localhost:3000/fonts/gomarice_nandaka_western.ttf');
+    src: url(/fonts/gomarice_nandaka_western.ttf);
     font-weight: normal;
     font-style: normal;
 }
@@ -210,7 +210,7 @@ pre {
 /* COLLAPSE */
 @media only screen and (max-width: 767px) {
     h1 {
-        text-align: center !important;
+        /* text-align: center !important; */
         font-size: 2em;
     }
 

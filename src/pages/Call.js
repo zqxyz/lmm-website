@@ -22,7 +22,6 @@ const Call = () => {
         </Link>
       </Container>
 
-
       <Container>
         <Columns>
           <column>

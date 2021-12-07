@@ -26,28 +26,29 @@ const SmallNav = ({ links }) => {
         </span>
       </Link>
 
-
       <div
         className={(dropdownVisible)
-            ? 'ui inline dropdown item right active visible'
-            : 'ui dropdown item right item'}
+          ? 'ui inline dropdown item right active visible'
+          : 'ui dropdown item right item'}
         onClick={() => setDropdownVisible(!dropdownVisible)}
       >
-          More
-          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
-            className="bi bi-list" viewBox="0 0 16 16" style={{ marginLeft: '1em' }}>
-            <path fillRule="evenodd" d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5
+
+        <svg
+          xmlns='http://www.w3.org/2000/svg' width='16' height='16' fill='currentColor'
+          className='bi bi-list' viewBox='0 0 16 16' alt='Menu' title='Links Menu'
+        >
+          <path
+            fillRule='evenodd' d='M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5
               0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5
-              0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5z" />
-          </svg>
-          <div className={`menu transition${(dropdownVisible) ? ' visible' : ' hidden'}`}>
-            {menuItems}
-          </div>
+              0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5z'
+          />
+        </svg>
+
+        <div className={`menu transition${(dropdownVisible) ? ' visible' : ' hidden'}`}>
+          {menuItems}
+        </div>
 
       </div>
-
-
-
 
     </>
   )

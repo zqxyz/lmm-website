@@ -41,12 +41,12 @@ const Container = ({ title, bgColor = '#cbd1b6', lightText, children }) => {
       >
         <div className={`page${(lightText || bgColor === 'dark') ? ' lightText' : ''}`}>
 
-          {(title) ?
-            <h1
-              id={`heading-${title.replace(' ', '-')}`}
-            >
+          {(title)
+            ? <h1
+                id={`heading-${title.replace(' ', '-')}`}
+              >
               {title}
-            </h1>
+              </h1>
             : null}
           {children}
         </div>

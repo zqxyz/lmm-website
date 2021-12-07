@@ -17,9 +17,9 @@ import Container from './Container'
  * &nbsp;`</p>`
  * `</Focus>`
  */
-const Focus = ({ bgColor, children }) => {
+const Focus = ({ bgColor, lightText, children }) => {
   return (
-    <Container bgColor={bgColor}>
+    <Container bgColor={bgColor} lightText={lightText}>
       <div
         className='page' style={{
           paddingBottom: '2em',

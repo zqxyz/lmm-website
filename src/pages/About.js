@@ -1,122 +1,103 @@
 import React, { Fragment } from 'react'
 import Tabs from '../components/Tabs'
 import Container from '../components/Container'
-import ContainerSplitLeft from '../components/ContainerSplitLeft'
+import ContainerSplitLeftWide from '../components/ContainerSplitLeftWide'
 import Checklist from '../components/Checklist'
 import Banner from '../components/Banner'
 import Columns from '../components/Columns'
 import Focus from '../components/Focus'
+import ContainerSplitLeft from '../components/ContainerSplitLeft'
 
 const About = () => {
   return (
     <>
 
       <Banner
-        title='Banner example'
-        imageUrl='/images/fadedBoxes.jpg'
-        height='275px'
+        title="Meet the Muscle"
+        imageUrl='/images/crew.jpg'
+        height='300px'
       >
-        <p>
-          Text inside a &lt;p&gt; tag is easy to see on an image
-          because it's given a white background when placed inside
-          the Banner component. The header is large and darkens the
-          text behind it. Darkened images must still be used to 
-          maintain legibility of the stylized heading on the banners.
-        </p>
       </Banner>
 
-      <Focus>
-        This page shows off the Components available to you. All the background
-        colors are easily specified. Or, as in the case of this section, can be
-        undefined and will default to this color.
+
+      <ContainerSplitLeftWide
+        title="Our story, in storage eunuchs"
+        bgColor="#f0ede7"
+      >
+        <p>
+          No doubt we're well acquanted with storage units, ten years
+          ago our story started in one! Founding partner Alex Sargent
+          got the idea to start a moving company after overhearing
+          complaints about the moving experience and attitude of the
+          movers people had hired. Ned Swain, a frequent customer,
+          liked the idea so much he brought it to two other friends,
+          Jake Holz and Jon Donnell. Soon after, Local Muscle was
+          born with the driving idea that customer service and attitude
+          of the crews will be what sets us apart. The results
+          speak for themselves.
+        </p>
+        <iframe style={{ width: '100%', minHeight: '300px' }} src="https://www.youtube.com/embed/zsexg2uA4ak"
+          title="YouTube video player" frameborder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+          allowfullscreen>
+        </iframe>
+      </ContainerSplitLeftWide>
+
+
+      <Focus
+        bgColor='rgb(203, 208, 188)'
+      >
+        <p style={{ fontSize: '1.5em' }}>
+          <strong>Our Mission</strong>: To provide a stress free and cost effective move that leaves you
+          wondering what you were worried about in the first place.
+        </p>
       </Focus>
 
-      <ContainerSplitLeft
-        title='Tabs example'
-        bgColor='#4d8c57'
+
+      <ContainerSplitLeftWide
+        title="Why choose Local Muscle?"
+        bgColor="rgb(226, 236, 228)"
       >
-        <>
-          This is a ContainerSplitLeft component
-        </>
-        <Tabs defaultTab='Moving'>
-          <tab title='Moving'>
-            <p>
-              We'll move you from your current location to your next.
-              We have years of experience providing excellent service.
-            </p>
-            <ul>
-              <li>
-                Trustworthiness is among the most important traits we look for
-                when hiring new movers. We understand the sensitivity involved
-                with allowing us into your home and handling your posessions.
-                We train our team to high standards of careful handling as well
-                as courteous conduct.
-              </li>
-            </ul>
-          </tab>
-          <tab title='Rearranging'>
-            <p>
-              Rearranging stuff text goes here
-            </p>
-          </tab>
-        </Tabs>
-      </ContainerSplitLeft>
+        <p>
+          We've built a reputation throughout New England as a moving company you can trust.
+          Whether you're moving halfway across the country or across the street, we've
+          got you covered.Throughout our history we really have seen it all, and use
+          that knowledge to make your move as smooth as possible.Many of our
+          customers have returned to us time and time again for their moving needs.
+          That being said, we prefer to let our reviews speak for themselves.
+          Check us out on Google Reviews and Yelp for more firsthand customer feedback!
+        </p>
+        <iframe style={{ width: '100%', minHeight: '300px' }} src="https://youtube.com/embed/CLv16TFTKNs"
+          title="YouTube video player" frameborder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+          allowfullscreen>
+        </iframe>
+      </ContainerSplitLeftWide>
+
 
       <Container
-        title='Checklist example'
+        // title="What can you expect with Local Muscle?"
+        bgColor='rgb(226, 236, 228)'
       >
-        <Checklist>
-          <>Item one</>
-          <>Item two</>
-          <>Don't forget to remember all that stuff you forgot</>
-          <><span style={{ color: 'transparent' }}>.</span></>
-          <><span style={{ color: 'transparent' }}>.</span></>
-          <>Final two</>
-        </Checklist>
+        <p>
+          Put simply, we want to change your opinion of movers
+          and moving for the better. Each move is carefully tailored
+          to best fit your needs and ensure a positive experience for
+          customers and crews alike. From the point you complete our
+          estimate form, a member of our dedicated staff will be in
+          contact with you every step of the way.
+        </p>
       </Container>
 
-      <Container
-        title='Dark container and Columns example'
-        bgColor='dark'
-      >
-        <Columns style={{ marginTop: '2em' }}>
-          <column>
-            <h2>You can escape the framework and use whatever JSX (~HTML) you want</h2>
-            <p>
-              Components make your life easier, but are not meant to be limiting. Styles
-              can be applied to &lt;Columns&gt; and individual &lt;column&gt; elements.
-            </p>
-          </column>
-          <column style={{
-            backgroundColor: 'white',
-            color: 'black',
-            borderRadius: '20px',
-            padding: '1.5'
-          }}
-          >
-            This column is using custom inline styles:
-            <pre style={{ color: 'black' }}>
 
-              &lt;column style=&#123;&#123;<br />
-              &nbsp;backgroundColor: 'white',<br />
-              &nbsp;color: 'black',<br />
-              &nbsp;borderRadius: '20px',<br />
-              &nbsp;padding: '1.5em'<br />
-              &#125;&#125;<br />
-              &gt;
-            </pre>
-          </column>
-          <column style={{ textAlign: 'right' }}>
-            <h2>Columns stack when squished</h2>
-            <p>
-              On a mobile phone, for example
-            </p>
-            <button className='ui button orange'>
-              Third Column button
-            </button>
-          </column>
-        </Columns>
-      </Container>
+      <Focus
+        bgColor='transparent'
+      >
+        <p style={{ fontSize: '1.5em' }}>
+          "I <em>love</em> lifting heavy awkward things, and running around." - Ned Swain
+        </p>
+      </Focus>
+
 
     </>
   )

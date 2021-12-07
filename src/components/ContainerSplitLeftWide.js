@@ -38,14 +38,14 @@ const ContainerSplitLeft = ({ title, bgColor = '#cbd1b6', lightText, children })
 
       <div className='ui stackable grid'>
 
-        <div className='five wide column'>
+        <div className='eleven wide column'>
           <h1 id={`heading-${title.replace(' ', '-')}`}>{title}</h1><br />
-          <div style={{ fontSize: '1.15em'}}>
+          <div style={{ fontSize: '1.15em', lineHeight: '1.5em' }}>
             {subTitle}
           </div>
         </div>
 
-        <div className='eleven wide column'>
+        <div className='five wide column'>
           {content}
         </div>
       </div>

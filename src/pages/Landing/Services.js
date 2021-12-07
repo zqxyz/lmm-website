@@ -1,11 +1,10 @@
-import React from 'react';
-import ContainerSplitLeft from '../../components/ContainerSplitLeft';
-import Tabs from '../../components/Tabs';
-import Link from '../../Link';
+import React from 'react'
+import ContainerSplitLeft from '../../components/ContainerSplitLeft'
+import Tabs from '../../components/Tabs'
+import Link from '../../Link'
 
 const Services = () => {
   return (
-
 
     <ContainerSplitLeft
       title='Services Offered'
@@ -55,7 +54,7 @@ const Services = () => {
             In many cases, we'll be able to get large items into the second
             floor of your home over the side of your deck or through a window.
             To determine if your hoist is within our scope of work,
-            fill out our <Link href="/estimate"> estimate form</Link> and we'll
+            fill out our <Link href='/estimate'> estimate form</Link> and we'll
             work with you to get it done.
           </p>
         </tab>
@@ -65,15 +64,16 @@ const Services = () => {
           <p>
             Local Muscle has loads of experience moving items up to 500 pounds,
             including pianos, gun safes, stone benches, and armoirs. To determine
-            if your item is within our scope of work, fill out our <Link href="/estimate">
-              estimate form</Link>.
+            if your item is within our scope of work, fill out our
+            <Link href='/estimate'>
+              estimate form
+            </Link>.
           </p>
         </tab>
 
       </Tabs>
 
     </ContainerSplitLeft>
-
 
   )
 }
