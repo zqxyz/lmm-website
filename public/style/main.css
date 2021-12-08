@@ -33,13 +33,15 @@ body {
 /* Banners and other images to preload */
 #preload {
     background-image:
-    url(/images/fadedBoxes.jpg),
-    url(/images/fadedMasthead.jpg),
-    url(/images/movingAction.JPG),
-    url(/images/crew.jpg);
-	opacity: 0.0; 
-	-ms-filter:progid:DXImageTransform.Microsoft.Alpha(Opacity= 0); /* // for IE8 */
-	filter: alpha(opacity= 0); /* //for IE5-7 */
+        url(/images/fadedBoxes.jpg),
+        url(/images/fadedMasthead.jpg),
+        url(/images/movingAction.JPG),
+        url(/images/crew.jpg);
+    opacity: 0.0;
+    -ms-filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=0);
+    /* // for IE8 */
+    filter: alpha(opacity=0);
+    /* //for IE5-7 */
 }
 
 a {
@@ -233,5 +235,21 @@ pre {
     .onlyOnLargeScreens {
         display: none !important;
         font-weight: 900;
+    }
+
+    ui.stackable.grid>.row>.wide.column,
+    .ui.stackable.grid>.wide.column,
+    .ui.stackable.grid>.column.grid>.column,
+    .ui.stackable.grid>.column.row>.column,
+    .ui.stackable.grid>.row>.column,
+    .ui.stackable.grid>.column:not(.row),
+    .ui.grid>.stackable.stackable.row>.column {
+        padding-left: 0 !important;
+        padding-right: 0 !important
+    }
+
+    .column>.column {
+        padding-left: 1rem !important;
+        padding-right: 1rem !important
     }
 }

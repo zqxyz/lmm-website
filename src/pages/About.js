@@ -1,12 +1,8 @@
-import React, { Fragment } from 'react'
-import Tabs from '../components/Tabs'
+import React from 'react'
 import Container from '../components/Container'
 import ContainerSplitLeftWide from '../components/ContainerSplitLeftWide'
-import Checklist from '../components/Checklist'
 import Banner from '../components/Banner'
-import Columns from '../components/Columns'
 import Focus from '../components/Focus'
-import ContainerSplitLeft from '../components/ContainerSplitLeft'
 
 const About = () => {
   return (

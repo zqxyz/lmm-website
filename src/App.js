@@ -7,6 +7,7 @@ import Call from './pages/Call'
 import Header from './components/Header'
 import Footer from './components/Footer'
 import About from './pages/About'
+import Join from './pages/Join'
 
 const App = () => {
   return (
@@ -20,6 +21,9 @@ const App = () => {
       </Route>
       <Route path='/about'>
         <About />
+      </Route>
+      <Route path='/join'>
+        <Join />
       </Route>
       <Route path='/call'>
         <Call />

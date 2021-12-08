@@ -11,10 +11,13 @@ const Resources = () => {
     <>
 
       <Container
-        title='Resources'
-        bgColor='dark'
+        title="Resources"
+        bgColor='rgb(54, 89, 59)'
+        lightText
       >
+        <p>
         Resources for customers
+        </p>
       </Container>
 
       <Container

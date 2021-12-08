@@ -10,13 +10,11 @@ const Services = () => {
       title='Services Offered'
       bgColor='rgb(157, 184, 155)'
     >
-
       <p>
         We're insured and FMCSA registered.
       </p>
 
       <Tabs defaultTab='Moving'>
-
         <tab title='Moving'>
           <h2>
             Moving doesn't have to be difficult
@@ -54,7 +52,7 @@ const Services = () => {
             In many cases, we'll be able to get large items into the second
             floor of your home over the side of your deck or through a window.
             To determine if your hoist is within our scope of work,
-            fill out our <Link href='/estimate'> estimate form</Link> and we'll
+            fill out our <Link href='/estimate'>estimate form</Link> and we'll
             work with you to get it done.
           </p>
         </tab>
@@ -70,7 +68,6 @@ const Services = () => {
             </Link>.
           </p>
         </tab>
-
       </Tabs>
 
     </ContainerSplitLeft>

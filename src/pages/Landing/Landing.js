@@ -10,6 +10,7 @@ const Landing = () => {
   return (
     <>
 
+
       <Banner
         imageUrl='/images/fadedMasthead.jpg'
         title="Let's get moving"
@@ -26,6 +27,7 @@ const Landing = () => {
         </Link>
       </Banner>
 
+
       <Container bgColor='dark'>
         <p style={{ textAlign: 'center' }}>
           At Local Muscle, we understand the serious responsibility
@@ -34,6 +36,7 @@ const Landing = () => {
           enhanced sanitization routines.
         </p>
       </Container>
+
 
       <Container bgColor='#315238' lightText>
         <div className='ui stackable grid'>
@@ -54,6 +57,7 @@ const Landing = () => {
         </div>
       </Container>
 
+
       <Container bgColor='rgb(58, 91, 66)' lightText>
         <div className='ui stackable grid'>
           <div className='six wide column'>
@@ -71,7 +75,9 @@ const Landing = () => {
         </div>
       </Container>
 
+
       <Services />
+
 
       <Banner
         title="We're equipped to safely handle your possessions"
@@ -79,7 +85,9 @@ const Landing = () => {
         height='350px'
       />
 
+
       <Reviews />
+
 
       <Focus bgColor='rgb(105, 171, 105)'>
         <h1>Start your move with us</h1>
@@ -96,6 +104,7 @@ const Landing = () => {
           </button>
         </Link>
       </Focus>
+
 
     </>
   )
