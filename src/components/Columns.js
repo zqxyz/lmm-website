@@ -1,27 +1,29 @@
 import React from 'react'
 
 /**
- * Create 1 through 10 equally wide, stackable columns
- * @children JSX `<column>` elements
+ * Create 2 through 10 equally wide, stackable columns
+ * @prop [`style`] -- React style object
+ * @children JSX `<column>` elements, can recieve individual
+ * `style` objects
  *
  * Usage example:
  *
- * `<Columns>`
- * &nbsp;`<column>`
- * &nbsp;&nbsp;`<h2>First Column</h2>`
- * &nbsp;&nbsp;`Column contents`
- * &nbsp;`</column>`
- * &nbsp;`<column>`
- * &nbsp;&nbsp;`<h2>Second Column</h2>`
- * &nbsp;&nbsp;`Second column's contents`
- * &nbsp;`</column>`
- *  &nbsp;`<column>`
- * &nbsp;&nbsp;`<h2>Third Column</h2>`
- * &nbsp;&nbsp;`<p>`
- * &nbsp;&nbsp;&nbsp;`Third column. A paragraph.`
- * &nbsp;&nbsp;`</p>`
- * &nbsp;`</column>`
- * `</Columns>`
+ * `<Columns>`  
+ * &nbsp;`<column>`  
+ * &nbsp;&nbsp;`<h2>First Column</h2>`  
+ * &nbsp;&nbsp;`Column contents`  
+ * &nbsp;`</column>`  
+ * &nbsp;`<column>`  
+ * &nbsp;&nbsp;`<h2>Second Column</h2>`  
+ * &nbsp;&nbsp;`Second column's contents`  
+ * &nbsp;`</column>`  
+ *  &nbsp;`<column>`  
+ * &nbsp;&nbsp;`<h2>Third Column</h2>`  
+ * &nbsp;&nbsp;`<p>`  
+ * &nbsp;&nbsp;&nbsp;`Third column. A paragraph.`  
+ * &nbsp;&nbsp;`</p>`  
+ * &nbsp;`</column>`  
+ * `</Columns>`  
  *
  */
 const Columns = ({ style, children }) => {
@@ -38,7 +40,6 @@ const Columns = ({ style, children }) => {
     )
   }))
   const numberWordsKey = {
-    1: 'one',
     2: 'two',
     3: 'three',
     4: 'four',

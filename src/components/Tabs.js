@@ -2,11 +2,11 @@ import React, { useState } from 'react'
 
 /**
  * Widget for information sorted by tabs
- * @prop {string} defaultTab title of tab to display by
- * default upon page load
- * @children pass `tab` elements containing `title`
+ * @prop {string} [`defaultTab`=children[0].props.title] -- title
+ * of tab to display by default upon page load
+ * @children pass `<tab>` elements containing `title`
  * prop each. The child elements of each `tab` will
- * render when parent title is selected.
+ * render when corresponding title is selected. 2 minimum.
  *
  * Usage example:
  *
@@ -25,6 +25,7 @@ import React, { useState } from 'react'
  *
  */
 const Tabs = ({ children, defaultTab }) => {
+  if (!defaultTab) defaultTab = children[0].props.title
   const [activeTab, setActiveTab] = useState(defaultTab)
 
   const titles = Array.from(children.map((child) => {

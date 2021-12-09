@@ -2,39 +2,34 @@ import React from 'react'
 
 /**
  * Container for section of page content
- * @prop {string} title - (optional) h1 title of page or banner message
- * @prop {string} bgColor - (optional) color for background, standard
- * html (hex or rgb), special term 'dark' can be used for light text
- * on dark bg
+ * @prop {string} `title` -- h1 title for contents of container
+ * @prop {string} [`bgColor`] -- HTML color for background. Can
+ * use hex/RGB/transparent/none. Special term 'dark' may be used
+ * to display light text on preset dark grey
+ * @prop {boolean} [`lightText`] -- used to display light text
+ * on manually set dark background
+ * @prop {string} [`id`] -- html id attribute
+ * @children JSX elements to render inside component.
  *
  * EXAMPLE:
  *
  *
- * `<Container`
- * &nbsp;&nbsp;`title="Walrus facts"`
- * &nbsp;&nbsp;`bgColor="#d2efdf"`
- * `>`
- * &nbsp;&nbsp;`<p>`
- * &nbsp;&nbsp;&nbsp;`The largest known walrus weighs ~3,700 lbs`
- * &nbsp;&nbsp;`</p>`
- * `</Container>`
+ * `<Container`  
+ * &nbsp;&nbsp;`title="Walrus facts"`  
+ * &nbsp;&nbsp;`bgColor="#d2efdf"`  
+ * `>`  
+ * &nbsp;&nbsp;`<p>`  
+ * &nbsp;&nbsp;&nbsp;`The largest known walrus weighs ~3,700 lbs`  
+ * &nbsp;&nbsp;`</p>`  
+ * `</Container>`  
  *
  */
 
 const Container = ({ title, bgColor = '#cbd1b6', lightText, id, children }) => {
-  // const clipboardWrite = text => {
-  //   navigator.clipboard.writeText(text).then(() => {
-  //     console.log('copied')
-  //   },
-  //     () => {
-  //       console.log('clipboard access blocked')
-  //     })
-  // }
-
   return (
     <>
       <div
-        id={(id) ? id : ''}
+        id={id}
         className={
           `container${(bgColor === 'dark') ? ' dark' : ''}`
         }

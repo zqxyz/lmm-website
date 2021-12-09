@@ -14,7 +14,7 @@ const Services = () => {
         We're insured and FMCSA registered.
       </p>
 
-      <Tabs defaultTab='Moving'>
+      <Tabs>
         <tab title='Moving'>
           <h2>
             Moving doesn't have to be difficult
