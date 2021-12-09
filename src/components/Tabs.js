@@ -10,18 +10,18 @@ import React, { useState } from 'react'
  *
  * Usage example:
  *
- * `<Tabs defaultTab="First Tab">`
- * &nbsp;`<tab title="First Tab">`
- * &nbsp; &nbsp;`<p>`
- * &nbsp; &nbsp; &nbsp; `Body of tab goes here.`
- * &nbsp; &nbsp;`<p>`
- * &nbsp;`</tab>`
- * &nbsp;`<tab title="Second Tab">`
- * &nbsp; &nbsp;`<p>`
- * &nbsp; &nbsp;&nbsp; `Tab 2 body goes here.`
- * &nbsp; &nbsp;`<p>`
- * &nbsp;`</tab>`
- * `</Tabs>`
+ * `<Tabs defaultTab="First Tab">`  
+ * &nbsp;`<tab title="First Tab">`  
+ * &nbsp; &nbsp;`<p>`  
+ * &nbsp; &nbsp; &nbsp; `Body of tab goes here.`  
+ * &nbsp; &nbsp;`<p>`  
+ * &nbsp;`</tab>`  
+ * &nbsp;`<tab title="Second Tab">`  
+ * &nbsp; &nbsp;`<p>`  
+ * &nbsp; &nbsp;&nbsp; `Tab 2 body goes here.`  
+ * &nbsp; &nbsp;`<p>`  
+ * &nbsp;`</tab>`  
+ * `</Tabs>`  
  *
  */
 const Tabs = ({ children, defaultTab }) => {

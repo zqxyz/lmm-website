@@ -21,7 +21,7 @@ import React from 'react'
  *
  */
 
-const Container = ({ title, bgColor = '#cbd1b6', lightText, children }) => {
+const Container = ({ title, bgColor = '#cbd1b6', lightText, id, children }) => {
   // const clipboardWrite = text => {
   //   navigator.clipboard.writeText(text).then(() => {
   //     console.log('copied')
@@ -34,6 +34,7 @@ const Container = ({ title, bgColor = '#cbd1b6', lightText, children }) => {
   return (
     <>
       <div
+        id={(id) ? id : ''}
         className={
           `container${(bgColor === 'dark') ? ' dark' : ''}`
         }

@@ -67,9 +67,10 @@ a:focus {
 }
 
 #footer {
-    background: url(http://localhost:3000/images/boxPlaceholder.png) no-repeat;
+    background: url(/images/boxPlaceholder.png) no-repeat;
     background-position: top left 15%;
-    height: 200px;
+    background-size: 200px;
+    height: 135px;
     width: 100vw;
     margin: 0;
     padding: 2em;
@@ -245,11 +246,6 @@ pre {
     .ui.stackable.grid>.column:not(.row),
     .ui.grid>.stackable.stackable.row>.column {
         padding-left: 0 !important;
-        padding-right: 0 !important
-    }
-
-    .column>.column {
-        padding-left: 1rem !important;
-        padding-right: 1rem !important
+        padding-right: 0 !important;
     }
 }

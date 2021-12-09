@@ -16,14 +16,17 @@ const Resources = () => {
         lightText
       >
         <p>
-        Resources for customers
+          Resources for customers
         </p>
       </Container>
 
-      <Container
+      <ContainerSplitLeft
         title='Moving Checklist'
         bgColor='#cbd1b6'
       >
+        <p>
+          Quick reference for steps to ensure your move goes off without a hitch
+        </p>
         <Checklist>
           <>All small and loose items are protected and boxed</>
           <>A 'no pack' zone is designated for essentials (phone chargers, medicine, keys)</>
@@ -42,11 +45,11 @@ const Resources = () => {
         </Checklist>
         <a
           target='_blank' rel='noopener noreferrer'
-          href='http://localhost:3000/documents/Local_Muscle_In-State_Terms_and_Conditions-Dec2021.pdf'
+          href='/documents/Local_Muscle_In-State_Terms_and_Conditions-Dec2021.pdf'
         >
-          Longer, printable version [x]
+          Longer, printable version [placeholder]
         </a>
-      </Container>
+      </ContainerSplitLeft>
 
       <ContainerSplitLeft
         title='Policies and Contracts'
@@ -64,7 +67,7 @@ const Resources = () => {
               <li>
                 <a
                   target='_blank' rel='noopener noreferrer'
-                  href='http://localhost:3000/documents/Local_Muscle_In-State_Terms_and_Conditions-Dec2021.pdf'
+                  href='/documents/Local_Muscle_In-State_Terms_and_Conditions-Dec2021.pdf'
                 >
                   In State Terms and Conditions Outline
                 </a>
@@ -72,7 +75,7 @@ const Resources = () => {
               <li>
                 <a
                   target='_blank' rel='noopener noreferrer'
-                  href='http://localhost:3000/documents/Local_Muscle_In-State_Full_Valuation_Coverage__Liability-Dec2021.pdf'
+                  href='/documents/Local_Muscle_In-State_Full_Valuation_Coverage__Liability-Dec2021.pdf'
                 >
                   In State Full Value Replacement Coverage
                 </a>
@@ -85,17 +88,17 @@ const Resources = () => {
               <li>
                 <a
                   target='_blank' rel='noopener noreferrer'
-                  href='http://localhost:3000/documents/Local_Muscle_In-State_Terms_and_Conditions-Dec2021.pdf'
+                  href='/documents/Local_Muscle_In-State_Terms_and_Conditions-Dec2021.pdf'
                 >
-                  Interstate Terms and Conditions [x]
+                  Interstate Terms and Conditions [placeholder]
                 </a>
               </li>
               <li>
                 <a
                   target='_blank' rel='noopener noreferrer'
-                  href='http://localhost:3000/documents/Local_Muscle_In-State_Terms_and_Conditions-Dec2021.pdf'
+                  href='/documents/Local_Muscle_In-State_Terms_and_Conditions-Dec2021.pdf'
                 >
-                  Interstate Full Value Replacement Coverage [x]
+                  Interstate Full Value Replacement Coverage [placeholder]
                 </a>
               </li>
               <li>

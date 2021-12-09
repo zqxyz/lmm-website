@@ -1,4 +1,4 @@
-#headwrap {
+#headContainer {
     background: url(/images/russBg.png) bottom left 25px no-repeat;
     background-size: 155px;
 }
@@ -8,7 +8,7 @@
     margin: 1em auto 2em auto;
 }
 
-#navWrap {
+#headWrap {
     margin: 0 auto 0 auto;
     max-width: 1300px;
     padding: 0 2em 0 2em
@@ -67,14 +67,14 @@
 }
 
 @media only screen and (max-width: 1750px) {
-    #headwrap {
+    #headContainer {
         background-position: bottom left 15px;
         background-size: 140px;
     }
 }
 
 @media only screen and (max-width: 1615px) {
-    #headwrap {
+    #headContainer {
         background-position: bottom left 12px;
         background-size: 120px;
 
@@ -82,7 +82,7 @@
 }
 
 @media only screen and (max-width: 1550px) {
-    #headwrap {
+    #headContainer {
         background: none
     }
 

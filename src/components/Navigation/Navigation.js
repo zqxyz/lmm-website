@@ -15,12 +15,12 @@ const Navigation = () => {
   }
 
   return (
-    <div id='navWrap'>
+    // <div id='navWrap'>
       <div className='ui menu' id='navigation'>
 
         {navByWidth()}
 
-      </div>
+      {/* </div> */}
     </div>
   )
 }
