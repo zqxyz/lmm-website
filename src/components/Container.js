@@ -39,10 +39,10 @@ const Container = ({ title, bgColor = '#cbd1b6', lightText, id, children }) => {
 
           {(title)
             ? <h1
-                id={`heading-${title.replace(' ', '-')}`}
-              >
+              id={`heading-${title.replace(' ', '-')}`}
+            >
               {title}
-              </h1>
+            </h1>
             : null}
           {children}
         </div>

@@ -1,6 +1,6 @@
 import React from 'react'
 import Container from '../components/Container'
-import ContainerSplitLeft from '../components/ContainerSplitLeft'
+import ContainerSplitRight from '../components/ContainerSplitRight'
 
 const Join = () => {
   return (
@@ -34,7 +34,7 @@ const Join = () => {
       </Container>
 
 
-      <ContainerSplitLeft
+      <ContainerSplitRight
         title="Application Form"
         bgColor="rgb(220, 230, 223)"
       >
@@ -67,7 +67,7 @@ const Join = () => {
           <div className="ui blue button" tabIndex="0">Submit</div>
         </form>
 
-      </ContainerSplitLeft>
+      </ContainerSplitRight>
 
 
     </>

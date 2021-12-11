@@ -3,7 +3,7 @@ import Container from './Container'
 
 /**
  * Two column container for section of page content with header
- * on and body left with secondary content on right
+ * on left and body on the right
  * @prop {string} `title` -- h1 title for contents of container
  * @prop {string} [`bgColor`] -- HTML color for background. Can
  * use hex/RGB/transparent/none. Special term 'dark' may be used
@@ -12,25 +12,28 @@ import Container from './Container'
  * on manually set dark background
  * @prop {string} [`id`] -- html id attribute
  * @children JSX elements to render inside component. First element
- * displays under title as primary content. Remaining children
- * display as secondary elements to right of main body.
- *
+ * acts as subtitle. Buttons or widgets may be used instead.
+ * Remaining child elements will render inside right column.
  * EXAMPLE:
  *
  *
- * `<ContainerSplitLeftWide`  
+ * `<ContainerSplitLeft`  
  * &nbsp;&nbsp;`title="Section title"`  
  * &nbsp;&nbsp;`bgColor="#d2efdf"`  
  * `>`  
- * &nbsp;&nbsp;`<p>`  
- * &nbsp;&nbsp;&nbsp;`Main content goes here`  
- * &nbsp;&nbsp;`</p>`  
- * &nbsp;&nbsp;`<img src="#" alt="secondary content" />`  
- * `</ContainerSplitLeftWide>`  
+ * &nbsp;&nbsp;`<>`  
+ * &nbsp;&nbsp;&nbsp;`Subtitle for section`  
+ * &nbsp;&nbsp;`</>`  
+ * &nbsp;&nbsp;`<ul>`  
+ * &nbsp;&nbsp;&nbsp;`<li>List item one</li>`  
+ * &nbsp;&nbsp;&nbsp;`<li>List item two</li>`  
+ * &nbsp;&nbsp;&nbsp;`<li>List item three</li>`  
+ * &nbsp;&nbsp;`</ul>`  
+ * `</ContainerSplitLeft>`  
  *
  */
 
-const ContainerSplitLeft = ({ title, bgColor = '#cbd1b6', lightText, id, children }) => {
+const ContainerSplitRight = ({ title, bgColor = '#cbd1b6', lightText, id, children }) => {
   const subTitle = children[0].props.children
   const content = Array.from(children).splice(1)
 
@@ -39,14 +42,14 @@ const ContainerSplitLeft = ({ title, bgColor = '#cbd1b6', lightText, id, childre
 
       <div className='ui stackable grid'>
 
-        <div className='eleven wide column'>
+        <div className='five wide column'>
           <h1 id={`heading-${title.replace(' ', '-')}`}>{title}</h1><br />
-          <div style={{ fontSize: '1.15em', lineHeight: '1.5em' }}>
+          <div style={{ fontSize: '1.15em'}}>
             {subTitle}
           </div>
         </div>
 
-        <div className='five wide column'>
+        <div className='eleven wide column'>
           {content}
         </div>
       </div>
@@ -55,4 +58,4 @@ const ContainerSplitLeft = ({ title, bgColor = '#cbd1b6', lightText, id, childre
   )
 }
 
-export default ContainerSplitLeft
+export default ContainerSplitRight

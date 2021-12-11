@@ -1,6 +1,6 @@
 import React from 'react'
 import Container from '../components/Container'
-import ContainerSplitLeft from '../components/ContainerSplitLeft'
+import ContainerSplitRight from '../components/ContainerSplitRight'
 import Columns from '../components/Columns'
 import Checklist from '../components/Checklist'
 import Focus from '../components/Focus'
@@ -20,7 +20,7 @@ const Resources = () => {
         </p>
       </Container>
 
-      <ContainerSplitLeft
+      <ContainerSplitRight
         title='Moving Checklist'
         bgColor='#cbd1b6'
       >
@@ -49,9 +49,9 @@ const Resources = () => {
         >
           Longer, printable version [placeholder]
         </a>
-      </ContainerSplitLeft>
+      </ContainerSplitRight>
 
-      <ContainerSplitLeft
+      <ContainerSplitRight
         title='Policies and Contracts'
         bgColor='rgb(210, 239, 223)'
       >
@@ -121,7 +121,7 @@ const Resources = () => {
           </column>
         </Columns>
 
-      </ContainerSplitLeft>
+      </ContainerSplitRight>
 
       <Focus bgColor='rgb(105, 171, 105)'>
         <h1>Start your move with us</h1>

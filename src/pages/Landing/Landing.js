@@ -80,7 +80,7 @@ const Landing = () => {
 
 
       <Banner
-        title="We're equipped to safely handle your possessions"
+        title="We're equipped to safely handle your goods"
         imageUrl='/images/equipment.jpg'
         height='350px'
       />

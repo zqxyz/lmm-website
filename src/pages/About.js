@@ -1,6 +1,6 @@
 import React from 'react'
 import Container from '../components/Container'
-import ContainerSplitLeftWide from '../components/ContainerSplitLeftWide'
+import ContainerSplitLeft from '../components/ContainerSplitLeft'
 import Banner from '../components/Banner'
 import Focus from '../components/Focus'
 
@@ -16,7 +16,7 @@ const About = () => {
       </Banner>
 
 
-      <ContainerSplitLeftWide
+      <ContainerSplitLeft
         title="Our story, in storage eunuchs"
         bgColor="#f0ede7"
       >
@@ -37,7 +37,7 @@ const About = () => {
           allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
           allowfullscreen>
         </iframe>
-      </ContainerSplitLeftWide>
+      </ContainerSplitLeft>
 
 
       <Focus
@@ -50,7 +50,7 @@ const About = () => {
       </Focus>
 
 
-      <ContainerSplitLeftWide
+      <ContainerSplitLeft
         title="Why choose Local Muscle?"
         bgColor="rgb(226, 236, 228)"
       >
@@ -68,7 +68,7 @@ const About = () => {
           allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
           allowfullscreen>
         </iframe>
-      </ContainerSplitLeftWide>
+      </ContainerSplitLeft>
 
 
       <Container

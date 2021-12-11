@@ -1,12 +1,12 @@
 import React from 'react'
-import ContainerSplitLeft from '../../components/ContainerSplitLeft'
+import ContainerSplitRight from '../../components/ContainerSplitRight'
 import Tabs from '../../components/Tabs'
 import Link from '../../Link'
 
 const Services = () => {
   return (
 
-    <ContainerSplitLeft
+    <ContainerSplitRight
       title='Services Offered'
       bgColor='rgb(157, 184, 155)'
     >
@@ -70,7 +70,7 @@ const Services = () => {
         </tab>
       </Tabs>
 
-    </ContainerSplitLeft>
+    </ContainerSplitRight>
 
   )
 }
