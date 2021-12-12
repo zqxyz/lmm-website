@@ -6,7 +6,7 @@ Website content and framework for localmusclemovers.com
 
 All pages are store directly in `src/pages/` as a `.js` file. The exception being the home page, which is nested in a folder at `src/pages/Landing/`.
 
-The pages are very much like normal HTML with improved semantics. For example, the page at `/call` contains an element made of the following code: 
+The pages are JSX, which is very much like normal HTML. The page at `/call` contains an element made of the following code: 
 
     <Container
         title='Contacting us by phone'
@@ -25,6 +25,8 @@ The pages are very much like normal HTML with improved semantics. For example, t
     </Container>
 
 This page uses the provided `<Container>` component. Note that the C is capitalized for special componenents like this.
+
+# Layout Components
 
 ## `<Container>`
 
@@ -50,7 +52,7 @@ There are 4 attributes you can pass to a `<Container>`:
         </p>
     </Container>
 
-    Values may be undefined and will use defaults without error:
+Values may be undefined and will use defaults without error:
 
     <Container>
         <h1>Prices</h1>
@@ -140,7 +142,6 @@ A simple container for emphasizing contents
 
 ### Example
 
-
       <Focus
         bgColor='transparent'
       >
@@ -148,3 +149,41 @@ A simple container for emphasizing contents
           "I <em>love</em> lifting heavy awkward things, and running around." - Ned Swain
         </p>
       </Focus>
+
+## `<Columns>`
+
+A container for evenly divided columns. Fill with 2 to 10 `<column>` elements (note lowercase c). Columns will stack when squished at widths below 768px.
+
+### Example
+
+    <Columns>
+     <column>
+      <h2>First Column</h2>
+      Column contents
+     </column>
+     <column>
+      <h2>Second Column</h2>
+      Second column's contents
+     </column>
+     <column>
+      <h2>Third Column</h2>
+      <p>
+       Third column. A paragraph.
+      </p>
+     </column>
+    </Columns>
+
+# Widget Components
+
+## `<Checklist>`
+
+Creates a corny notepad style checklist/todo list. Wrap items in `<>` shorthand fragments.
+
+## Example
+
+    <Checklist>
+     <>List item one</>
+     <>List item two</>
+     <>List item three</>
+     <>Final list item</>
+    </Checklist>
