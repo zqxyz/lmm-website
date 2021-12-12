@@ -1,8 +1,26 @@
-import React, { useState } from 'react'
+import React, { useState, useEffect, useRef } from 'react'
 import Link from '../../Link'
 
 const SmallNav = ({ links }) => {
   const [dropdownVisible, setDropdownVisible] = useState(false)
+  const ref = useRef()
+
+  useEffect(() => {
+    const onBodyClick = event => {
+      if (ref.current.contains(event.target)) {
+        return
+      }
+      setDropdownVisible(false)
+    }
+
+    document.body.addEventListener(
+      'click', onBodyClick, { capture: true }
+    )
+
+    return () => {
+      document.body.removeEventListener('click', onBodyClick, { capture: true })
+    }
+  }, [])
 
   let i = 0
   const menuItems = [...links].splice(1).map(item => {
@@ -31,6 +49,12 @@ const SmallNav = ({ links }) => {
           ? 'ui inline dropdown item right active visible'
           : 'ui dropdown item right item'}
         onClick={() => setDropdownVisible(!dropdownVisible)}
+        onKeyDown={e => {
+          if (e.key === 'Enter') setDropdownVisible(!dropdownVisible)
+          else if (e.key === 'Escape' || e.key === 'Esc') setDropdownVisible(false)
+        }}
+        tabIndex='0'
+        ref={ref}
       >
 
         <svg
@@ -44,7 +68,9 @@ const SmallNav = ({ links }) => {
           />
         </svg>
 
-        <div className={`menu transition${(dropdownVisible) ? ' visible' : ' hidden'}`}>
+        <div
+          className={`menu transition${(dropdownVisible) ? ' visible' : ' hidden'}`}
+        >
           {menuItems}
         </div>
 

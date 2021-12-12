@@ -1,14 +1,6 @@
 import React from 'react'
 import Link from '../../Link'
 
-/*
-NAVIGATION. NO BREATHING.
-DON'T GIVE A FUCK IF I
-CLICK A LINK FREELY.
-
-THIS IS ONE OF THREE RESORTS.
-*/
-
 const BigNav = ({ links }) => {
   // Primary links, left aligned
   let i = 0

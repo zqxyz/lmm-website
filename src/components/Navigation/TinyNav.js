@@ -1,8 +1,9 @@
-import React, { useState } from 'react'
+import React, { useState, useEffect, useRef } from 'react'
 import Link from '../../Link'
 
 const Mini = ({ links }) => {
   const [dropdownVisible, setDropdownVisible] = useState(false)
+  const ref = useRef()
 
   let i = 0
   const menuItems = links.map(item => {
@@ -17,10 +18,33 @@ const Mini = ({ links }) => {
     )
   })
 
+  useEffect(() => {
+    const onBodyClick = event => {
+      if (ref.current.contains(event.target)) {
+        return
+      }
+      setDropdownVisible(false)
+    }
+
+    document.body.addEventListener(
+      'click', onBodyClick, { capture: true }
+    )
+
+    return () => {
+      document.body.removeEventListener('click', onBodyClick, { capture: true })
+    }
+  }, [])
+
   return (
     <div
       className='link header item mini'
       onClick={() => setDropdownVisible(!dropdownVisible)}
+      onKeyDown={e => {
+        if (e.key === 'Enter') setDropdownVisible(!dropdownVisible)
+        else if (e.key === 'Escape' || e.key === 'Esc') setDropdownVisible(false)
+      }}
+      tabIndex='0'
+      ref={ref}
     >
 
       <div
@@ -29,7 +53,10 @@ const Mini = ({ links }) => {
       >
         {/* {links[0].name} */}
         Local<br /> Muscle
-        <div className={`menu transition${(dropdownVisible) ? ' visible' : ' hidden'}`}>
+        <div
+          className={`menu transition${(dropdownVisible) ? ' visible' : ' hidden'}`}
+          onKeyUp={e => { if (e.key === 'Enter') setDropdownVisible(false) }}
+        >
           {menuItems}
         </div>
       </div>

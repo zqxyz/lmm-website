@@ -32151,7 +32151,7 @@
      cursor: pointer;
      position: relative;
      display: inline-block;
-     outline: none;
+     /* outline: none; */
      text-align: left;
      -webkit-transition: width 0.1s ease, -webkit-box-shadow 0.1s ease;
      transition: width 0.1s ease, -webkit-box-shadow 0.1s ease;
