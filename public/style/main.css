@@ -1,6 +1,7 @@
 @import url('./header.css');
 @import url('./checklist.css');
 @import url('./tabs.css');
+@import url('./forms.css');
 
 * {
     font-family: 'Roboto', sans-serif;
@@ -67,9 +68,9 @@ a:focus {
 }
 
 #footer {
-    background: url(/images/boxPlaceholder.png) no-repeat;
+    /* background: url(/images/boxPlaceholder.png) no-repeat;
     background-position: top left 15%;
-    background-size: 200px;
+    background-size: 200px; */
     height: 135px;
     width: 100vw;
     margin: 0;

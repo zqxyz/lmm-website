@@ -70,6 +70,7 @@ const SmallNav = ({ links }) => {
 
         <div
           className={`menu transition${(dropdownVisible) ? ' visible' : ' hidden'}`}
+          onKeyUp={e => { if (e.key === 'Enter') setDropdownVisible(false) }}
         >
           {menuItems}
         </div>

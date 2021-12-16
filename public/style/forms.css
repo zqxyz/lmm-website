@@ -1,0 +1,10 @@
+legend {
+    font-size: 1.25em;
+    font-weight: 800;
+    padding: 2px
+}
+
+input::placeholder {
+    color: #5e5e5e !important;
+    font-style: italic;
+}
