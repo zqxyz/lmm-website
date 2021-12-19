@@ -20754,7 +20754,7 @@
  .ui.form .field.error .checkbox label:after,
  .ui.form .fields.error .field .checkbox .box:after,
  .ui.form .field.error .checkbox .box:after {
-     color: #9F3A38;
+     /* color: #9F3A38; */
  }
 
  /*--------------------
@@ -31220,7 +31220,6 @@
      vertical-align: baseline;
      font-style: normal;
      min-height: 17px;
-     font-size: 1rem;
      line-height: 17px;
      min-width: 17px;
  }
@@ -31251,7 +31250,7 @@
      display: block;
      padding-left: 1.85714em;
      outline: none;
-     font-size: 1em;
+     /* font-size: 1em; */
  }
 
  .ui.checkbox .box:before,
@@ -31285,7 +31284,7 @@
      height: 17px;
      text-align: center;
      opacity: 0;
-     color: rgba(0, 0, 0, 0.87);
+     /* color: rgba(0, 0, 0, 0.87); */
      -webkit-transition: border 0.1s ease, opacity 0.1s ease, -webkit-transform 0.1s ease, -webkit-box-shadow 0.1s ease;
      transition: border 0.1s ease, opacity 0.1s ease, -webkit-transform 0.1s ease, -webkit-box-shadow 0.1s ease;
      transition: border 0.1s ease, opacity 0.1s ease, transform 0.1s ease, box-shadow 0.1s ease;
@@ -31300,7 +31299,7 @@
 
  .ui.checkbox label,
  .ui.checkbox+label {
-     color: rgba(0, 0, 0, 0.87);
+     /* color: rgba(0, 0, 0, 0.87); */
      -webkit-transition: color 0.1s ease;
      transition: color 0.1s ease;
  }
@@ -31325,10 +31324,10 @@
      border-color: rgba(34, 36, 38, 0.35);
  }
 
- .ui.checkbox label:hover,
+ /* .ui.checkbox label:hover,
  .ui.checkbox+label:hover {
      color: rgba(0, 0, 0, 0.8);
- }
+ } */
 
  /*--------------
        Down
@@ -31340,14 +31339,14 @@
      border-color: rgba(34, 36, 38, 0.35);
  }
 
- .ui.checkbox .box:active::after,
+ /* .ui.checkbox .box:active::after,
  .ui.checkbox label:active::after {
      color: rgba(0, 0, 0, 0.95);
- }
+ } */
 
- .ui.checkbox input:active~label {
+ /* .ui.checkbox input:active~label {
      color: rgba(0, 0, 0, 0.95);
- }
+ } */
 
  /*--------------
       Focus
@@ -31855,7 +31854,7 @@
 
  .ui.checkbox input:indeterminate~.box:after,
  .ui.checkbox input:indeterminate~label:after {
-     font-size: 12px;
+     /* font-size: 12px; */
      content: '\e801';
  }
 

@@ -12,8 +12,7 @@ const About = () => {
         title="Meet the Muscle"
         imageUrl='/images/crew.jpg'
         height='300px'
-      >
-      </Banner>
+      />
 
 
       <ContainerSplitLeft
