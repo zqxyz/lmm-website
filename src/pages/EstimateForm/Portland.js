@@ -75,7 +75,7 @@ const Portland = () => {
       >
         <>
           Request an estimate for moving service from Local Muscle
-          in <strong>Portland, Maine</strong>.
+          in <strong>Portland, Maine</strong>
           {postResponse}
         </>
         <div class="ui large form">

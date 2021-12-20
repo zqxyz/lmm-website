@@ -1,6 +1,7 @@
 import React from 'react';
 import Container from '../components/Container';
 import Portland from './EstimateForm/Portland';
+import Banner from '../components/Banner'
 
 const Estimate = () => {
   const [branch, setBranch] = React.useState('')
@@ -12,11 +13,7 @@ const Estimate = () => {
         bgColor='dark'
       >
         <p>
-          Choose the branch you'd like to contact using the options above.
-        </p>
-        <p>
-          If you are moving from Portland to Burlington, or Burlington to Portland,
-          choose the branch closer to your origin location.
+            Choose the branch you'd like to contact using the options above.
         </p>
       </Container>
     )
@@ -26,29 +23,30 @@ const Estimate = () => {
     if (branch === '') return chooseBranchPrompt()
     if (branch === 'portland') return <Portland />
     if (branch === 'burlington') return <>burlington goes here</>
-
   }
 
   return (
     <>
-      <Container
-        bgColor='#64866d'
+      <Banner
+        imageUrl='/images/geo.jpg'
       >
         <center>
           <button
-            className={`ui ${(branch === 'portland') ? 'blue' : 'grey'} button huge`}
+            className={`ui ${(branch === 'portland') ? 'blue' : ''} button huge`}
             onClick={() => { setBranch('portland') }}
+            style={{ marginTop: '1em' }}
           >
             Portland, ME {(branch === 'portland') ? '✔' : ''}
           </button>
           <button
-            className={`ui ${(branch === 'burlington') ? 'blue' : 'grey'} button huge`}
+            className={`ui ${(branch === 'burlington') ? 'blue' : ''} button huge`}
             onClick={() => { setBranch('burlington') }}
+            style={{ marginTop: '1em' }}
           >
             Burlington, VT {(branch === 'burlington') ? '✔' : ''}
           </button>
         </center>
-      </Container>
+      </Banner>
 
       {renderBranchForm()}
     </>
