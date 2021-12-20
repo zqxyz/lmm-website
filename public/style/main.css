@@ -37,7 +37,8 @@ body {
         url(/images/fadedBoxes.jpg),
         url(/images/fadedMasthead.jpg),
         url(/images/movingAction.JPG),
-        url(/images/crew.jpg);
+        url(/images/crew.jpg),
+        url(/images/geo.jpg);
     opacity: 0.0;
     -ms-filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=0);
     /* // for IE8 */
@@ -64,7 +65,7 @@ a:focus {
 #root {
     position: relative;
     padding-bottom: 200px;
-    min-height: 100vh !important;
+    min-height: 100% !important;
 }
 
 #footer {
@@ -114,14 +115,14 @@ h1 {
     border: 1px solid rgba(35, 37, 28, 0.78);
 }
 
-.container button {
+.container button.pop {
     -webkit-box-shadow: 6px 6px 4px 0px rgba(35, 37, 28, 0.78) !important;
     box-shadow: 6px 6px 4px 0px rgba(35, 37, 28, 0.4) !important;
     margin-bottom: 1em !important;
     border: 1px solid rgb(255, 255, 255) !important;
 }
 
-.container button:active {
+.container button.pop:active {
     -webkit-box-shadow: 2px 2px 4px 0px rgba(35, 37, 28, 0.78) !important;
     box-shadow: 2px 2px 4px 0px rgba(35, 37, 28, 0.4) !important;
     margin-bottom: 1em !important;
@@ -131,11 +132,11 @@ h1 {
     left: 2px
 }
 
-.container button a {
+.container button.pop a {
     color: white;
 }
 
-.container button:active a {
+.container button.pop:active a {
     color: rgb(228, 228, 228);
 
 }
@@ -212,6 +213,7 @@ pre {
     font-family: monospace !important;
     font-size: 0.75em
 }
+
 
 @media only screen and (max-width: 1300px) {
     h1 {

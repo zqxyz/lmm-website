@@ -12,14 +12,15 @@ const Landing = () => {
 
 
       <Banner
-        imageUrl='/images/fadedMasthead.jpg'
+        // imageUrl='/images/fadedMasthead.jpg'
+        imageUrl='/images/streets.jpg'
         title="Let's get moving"
         height='300px'
       >
         <br />
         <Link href='/estimate'>
           <button
-            className='ui blue button huge'
+            className='ui blue button huge pop'
             title='Press here to go to our estimate request form'
           >
             Get a free estimate
@@ -97,7 +98,7 @@ const Landing = () => {
         <br />
         <Link href='#'>
           <button
-            className='ui blue button huge'
+            className='ui blue button huge pop'
             title='Press here to go to our estimate request form'
           >
             Get a free estimate

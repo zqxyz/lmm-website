@@ -4,7 +4,7 @@ const Footer = () => {
   return (
     <>
       <div id='footer'>
-        Local Muscle Movers © 2022<br />
+        Local Muscle Movers<br />
         <strong>US DOT# 2162841</strong>
       </div>
     </>

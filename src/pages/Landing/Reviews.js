@@ -3,13 +3,11 @@ import Columns from '../../components/Columns'
 import Container from '../../components/Container'
 import reviewJson from '../../config/reviews.json'
 
-function shuffle (array) {
+function shuffle(array) {
   let currentIndex = array.length; let randomIndex
-
   while (currentIndex !== 0) {
     randomIndex = Math.floor(Math.random() * currentIndex)
     currentIndex--;
-
     [array[currentIndex], array[randomIndex]] = [
       array[randomIndex], array[currentIndex]]
   }
@@ -18,8 +16,8 @@ function shuffle (array) {
 }
 
 const Reviews = () => {
-  // Pulls 3 review at random from src/reviews.json
-  const reviews = shuffle(reviewJson).slice(0, 3)
+  const fetchThreeReviews = () => { return shuffle(reviewJson).slice(0, 3) }
+  const [reviews, setReviews] = React.useState(fetchThreeReviews())
 
   return (
     <Container bgColor='#44663f' lightText>
@@ -38,6 +36,15 @@ const Reviews = () => {
           )
         })}
       </Columns>
+      <div className="ui block clear" style={{margin: '1.5em 0 3.5em 0'}}>
+        <button
+          className="ui button small green right floated"
+          style={{ margin: '1em 0 1em 0', color: 'black' }}
+          onClick={() => setReviews(fetchThreeReviews())}
+        >
+          More reviews
+        </button>
+      </div>
     </Container>
   )
 }

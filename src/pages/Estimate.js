@@ -32,14 +32,14 @@ const Estimate = () => {
       >
         <center>
           <button
-            className={`ui ${(branch === 'portland') ? 'blue' : ''} button huge`}
+            className={`ui ${(branch === 'portland') ? 'blue' : ''} button huge pop`}
             onClick={() => { setBranch('portland') }}
             style={{ marginTop: '1em' }}
           >
             Portland, ME {(branch === 'portland') ? '✔' : ''}
           </button>
           <button
-            className={`ui ${(branch === 'burlington') ? 'blue' : ''} button huge`}
+            className={`ui ${(branch === 'burlington') ? 'blue' : ''} button huge pop`}
             onClick={() => { setBranch('burlington') }}
             style={{ marginTop: '1em' }}
           >

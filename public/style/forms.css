@@ -1,7 +1,7 @@
 legend {
     font-size: 1.5em;
     font-weight: 800;
-    background-color: #206051;
+    background-color: rgb(66, 89, 76);
     -webkit-border-radius: 4px;
     -moz-border-radius: 4px;
     border-radius: 4px;
@@ -11,7 +11,7 @@ legend {
 }
 
 fieldset {
-    background-color: rgb(27, 83, 70);
+    background-color: rgb(24, 74, 58);
     -webkit-border-radius: 5px;
     -moz-border-radius: 5px;
     border-radius: 5px;
