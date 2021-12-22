@@ -21,7 +21,7 @@ import React from 'react'
  * `</Banner>`  
  *
  */
-const Banner = ({ title, height, imageUrl, children }) => {
+const Banner = ({ title, height, imageUrl, lightText, children }) => {
   return (
     <>
       <div
@@ -35,7 +35,7 @@ const Banner = ({ title, height, imageUrl, children }) => {
           }
         }
       >
-        <div className='page'>
+        <div className={`page${(lightText) ? ' lightText' : ''}`}>
 
           {(title) ? <><h1>{title}</h1><br /></> : null}
           {children}

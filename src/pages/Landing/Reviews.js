@@ -1,4 +1,5 @@
 import React from 'react'
+import Banner from '../../components/Banner';
 import Columns from '../../components/Columns'
 import Container from '../../components/Container'
 import reviewJson from '../../config/reviews.json'
@@ -20,7 +21,10 @@ const Reviews = () => {
   const [reviews, setReviews] = React.useState(fetchThreeReviews())
 
   return (
-    <Container bgColor='#44663f' lightText>
+    <Container
+      bgColor='#2c3c40'
+      lightText
+    >
       <Columns>
         {reviews.map(review => {
           return (
@@ -36,7 +40,7 @@ const Reviews = () => {
           )
         })}
       </Columns>
-      <div className="ui block clear" style={{margin: '1.5em 0 3.5em 0'}}>
+      <div className="ui block clear" style={{ margin: '1.5em 0 3.5em 0' }}>
         <button
           className="ui button small green right floated"
           style={{ margin: '1em 0 1em 0', color: 'black' }}
