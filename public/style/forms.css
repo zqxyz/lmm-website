@@ -30,13 +30,36 @@ fieldset * {
     color: whitesmoke
 }
 
-input, select {
+input, select, textarea {
     font-weight: 500;
     font-family: 'Roboto';
     font-size: 1.15em !important;
+    background-color: #f3f3f3 !important;
+    border: 3px solid white !important
 }
 
-input::placeholder {
+input:focus, select:focus, textarea:focus {
+    background-color: #ffffff !important;
+    border: 3px solid #0091ff !important;
+}
+
+input[type="checkbox"] + label:hover {
+    text-decoration: underline
+}
+
+input::placeholder, textarea::placeholder {
     color: #5e5e5e !important;
     font-style: italic;
+}
+
+.ui.checkbox input[type="checkbox"] {
+    width: 1.2em;
+    height: 1.2em;
+    margin-bottom: 0.6em;
+}
+
+.ui.checkbox label {
+    font-size: 1.25em;
+    margin-bottom: 0.6em;
+
 }

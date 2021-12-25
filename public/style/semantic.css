@@ -31232,11 +31232,9 @@
      position: absolute;
      top: 0px;
      left: 0px;
-     opacity: 0 !important;
-     outline: none;
+     /* opacity: 0 !important;
+     outline: none; */
      z-index: 3;
-     width: 17px;
-     height: 17px;
  }
 
  /*--------------
