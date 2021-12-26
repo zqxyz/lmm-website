@@ -62,10 +62,8 @@ const Services = () => {
           <p>
             Local Muscle has loads of experience moving items up to 500 pounds,
             including pianos, gun safes, stone benches, and armoirs. To determine
-            if your item is within our scope of work, fill out our
-            <Link href='/estimate'>
-              estimate form
-            </Link>.
+            if your item is within our scope of work, fill out
+            our <Link href='/estimate'> estimate form</Link>.
           </p>
         </tab>
       </Tabs>

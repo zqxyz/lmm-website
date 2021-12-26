@@ -1,7 +1,7 @@
 ul.checklist {
     list-style-type: none;
     width: fit-content;
-    background-color: bisque;
+    background-color: #ece2d7;
     padding: 0.25em;
     -webkit-border-radius: 3px;
     -moz-border-radius: 3px;
