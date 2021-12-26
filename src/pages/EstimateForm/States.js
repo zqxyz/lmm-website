@@ -1,7 +1,6 @@
 const States = () => {
   return (
     <>
-      <option value="ME" selected>Maine</option>
       <option value="AL">Alabama</option>
       <option value="AK">Alaska</option>
       <option value="AZ">Arizona</option>
@@ -21,6 +20,7 @@ const States = () => {
       <option value="KS">Kansas</option>
       <option value="KY">Kentucky</option>
       <option value="LA">Louisiana</option>
+      <option value="ME">Maine</option>
       <option value="MD">Maryland</option>
       <option value="MA">Massachusetts</option>
       <option value="MI">Michigan</option>
