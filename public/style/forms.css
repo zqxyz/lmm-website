@@ -21,9 +21,11 @@ fieldset {
 }
 
 label, label:active, label:focus, label::selection {
+    font-family: 'Fira Sans', sans-serif;
     color: white !important;
     cursor: pointer !important;
     font-size: 1.15em !important;
+    margin-bottom: 0.5em !important;
 }
 
 fieldset * {
@@ -35,7 +37,9 @@ input, select, textarea {
     font-family: 'Roboto';
     font-size: 1.15em !important;
     background-color: #f3f3f3 !important;
-    border: 3px solid white !important
+    border: 3px solid white !important;
+    margin-bottom: 0.5em !important;
+    font-family: 'Fira Sans', sans-serif;
 }
 
 input:focus, select:focus, textarea:focus {
@@ -61,5 +65,11 @@ input::placeholder, textarea::placeholder {
 .ui.checkbox label {
     font-size: 1.25em;
     margin-bottom: 0.6em;
+}
 
+@media only screen and (max-width: 767px) {
+    div.column {
+        padding: 0em 1em 0 1em !important;
+        margin: 0 !important
+    }
 }

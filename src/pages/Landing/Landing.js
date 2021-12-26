@@ -80,17 +80,17 @@ const Landing = () => {
       <Services />
 
 
-      <Banner
+      {/* <Banner
         title="We're equipped to safely handle your goods"
         imageUrl='/images/equipment.jpg'
         height='350px'
-      />
+      /> */}
 
 
       <Reviews />
 
 
-      <Focus bgColor='rgb(105, 171, 105)'>
+      <Focus bgColor='rgb(41, 89, 48)' lightText>
         <h1>Start your move with us</h1>
         <p>
           The first step is filling out our estimate form

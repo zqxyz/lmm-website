@@ -15,38 +15,47 @@ const Destination = ({ form, handleFormChange, destinationFloors, setDestination
         6 10zm0-7a3 3 0 1 1 0-6 3 3 0 0 1 0 6z" />
         </svg>
       </legend>
-      <div className="inline fields">
+      <div className="fields">
         <div className="ten wide field">
+          <label htmlFor='destinationStreet'>
+            Street Address*
+          </label>
           <input
             required
             type="text"
             className="form-control"
             name="DestinationStreet"
-            id="DestinationStreet"
+            id="destinationStreet"
             placeholder='67 Forinstance Ave.'
             value={form.DestinationStreet}
             onChange={handleFormChange}
           />
         </div>
         <div className="six wide field">
+          <label htmlFor='destinationCity'>
+            City*
+          </label>
           <input required
             type="text"
             className="form-control"
             name="DestinationCity"
-            id="DestinationCity"
+            id="destinationCity"
             placeholder='City'
             value={form.DestinationCity}
             onChange={handleFormChange}
           />
         </div>
       </div>
-      <div className="inline fields">
+      <div className="fields">
         <div className="twelve wide field">
+          <label htmlFor='destinationState'>
+            State*
+          </label>
           <select required
             type="text"
             className="form-control"
             name="DestinationState"
-            id="DestinationState"
+            id="destinationState"
             placeholder='ME'
             value={form.DestinationState}
             onChange={handleFormChange}
@@ -55,17 +64,25 @@ const Destination = ({ form, handleFormChange, destinationFloors, setDestination
           </select>
         </div>
         <div className="four wide field">
+          <label htmlFor='destinationZip'>
+            ZIP*
+          </label>
           <input required
             type="text"
             className="form-control"
             name="DestinationZip"
-            id="DestinationZip"
+            id="destinationZip"
             placeholder='ZIP'
             value={form.DestinationZip}
             onChange={handleFormChange}
           />
         </div>
       </div>
+      <label>
+        <strong>
+          Floors*
+        </strong>
+      </label>
       <Columns>
         <column>
           <div class="ui checkbox">

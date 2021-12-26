@@ -16,8 +16,8 @@ const About = () => {
 
 
       <ContainerSplitLeft
-        title="Our story, in storage eunuchs"
-        bgColor="#f0ede7"
+        title="Our story, in storage units"
+        bgColor="rgb(199, 202, 176)"
       >
         <p>
           No doubt we're well acquanted with storage units, ten years
@@ -40,7 +40,7 @@ const About = () => {
 
 
       <Focus
-        bgColor='rgb(203, 208, 188)'
+        bgColor='rgb(148, 174, 142)'
       >
         <p style={{ fontSize: '1.5em' }}>
           <strong>Our Mission</strong>: To provide a stress free and cost effective move that leaves you

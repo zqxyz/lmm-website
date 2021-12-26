@@ -22,7 +22,7 @@ const Reviews = () => {
 
   return (
     <Container
-      bgColor='#2c3c40'
+      bgColor='rgb(46, 96, 65)'
       lightText
     >
       <Columns>
