@@ -87,8 +87,7 @@ const Portland = () => {
     <>
       <ContainerSplitRight
         title='Estimate Request Form'
-        bgColor='rgb(66, 89, 76)'
-        lightText
+        bgColor='transparent'
       >
         <>
           Request an estimate for moving service from Local Muscle
@@ -96,12 +95,12 @@ const Portland = () => {
           <br />
           <br />
           <p>
-            {JSON.stringify(form).split(',').map(item => <>{item}<br /></>)}
+            {/* {JSON.stringify(form).split(',').map(item => <>{item}<br /></>)} */}
           </p>
         </>
         <div class="ui large form">
           <form onSubmit={handleSubmit}>
-            <p style={{ color: '#d2d2d2', textAlign: 'right' }}>
+            <p style={{ color: 'rgb(55, 55, 55)', textAlign: 'right' }}>
               Required fields marks with *
             </p>
 

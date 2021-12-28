@@ -15,16 +15,17 @@ const Call = () => {
       >
         <p>
           The <strong>fastest</strong> way to get booked with us is to complete
-          our estimate form.
+          our <Link href='#'>estimate form</Link>.
         </p>
-        <Link href='#'>
-          <button className='ui blue button huge pop'>
-            Get started with our estimate form
-          </button>
-        </Link>
+        <p>
+          For other inquiries, call the office you'd like to contact using
+          the numbers listed below.
+        </p>
       </Container>
 
-      <Container>
+      <Container
+      bgColor='rgb(236, 234, 228)'
+      >
         <Columns>
           <column>
             <center>

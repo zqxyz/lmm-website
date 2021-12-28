@@ -26,7 +26,12 @@ html, body, #root {
 }
 
 body {
-    background-color: #dfdfce;
+    background-color: #f0ece6;
+    background-image: url(/images/softWhite.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: bottom;
     color: rgb(34, 34, 34);
     font-size: 1.2em;
     line-height: 140%;
@@ -46,7 +51,7 @@ body {
 }
 
 a {
-    color: rgb(40, 70, 168)
+    color: rgb(66, 94, 219)
 }
 
 a:hover {
@@ -54,7 +59,7 @@ a:hover {
 }
 
 a:visited {
-    color: rgb(123, 33, 158)
+    color: rgb(66, 94, 219)
 }
 
 a:focus {
@@ -68,9 +73,6 @@ a:focus {
 }
 
 #footer {
-    /* background: url(/images/boxPlaceholder.png) no-repeat;
-    background-position: top left 15%;
-    background-size: 200px; */
     height: 135px;
     width: 100%;
     margin: 0;
@@ -78,6 +80,24 @@ a:focus {
     text-align: center;
     position: absolute;
     bottom: 0;
+}
+
+#footerInner {
+    background-color: rgb(53, 79, 61);
+    padding: 1em;
+    width: 12em;
+    margin: auto;
+    -webkit-border-top-left-radius: 3px;
+    -webkit-border-top-right-radius: 3px;
+    -moz-border-radius-topleft: 3px;
+    -moz-border-radius-topright: 3px;
+    border-top-left-radius: 3px;
+    border-top-right-radius: 3px;
+    color: white;
+}
+
+#footerInner a {
+    color: rgb(36, 168, 201)
 }
 
 .rightUnlessStacked {
@@ -98,18 +118,19 @@ h1 {
 
 .container {
     width: 100%;
-    animation: fadeInAnimation ease 0.3s;
+    animation: fadeInAnimation ease 0.2s;
     animation-iteration-count: 1;
     animation-fill-mode: forwards;
 }
-  
+
 @keyframes fadeInAnimation {
     0% {
         opacity: 0.8;
     }
+
     100% {
         opacity: 1;
-     }
+    }
 }
 
 .container a:hover {
@@ -124,24 +145,28 @@ h1 {
     -webkit-box-shadow: 12px 12px 0px 0px rgba(35, 37, 28, 0.78);
     box-shadow: 12px 12px 0px 0px rgba(35, 37, 28, 0.78);
     margin-bottom: 1em;
-    border: 1px solid rgba(35, 37, 28, 0.78);
+    border: 1px solid rgba(111, 114, 102, 0.78);
 }
 
 .container button.pop {
     -webkit-box-shadow: 6px 6px 4px 0px rgba(35, 37, 28, 0.78) !important;
     box-shadow: 6px 6px 4px 0px rgba(35, 37, 28, 0.4) !important;
-    margin-bottom: 1em !important;
-    border: 1px solid rgb(255, 255, 255) !important;
+    /* margin-bottom: 1em !important; */
+    border: 1px solid rgb(207, 207, 207) !important;
 }
 
 .container button.pop:active {
     -webkit-box-shadow: 2px 2px 4px 0px rgba(35, 37, 28, 0.78) !important;
     box-shadow: 2px 2px 4px 0px rgba(35, 37, 28, 0.4) !important;
-    margin-bottom: 1em !important;
+    /* margin-bottom: 1em !important; */
     border: 1px solid rgb(155, 155, 155) !important;
     position: relative;
     top: 2px;
     left: 2px
+}
+
+.field button.pop {
+    margin-bottom: 1em !important;
 }
 
 .container button.pop a {
@@ -199,11 +224,11 @@ h1 {
 }
 
 .container.dark a, .lightText a {
-    color: rgb(123, 197, 231)
+    color: rgb(113, 146, 218)
 }
 
 .container.dark a:visited, .lightText a:visited {
-    color: rgb(178, 138, 224)
+    color: rgb(113, 146, 218)
 }
 
 .page {
@@ -218,7 +243,7 @@ h1 {
 }
 
 .page:not(.lightText) {
-    color: #3b3b3b;
+    color: #2b2b2b;
 }
 
 pre {

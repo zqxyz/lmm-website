@@ -10,16 +10,16 @@
 }
 
 .tabular .item.active {
-    background-color: #d6eae0 !important;
+    background-color: #eceee2 !important;
 }
 
 .tabular .item:focus {
-    border: 1px solid #d6eae0 !important;
+    border: 1px solid #eceee2 !important;
     border-bottom: 1px solid transparent !important
 }
 
 .tab.segment {
-    background-color: #bfdace;
+    background-color: #e3e4dd;
     color: rgb(26, 26, 26)
 }
 

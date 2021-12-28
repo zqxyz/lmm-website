@@ -8,7 +8,7 @@ const Services = () => {
 
     <ContainerSplitRight
       title='Services Offered'
-      bgColor='rgb(157, 184, 155)'
+      bgColor='rgb(198, 197, 189)'
     >
       <p>
         We're insured and FMCSA registered.

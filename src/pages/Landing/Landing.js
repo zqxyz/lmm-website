@@ -12,8 +12,8 @@ const Landing = () => {
 
 
       <Banner
-        // imageUrl='/images/fadedMasthead.jpg'
-        imageUrl='/images/streets.jpg'
+        imageUrl='/images/fadedMasthead.jpg'
+        // imageUrl='/images/streets.jpg'
         title="Let's get moving"
         height='300px'
       >
@@ -39,7 +39,9 @@ const Landing = () => {
       </Container>
 
 
-      <Container bgColor='#315238' lightText>
+      <Container
+        bgColor='rgb(196, 170, 137)'
+      >
         <div className='ui stackable grid'>
           <div className='ten wide column'>
             <h1 className='rightUnlessStacked'>Trusted for over a decade</h1>
@@ -59,7 +61,9 @@ const Landing = () => {
       </Container>
 
 
-      <Container bgColor='rgb(58, 91, 66)' lightText>
+      <Container
+        bgColor='rgb(202, 183, 146)'
+      >
         <div className='ui stackable grid'>
           <div className='six wide column'>
             <img src='/images/happyCrew.jpg' alt='Team flexing with a young customer' />
@@ -78,13 +82,6 @@ const Landing = () => {
 
 
       <Services />
-
-
-      {/* <Banner
-        title="We're equipped to safely handle your goods"
-        imageUrl='/images/equipment.jpg'
-        height='350px'
-      /> */}
 
 
       <Reviews />

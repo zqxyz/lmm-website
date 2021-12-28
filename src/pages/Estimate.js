@@ -10,10 +10,14 @@ const Estimate = () => {
     return (
       <Container
         title='Choose a branch'
-        bgColor='dark'
+        bgColor='#354f3d'
+        lightText
       >
         <p>
             Choose the branch you'd like to contact using the options above.
+        </p>
+        <p>
+          If you are unsure which office to contact, select the office closest to your origin address.
         </p>
       </Container>
     )
@@ -27,26 +31,26 @@ const Estimate = () => {
 
   return (
     <>
-      <Banner
-        imageUrl='/images/geo.jpg'
+      <Container
+        bgColor='#497b5b'
       >
         <center>
           <button
             className={`ui ${(branch === 'portland') ? 'blue' : ''} button huge pop`}
             onClick={() => { setBranch('portland') }}
-            style={{ marginTop: '1em' }}
+            style={{ marginBottom: '0' }}
           >
             Portland, ME {(branch === 'portland') ? '✔' : ''}
           </button>
           <button
             className={`ui ${(branch === 'burlington') ? 'blue' : ''} button huge pop`}
             onClick={() => { setBranch('burlington') }}
-            style={{ marginTop: '1em' }}
+            style={{ marginBottom: '0' }}
           >
             Burlington, VT {(branch === 'burlington') ? '✔' : ''}
           </button>
         </center>
-      </Banner>
+      </Container>
 
       {renderBranchForm()}
     </>

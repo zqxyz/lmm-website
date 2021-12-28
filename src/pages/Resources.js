@@ -12,7 +12,7 @@ const Resources = () => {
 
       <Container
         title="Resources"
-        bgColor='rgb(54, 89, 59)'
+        bgColor='#588157'
         lightText
       >
         <p>
@@ -22,7 +22,8 @@ const Resources = () => {
 
       <ContainerSplitRight
         title='Moving Checklist'
-        bgColor='#cbd1b6'
+        bgColor='#3a5a40'
+        lightText
       >
         <p>
           Quick reference for steps to ensure your move goes off without a hitch
@@ -53,7 +54,8 @@ const Resources = () => {
 
       <ContainerSplitRight
         title='Policies and Contracts'
-        bgColor='rgb(210, 239, 223)'
+        bgColor='#344e41'
+        lightText
       >
         <>
           We've outlined our Terms of Service and Full Value Replacement Coverage in simple
@@ -123,18 +125,6 @@ const Resources = () => {
 
       </ContainerSplitRight>
 
-      <Focus bgColor='rgb(105, 171, 105)'>
-        <h1>Start your move with us</h1>
-        <p>
-          The first step is filling out our estimate form
-        </p>
-        <br />
-        <Link href='#'>
-          <button className='ui blue button huge'>
-            Get a free estimate
-          </button>
-        </Link>
-      </Focus>
 
     </>
   )

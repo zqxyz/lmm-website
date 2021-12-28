@@ -17,7 +17,7 @@ const About = () => {
 
       <ContainerSplitLeft
         title="Our story, in storage units"
-        bgColor="rgb(199, 202, 176)"
+        bgColor="rgb(232, 234, 228)"
       >
         <p>
           No doubt we're well acquanted with storage units, ten years
@@ -40,7 +40,7 @@ const About = () => {
 
 
       <Focus
-        bgColor='rgb(148, 174, 142)'
+        bgColor='rgb(203, 217, 212)'
       >
         <p style={{ fontSize: '1.5em' }}>
           <strong>Our Mission</strong>: To provide a stress free and cost effective move that leaves you
@@ -51,7 +51,7 @@ const About = () => {
 
       <ContainerSplitLeft
         title="Why choose Local Muscle?"
-        bgColor="rgb(226, 236, 228)"
+        bgColor="rgb(232, 234, 228)"
       >
         <p>
           We've built a reputation throughout New England as a moving company you can trust.
@@ -71,7 +71,7 @@ const About = () => {
 
 
       <Container
-        bgColor='rgb(226, 236, 228)'
+        bgColor='rgb(232, 234, 228)'
       >
         <p>
           Put simply, we want to change your opinion of movers
@@ -85,7 +85,7 @@ const About = () => {
 
 
       <Focus
-        bgColor='transparent'
+        bgColor='rgb(232, 234, 228)'
       >
         <p style={{ fontSize: '1.5em' }}>
           "I <em>love</em> lifting heavy awkward things, and running around." - Ned Swain

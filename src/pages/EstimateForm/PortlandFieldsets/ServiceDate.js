@@ -29,9 +29,10 @@ const ServiceDate = ({ form, handleFormChange }) => {
       <div className="fields">
         <div className="field">
           <label htmlFor='desiredDate'>
-            Desired date
+            Desired date*
           </label>
           <input
+          required
             type="date"
             id="desiredDate"
             name="MoveDate"
@@ -42,9 +43,9 @@ const ServiceDate = ({ form, handleFormChange }) => {
         </div>
         <div className="field">
           <label htmlFor='dateRange'>
-            Flexibility
+            Flexibility*
           </label>
-          <select name='DateRange'>
+          <select name='DateRange' required>
             <option selected disabled hidden>
               How soon do you need service?
             </option>

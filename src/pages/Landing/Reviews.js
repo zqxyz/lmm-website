@@ -6,7 +6,7 @@ import reviewJson from '../../config/reviews.json'
 
 function shuffle(array) {
   let currentIndex = array.length; let randomIndex
-  while (currentIndex !== 0) {
+while (currentIndex !== 0) {
     randomIndex = Math.floor(Math.random() * currentIndex)
     currentIndex--;
     [array[currentIndex], array[randomIndex]] = [
@@ -22,15 +22,14 @@ const Reviews = () => {
 
   return (
     <Container
-      bgColor='rgb(46, 96, 65)'
-      lightText
+      bgColor='rgb(223, 219, 204)'
     >
       <Columns>
         {reviews.map(review => {
           return (
             <column
               key={review.key}
-              style={{ fontStyle: 'italic' }}
+              // style={{ fontStyle: 'italic' }}
             >
               "{review.quote}"
               <div style={{ textAlign: 'right', fontWeight: '600' }}>
