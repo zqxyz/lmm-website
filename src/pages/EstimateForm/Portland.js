@@ -7,6 +7,7 @@ import ServiceDate from './PortlandFieldsets/ServiceDate';
 import Origin from './PortlandFieldsets/Origin';
 import Destination from './PortlandFieldsets/Destination';
 import AddlLocation from './PortlandFieldsets/AddlLocation';
+import OtherNotes from './PortlandFieldsets/OtherNotes'
 
 // API documentation for SmartMoving
 // https://smfilestore.blob.core.windows.net/docs/AdvancedWebsiteFormIntegration.pdf
@@ -52,6 +53,8 @@ const Portland = () => {
     elevator: false
   })
   const [addlLocationNotes, setAddlLocationNotes] = React.useState('')
+  const [otherNotes, setOtherNotes] = React.useState('')
+  const [dateWindow, setDateWindow] = React.useState('')
   const [complete, setComplete] = React.useState(false)
   const [postResponse, setPostResponse] = React.useState('')
 
@@ -74,20 +77,49 @@ const Portland = () => {
     validate()
   }
 
+  React.useEffect(() => {
+    setForm(prevState => ({ ...prevState, Notes: prepareNotes() }))
+  }, [addlLocationNotes, otherNotes])
+
+  const prepareNotes = () => {
+    let notes = ''
+    if (otherNotes.length > 0) notes += `"${otherNotes}"`
+    if (addlLocationNotes.length > 0) notes += `\nLocation notes: ${addlLocationNotes}`
+    if (dateWindow.length > 0) notes += `\nFlexibility: ${dateWindow}`
+    if (Object.values(originFloors).includes(true)) {
+      notes += `\nOrigin floors: ${Object.keys(originFloors).filter(key => originFloors[key] === true)}`
+    }
+    if (Object.values(destinationFloors).includes(true)) {
+      notes += `\nDestination floors: ${Object.keys(destinationFloors).filter(k => destinationFloors[k] === true)}`
+    }
+
+    return notes
+  }
+
   const handleSubmit = (event) => {
     event.preventDefault()
-    console.log('submit')
+
     axios.post(URL, JSON.stringify(form))
       .then((response) => {
-        setPostResponse({ ...response.data });
-      });
+        setPostResponse(response.data.leadId);
+        alert('Lead created: ' + response.data.leadId)
+      })
+      .catch(function (error) {
+        if (error.response.data.message === 'This lead has already been submitted.  Please contact SmartMoving support.') {
+          console.log('Duplicate')
+          alert('Information already submitted')
+        } else {
+          console.log(error.response.data);
+          console.log(error.response.status);
+        }
+      })
   }
 
   return (
     <>
       <ContainerSplitRight
         title='Estimate Request Form'
-        bgColor='transparent'
+        bgColor='#e8d5d5'
       >
         <>
           Request an estimate for moving service from Local Muscle
@@ -95,7 +127,8 @@ const Portland = () => {
           <br />
           <br />
           <p>
-            {/* {JSON.stringify(form).split(',').map(item => <>{item}<br /></>)} */}
+            Please keep in mind this is currently for internal use only. Changes
+            should be expected on not everything will be perfect.
           </p>
         </>
         <div class="ui large form">
@@ -117,6 +150,8 @@ const Portland = () => {
             <ServiceDate
               form={form}
               handleFormChange={handleFormChange}
+              dateWindow={dateWindow}
+              setDateWindow={setDateWindow}
             />
 
             <Origin
@@ -140,15 +175,19 @@ const Portland = () => {
               setAddlLocationNotes={setAddlLocationNotes}
             />
 
-            {(complete === true) ?
-              <button
-                className={`ui ${(complete === true) ? 'blue' : 'grey'} button huge pop`}
-                style={{ margin: '0.75em' }}
-              >
-                Submit
-              </button>
-              : <em>Complete form to proceed</em>
-            }
+            <OtherNotes
+              otherNotes={otherNotes}
+              setOtherNotes={setOtherNotes}
+            />
+
+            {(complete === false) ? <p>Complete the required fields above to proceed</p> : ''}
+            <button
+              className={`ui ${(complete === true) ? 'blue' : 'grey'} button huge pop`}
+              style={{ margin: '0.75em' }}
+              disabled={(complete === true) ? false : true}
+            >
+              Submit
+            </button>
 
 
           </form>

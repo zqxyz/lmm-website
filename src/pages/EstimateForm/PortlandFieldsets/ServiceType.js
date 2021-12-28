@@ -2,10 +2,13 @@ import React from 'react';
 
 
 const ServiceType = ({ form, setForm }) => {
+
   const setServiceType = evt => {
+    const serviceType = evt.target.value
     evt.preventDefault()
-    setForm(prevState => ({ ...prevState, ServiceType: evt.target.value }))
+    setForm(prevState => ({ ...prevState, ServiceType: serviceType }))
   }
+
   return (
     <fieldset>
       <legend>
@@ -45,12 +48,12 @@ const ServiceType = ({ form, setForm }) => {
             value='LoadingOnly'
             onClick={setServiceType}
           >
-          Single Location (Rearrangement, U-Haul, Container load)
-          {(form.ServiceType === 'LoadingOnly') ? ' ✔' : ''}
-        </button>
-      </div>
+            Single Location (Rearrangement, U-Haul, Container load)
+            {(form.ServiceType === 'LoadingOnly') ? ' ✔' : ''}
+          </button>
+        </div>
 
-    </div>
+      </div>
     </fieldset >
   )
 }

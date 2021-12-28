@@ -1,6 +1,6 @@
 import React from 'react';
 
-const ServiceDate = ({ form, handleFormChange }) => {
+const ServiceDate = ({ form, handleFormChange, dateWindow, setDateWindow }) => {
   let today = new Date();
   const dd = String(today.getDate()).padStart(2, '0');
   const mm = String(today.getMonth() + 1).padStart(2, '0');
@@ -45,7 +45,12 @@ const ServiceDate = ({ form, handleFormChange }) => {
           <label htmlFor='dateRange'>
             Flexibility*
           </label>
-          <select name='DateRange' required>
+          <select
+          value={dateWindow}
+          onChange={(e)=>setDateWindow(e.target.value)}
+          id='dateRange'
+          name='DateRange'
+          required>
             <option selected disabled hidden>
               How soon do you need service?
             </option>

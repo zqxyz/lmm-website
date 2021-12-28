@@ -40,7 +40,7 @@ const Landing = () => {
 
 
       <Container
-        bgColor='rgb(196, 170, 137)'
+        bgColor='rgb(178, 189, 159)'
       >
         <div className='ui stackable grid'>
           <div className='ten wide column'>
@@ -62,7 +62,7 @@ const Landing = () => {
 
 
       <Container
-        bgColor='rgb(202, 183, 146)'
+        bgColor='rgb(156, 170, 141)'
       >
         <div className='ui stackable grid'>
           <div className='six wide column'>

@@ -12,7 +12,7 @@ const Footer = () => {
           <Link href='/about'>
             About
           </Link>
-          &nbsp; - &nbsp;
+          &nbsp; &nbsp; &nbsp;
           <Link href='/contact'>
             Contact us
           </Link>
