@@ -90,17 +90,9 @@ const Resources = () => {
               <li>
                 <a
                   target='_blank' rel='noopener noreferrer'
-                  href='/documents/Local_Muscle_In-State_Terms_and_Conditions-Dec2021.pdf'
+                  href='/documents/Local_Muscle_Interstate_contract-Dec2021.pdf'
                 >
-                  Interstate Terms and Conditions [placeholder]
-                </a>
-              </li>
-              <li>
-                <a
-                  target='_blank' rel='noopener noreferrer'
-                  href='/documents/Local_Muscle_In-State_Terms_and_Conditions-Dec2021.pdf'
-                >
-                  Interstate Full Value Replacement Coverage [placeholder]
+                  Interstate Carrier Liability Agreement
                 </a>
               </li>
               <li>
@@ -120,6 +112,8 @@ const Resources = () => {
                 </a> [External link]
               </li>
             </ul>
+            We bill differently for interstate moves, as mandated by law. We will determine a flat rate
+            and provide a quote, rather than create an hourly-based estimate.
           </column>
         </Columns>
 
