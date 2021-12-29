@@ -20,7 +20,7 @@ const AddlLocation = ({ addlLocationNotes, setAddlLocationNotes }) => {
       </legend>
       <div className='field' style={{ paddingBottom: '0.5em' }}>
         <label htmlFor='addlLocationNotes'>
-          Special precautions for locations or addtional pickup/dropoff spots<br />
+          Special precautions for locations or additional pickup/dropoff spots<br />
         </label>
         <textarea
           id="addlLocationNotes"

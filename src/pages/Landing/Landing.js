@@ -93,7 +93,7 @@ const Landing = () => {
           The first step is filling out our estimate form
         </p>
         <br />
-        <Link href='#'>
+        <Link href='/estimate'>
           <button
             className='ui blue button huge pop'
             title='Press here to go to our estimate request form'
