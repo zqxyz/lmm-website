@@ -27,6 +27,7 @@ label, label:active, label:focus, label::selection {
     cursor: pointer !important;
     font-size: 1.15em !important;
     margin-bottom: 0.5em !important;
+    font-weight: 500 !important;
 }
 
 input, select, textarea {
