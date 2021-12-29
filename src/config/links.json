@@ -24,12 +24,6 @@
         "left": true
     },
     {
-        "name": "Contact",
-        "shortName": null,
-        "path": "/contact",
-        "left": true
-    },
-    {
         "name": "Hire Us",
         "shortName": null,
         "path": "/estimate",

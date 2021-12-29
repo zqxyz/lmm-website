@@ -35,9 +35,9 @@ const Resources = () => {
           <>Items in drawers and on shelves are cleared</>
           <>Appliances are detached/unhooked</>
           <>Gas/oil is removed from equipment</>
-          <>Flammable substances, ammunitions, explosives, and alcohol, are handled seperately</>
+          <>Flammable substances, ammunitions, explosives, and alcohol, are handled separately</>
           <>Parking arrangements are secured</>
-          <>Property mangement/neighbors are aware of your move</>
+          <>Property management/neighbors are aware of your move</>
           <>If applicable, an elevator is explicitly reserved</>
           <>Confirm no other work crews are scheduled at the same time as us</>
           <>Pathways are clear, inside and outside load and unload sites</>
@@ -46,9 +46,9 @@ const Resources = () => {
         </Checklist>
         <a
           target='_blank' rel='noopener noreferrer'
-          href='/documents/Local_Muscle_In-State_Terms_and_Conditions-Dec2021.pdf'
+          href='/documents/Local_Muscle_moving-checklist.pdf'
         >
-          Longer, printable version [placeholder]
+          Printable checklist
         </a>
       </ContainerSplitRight>
 

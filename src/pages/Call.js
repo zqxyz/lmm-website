@@ -25,7 +25,7 @@ const Call = () => {
       </Container>
 
       <Container
-      bgColor='rgb(236, 234, 228)'
+        bgColor='rgb(236, 234, 228)'
       >
         <Columns>
           <column>

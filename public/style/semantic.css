@@ -31220,7 +31220,7 @@
      vertical-align: baseline;
      font-style: normal;
      min-height: 17px;
-     line-height: 17px;
+     /* line-height: 17px; */
      min-width: 17px;
  }
 

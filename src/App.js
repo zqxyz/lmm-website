@@ -9,7 +9,6 @@ import Footer from './components/Footer'
 import About from './pages/About'
 import Join from './pages/Join'
 import Estimate from './pages/Estimate'
-import Contact from './pages/Contact'
 
 const App = () => {
   return (
@@ -34,10 +33,6 @@ const App = () => {
 
       <Route path='/join'>
         <Join />
-      </Route>
-
-      <Route path='/contact'>
-        <Contact />
       </Route>
       
       <Route path='/call'>

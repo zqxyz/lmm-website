@@ -71,4 +71,21 @@ input::placeholder, textarea::placeholder {
         padding: 0em 1em 0 1em !important;
         margin: 0 !important
     }
+
+    button.pop {
+        margin: 0.5em !important;
+    }
+
+    legend {
+        font-size: 1.15em !important;
+    }
+
+    label, label:active, label:focus, label::selection {
+        font-size: 1em !important;
+    }
+
+    input, select, textarea {
+        font-size: 1em !important;
+    }
+
 }

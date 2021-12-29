@@ -78,11 +78,6 @@ const Destination = ({ form, handleFormChange, destinationFloors, setDestination
           />
         </div>
       </div>
-      <label>
-        <strong>
-          Floors*
-        </strong>
-      </label>
       <Columns style={{paddingBottom: '1em'}}>
         <column>
           <div class="ui checkbox">

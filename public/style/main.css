@@ -78,7 +78,7 @@ a:focus {
     height: 135px;
     width: 100%;
     margin: 0;
-    padding: 2em;
+    padding: 2em 0 0 0;
     text-align: center;
     position: absolute;
     bottom: 0;
@@ -87,8 +87,9 @@ a:focus {
 #footerInner {
     background-color: rgb(250, 252, 248);
     padding: 1em;
-    width: 20em;
+    max-width: 20em;
     margin: auto;
+    bottom: 0;
     -webkit-border-top-left-radius: 3px;
     -webkit-border-top-right-radius: 3px;
     -moz-border-radius-topleft: 3px;
@@ -265,6 +266,10 @@ pre {
 
 /* COLLAPSE */
 @media only screen and (max-width: 767px) {
+    body {
+        background-image: none;
+    }
+    
     h1 {
         /* text-align: center !important; */
         font-size: 2em;
