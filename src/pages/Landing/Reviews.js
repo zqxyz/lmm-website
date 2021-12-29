@@ -22,7 +22,7 @@ const Reviews = () => {
 
   return (
     <Container
-      bgColor='rgb(223, 219, 204)'
+      bgColor='#f0eee5'
     >
       <Columns>
         {reviews.map(review => {

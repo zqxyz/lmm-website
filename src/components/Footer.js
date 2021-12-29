@@ -5,19 +5,13 @@ const Footer = () => {
   return (
     <>
       <div id='footer'>
+        <div id="footerInner">
 
-
-        <strong>Local Muscle Movers</strong><br />
-        USDOT # 2162841
-        <br />
-        <Link href='/about'>
-          About
-        </Link>
-        &nbsp; &nbsp; &nbsp; &nbsp;
-        <Link href='/contact'>
-          Contact
-        </Link>
-
+          USDOT # 2162841<br />
+          <strong>Local Muscle Movers</strong>
+          <br />
+          &copy; 2022
+        </div>
       </div>
     </>
   )

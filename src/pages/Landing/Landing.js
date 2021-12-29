@@ -40,7 +40,7 @@ const Landing = () => {
 
 
       <Container
-        bgColor='rgb(178, 189, 159)'
+        bgColor='#cdddca'
       >
         <div className='ui stackable grid'>
           <div className='ten wide column'>
@@ -62,7 +62,7 @@ const Landing = () => {
 
 
       <Container
-        bgColor='rgb(156, 170, 141)'
+        bgColor='#c6cebd'
       >
         <div className='ui stackable grid'>
           <div className='six wide column'>
@@ -87,7 +87,7 @@ const Landing = () => {
       <Reviews />
 
 
-      <Focus bgColor='rgb(41, 89, 48)' lightText>
+      <Focus bgColor='rgb(34, 83, 44)' lightText>
         <h1>Start your move with us</h1>
         <p>
           The first step is filling out our estimate form

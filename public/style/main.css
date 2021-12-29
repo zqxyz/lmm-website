@@ -27,7 +27,7 @@ html, body, #root {
 
 body {
     background-color: #9ed0a3;
-    /* background-image: url(/images/softWhite.jpg); */
+    background-image: url(/images/doors_whitebg.jpg);
     background-size: cover;
     background-repeat: no-repeat;
     background-attachment: fixed;
@@ -85,9 +85,9 @@ a:focus {
 }
 
 #footerInner {
-    background-color: rgb(53, 79, 61);
+    background-color: rgb(250, 252, 248);
     padding: 1em;
-    width: 12em;
+    width: 20em;
     margin: auto;
     -webkit-border-top-left-radius: 3px;
     -webkit-border-top-right-radius: 3px;
@@ -95,11 +95,7 @@ a:focus {
     -moz-border-radius-topright: 3px;
     border-top-left-radius: 3px;
     border-top-right-radius: 3px;
-    color: white;
-}
-
-#footerInner a {
-    color: rgb(36, 168, 201)
+    color: rgb(37, 37, 37);
 }
 
 .rightUnlessStacked {
@@ -226,11 +222,11 @@ h1 {
 }
 
 .container.dark a, .lightText a {
-    color: rgb(113, 146, 218)
+    color: rgb(136, 172, 248)
 }
 
 .container.dark a:visited, .lightText a:visited {
-    color: rgb(113, 146, 218)
+    color: rgb(136, 172, 248)
 }
 
 .page {

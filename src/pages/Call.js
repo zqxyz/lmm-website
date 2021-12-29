@@ -11,11 +11,12 @@ const Call = () => {
 
       <Container
         title='Contacting us by phone'
-        bgColor='dark'
+        bgColor='#313530'
+        lightText
       >
         <p>
           The <strong>fastest</strong> way to get booked with us is to complete
-          our <Link href='#'>estimate form</Link>.
+          our <Link href='/estimate'>estimate form</Link>.
         </p>
         <p>
           For other inquiries, call the office you'd like to contact using

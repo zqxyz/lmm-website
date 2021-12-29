@@ -6,7 +6,7 @@ const Contact = () => {
     <>
       <Container
         title='Contact Form'
-        bgColor='rgb(41, 96, 91)'
+        bgColor='rgb(41, 96, 83)'
         lightText
       >
         <p style={{maxWidth: '700px'}}>
