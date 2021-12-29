@@ -18,19 +18,21 @@ const AddlLocation = ({ addlLocationNotes, setAddlLocationNotes }) => {
           />
         </svg>
       </legend>
-      <label htmlFor='addlLocationNotes'>
-        Special precautions for locations or addtional pickup/dropoff spots.<br /><br />
-      </label>
-      <textarea
-        id="addlLocationNotes"
-        name="AddlLocationNotes"
-        placeholder='Optional location notes'
-        rows='3'
-        value={addlLocationNotes}
-        onChange={(event) => {
-          setAddlLocationNotes(event.target.value)
-        }}
-      />
+      <div className='field' style={{ paddingBottom: '0.5em' }}>
+        <label htmlFor='addlLocationNotes'>
+          Special precautions for locations or addtional pickup/dropoff spots<br />
+        </label>
+        <textarea
+          id="addlLocationNotes"
+          name="AddlLocationNotes"
+          placeholder='Optional location notes'
+          rows='3'
+          value={addlLocationNotes}
+          onChange={(event) => {
+            setAddlLocationNotes(event.target.value)
+          }}
+        />
+      </div>
     </fieldset>
   )
 }

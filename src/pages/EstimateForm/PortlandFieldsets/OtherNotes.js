@@ -18,18 +18,20 @@ const AddlLocation = ({ otherNotes, setOtherNotes }) => {
           />
         </svg>
       </legend>
-      <label htmlFor='otherNotes'>
-        Summary of service or anything else we should know.<br /><br />
-      </label>
-      <textarea
-        id="otherNotes"
-        name="OtherNotes"
-        rows='3'
-        value={otherNotes}
-        onChange={(event) => {
-          setOtherNotes(event.target.value)
-        }}
-      />
+      <div className='field' style={{paddingBottom: '0.5em'}}>
+        <label htmlFor='otherNotes'>
+          Summary of service or anything else we should know<br />
+        </label>
+        <textarea
+          id="otherNotes"
+          name="OtherNotes"
+          rows='3'
+          value={otherNotes}
+          onChange={(event) => {
+            setOtherNotes(event.target.value)
+          }}
+        />
+      </div>
     </fieldset>
   )
 }

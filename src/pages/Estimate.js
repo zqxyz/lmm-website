@@ -31,8 +31,8 @@ const Estimate = () => {
 
   return (
     <>
-      <Banner
-        imageUrl='images/geo.jpg'
+      <Container
+        bgColor='rgb(111, 159, 107)'
       >
         <center>
           <button
@@ -50,7 +50,7 @@ const Estimate = () => {
             Burlington, VT {(branch === 'burlington') ? '✔' : ''}
           </button>
         </center>
-      </Banner>
+      </Container>
 
       {renderBranchForm()}
     </>

@@ -26,8 +26,8 @@ html, body, #root {
 }
 
 body {
-    background-color: #f0ece6;
-    background-image: url(/images/softWhite.jpg);
+    background-color: #9ed0a3;
+    /* background-image: url(/images/softWhite.jpg); */
     background-size: cover;
     background-repeat: no-repeat;
     background-attachment: fixed;
@@ -51,7 +51,7 @@ body {
 }
 
 a {
-    color: rgb(66, 94, 219)
+    color: rgb(43, 58, 192)
 }
 
 a:hover {
@@ -59,8 +59,10 @@ a:hover {
 }
 
 a:visited {
-    color: rgb(66, 94, 219)
+    color: rgb(43, 58, 192)
 }
+
+
 
 a:focus {
     border: 1px solid black !important;

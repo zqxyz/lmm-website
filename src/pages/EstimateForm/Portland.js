@@ -8,6 +8,7 @@ import Origin from './PortlandFieldsets/Origin';
 import Destination from './PortlandFieldsets/Destination';
 import AddlLocation from './PortlandFieldsets/AddlLocation';
 import OtherNotes from './PortlandFieldsets/OtherNotes'
+import Container from '../../components/Container';
 
 // API documentation for SmartMoving
 // https://smfilestore.blob.core.windows.net/docs/AdvancedWebsiteFormIntegration.pdf
@@ -117,25 +118,22 @@ const Portland = () => {
 
   return (
     <>
-      <ContainerSplitRight
+      <Container
         title='Estimate Request Form'
-        bgColor='#e8d5d5'
+        bgColor='rgb(232, 236, 226)'
       >
-        <>
+        <p>
           Request an estimate for moving service from Local Muscle
           in <strong>Portland, Maine</strong>
-          <br />
-          <br />
-          <p>
-            Please keep in mind this is currently for internal use only. Changes
-            should be expected on not everything will be perfect.
-          </p>
-        </>
-        <div class="ui large form">
+        </p>
+        <p>
+          Required fields marks with *
+        </p>
+        <div
+          class="ui large form"
+          style={{ maxWidth: '900px', margin: 'auto' }}
+        >
           <form onSubmit={handleSubmit}>
-            <p style={{ color: 'rgb(55, 55, 55)', textAlign: 'right' }}>
-              Required fields marks with *
-            </p>
 
             <Contact
               form={form}
@@ -192,7 +190,7 @@ const Portland = () => {
 
           </form>
         </div>
-      </ContainerSplitRight>
+      </Container>
 
 
     </>

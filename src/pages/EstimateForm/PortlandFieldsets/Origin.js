@@ -78,7 +78,7 @@ const Origin = ({ form, handleFormChange, originFloors, setOriginFloors }) => {
         </div>
       </div>
 
-      <Columns>
+      <Columns style={{paddingBottom: '1em'}}>
         <column>
           <div class="ui checkbox">
             <input

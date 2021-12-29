@@ -35,7 +35,9 @@ const Container = ({ title, bgColor = '#cbd1b6', lightText, id, children }) => {
         }
         style={(bgColor !== 'dark') ? { backgroundColor: bgColor } : null}
       >
-        <div className={`page${(lightText || bgColor === 'dark') ? ' lightText' : ''}`}>
+        <div
+          className={`page${(lightText || bgColor === 'dark') ? ' lightText' : ''}`}
+        >
 
           {(title)
             ? <h1

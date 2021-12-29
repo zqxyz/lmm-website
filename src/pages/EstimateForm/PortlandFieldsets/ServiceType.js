@@ -29,11 +29,11 @@ const ServiceType = ({ form, setForm }) => {
           1 0 1 0 0 2 1 1 0 0 0 0-2z" />
         </svg>
       </legend>
-      <div className="fields">
+
 
         <div className="field">
           <button
-            className={`ui button pop${(form.ServiceType === 'Moving') ? ' green' : ''}`}
+            className={`ui button large pop${(form.ServiceType === 'Moving') ? ' blue' : ''}`}
             id="serviceMultiLocation"
             value='Moving'
             onClick={setServiceType}
@@ -43,7 +43,7 @@ const ServiceType = ({ form, setForm }) => {
           </button>
           <br />
           <button
-            className={`ui button pop${(form.ServiceType === 'LoadingOnly') ? ' green' : ''}`}
+            className={`ui button large pop${(form.ServiceType === 'LoadingOnly') ? ' blue' : ''}`}
             id="serviceMultiLocation"
             value='LoadingOnly'
             onClick={setServiceType}
@@ -53,7 +53,7 @@ const ServiceType = ({ form, setForm }) => {
           </button>
         </div>
 
-      </div>
+
     </fieldset >
   )
 }

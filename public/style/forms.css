@@ -1,50 +1,47 @@
 legend {
     font-size: 1.5em;
-    font-weight: 800;
-    background-color: #e8d5d5;
+    font-weight: 500 !important;
+    background-color: rgb(245, 247, 242);
     -webkit-border-radius: 4px;
     -moz-border-radius: 4px;
     border-radius: 4px;
-    padding: 0.4em;
+    padding: 0.5em 1em 0.5em 1em;
     margin-bottom: 1em;
     color: rgb(27, 27, 27);
 }
 
 fieldset {
-    background-color: rgb(91, 91, 91);
+    background-color: rgb(245, 247, 242);
     -webkit-border-radius: 5px;
     -moz-border-radius: 5px;
     border-radius: 5px;
-    margin-bottom: 1em;
+    margin-bottom: 1.5em;
     border: transparent;
-    padding: 1em;
+    color: whitesmoke;
+    padding: 1em 2em 1em 2em;
 }
 
 label, label:active, label:focus, label::selection {
     font-family: 'Fira Sans', sans-serif;
-    color: white !important;
+    color: rgb(58, 58, 58) !important;
     cursor: pointer !important;
     font-size: 1.15em !important;
     margin-bottom: 0.5em !important;
 }
 
-fieldset {
-    color: whitesmoke
-}
-
 input, select, textarea {
     font-weight: 500;
     font-family: 'Roboto';
-    font-size: 1.15em !important;
-    background-color: #f3f3f3 !important;
-    border: 3px solid white !important;
+    font-size: 1.3em !important;
+    background-color: #fbfbfb !important;
+    border: 3px solid rgb(240, 240, 240) !important;
     margin-bottom: 0.5em !important;
     font-family: 'Fira Sans', sans-serif;
 }
 
 input:focus, select:focus, textarea:focus {
     background-color: #ffffff !important;
-    border: 3px solid #0091ff !important;
+    border: 3px solid white !important;
 }
 
 input[type="checkbox"] + label:hover {
@@ -52,8 +49,9 @@ input[type="checkbox"] + label:hover {
 }
 
 input::placeholder, textarea::placeholder {
-    color: #5e5e5e !important;
+    color: #444444 !important;
     font-style: italic;
+    font-weight: 100;
 }
 
 .ui.checkbox input[type="checkbox"] {
