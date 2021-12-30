@@ -10,10 +10,26 @@ import About from './pages/About'
 import Join from './pages/Join'
 import Estimate from './pages/Estimate'
 
+import links from './config/links.json'
+import Error404 from './pages/Error404'
+
 const App = () => {
+  const validLinks = links.map(link => link.path)
+  const [valid, setValid] = React.useState(true)
+
+  React.useEffect(() => {
+    setValid(validLinks.includes(window.location.pathname))
+  })
+
   return (
     <>
       <Header />
+
+      {(!valid) ?
+        <Route path={window.location.pathname}>
+          <Error404 />
+        </Route>
+        : null}
 
       <Route path='/'>
         <Landing />
@@ -34,7 +50,7 @@ const App = () => {
       <Route path='/join'>
         <Join />
       </Route>
-      
+
       <Route path='/call'>
         <Call />
       </Route>
