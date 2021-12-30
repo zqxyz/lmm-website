@@ -6,7 +6,7 @@
 
 const hoursText = [
   "Moving 7 days a week",
-  "Monday-Friday, 9AM to 4PM"
+  "Mon-Fri, 9AM to 4PM"
 ]
 
 export default hoursText

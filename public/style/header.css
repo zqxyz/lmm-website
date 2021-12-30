@@ -146,6 +146,7 @@
 
     #localmuscle, #localmuscle:hover {
         font-family: 'cowboy', serif !important;
+        font-weight: 900;
         font-size: 2em;
         text-align: left;
         width: 100%;

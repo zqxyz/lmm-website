@@ -131,7 +131,7 @@ const Portland = () => {
         </p>
         <div
           class="ui large form"
-          style={{ maxWidth: '900px', margin: 'auto' }}
+          style={{ maxWidth: '800px', margin: '3em auto 0 auto' }}
         >
           <form onSubmit={handleSubmit}>
 
