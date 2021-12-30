@@ -127,7 +127,7 @@ const Portland = () => {
           in <strong>Portland, Maine</strong>
         </p>
         <p>
-          Required fields marks with *
+          Required fields marked with *
         </p>
         <div
           class="ui large form"
