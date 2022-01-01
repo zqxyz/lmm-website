@@ -40,11 +40,9 @@ body {
 /* Banners and other images to preload */
 #preload {
     background-image:
-        url(/images/fadedBoxes.jpg),
-        url(/images/streets.jpg),
         url(/images/movingAction.JPG),
         url(/images/crew.jpg),
-        url(/images/geo.jpg);
+        url(images/fadedMasthead.jpg);
     opacity: 0.0;
     -ms-filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=0);
     filter: alpha(opacity=0);
