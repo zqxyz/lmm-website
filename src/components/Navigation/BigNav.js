@@ -5,7 +5,7 @@ const BigNav = ({ links }) => {
   // Primary links, left aligned
   let i = 0
   const menuItems = [...links].splice(1).filter((link) => {
-    return link.left
+    return link.position === 'primary'
   }).map(item => {
     return (
       <Link
@@ -21,7 +21,7 @@ const BigNav = ({ links }) => {
   // Links aligned right
   let j = 0
   const menuItemsRight = [...links].splice(1).filter((link) => {
-    return !link.left
+    return link.position === 'secondary'
   }).map(item => {
     return (
       <Link

@@ -23,7 +23,9 @@ const SmallNav = ({ links }) => {
   }, [])
 
   let i = 0
-  const menuItems = [...links].splice(1).map(item => {
+  const menuItems = [...links].splice(1).filter((link) => {
+    return link.position !== 'hidden'
+  }).map(item => {
     return (
       <Link
         key={`linkMiniNav${i++}`}
