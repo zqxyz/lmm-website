@@ -1,8 +1,34 @@
-# Local Muscle Website
+# Improvements
 
-Website content and framework for localmusclemovers.com
+The new website is snappier and better optimized than the previous.
 
-## Editing Page Content
+|             | Size        | Avg. Load time    |
+| ----------- | ----------- | -----------  |
+| Old site home page    | 8.36 MB     | 10.8 Seconds |
+| Entire new site    | 2.43 MB     | 2.6 Seconds |
+
+## Controlled loading
+
+After the initial load, subsequent navigation from page to page will not require further requests from the server. That 2.6 seconds caches the whole website, excluding external content (like the YouTube videos on the About page). The code is optimized and the images are compressed to the extent appropriate for their use case.
+
+Rather than leaving standard anchor tags to do their duty, the default PopStateEvent is hijacked and prevented. The browser's history object is modified, and the target content is rendered from cache. It behaves like a normal website, but has the speed of a local document.
+
+In 2021, Local Muscle's most demanding month for bandwidth was August,
+using 12 GB of transfer. With our new website, we are unlikely to ever exceed
+5GB total. That would allow us to utilize Firebase's (where the demo is currently
+hosted) free tier (limited to 10GB/month). That's **free hosting**. If we ever need
+to expand capacity or
+incorporate advanced features, we'll be ready to upgrade to the paid tier. This
+service is priced for large apps and even around 40,000 visits per month
+would be in the price range of 1 to 2 gas station coffees.
+
+## Accessibility
+
+The new website is ready for screen readers and other impairment software. Text tested for contrast compliance. Important screen elements use tabindex for input compatibility.
+
+###
+
+# Editing Page Content
 
 All pages are store directly in `src/pages/` as a `.js` file. The exception being the home page, which is nested in a folder at `src/pages/Landing/`.
 
