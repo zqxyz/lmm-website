@@ -39,7 +39,9 @@ const Burlington = () => {
     }
     const timerId = setTimeout(() => {
       setForm(
-        {
+        { // This help trim off an extra digit
+          // that otherwise can show up in some
+          // cases
           ...form, 'Phone': form.Phone
             .replaceAll(/[^\d]/g, '')
             .substring(0, 10)
@@ -77,7 +79,7 @@ const Burlington = () => {
     <>
       <Container
         title='Estimate Request Form'
-        bgColor='rgba(62, 61, 60, 0.94)'
+        bgColor='rgba(72, 74, 68, 0.94)'
         lightText
       >
         <p>
@@ -107,6 +109,7 @@ const Burlington = () => {
             <button
               className={`ui ${(complete === true) ? 'blue' : 'grey'} button huge pop`}
               style={{ margin: '0.75em' }}
+              disabled
             >
               Submit
             </button>

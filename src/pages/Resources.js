@@ -10,7 +10,7 @@ const Resources = () => {
 
       <Container
         title="Resources"
-        bgColor='#588157'
+        bgColor='#537d58'
         lightText
       >
         <p>
@@ -20,7 +20,7 @@ const Resources = () => {
 
       <ContainerSplitRight
         title='Moving Checklist'
-        bgColor='#3a5a40'
+        bgColor='#38573e'
         lightText
       >
         <p>
@@ -52,7 +52,7 @@ const Resources = () => {
 
       <ContainerSplitRight
         title='Policies and Contracts'
-        bgColor='#344e41'
+        bgColor='#304838'
         lightText
       >
         <>

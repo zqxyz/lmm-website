@@ -13,6 +13,8 @@ import Container from '../../components/Container';
 // https://smfilestore.blob.core.windows.net/docs/AdvancedWebsiteFormIntegration.pdf
 
 const Portland = () => {
+  const debounceTime = 500 // milliseconds
+
   const [form, setForm] = React.useState({
     FirstName: '',
     LastName: '',
@@ -56,20 +58,39 @@ const Portland = () => {
   const URL =
     `https://api.smartmoving.com/api/leads/from-provider/v2?providerKey=2f400089-28bf-46c7-8a17-adfd01096041`;
 
-  const validate = () => {
-    const emailRegex = /^([\w.%+-]+)@([\w-]+\.)+([\w]{2,})$/i
-    if (form.FirstName !== ''
-      && form.LastName !== ''
-      && form.PhoneNumber !== ''
-      && form.Email !== '') {
-      setComplete(emailRegex.test(form.Email))
-    } else { setComplete(false) }
-  }
+ /**
+  * Formatting and validation with debounce,
+  * sets "complete" state object to true if
+  * conditions are met
+  */
+  React.useEffect(() => {
+    const validateForm = () => {
+      const emailRegex = /^([\w.%+-]+)@([\w-]+\.)+([\w]{2,})$/i
+      if (form.FirstName !== ''
+        && form.LastName !== ''
+        && form.PhoneNumber !== ''
+        && form.Email !== '') {
+        setComplete(emailRegex.test(form.Email))
+      } else { setComplete(false) }
+    }
+    const timerId = setTimeout(() => {
+      setForm(
+        {
+          ...form, 'PhoneNumber': form.PhoneNumber
+            .replaceAll(/[^\d]/g, '')
+            .substring(0, 10)
+        })
+      validateForm()
+    }, debounceTime)
+
+    return () => {
+      clearTimeout(timerId)
+    }
+  }, [form])
 
   const handleFormChange = (event) => {
     const { name, value } = event.target
     setForm(prevState => ({ ...prevState, [name]: value }))
-    validate()
   }
 
   React.useEffect(() => {
@@ -114,7 +135,7 @@ const Portland = () => {
     <>
       <Container
         title='Estimate Request Form'
-        bgColor='rgba(221, 223, 217, 0.9)'
+        bgColor='rgba(204, 208, 196, 0.9)'
       >
         <p>
           Request an estimate for moving service from Local Muscle

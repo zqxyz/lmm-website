@@ -8,10 +8,10 @@ const About = () => {
   return (
     <>
 
-      <Banner
+      <Container
         title="Meet the Muscle"
-        imageUrl='/images/crew.jpg'
-        height='300px'
+        bgColor='#696c5d'
+        lightText
       />
 
 
@@ -20,7 +20,7 @@ const About = () => {
         bgColor="rgb(232, 234, 228)"
       >
         <p>
-          No doubt we're well acquanted with storage units, ten years
+          No doubt we're well acquainted with storage units. Ten years
           ago our story started in one! Founding partner Alex Sargent
           got the idea to start a moving company after overhearing
           complaints about the moving experience and attitude of the

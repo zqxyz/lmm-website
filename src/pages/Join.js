@@ -8,7 +8,7 @@ const Join = () => {
 
       <Container
         title="Join Our Crew"
-        bgColor='rgb(31, 89, 70)'
+        bgColor='#8a7c2f'
         lightText
       >
         <p>

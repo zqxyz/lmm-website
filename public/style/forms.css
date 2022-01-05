@@ -29,7 +29,7 @@ fieldset.dark {
 }
 
 label, label:active, label:focus, label::selection {
-    font-family: 'Fira Sans', sans-serif;
+    font-family: 'Rubik', sans-serif;
     color: rgb(58, 58, 58) !important;
     cursor: pointer !important;
     font-size: 1.15em !important;
@@ -44,7 +44,7 @@ input, select, textarea {
     background-color: #fcfdfb !important;
     /* border: 3px solid rgb(235, 235, 235) !important; */
     margin-bottom: 0.5em !important;
-    font-family: 'Fira Sans', sans-serif;
+    font-family: 'Rubik', sans-serif;
     -webkit-box-shadow: 5px 5px 8px -2px rgba(0, 0, 0, 0.03) !important;
     box-shadow: 5px 5px 8px -2px rgba(0, 0, 0, 0.03) !important;
 }
@@ -76,7 +76,7 @@ input[type="checkbox"]+label:hover {
 }
 
 input::placeholder, textarea::placeholder {
-    color: #303030 !important;
+    color: #929292 !important;
     font-style: italic;
     font-weight: 200;
 }
