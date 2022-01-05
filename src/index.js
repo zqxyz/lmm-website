@@ -1,8 +1,8 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
 import App from './App'
-
 import { initializeApp } from 'firebase/app'
+
 const firebaseConfig = {
   apiKey: 'AIzaSyAmtAEf_-9xWSMpWscDHtaKYmcYvxhVPbw',
   authDomain: 'localmuscle-demo.firebaseapp.com',

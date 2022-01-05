@@ -12,11 +12,6 @@ import Container from '../../components/Container';
 // API documentation for SmartMoving
 // https://smfilestore.blob.core.windows.net/docs/AdvancedWebsiteFormIntegration.pdf
 
-// NOTE
-// This will use React to submit form to API directly in React
-// only in development, for testing. Final target is using
-// server side submission using Express.js or PHP.
-
 const Portland = () => {
   const [form, setForm] = React.useState({
     FirstName: '',

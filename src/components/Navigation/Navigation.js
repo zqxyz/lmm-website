@@ -1,6 +1,6 @@
 import React from 'react'
 import useCurrentWidth from '../../screenWidth'
-import links from '../../config/links.json'
+import links from '../../config/links.js'
 import TinyNav from './TinyNav'
 import SmallNav from './SmallNav'
 import BigNav from './BigNav'

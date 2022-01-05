@@ -1,6 +1,7 @@
 import React from 'react';
 import Container from '../components/Container';
 import Portland from './EstimateForm/Portland';
+import Burlington from './EstimateForm/Burlington'
 import Banner from '../components/Banner'
 
 const Estimate = () => {
@@ -26,7 +27,7 @@ const Estimate = () => {
   const renderBranchForm = () => {
     if (branch === '') return chooseBranchPrompt()
     if (branch === 'portland') return <Portland />
-    if (branch === 'burlington') return <>burlington goes here</>
+    if (branch === 'burlington') return <><Burlington /></>
   }
 
   return (
