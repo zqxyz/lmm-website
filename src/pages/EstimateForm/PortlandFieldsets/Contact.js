@@ -60,7 +60,7 @@ const Contact = ({ form, handleFormChange }) => {
               type="tel"
               pattern="(?:\(\d{3}\)|\d{3})[- ]?\d{3}[- ]?\d{4}"
               className="form-control"
-              name="PhoneNumber"
+              name="Phone"
               id="phoneNumber"
               placeholder='(123) 555-6789'
               value={formatPhoneNumber(form.PhoneNumber)}

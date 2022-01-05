@@ -13,7 +13,7 @@ const Landing = () => {
 
       <Banner
         imageUrl='/images/fadedMasthead.jpg'
-        // imageUrl='/images/streets.jpg'
+        // imageUrl='/images/trucks.jpeg'
         title="Let's get moving"
         height='300px'
       >

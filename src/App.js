@@ -12,7 +12,7 @@ const App = () => {
 
   React.useEffect(() => {
     setValid(validLinks.includes(window.location.pathname))
-  })
+  }, [validLinks])
 
   return (
     <>
@@ -26,7 +26,7 @@ const App = () => {
 
       {links.map(link => {
         return (
-          <Route path={link.path}>
+          <Route path={link.path} key={link.name}>
             {link.component}
           </Route>
         )

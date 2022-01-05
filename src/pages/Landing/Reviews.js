@@ -1,5 +1,4 @@
 import React from 'react'
-import Banner from '../../components/Banner';
 import Columns from '../../components/Columns'
 import Container from '../../components/Container'
 import reviewJson from '../../config/reviews.json'

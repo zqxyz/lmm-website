@@ -10,12 +10,12 @@ const ServiceType = ({ form, setForm }) => {
   }
 
   return (
-    <fieldset>
+    <fieldset className="dark">
       <legend>
         Service Type
         &nbsp;
         <svg xmlns="http://www.w3.org/2000/svg" width="24"
-          height="24" fill="black" class="bi bi-truck"
+          height="24" fill="black" className="bi bi-truck"
           viewBox="0 0 16 16">
           <path d="M0 3.5A1.5 1.5 0 0 1 1.5 2h9A1.5 1.5 0 0
           1 12 3.5V5h1.02a1.5 1.5 0 0 1 1.17.563l1.481 1.85a1.5
@@ -39,7 +39,7 @@ const ServiceType = ({ form, setForm }) => {
             onClick={setServiceType}
           >
             Multiple Location (Moving with our trucks)
-            {(form.ServiceType === 'Moving') ? ' ✔' : ''}
+            {(form.ServiceType === 'Moving') ? ' ✓' : ''}
           </button>
           <br />
           <button
@@ -49,7 +49,7 @@ const ServiceType = ({ form, setForm }) => {
             onClick={setServiceType}
           >
             Single Location (Rearrangement, U-Haul, Container load)
-            {(form.ServiceType === 'LoadingOnly') ? ' ✔' : ''}
+            {(form.ServiceType === 'LoadingOnly') ? ' ✓' : ''}
           </button>
         </div>
 

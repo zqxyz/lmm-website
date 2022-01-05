@@ -6,6 +6,8 @@ import ServiceType from './BurlingtonFieldsets/ServiceType';
 
 
 const Burlington = () => {
+  const debounceTime = 500 // milliseconds
+
   const [form, setForm] = React.useState({
     FirstName: '',
     LastName: '',
@@ -20,37 +22,62 @@ const Burlington = () => {
     Notes: ''
   });
 
-  const [complete, setComplete] = React.useState(false)
+  /**
+   * Formatting and validation with debounce,
+   * sets "complete" state object to true if
+   * conditions are met
+   */
+  React.useEffect(() => {
+    const validateForm = () => {
+      const emailRegex = /^([\w.%+-]+)@([\w-]+\.)+([\w]{2,})$/i
+      if (form.FirstName !== ''
+        && form.LastName !== ''
+        && form.Phone !== ''
+        && form.Email !== '') {
+        setComplete(emailRegex.test(form.Email))
+      } else { setComplete(false) }
+    }
+    const timerId = setTimeout(() => {
+      setForm(
+        {
+          ...form, 'Phone': form.Phone
+            .replaceAll(/[^\d]/g, '')
+            .substring(0, 10)
+        })
+      validateForm()
+    }, debounceTime)
 
-  const validate = () => {
-    const emailRegex = /^([\w.%+-]+)@([\w-]+\.)+([\w]{2,})$/i
-    if (form.FirstName !== ''
-      && form.LastName !== ''
-      && form.PhoneNumber !== ''
-      && form.Email !== '') {
-      setComplete(emailRegex.test(form.Email))
-    } else { setComplete(false) }
-  }
+    return () => {
+      clearTimeout(timerId)
+    }
+  }, [form])
+
+  const [complete, setComplete] = React.useState(false)
 
   const handleFormChange = (event) => {
     const { name, value } = event.target
     setForm(prevState => ({ ...prevState, [name]: value }))
-    validate()
   }
 
   const handleSubmit = (event) => {
     event.preventDefault()
-    mail('code@zquint.xyz',
-      '802 REF: test submission',
-      form
-    )
+    const date = Date.now()
+
+    const to = 'code@zquint.xyz'
+    const subject = `802 New Lead from ${form.FirstName} ${form.LastName} on ${date}`
+    let mailBody
+    for (const [key, value] of Object.entries(form)) {
+      mailBody += `${key}: ${value}\n`
+    }
+
+    mail(to, subject, mailBody)
   }
 
   return (
     <>
       <Container
         title='Estimate Request Form'
-        bgColor='rgb(100, 94, 87)'
+        bgColor='rgba(62, 61, 60, 0.94)'
         lightText
       >
         <p>
@@ -62,7 +89,7 @@ const Burlington = () => {
         </p>
 
         <div
-          class="ui large form"
+          className="ui large form"
           style={{ maxWidth: '800px', margin: '3em auto 0 auto' }}
         >
           <form onSubmit={handleSubmit}>
@@ -76,6 +103,13 @@ const Burlington = () => {
               form={form}
               setForm={setForm}
             />
+
+            <button
+              className={`ui ${(complete === true) ? 'blue' : 'grey'} button huge pop`}
+              style={{ margin: '0.75em' }}
+            >
+              Submit
+            </button>
 
           </form>
         </div>

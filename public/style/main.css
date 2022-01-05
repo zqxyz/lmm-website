@@ -85,7 +85,7 @@ a:focus {
 #footerInner {
     background-color: rgb(250, 252, 248);
     padding: 1em;
-    max-width: 20em;
+    max-width: calc(1300px - 4em);
     margin: auto;
     bottom: 0;
     -webkit-border-top-left-radius: 3px;
@@ -95,9 +95,9 @@ a:focus {
     border-top-left-radius: 3px;
     border-top-right-radius: 3px;
     color: rgb(37, 37, 37);
-    opacity: 0.9;
-    -ms-filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=90);
-    filter: alpha(opacity=90);
+    opacity: 0.8;
+    -ms-filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=80);
+    filter: alpha(opacity=80);
 }
 
 .rightUnlessStacked {
@@ -155,6 +155,10 @@ h1 {
     border: 1px solid rgb(207, 207, 207) !important;
 }
 
+.container button.pop:hover {
+    border: 1px solid rgb(243, 243, 243) !important;
+}
+
 .container button.pop:active {
     -webkit-box-shadow: 2px 2px 4px 0px rgba(35, 37, 28, 0.78) !important;
     box-shadow: 2px 2px 4px 0px rgba(35, 37, 28, 0.4) !important;
@@ -181,6 +185,7 @@ h1 {
     -webkit-box-shadow: 4px 4px 4px 0px rgba(35, 37, 28, 0.2) !important;
     box-shadow: 4px 4px 4px 0px rgba(35, 37, 28, 0.2) !important;
     border: 1px solid rgb(207, 207, 207) !important;
+    font-weight: 500 !important;
 }
 
 

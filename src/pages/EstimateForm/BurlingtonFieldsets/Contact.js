@@ -2,7 +2,7 @@ import React from 'react';
 
 const formatPhoneNumber = (value) => {
   if (!value) return value;
-  const phoneNumber = value.replace(/[^\d]/g, "");
+  const phoneNumber = value.replace(/[^\d]/g, '');
   const phoneNumberLength = phoneNumber.length;
   if (phoneNumberLength < 4) return phoneNumber;
   if (phoneNumberLength < 7) {
@@ -21,7 +21,7 @@ const Contact = ({ form, handleFormChange }) => {
           Contact Information
           &nbsp;
           <svg xmlns="http://www.w3.org/2000/svg" width="24"
-            height="24" fill="black" class="bi bi-person-fill"
+            height="24" fill="black" className="bi bi-person-fill"
             viewBox="0 0 16 16">
             <path d="M3 14s-1 0-1-1 1-4 6-4 6 3 6 4-1 1-1 1H3zm5-6a3
                   3 0 1 0 0-6 3 3 0 0 0 0 6z" />
@@ -60,10 +60,10 @@ const Contact = ({ form, handleFormChange }) => {
               type="tel"
               pattern="(?:\(\d{3}\)|\d{3})[- ]?\d{3}[- ]?\d{4}"
               className="form-control"
-              name="PhoneNumber"
+              name="Phone"
               id="phoneNumber"
               placeholder='(123) 555-6789'
-              value={formatPhoneNumber(form.PhoneNumber)}
+              value={formatPhoneNumber(form.Phone)}
               onChange={handleFormChange}
               onWheel={(e) => e.target.blur()}
             />

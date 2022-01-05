@@ -19,8 +19,8 @@ fieldset {
     border: transparent;
     color: whitesmoke;
     padding: 1em 2em 1em 2em;
-    -webkit-box-shadow: 5px 5px 8px -2px rgba(0,0,0,0.04); 
-    box-shadow: 5px 5px 8px -2px rgba(0,0,0,0.04);
+    -webkit-box-shadow: 5px 5px 8px -2px rgba(0, 0, 0, 0.04);
+    box-shadow: 5px 5px 8px -2px rgba(0, 0, 0, 0.04);
 }
 
 fieldset.dark {
@@ -41,15 +41,34 @@ input, select, textarea {
     font-weight: 500;
     font-family: 'Roboto';
     font-size: 1.3em !important;
-    background-color: #fbfbfb !important;
-    border: 3px solid rgb(240, 240, 240) !important;
+    background-color: #fcfdfb !important;
+    /* border: 3px solid rgb(235, 235, 235) !important; */
     margin-bottom: 0.5em !important;
     font-family: 'Fira Sans', sans-serif;
+    -webkit-box-shadow: 5px 5px 8px -2px rgba(0, 0, 0, 0.03) !important;
+    box-shadow: 5px 5px 8px -2px rgba(0, 0, 0, 0.03) !important;
 }
+
+
+
+
+/* background-color: #f7f9f5 !important;
+border: none !important;
+    border-bottom-color: currentcolor;
+    border-bottom-style: none;
+    border-bottom-width: medium;
+border-bottom-color: currentcolor;
+border-bottom-style: none;
+border-bottom-width: medium;
+border-bottom: 1px solid #8a8a8a !important; */
+
+
 
 input:focus, select:focus, textarea:focus {
     background-color: #ffffff !important;
-    border: 3px solid white !important;
+    /* border: 3px solid white !important; */
+    -webkit-box-shadow: 5px 5px 8px -2px rgba(0, 0, 0, 0.00) !important;
+    box-shadow: 5px 5px 8px -2px rgba(0, 0, 0, 0.00) !important;
 }
 
 input[type="checkbox"]+label:hover {
@@ -57,15 +76,17 @@ input[type="checkbox"]+label:hover {
 }
 
 input::placeholder, textarea::placeholder {
-    color: #444444 !important;
+    color: #303030 !important;
     font-style: italic;
-    font-weight: 100;
+    font-weight: 200;
 }
 
 .ui.checkbox input[type="checkbox"] {
     width: 1.2em;
     height: 1.2em;
     margin-bottom: 0.6em;
+    -webkit-box-shadow: 5px 5px 8px -2px rgba(0, 0, 0, 0.03) !important;
+    box-shadow: 5px 5px 8px -2px rgba(0, 0, 0, 0.03) !important;
 }
 
 .ui.checkbox label {

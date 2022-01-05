@@ -3,8 +3,6 @@ import Container from '../components/Container'
 import ContainerSplitRight from '../components/ContainerSplitRight'
 import Columns from '../components/Columns'
 import Checklist from '../components/Checklist'
-import Focus from '../components/Focus'
-import Link from '../Link'
 
 const Resources = () => {
   return (

@@ -2,7 +2,6 @@ import React from 'react';
 import Container from '../components/Container';
 import Portland from './EstimateForm/Portland';
 import Burlington from './EstimateForm/Burlington'
-import Banner from '../components/Banner'
 
 const Estimate = () => {
   const [branch, setBranch] = React.useState('')

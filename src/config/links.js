@@ -19,7 +19,7 @@ import Resources from "../pages/Resources"
  *              "hidden" - Not shown in navigation bar or menu, but accessible through
  *                         other means, such as links in pages
  */
-export default [
+const links = [
   {
       "name": "Local Muscle Movers",
       "shortName": "Local Muscle",
@@ -63,3 +63,5 @@ export default [
       "position": "hidden"
   }
 ]
+
+export default links

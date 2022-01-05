@@ -51,7 +51,7 @@ const Portland = () => {
   const [otherNotes, setOtherNotes] = React.useState('')
   const [dateWindow, setDateWindow] = React.useState('')
   const [complete, setComplete] = React.useState(false)
-  const [postResponse, setPostResponse] = React.useState('')
+  // const [postResponse, setPostResponse] = React.useState('')
 
   const URL =
     `https://api.smartmoving.com/api/leads/from-provider/v2?providerKey=2f400089-28bf-46c7-8a17-adfd01096041`;
@@ -73,30 +73,30 @@ const Portland = () => {
   }
 
   React.useEffect(() => {
+    const prepareNotes = () => {
+      let notes = ''
+      if (otherNotes.length > 0) notes += `"${otherNotes}"`
+      if (addlLocationNotes.length > 0) notes += `\nLocation notes: ${addlLocationNotes}`
+      if (dateWindow.length > 0) notes += `\nFlexibility: ${dateWindow}`
+      if (Object.values(originFloors).includes(true)) {
+        notes += `\nOrigin floors: ${Object.keys(originFloors).filter(key => originFloors[key] === true)}`
+      }
+      if (Object.values(destinationFloors).includes(true)) {
+        notes += `\nDestination floors: ${Object.keys(destinationFloors).filter(k => destinationFloors[k] === true)}`
+      }
+
+      return notes
+    }
+
     setForm(prevState => ({ ...prevState, Notes: prepareNotes() }))
-  }, [addlLocationNotes, otherNotes])
-
-  const prepareNotes = () => {
-    let notes = ''
-    if (otherNotes.length > 0) notes += `"${otherNotes}"`
-    if (addlLocationNotes.length > 0) notes += `\nLocation notes: ${addlLocationNotes}`
-    if (dateWindow.length > 0) notes += `\nFlexibility: ${dateWindow}`
-    if (Object.values(originFloors).includes(true)) {
-      notes += `\nOrigin floors: ${Object.keys(originFloors).filter(key => originFloors[key] === true)}`
-    }
-    if (Object.values(destinationFloors).includes(true)) {
-      notes += `\nDestination floors: ${Object.keys(destinationFloors).filter(k => destinationFloors[k] === true)}`
-    }
-
-    return notes
-  }
+  }, [addlLocationNotes, otherNotes, dateWindow, destinationFloors, originFloors])
 
   const handleSubmit = (event) => {
     event.preventDefault()
 
     axios.post(URL, JSON.stringify(form))
       .then((response) => {
-        setPostResponse(response.data.leadId);
+        // setPostResponse(response.data.leadId);
         alert('Lead created: ' + response.data.leadId)
       })
       .catch(function (error) {
@@ -114,7 +114,7 @@ const Portland = () => {
     <>
       <Container
         title='Estimate Request Form'
-        bgColor='rgb(232, 236, 226)'
+        bgColor='rgba(221, 223, 217, 0.9)'
       >
         <p>
           Request an estimate for moving service from Local Muscle
