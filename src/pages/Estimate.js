@@ -33,7 +33,7 @@ const Estimate = () => {
   return (
     <>
       <Container
-        bgColor='rgb(111, 159, 107)'
+        bgColor='rgb(53, 53, 53)'
       >
         <center>
           <button

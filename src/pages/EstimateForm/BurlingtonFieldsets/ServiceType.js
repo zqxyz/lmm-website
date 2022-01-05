@@ -15,7 +15,7 @@ const ServiceType = ({ form, setForm }) => {
         Service Type
         &nbsp;
         <svg xmlns="http://www.w3.org/2000/svg" width="24"
-          height="24" fill="currentColor" class="bi bi-truck"
+          height="24" fill="black" class="bi bi-truck"
           viewBox="0 0 16 16">
           <path d="M0 3.5A1.5 1.5 0 0 1 1.5 2h9A1.5 1.5 0 0
           1 12 3.5V5h1.02a1.5 1.5 0 0 1 1.17.563l1.481 1.85a1.5
