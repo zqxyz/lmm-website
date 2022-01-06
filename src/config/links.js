@@ -22,7 +22,7 @@ import Resources from "../pages/Resources"
 const links = [
   {
       "name": "Local Muscle Movers",
-      "shortName": "Local Muscle",
+      "shortName": "Home",
       "path": "/",
       "component": <Landing />,
       "position": "primary"

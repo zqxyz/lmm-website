@@ -27,7 +27,7 @@ const Contact = ({ form, handleFormChange, dark }) => {
                   3 0 1 0 0-6 3 3 0 0 0 0 6z" />
           </svg>
           &nbsp;
-          Contact Information
+          Contact Info
         </legend>
         <div className="fields">
           <div className="eight wide field">

@@ -6,7 +6,7 @@ const Mini = ({ links }) => {
   const ref = useRef()
 
   let i = 0
-  const menuItems = [...links].splice(1).filter((link) => {
+  const menuItems = [...links].splice(0).filter((link) => {
     return link.position !== 'hidden'
   }).map(item => {
     return (
