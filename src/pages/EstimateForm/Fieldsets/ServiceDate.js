@@ -39,6 +39,7 @@ const ServiceDate = ({ form, handleFormChange, dateWindow, setDateWindow, dark }
             id="desiredDate"
             name="MoveDate"
             min={today}
+            placeholder='mm/dd/yyyy'
             value={form.MoveDate}
             onChange={handleFormChange}
           />

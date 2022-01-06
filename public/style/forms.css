@@ -38,7 +38,6 @@ label, label:active, label:focus, label::selection {
 }
 
 input, select, textarea {
-    -webkit-appearance: textfield;
     color: rgb(27, 27, 27) !important;
     font-weight: 500;
     font-family: 'Roboto';
@@ -51,12 +50,15 @@ input, select, textarea {
     box-shadow: 5px 5px 8px -2px rgba(0, 0, 0, 0.03) !important;
 }
 
-select * {
-    color: rgb(27, 27, 27) !important;
+/* IOS Safari fixes */
+input[type='text'], textarea, select, input[type='date'] {
+    -webkit-appearance: none;
+    border-radius: 3px;
+    -webkit-border-radius: 3px;
 }
 
-input:last-child {
-    margin-bottom: 0 !important;
+select * {
+    color: rgb(27, 27, 27) !important;
 }
 
 input:focus, select:focus, textarea:focus {
@@ -109,6 +111,7 @@ input::placeholder, textarea::placeholder {
 
     input, select, textarea {
         font-size: 1em !important;
+        margin-bottom: 1em !important;
     }
 
 }
