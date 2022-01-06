@@ -38,7 +38,7 @@ label, label:active, label:focus, label::selection {
 }
 
 input, select, textarea {
-    -webkit-appearance: none;
+    -webkit-appearance: textfield;
     color: rgb(27, 27, 27) !important;
     font-weight: 500;
     font-family: 'Roboto';
