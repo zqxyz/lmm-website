@@ -23,27 +23,31 @@
     color: rgb(26, 26, 26)
 }
 
-.tab.segment.active,.tab.segment.active p {
+.tab.segment.active, .tab.segment.active p {
     font-size: 1.10em;
     line-height: 1.25em;
 }
 
+/* CONTENT COLLAPSE BREAKPOINT */
 @media only screen and (max-width: 767px) {
     .tabular .item {
         color: rgb(55, 74, 136) !important;
-        text-decoration: underline !important;
+        background-color: #eceee2 !important;
+        text-decoration: none !important;
+        border: none !important
     }
 
     .tabular .item.active {
         color: black !important;
-        text-decoration: none !important;
+        background-color: #e9e5d9 !important;
     }
 
     .tabular .item:hover {
         cursor: pointer;
-        border: none !important
+        border: none !important;
+        text-decoration: underline !important;
     }
-    
+
     .tabular .item:focus {
         border: none !important
     }
