@@ -20,7 +20,7 @@ const AddlLocation = ({ otherNotes, setOtherNotes }) => {
       </legend>
       <div className='field' style={{ paddingBottom: '0.5em' }}>
         <label htmlFor='otherNotes'>
-          Summary of service or anything else we should know<br />
+          Optional - Summary of service or anything else we should know<br />
         </label>
         <textarea
           id="otherNotes"

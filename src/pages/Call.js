@@ -30,7 +30,7 @@ const Call = () => {
         <Columns>
           <column>
             <center>
-              <h2>For our Portland, ME branch</h2>
+              <h2>Portland, ME</h2>
               <p>
                 {(width < 768) ? <>Call <a href="tel:2073909090">207-390-9090</a></>
                   : <>Call 207-390-9090</>}
@@ -39,7 +39,7 @@ const Call = () => {
           </column>
           <column>
             <center>
-              <h2>For our Burlington, VT branch</h2>
+              <h2>Burlington, VT</h2>
               <p>
                 {(width < 768) ? <>Call <a href="tel:8028990908">802-899-0908</a></>
                   : <>Call 802-899-0908</>}

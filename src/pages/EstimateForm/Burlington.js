@@ -6,6 +6,9 @@ import ServiceType from './Fieldsets/ServiceType';
 import ServiceDate from './Fieldsets/ServiceDate';
 import AddressTemplate from './Fieldsets/AddressTemplate'
 import NumberOfSites from './Fieldsets/NumberOfSites';
+import AddlLocation from './Fieldsets/AddlLocation';
+import OtherNotes from './Fieldsets/OtherNotes'
+import NumberOfRooms from './Fieldsets/NumberOfRooms';
 
 
 const Burlington = () => {
@@ -20,6 +23,7 @@ const Burlington = () => {
   const [otherNotes, setOtherNotes] = React.useState('')
   const [dateWindow, setDateWindow] = React.useState('')
   const [siteCount, setSiteCount] = React.useState(2)
+  const [roomCount, setRoomCount] = React.useState(1)
   const [form, setForm] = React.useState({
     FirstName: '',
     LastName: '',
@@ -38,7 +42,7 @@ const Burlington = () => {
   /**
    * Synchronize site count state
    */
-  React.useEffect(()=> {
+  React.useEffect(() => {
     if (form.ServiceType === 'LoadingOnly') {
       setSiteCount(1)
     } else {
@@ -148,9 +152,10 @@ const Burlington = () => {
       >
         <p>
           Request an estimate for moving service from Local Muscle
-          in <strong>Burlington, VT</strong>
+          in <strong>Burlington, VT</strong>.
         </p>
         <p>
+          <strong>Estimated completion time: 10-15 minutes.</strong><br />
           Required fields marked with *
         </p>
 
@@ -181,13 +186,29 @@ const Burlington = () => {
             />
 
             {(form.ServiceType === 'Moving') ?
-            <NumberOfSites
-              siteCount={siteCount}
-              setSiteCount={setSiteCount}
-              dark
-            /> : null }
+              <NumberOfSites
+                siteCount={siteCount}
+                setSiteCount={setSiteCount}
+                dark
+              /> : null}
 
             {renderSites()}
+
+            <AddlLocation
+              addlLocationNotes={addlLocationNotes}
+              setAddlLocationNotes={setAddlLocationNotes}
+            />
+
+            <NumberOfRooms
+              roomCount={roomCount}
+              setRoomCount={setRoomCount}
+              dark
+            />
+
+            <OtherNotes
+              otherNotes={otherNotes}
+              setOtherNotes={setOtherNotes}
+            />
 
             <button
               className={`ui ${(complete === true) ? 'blue' : 'grey'} button huge pop`}
