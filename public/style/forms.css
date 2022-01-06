@@ -38,6 +38,8 @@ label, label:active, label:focus, label::selection {
 }
 
 input, select, textarea {
+    -webkit-appearance: none;
+    color: rgb(27, 27, 27) !important;
     font-weight: 500;
     font-family: 'Roboto';
     font-size: 1.3em !important;
@@ -47,6 +49,10 @@ input, select, textarea {
     font-family: 'Rubik', sans-serif;
     -webkit-box-shadow: 5px 5px 8px -2px rgba(0, 0, 0, 0.03) !important;
     box-shadow: 5px 5px 8px -2px rgba(0, 0, 0, 0.03) !important;
+}
+
+select * {
+    color: rgb(27, 27, 27) !important;
 }
 
 input:last-child {

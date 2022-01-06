@@ -5,10 +5,10 @@ import Columns from '../../../components/Columns';
 const AddressTemplate = ({ form, handleFormChange, siteNumber }) => {
   const [floors, setFloors] = React.useState({
     basement: false,
-    floor1: false,
-    floor2: false,
-    floor3: false,
-    floor4orHigher: false,
+    first: false,
+    second: false,
+    third: false,
+    fourthPlus: false,
     elevator: false
   })
   return (
@@ -64,10 +64,10 @@ const AddressTemplate = ({ form, handleFormChange, siteNumber }) => {
             name={`Site${siteNumber}State`}
             id={`site${siteNumber}State`}
             placeholder='ME'
-            value={form[`Site${siteNumber}State`]}
+            value={form[`Site${siteNumber}State`] || "VT"}
             onChange={handleFormChange}
           >
-            <States />
+            <States/>
           </select>
         </div>
         <div className="four wide field">
@@ -86,45 +86,48 @@ const AddressTemplate = ({ form, handleFormChange, siteNumber }) => {
         </div>
       </div>
 
+
+      {/*     FLOORS     */}
+      {/******************/}
       <Columns style={{paddingBottom: '1em'}}>
         <column>
           <div class="ui checkbox">
             <input
               type="checkbox"
-              name="OriginFloorsBasement"
-              id="OriginFloorsBasement"
+              name={`Site${siteNumber}Basement`}
+              id={`site${siteNumber}Basement`}
               checked={floors.basement}
               onChange={() => setFloors(prevState =>
-                ({ ...prevState, [`Site${siteNumber}Zip`]: !floors.basement }))
+                ({ ...prevState, basement: !floors.basement }))
               }
             />
-            <label htmlFor="OriginFloorsBasement">Basement</label>
+            <label htmlFor={`site${siteNumber}Basement`}>Basement</label>
           </div><br />
 
           <div class="ui checkbox">
             <input
               type="checkbox"
-              name="OriginFloorsFirst"
-              id='floorsFirst'
+              name={`Site${siteNumber}First`}
+              id={`site${siteNumber}First`}
               checked={floors.first}
               onChange={() => setFloors(prevState =>
                 ({ ...prevState, 'first': !floors.first }))
               }
             />
-            <label htmlFor='floorsFirst'>1st Floor / Ground Level</label>
+            <label htmlFor={`site${siteNumber}First`}>1st Floor / Ground Level</label>
           </div><br />
 
           <div class="ui checkbox">
             <input
               type="checkbox"
-              name="OriginFloorsSecond"
-              id='floorsSecond'
+              name={`Site${siteNumber}Second`}
+              id={`site${siteNumber}Second`}
               checked={floors.second}
               onChange={() => setFloors(prevState =>
                 ({ ...prevState, 'second': !floors.second }))
               }
             />
-            <label htmlFor='floorsSecond'>2nd Floor</label>
+            <label htmlFor={`site${siteNumber}Second`}>2nd Floor</label>
           </div><br />
         </column>
 
@@ -132,40 +135,40 @@ const AddressTemplate = ({ form, handleFormChange, siteNumber }) => {
           <div class="ui checkbox">
             <input
               type="checkbox"
-              name="OriginFloorsThird"
-              id='floorsThird'
+              name={`Site${siteNumber}Third`}
+              id={`site${siteNumber}Third`}
               checked={floors.third}
               onChange={() => setFloors(prevState =>
                 ({ ...prevState, 'third': !floors.third }))
               }
             />
-            <label htmlFor='floorsThird'>3rd Floor</label>
+            <label htmlFor={`site${siteNumber}Third`}>3rd Floor</label>
           </div><br />
 
           <div class="ui checkbox">
             <input
               type="checkbox"
-              name="OriginFloorsFourth"
-              id='floorsFourth'
+              name={`Site${siteNumber}FourthPlus`}
+              id={`site${siteNumber}FourthPlus`}
               checked={floors.fourthPlus}
               onChange={() => setFloors(prevState =>
                 ({ ...prevState, 'fourthPlus': !floors.fourthPlus }))
               }
             />
-            <label htmlFor='floorsFourth'>4th Floor or Greater</label>
+            <label htmlFor={`site${siteNumber}FourthPlus`}>4th Floor or Greater</label>
           </div><br />
 
           <div class="ui checkbox">
             <input
               type="checkbox"
-              name="OriginFloorsElevator"
-              id='floorsElevator'
+              name={`Site${siteNumber}Elevator`}
+              id={`site${siteNumber}Elevator`}
               checked={floors.elevator}
               onChange={() => setFloors(prevState =>
                 ({ ...prevState, 'elevator': !floors.elevator }))
               }
             />
-            <label htmlFor='floorsElevator'>Elevator</label>
+            <label htmlFor={`site${siteNumber}Elevator`}>Elevator</label>
           </div><br />
         </column>
       </Columns>

@@ -24,7 +24,11 @@ const NumberOfSites = ({ siteCount, setSiteCount, dark }) => {
 
 
       <div className="field">
+        <label for='numberOfSites'>
+          How many locations will we be visiting?*
+        </label>
         <select
+        required
           value={siteCount}
           onChange={(e)=>{setSiteCount(e.target.value)}}
           id='numberOfSites'
