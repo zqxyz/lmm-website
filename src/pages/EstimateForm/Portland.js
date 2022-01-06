@@ -1,12 +1,12 @@
 import React from 'react';
 import axios from 'axios';
-import Contact from './PortlandFieldsets/Contact';
-import ServiceType from './PortlandFieldsets/ServiceType';
-import ServiceDate from './PortlandFieldsets/ServiceDate';
-import Origin from './PortlandFieldsets/Origin';
-import Destination from './PortlandFieldsets/Destination';
-import AddlLocation from './PortlandFieldsets/AddlLocation';
-import OtherNotes from './PortlandFieldsets/OtherNotes'
+import Contact from './Fieldsets/Contact';
+import ServiceType from './Fieldsets/ServiceType';
+import ServiceDate from './Fieldsets/ServiceDate';
+import Origin from './Fieldsets/Origin';
+import Destination from './Fieldsets/Destination';
+import AddlLocation from './Fieldsets/AddlLocation';
+import OtherNotes from './Fieldsets/OtherNotes'
 import Container from '../../components/Container';
 
 // API documentation for SmartMoving
@@ -58,11 +58,11 @@ const Portland = () => {
   const URL =
     `https://api.smartmoving.com/api/leads/from-provider/v2?providerKey=2f400089-28bf-46c7-8a17-adfd01096041`;
 
- /**
-  * Formatting and validation with debounce,
-  * sets "complete" state object to true if
-  * conditions are met
-  */
+  /**
+   * Formatting and validation with debounce,
+   * sets "complete" state object to true if
+   * conditions are met
+   */
   React.useEffect(() => {
     const validateForm = () => {
       const emailRegex = /^([\w.%+-]+)@([\w-]+\.)+([\w]{2,})$/i
@@ -155,16 +155,16 @@ const Portland = () => {
               handleFormChange={handleFormChange}
             />
 
-            <ServiceType
-              form={form}
-              setForm={setForm}
-            />
-
             <ServiceDate
               form={form}
               handleFormChange={handleFormChange}
               dateWindow={dateWindow}
               setDateWindow={setDateWindow}
+            />
+
+            <ServiceType
+              form={form}
+              setForm={setForm}
             />
 
             <Origin

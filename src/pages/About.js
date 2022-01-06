@@ -1,7 +1,6 @@
 import React from 'react'
 import Container from '../components/Container'
 import ContainerSplitLeft from '../components/ContainerSplitLeft'
-import Banner from '../components/Banner'
 import Focus from '../components/Focus'
 
 const About = () => {

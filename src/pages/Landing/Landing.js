@@ -12,8 +12,8 @@ const Landing = () => {
 
 
       <Banner
-        // imageUrl='/images/fadedMasthead.jpg'
-        imageUrl='/images/trucks.jpeg'
+        imageUrl='/images/fadedMasthead.jpg'
+        // imageUrl='/images/trucks.jpeg'
         title="Let's get moving"
         height='300px'
       >
@@ -40,7 +40,7 @@ const Landing = () => {
 
 
       <Container
-        bgColor='#cdddca'
+        bgColor='#cbd5ba'
       >
         <div className='ui stackable grid'>
           <div className='ten wide column'>
@@ -62,7 +62,7 @@ const Landing = () => {
 
 
       <Container
-        bgColor='#c6cebd'
+        bgColor='#c6bba6'
       >
         <div className='ui stackable grid'>
           <div className='six wide column'>

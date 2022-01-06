@@ -40,14 +40,14 @@ const Estimate = () => {
             onClick={() => { setBranch('portland') }}
             style={{ marginBottom: '0' }}
           >
-            Portland, ME {(branch === 'portland') ? '✔' : ''}
+            Portland, ME {(branch === 'portland') ? '✓' : ''}
           </button>
           <button
             className={`ui ${(branch === 'burlington') ? 'blue' : ''} button huge pop`}
             onClick={() => { setBranch('burlington') }}
             style={{ marginBottom: '0' }}
           >
-            Burlington, VT {(branch === 'burlington') ? '✔' : ''}
+            Burlington, VT {(branch === 'burlington') ? '✓' : ''}
           </button>
         </center>
       </Container>

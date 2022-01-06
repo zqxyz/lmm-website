@@ -49,20 +49,9 @@ input, select, textarea {
     box-shadow: 5px 5px 8px -2px rgba(0, 0, 0, 0.03) !important;
 }
 
-
-
-
-/* background-color: #f7f9f5 !important;
-border: none !important;
-    border-bottom-color: currentcolor;
-    border-bottom-style: none;
-    border-bottom-width: medium;
-border-bottom-color: currentcolor;
-border-bottom-style: none;
-border-bottom-width: medium;
-border-bottom: 1px solid #8a8a8a !important; */
-
-
+input:last-child {
+    margin-bottom: 0 !important;
+}
 
 input:focus, select:focus, textarea:focus {
     background-color: #ffffff !important;

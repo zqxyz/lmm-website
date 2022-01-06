@@ -41,8 +41,7 @@ body {
 #preload {
     background-image:
         url(/images/movingAction.JPG),
-        url(/images/crew.jpg),
-        url(images/fadedMasthead.jpg);
+        url(/images/trucks.jpeg);
     opacity: 0.0;
     -ms-filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=0);
     filter: alpha(opacity=0);
