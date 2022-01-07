@@ -1,6 +1,6 @@
 import React from 'react';
 
-const AddlLocation = ({ otherNotes, setOtherNotes }) => {
+const OtherNotes = ({ otherNotes, setOtherNotes }) => {
   return (
     <fieldset>
       <legend>
@@ -36,4 +36,4 @@ const AddlLocation = ({ otherNotes, setOtherNotes }) => {
   )
 }
 
-export default AddlLocation
+export default OtherNotes

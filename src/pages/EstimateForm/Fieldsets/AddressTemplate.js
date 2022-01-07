@@ -2,7 +2,7 @@ import React from 'react';
 import States from '../States';
 import Columns from '../../../components/Columns';
 
-const AddressTemplate = ({ form, handleFormChange, siteNumber }) => {
+const AddressTemplate = ({ form, handleFormChange, siteNumber, siteCount }) => {
   const [floors, setFloors] = React.useState({
     basement: false,
     first: false,
@@ -13,7 +13,10 @@ const AddressTemplate = ({ form, handleFormChange, siteNumber }) => {
   })
   return (
     <fieldset>
-      <legend>
+      <legend
+        align='right'
+        style={{ margin: '0' }}
+      >
         <svg xmlns="http://www.w3.org/2000/svg" width="24"
           height="24" fill="black" class="bi bi-geo-alt-fill"
           viewBox="0 0 16 16">
@@ -21,7 +24,7 @@ const AddressTemplate = ({ form, handleFormChange, siteNumber }) => {
           6 10zm0-7a3 3 0 1 1 0-6 3 3 0 0 1 0 6z" />
         </svg>
         &nbsp;
-        Site {siteNumber}
+        {(siteCount > 1) ? `Site ${siteNumber}` : 'Site'}
       </legend>
       <div className="fields">
         <div className="ten wide field">

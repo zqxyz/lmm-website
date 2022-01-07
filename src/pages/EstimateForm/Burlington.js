@@ -9,6 +9,7 @@ import NumberOfSites from './Fieldsets/NumberOfSites';
 import AddlLocation from './Fieldsets/AddlLocation';
 import OtherNotes from './Fieldsets/OtherNotes'
 import NumberOfRooms from './Fieldsets/NumberOfRooms';
+import RoomTemplate from './Fieldsets/RoomTemplate';
 
 
 const Burlington = () => {
@@ -24,6 +25,7 @@ const Burlington = () => {
   const [dateWindow, setDateWindow] = React.useState('')
   const [siteCount, setSiteCount] = React.useState(2)
   const [roomCount, setRoomCount] = React.useState(1)
+  const [inventory, setInventory] = React.useState({})
   const [form, setForm] = React.useState({
     FirstName: '',
     LastName: '',
@@ -88,7 +90,7 @@ const Burlington = () => {
 
 
   /**
-   *    Rendered sites
+   *    Rendered sites fieldsets
    *    based on user selection
    */
   const renderSites = () => {
@@ -98,7 +100,6 @@ const Burlington = () => {
     for (let i = 0; i < siteCount; i++) {
       sites[i] = i + 1;
     }
-
     return sites.map(site => {
       return (
         <AddressTemplate
@@ -106,10 +107,34 @@ const Burlington = () => {
           form={form}
           handleFormChange={handleFormChange}
           siteNumber={site}
+          siteCount={siteCount}
         />
       )
     })
+  }
 
+
+  /**
+  *    Rendered room fieldsets
+  *    based on user selection
+  */
+  const renderRooms = () => {
+    // Builds an array to access .map
+    // for simple rendering code
+    const rooms = []
+    for (let i = 0; i < roomCount; i++) {
+      rooms[i] = i + 1;
+    }
+    return rooms.map(room => {
+      return (
+        <RoomTemplate
+          key={`room${room}`}
+          inventory={inventory}
+          setInventory={setInventory}
+          roomNumber={room}
+        />
+      )
+    })
   }
 
 
@@ -147,7 +172,7 @@ const Burlington = () => {
     <>
       <Container
         title='Estimate Request Form'
-        bgColor='rgba(72, 74, 68, 0.94)'
+        bgColor='rgba(72, 74, 68, 0.8)'
         lightText
       >
         <p>
@@ -155,8 +180,9 @@ const Burlington = () => {
           in <strong>Burlington, VT</strong>.
         </p>
         <p>
-          <strong>Estimated completion time: 10-15 minutes.</strong><br />
-          Required fields marked with *
+          <strong>Estimated completion time: 10-15
+            minutes.</strong> <a href="#">Clear and reset form.</a>
+            <br />Required fields marked with *
         </p>
 
         <div
@@ -185,30 +211,68 @@ const Burlington = () => {
               dark
             />
 
-            {(form.ServiceType === 'Moving') ?
-              <NumberOfSites
-                siteCount={siteCount}
-                setSiteCount={setSiteCount}
+            {(siteCount === 1)
+              ? <h1>Location</h1>
+              : <h1>Locations</h1>
+            }
+            <div
+              className="ui segment"
+              style={{
+                backgroundColor: 'rgba(168, 167, 150, 0.36)',
+                marginBottom: '2em',
+                padding: '2em 2em 0 2em',
+                border: '1px solid rgb(191, 189, 189)'
+              }}
+            >
+              {(form.ServiceType === 'Moving') ?
+                <NumberOfSites
+                  siteCount={siteCount}
+                  setSiteCount={setSiteCount}
+                  dark
+                /> : null}
+              {renderSites()}
+              <AddlLocation
+                addlLocationNotes={addlLocationNotes}
+                setAddlLocationNotes={setAddlLocationNotes}
+              />
+            </div>
+
+            <h1>Inventory</h1>
+            <p>
+              Please note: Gathering inventory details is the most involved
+              part of this process, and the more specific detail you're
+              able to provide us, the more accurate our estimate will be.
+              We wish that providing a good estimate was as simple as
+              getting a general idea of our customers' needs, but experience
+              has taught us that specifics can vary a great deal even
+              between "typical" moves of the same type.
+            </p>
+            <div
+              className="ui segment"
+              style={{
+                backgroundColor: 'rgba(168, 167, 150, 0.36)',
+                marginBottom: '2em',
+                padding: '2em 2em 0 2em',
+                border: '1px solid rgb(191, 189, 189)'
+              }}
+            >
+              <NumberOfRooms
+                roomCount={roomCount}
+                setRoomCount={setRoomCount}
                 dark
-              /> : null}
+              />
 
-            {renderSites()}
-
-            <AddlLocation
-              addlLocationNotes={addlLocationNotes}
-              setAddlLocationNotes={setAddlLocationNotes}
-            />
-
-            <NumberOfRooms
-              roomCount={roomCount}
-              setRoomCount={setRoomCount}
-              dark
-            />
+              {renderRooms()}
+            </div>
 
             <OtherNotes
               otherNotes={otherNotes}
               setOtherNotes={setOtherNotes}
             />
+
+            <p>
+              Thanks for taking a moment to fill out our estimate form!
+            </p>
 
             <button
               className={`ui ${(complete === true) ? 'blue' : 'grey'} button huge pop`}
@@ -220,7 +284,7 @@ const Burlington = () => {
 
           </form>
         </div>
-      </Container>
+      </Container >
 
 
     </>

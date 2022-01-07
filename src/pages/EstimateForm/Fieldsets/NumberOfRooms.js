@@ -24,15 +24,15 @@ const NumberOfRooms = ({ roomCount, setRoomCount, dark }) => {
 
       <div className="field">
         <label for='numberOfRooms'>
-          How many rooms contain items that we'll be handling?*
+          How many rooms/spaces contain items that we'll be handling?*
         </label>
         <select
-          required
           value={roomCount}
           onChange={(e) => { setRoomCount(e.target.value) }}
           id='numberOfRooms'
           name='NumberOfRooms'
-          required>
+          required
+        >
           <option value='1'>
             One
           </option>

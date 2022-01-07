@@ -135,7 +135,7 @@ const Portland = () => {
     <>
       <Container
         title='Estimate Request Form'
-        bgColor='rgba(204, 208, 196, 0.9)'
+        bgColor='rgba(204, 208, 196, 0.8)'
       >
         <p>
           Request an estimate for moving service from Local Muscle

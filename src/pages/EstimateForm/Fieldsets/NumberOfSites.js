@@ -28,12 +28,12 @@ const NumberOfSites = ({ siteCount, setSiteCount, dark }) => {
           How many locations will we be visiting?*
         </label>
         <select
-        required
           value={siteCount}
-          onChange={(e)=>{setSiteCount(e.target.value)}}
+          onChange={(e) => { setSiteCount(e.target.value) }}
           id='numberOfSites'
           name='NumberOfSites'
-          required>
+          required
+          >
           <option value='2'>
             Two
           </option>
