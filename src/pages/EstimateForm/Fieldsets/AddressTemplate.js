@@ -1,6 +1,7 @@
 import React from 'react';
 import States from '../States';
 import Columns from '../../../components/Columns';
+import SectionHeader from './SectionHeader';
 
 const AddressTemplate = ({ form, handleFormChange, siteNumber, siteCount }) => {
   const [floors, setFloors] = React.useState({
@@ -11,21 +12,22 @@ const AddressTemplate = ({ form, handleFormChange, siteNumber, siteCount }) => {
     fourthPlus: false,
     elevator: false
   })
+
+  const icon = <svg xmlns="http://www.w3.org/2000/svg" width="24"
+    height="24" fill="black" class="bi bi-geo-alt-fill"
+    viewBox="0 0 16 16">
+    <path d="M8 16s6-5.686 6-10A6 6 0 0 0 2 6c0 4.314 6 10
+  6 10zm0-7a3 3 0 1 1 0-6 3 3 0 0 1 0 6z" />
+  </svg>;
+
   return (
     <fieldset>
-      <legend
-        align='right'
-        style={{ margin: '0' }}
-      >
-        <svg xmlns="http://www.w3.org/2000/svg" width="24"
-          height="24" fill="black" class="bi bi-geo-alt-fill"
-          viewBox="0 0 16 16">
-          <path d="M8 16s6-5.686 6-10A6 6 0 0 0 2 6c0 4.314 6 10
-          6 10zm0-7a3 3 0 1 1 0-6 3 3 0 0 1 0 6z" />
-        </svg>
-        &nbsp;
-        {(siteCount > 1) ? `Site ${siteNumber}` : 'Site'}
-      </legend>
+      <SectionHeader
+        title={(siteCount > 1) ? `Site ${siteNumber}` : 'Site'}
+        icon={icon}
+        legendAlignment={'right'}
+        legendStyle={{ margin: '0.5' }}
+      />
       <div className="fields">
         <div className="ten wide field">
           <label htmlFor={`site${siteNumber}Street`}>
@@ -70,7 +72,7 @@ const AddressTemplate = ({ form, handleFormChange, siteNumber, siteCount }) => {
             value={form[`Site${siteNumber}State`] || "VT"}
             onChange={handleFormChange}
           >
-            <States/>
+            <States />
           </select>
         </div>
         <div className="four wide field">
@@ -92,7 +94,7 @@ const AddressTemplate = ({ form, handleFormChange, siteNumber, siteCount }) => {
 
       {/*     FLOORS     */}
       {/******************/}
-      <Columns style={{paddingBottom: '1em'}}>
+      <Columns style={{ paddingBottom: '1em' }}>
         <column>
           <div class="ui checkbox">
             <input
@@ -175,7 +177,7 @@ const AddressTemplate = ({ form, handleFormChange, siteNumber, siteCount }) => {
           </div><br />
         </column>
       </Columns>
-    </fieldset>
+    </fieldset >
   )
 }
 

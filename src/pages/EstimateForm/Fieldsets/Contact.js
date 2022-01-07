@@ -1,4 +1,5 @@
 import React from 'react';
+import SectionHeader from './SectionHeader';
 
 const formatPhoneNumber = (value) => {
   if (!value) return value;
@@ -13,22 +14,23 @@ const formatPhoneNumber = (value) => {
 }
 
 const Contact = ({ form, handleFormChange, dark }) => {
+  const icon =
+    <svg xmlns="http://www.w3.org/2000/svg" width="24"
+      height="24" fill="black" class="bi bi-person-fill"
+      viewBox="0 0 15 15">
+      <path d="M3 14s-1 0-1-1 1-4 6-4 6 3 6 4-1 1-1 1H3zm5-6a3
+    3 0 1 0 0-6 3 3 0 0 0 0 6z" />
+    </svg>;
 
   return (
     <>
       <fieldset
         className={(dark) ? 'dark' : ''}
       >
-        <legend>
-          <svg xmlns="http://www.w3.org/2000/svg" width="24"
-            height="24" fill="black" class="bi bi-person-fill"
-            viewBox="0 0 15 15">
-            <path d="M3 14s-1 0-1-1 1-4 6-4 6 3 6 4-1 1-1 1H3zm5-6a3
-                  3 0 1 0 0-6 3 3 0 0 0 0 6z" />
-          </svg>
-          &nbsp;
-          Contact Info
-        </legend>
+        <SectionHeader
+          title='Contact Info'
+          icon={icon}
+        />
         <div className="fields">
           <div className="eight wide field">
             <label htmlFor='firstName'>First Name*</label>
