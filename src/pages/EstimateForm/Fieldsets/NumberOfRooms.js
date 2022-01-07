@@ -24,7 +24,7 @@ const NumberOfRooms = ({ roomCount, setRoomCount, dark }) => {
 
 
       <div className="field">
-        <label for='numberOfRooms'>
+        <label htmlFor='numberOfRooms'>
           How many rooms/spaces contain items that we'll be handling?*
         </label>
         <select

@@ -90,6 +90,27 @@ const Burlington = () => {
 
 
   /**
+   *    Combine, format inventories
+   *    add to form state
+   *    with debounce
+   */
+  const invDebounceTime = 200 // ms before validation is triggered
+  React.useEffect(() => {
+    const timerId = setTimeout(() => {
+      let str = ''
+      for (const key in inventory) {
+        str += inventory[key] + "\n\n"
+      }
+        setForm({...form, inventory: str})
+    }, invDebounceTime)
+
+    return () => {
+      clearTimeout(timerId)
+    }
+  }, [inventory])
+
+
+  /**
    *    Rendered sites fieldsets
    *    based on user selection
    */
@@ -156,7 +177,7 @@ const Burlington = () => {
 
     const to = 'code@zquint.xyz'
     const subject = `802 New Lead from ${form.FirstName} ${form.LastName} on ${date}`
-    let mailBody
+    let mailBody = ''
     for (const [key, value] of Object.entries(form)) {
       mailBody += `${key}: ${value}\n`
     }
@@ -181,7 +202,7 @@ const Burlington = () => {
         </p>
         <p>
           <strong>Estimated completion time: 10-15
-            minutes.</strong> <a href="#">Clear and reset form.</a>
+            minutes.</strong> {/* <a href="#">Clear and reset form.</a> */}
           <br />Required fields marked with *
         </p>
 

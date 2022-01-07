@@ -51,11 +51,12 @@ const ServiceDate = ({ form, handleFormChange, dateWindow, setDateWindow, dark }
             Flexibility*
           </label>
           <select
+            required
             value={dateWindow}
             onChange={(e) => setDateWindow(e.target.value)}
             id='dateRange'
             name='DateRange'
-            required>
+            >
             <option selected hidden>
               How soon do you need service?
             </option>

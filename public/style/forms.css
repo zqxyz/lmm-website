@@ -146,4 +146,8 @@ input[type='text'], textarea, select, input[type='date'] {
         background: none !important;
     }
 
+    .fieldset {
+        margin-bottom: 1.5em;
+    }
+
 }

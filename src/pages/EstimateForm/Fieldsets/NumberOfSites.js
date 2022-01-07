@@ -23,7 +23,7 @@ const NumberOfSites = ({ siteCount, setSiteCount, dark }) => {
         title='Number of Sites'
       />
       <div className="field">
-        <label for='numberOfSites'>
+        <label htmlFor='numberOfSites'>
           How many locations will we be visiting?*
         </label>
         <select

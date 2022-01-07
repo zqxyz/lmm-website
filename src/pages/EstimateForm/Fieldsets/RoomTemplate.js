@@ -1,15 +1,37 @@
 import React from 'react';
 
 const RoomTemplate = ({ inventory, setInventory, roomNumber }) => {
+  // Getters and Setters
   const [roomName, setRoomName] = React.useState('')
-  const [roomInventory, setRoomInventory] = React.useState([])
+  const [roomInventory, setRoomInventory] = React.useState('')
   const [roomBoxCount, setRoomBoxCount] = React.useState('')
 
-  React.useEffect(()=>{
-    
-  }, )
+  // Character enforcement for user input
+  const sanitize = (str) => str.replace(/[^\w'".,&\n() ]/g, "");
+  const numbersOnlyEnforce = (str) => str.replace(/[^\d]/g, "");
+
+  /**
+   *      Build inventory string from state
+   *      with debounce
+   */
+  const debounceTime = 500 // ms before validation is triggered
+  React.useEffect(() => {
+    const timerId = setTimeout(() => {
+      let str =
+        roomName + '\n' +
+        roomInventory.replaceAll(", ", '\n') + '\n' +
+        roomBoxCount + ' boxes';
+      setInventory({ ...inventory, [roomNumber]: str })
+    }, debounceTime)
+    return () => {
+      clearTimeout(timerId)
+    }
+  }, [roomName, roomInventory, roomBoxCount])
+
+
+  //  Body to render
   return (
-    <fieldset>
+    <fieldset className="dark">
       <legend
         align='right'
         style={{ margin: '0' }}
@@ -34,8 +56,8 @@ const RoomTemplate = ({ inventory, setInventory, roomNumber }) => {
           id={`room${roomNumber}Name`}
           name={`Room${roomNumber}Name`}
           placeholder='e.g. "Living Room" or "Shed"'
-          value={roomName}
-          onChange={evt => { setRoomName(evt.target.value) }}
+          value={sanitize(roomName)}
+          onChange={evt => { setRoomName(sanitize(evt.target.value)) }}
         />
       </div>
       <div className='field' style={{ paddingBottom: '0.5em' }}>
@@ -47,22 +69,25 @@ const RoomTemplate = ({ inventory, setInventory, roomNumber }) => {
           name={`Room${roomNumber}Inventory`}
           rows='3'
           placeholder='Please list all furniture and unboxed items to be moved from this room'
-          value={inventory[roomNumber]}
+          value={sanitize(roomInventory)}
           onChange={(event) => {
-            setInventory({ ...inventory, roomNumber: event.target.value })
+            setRoomInventory(sanitize(event.target.value))
           }}
         />
       </div>
       <div className='field' style={{ paddingBottom: '0.5em' }}>
         <label htmlFor={`room${roomNumber}BoxCount`}>
-          Box count*
+          Box count (numbers only)*
         </label>
         <input
+          required
+          value={numbersOnlyEnforce(roomBoxCount)}
+          onChange={evt => { setRoomBoxCount(numbersOnlyEnforce(evt.target.value)) }}
+          autoComplete="off"
+          type="text"
           id={`room${roomNumber}BoxCount`}
           name={`Room${roomNumber}BoxCount`}
           placeholder='Approximatations are fine'
-          value={roomBoxCount}
-          onChange={evt => { setRoomBoxCount(evt.target.value) }}
         />
       </div>
     </fieldset>

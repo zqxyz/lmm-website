@@ -19,7 +19,6 @@ const AddlLocation = ({ addlLocationNotes, setAddlLocationNotes }) => {
       <SectionHeader
         icon={icon}
         title='Location Notes'
-        legendAlignment='center'
       />
       <div className='field' style={{ paddingBottom: '0.5em' }}>
         <label htmlFor='addlLocationNotes'>
