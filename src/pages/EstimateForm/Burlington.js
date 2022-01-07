@@ -182,7 +182,7 @@ const Burlington = () => {
         <p>
           <strong>Estimated completion time: 10-15
             minutes.</strong> <a href="#">Clear and reset form.</a>
-            <br />Required fields marked with *
+          <br />Required fields marked with *
         </p>
 
         <div
@@ -215,15 +215,7 @@ const Burlington = () => {
               ? <h1>Location</h1>
               : <h1>Locations</h1>
             }
-            <div
-              className="ui segment"
-              style={{
-                backgroundColor: 'rgba(168, 167, 150, 0.36)',
-                marginBottom: '2em',
-                padding: '2em 2em 0 2em',
-                border: '1px solid rgb(191, 189, 189)'
-              }}
-            >
+            <div className="ui segment fieldsetGroup">
               {(form.ServiceType === 'Moving') ?
                 <NumberOfSites
                   siteCount={siteCount}
@@ -247,21 +239,12 @@ const Burlington = () => {
               has taught us that specifics can vary a great deal even
               between "typical" moves of the same type.
             </p>
-            <div
-              className="ui segment"
-              style={{
-                backgroundColor: 'rgba(168, 167, 150, 0.36)',
-                marginBottom: '2em',
-                padding: '2em 2em 0 2em',
-                border: '1px solid rgb(191, 189, 189)'
-              }}
-            >
+            <div className="ui segment fieldsetGroup">
               <NumberOfRooms
                 roomCount={roomCount}
                 setRoomCount={setRoomCount}
                 dark
               />
-
               {renderRooms()}
             </div>
 

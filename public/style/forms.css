@@ -10,7 +10,12 @@ legend {
     color: rgb(27, 27, 27) !important;
 }
 
-
+.fieldsetGroup {
+    background-color: rgba(168, 167, 150, 0.36) !important;
+    margin-bottom: 2em !important;
+    padding: 2em 2em 0 2em !important;
+    border: 1px solid rgb(191, 189, 189) !important;
+}
 
 fieldset {
     background-color: rgb(245, 247, 242);
@@ -63,7 +68,7 @@ input, select, textarea {
     margin-bottom: 1em !important;
 }
 
-.fields{
+.fields {
     margin-bottom: 0 !important;
 }
 
@@ -133,6 +138,12 @@ input[type='text'], textarea, select, input[type='date'] {
     input, select, textarea {
         font-size: 1em !important;
         margin-bottom: 1em !important;
+    }
+
+    .fieldsetGroup {
+        padding: 0 !important;
+        border: none !important;
+        background: none !important;
     }
 
 }
