@@ -42,7 +42,7 @@ const Burlington = () => {
 
 
   /**
-   * Synchronize site count state
+   *    Synchronize site count state
    */
   React.useEffect(() => {
     if (form.ServiceType === 'LoadingOnly') {
@@ -54,7 +54,8 @@ const Burlington = () => {
 
 
   /**
-   *    Formatting and validation with debounce;
+   *    Debounce wrapped functions;
+   *    FORMATTING and VALIDATION:
    *    sets "complete" state object to true if
    *    conditions are met
    */
@@ -78,11 +79,8 @@ const Burlington = () => {
             .replaceAll(/[^\d]/g, '')
             .substring(0, 10)
         })
-
       validateForm()
-
     }, debounceTime)
-
     return () => {
       clearTimeout(timerId)
     }
@@ -90,29 +88,8 @@ const Burlington = () => {
 
 
   /**
-   *    Combine, format inventories
-   *    add to form state
-   *    with debounce
-   */
-  const invDebounceTime = 200 // ms before validation is triggered
-  React.useEffect(() => {
-    const timerId = setTimeout(() => {
-      let str = ''
-      for (const key in inventory) {
-        str += inventory[key] + "\n\n"
-      }
-        setForm({...form, inventory: str})
-    }, invDebounceTime)
-
-    return () => {
-      clearTimeout(timerId)
-    }
-  }, [inventory])
-
-
-  /**
-   *    Rendered sites fieldsets
-   *    based on user selection
+   *    Render sites fieldsets
+   *    based on specified count
    */
   const renderSites = () => {
     // Builds an array to access .map
@@ -136,8 +113,8 @@ const Burlington = () => {
 
 
   /**
-  *    Rendered room fieldsets
-  *    based on user selection
+  *    Render room fieldsets
+  *    based on specified count
   */
   const renderRooms = () => {
     // Builds an array to access .map
@@ -160,27 +137,52 @@ const Burlington = () => {
 
 
   /*
-   *  Form Change
-   *       and
-   *    Form Submission
-   *  functions
-   * 
+   *    Form change handler for input states
    */
   const handleFormChange = (event) => {
     const { name, value } = event.target
     setForm(prevState => ({ ...prevState, [name]: value }))
   }
 
+
+  /**
+   *    Form submission
+   *       using mail() api,
+   *         plus
+   *     string formatting functions
+   */
   const handleSubmit = (event) => {
     event.preventDefault()
-    const date = Date.now()
 
-    const to = 'code@zquint.xyz'
-    const subject = `802 New Lead from ${form.FirstName} ${form.LastName} on ${date}`
-    let mailBody = ''
-    for (const [key, value] of Object.entries(form)) {
-      mailBody += `${key}: ${value}\n`
+    // Timestamp
+    const now = new Date()
+    const timestamp =
+      `${now.getMonth() + 1}/${now.getDay()}/${now.getFullYear()} ` +
+      `${now.toLocaleTimeString('en-US')}`
+
+    // Combine inventories into a string for submission to mail()
+    const formInventory = () => {
+      let str = ''
+      for (const key in inventory) {
+        str += inventory[key] + "\n\n"
+      }
+      setForm({ ...form, Inventory: str })
     }
+
+    // Submission
+    const to = 'code@zquint.xyz'
+    const subject = `802 REF: from ${form.LastName}, ${form.FirstName} @ ${timestamp}`
+
+    const mailBody = // ACTUAL REF EMAIL FORMAT
+      // Contact info
+      `Name: ${form.LastName}, ${form.FirstName}` + '\n' +
+      `Phone: ${form.PhoneNumber}` + '\n' +
+      `${(form.Extension) ? `Extension: ${form.Extension}\n` : ''}` +
+      `Email: ${form.Email}` + '\n' +
+      '\n' +
+      // Service Date
+      `Preferred date: ${form.MoveDate}` + '\n' +
+      `Flexibility: ${form.dateWindow}` + '\n';
 
     mail(to, subject, mailBody)
   }

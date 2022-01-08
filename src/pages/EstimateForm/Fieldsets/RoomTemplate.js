@@ -21,7 +21,7 @@ const RoomTemplate = ({ inventory, setInventory, roomNumber }) => {
         roomName + '\n' +
         roomInventory.replaceAll(", ", '\n') + '\n' +
         roomBoxCount + ' boxes';
-      setInventory({ ...inventory, [roomNumber]: str })
+      setInventory({ ...inventory, [roomNumber]: '\n' + str })
     }, debounceTime)
     return () => {
       clearTimeout(timerId)

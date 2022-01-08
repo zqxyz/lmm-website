@@ -6,7 +6,7 @@ import { initializeApp } from 'firebase/app'
 const firebaseConfig = {
   apiKey: 'AIzaSyAmtAEf_-9xWSMpWscDHtaKYmcYvxhVPbw',
   authDomain: 'localmuscle-demo.firebaseapp.com',
-  projectId: 'localmuscle-demo',
+  projectId: 'localmusclemovers',
   storageBucket: 'localmuscle-demo.appspot.com',
   messagingSenderId: '469866796136',
   appId: '1:469866796136:web:233c2d6c87d771c5a617dd'
