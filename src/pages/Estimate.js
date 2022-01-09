@@ -7,11 +7,13 @@ const Estimate = () => {
   const [branch, setBranch] = React.useState('')
 
   // Title for this page
-  React.useEffect(()=>{
+  React.useEffect(() => {
     document.title = "Local Muscle - Get a free moving estimate"
-    return ()=> document.title = "Local Muscle Movers"
+    return () => document.title = "Local Muscle Movers"
   }, [])
 
+
+  //  Instructions to select branch form
   const chooseBranchPrompt = () => {
     return (
       <Container
@@ -20,7 +22,7 @@ const Estimate = () => {
         lightText
       >
         <p>
-            Choose the branch you'd like to contact using the options above.
+          Choose the branch you'd like to contact using the options above.
         </p>
         <p>
           If you are unsure which office to contact, select the office closest to your origin address.
@@ -29,12 +31,15 @@ const Estimate = () => {
     )
   }
 
+  //  Render component based on input
   const renderBranchForm = () => {
     if (branch === '') return chooseBranchPrompt()
     if (branch === 'portland') return <Portland />
-    if (branch === 'burlington') return <><Burlington /></>
+    if (branch === 'burlington') return <Burlington />
   }
 
+
+  //  Render body
   return (
     <>
       <Container

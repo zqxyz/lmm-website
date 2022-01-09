@@ -15,6 +15,11 @@ import Container from '../../components/Container';
 const Portland = () => {
   const debounceTime = 500 // milliseconds
 
+  const scrollRef = React.useRef()
+  React.useEffect(() => {
+    if (scrollRef.current) scrollRef.current.scrollIntoView({ behavior: "smooth" })
+  }, [])
+
   const [form, setForm] = React.useState({
     FirstName: '',
     LastName: '',
@@ -133,13 +138,12 @@ const Portland = () => {
 
   return (
     <>
-      <Container
-        title='Estimate Request Form'
-        bgColor='rgba(204, 208, 196, 0.8)'
-      >
+      <Container bgColor='rgba(204, 208, 196, 0.8)'>
+        <h1 ref={scrollRef}>Estimate Request Form</h1>
         <p>
-          Request an estimate for moving service from Local Muscle
-          in <strong>Portland, Maine</strong>
+          Request an estimate for moving service from
+          <span className="cowboy"> Local Muscle </span>
+          in Portland, Maine
         </p>
         <p>
           Required fields marked with *
@@ -196,10 +200,9 @@ const Portland = () => {
             {(complete === false) ? <p>Complete the required fields above to proceed</p> : ''}
             <button
               className={`ui ${(complete === true) ? 'blue' : 'grey'} button huge pop`}
-              style={{ margin: '0.75em' }}
-              disabled={(complete === true) ? false : true}
+              disabled={!complete}
             >
-              Submit
+              {(!complete) ? 'Complete form before submitting' : 'Submit'}
             </button>
 
 

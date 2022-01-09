@@ -13,6 +13,11 @@ import RoomTemplate from './Fieldsets/RoomTemplate';
 
 
 const Burlington = () => {
+  const scrollRef = React.useRef()
+  React.useEffect(() => {
+    if (scrollRef.current) scrollRef.current.scrollIntoView({ behavior: "smooth" })
+  }, [])
+  
   /**
    *     State
    *    Getters
@@ -162,8 +167,8 @@ const Burlington = () => {
     const now = new Date()
     const timestamp =
       `${now.getMonth() + 1}/${now.getDate()}/${now.getFullYear()} ` +
-      `${now.toLocaleTimeString('en-US', {hour: '2-digit', minute: '2-digit', hour12: true})}`
-    
+      `${now.toLocaleTimeString('en-US', { hour: '2-digit', minute: '2-digit', hour12: true })}`
+
     // PHP uniqid() clone for consistency with old PHP system
     const uniqid_likePhp = (prefix = "", random = false) => {
       const sec = Date.now() * 1000 + Math.random() * 1000;
@@ -184,12 +189,12 @@ const Burlington = () => {
     const siteString = () => {
       let str = ''
       for (let i = 0; i < siteCount; i++) {
-        str += form[`Site${i+1}Street`] + '\n' +
-          form[`Site${i+1}City`] + ', ' +
-          form[`Site${i+1}State`] + '\xa0\xa0' +
-          form[`Site${i+1}Zip`] + '\n' +
-          'Floors: ' + form[`Site${i+1}Floors`] + '\n' +
-          'Services: ' + form[`Site${i+1}Services`]
+        str += form[`Site${i + 1}Street`] + '\n' +
+          form[`Site${i + 1}City`] + ', ' +
+          form[`Site${i + 1}State`] + '\xa0\xa0' +
+          form[`Site${i + 1}Zip`] + '\n' +
+          'Floors: ' + form[`Site${i + 1}Floors`] + '\n' +
+          'Services: ' + form[`Site${i + 1}Services`]
         if (i !== (siteCount - 1)) str += '\n\n'
       }
       return str
@@ -231,13 +236,14 @@ const Burlington = () => {
   return (
     <>
       <Container
-        title='Estimate Request Form'
         bgColor='rgba(72, 74, 68, 0.8)'
         lightText
       >
+        <h1 ref={scrollRef}>Estimate Request Form</h1>
         <p>
-          Request an estimate for moving service from Local Muscle
-          in <strong>Burlington, VT</strong>.
+          Request an estimate for moving service from
+          <span className="cowboy"> Local Muscle </span>
+          in Burlington, VT
         </p>
         <p>
           <strong>Estimated completion time: 10-15
@@ -319,7 +325,8 @@ const Burlington = () => {
 
             <button
               className={`ui ${(complete === true) ? 'blue' : 'grey'} button huge pop`}
-              disabled={!complete}
+              // disabled={!complete}
+              disabled
             >
               {(!complete) ? 'Complete form before submitting' : 'Submit'}
             </button>
