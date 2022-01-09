@@ -3,7 +3,7 @@ import States from '../States';
 import Columns from '../../../components/Columns';
 import SectionHeader from './SectionHeader';
 
-const AddressTemplate = ({ form, handleFormChange, siteNumber, siteCount }) => {
+const AddressTemplate = ({ form, setForm, handleFormChange, siteNumber, siteCount }) => {
   const [floors, setFloors] = React.useState({
     basement: false,
     first: false,
@@ -18,6 +18,35 @@ const AddressTemplate = ({ form, handleFormChange, siteNumber, siteCount }) => {
     rearranging: false,
     hoisting: false
   })
+
+
+  // Push floors to "form" state
+  React.useEffect(() => {
+    const floorArr = []
+    for (const [k, v] of Object.entries(floors)) {
+      if (v) floorArr.push(k)
+    }
+    const floorStr = floorArr.toString().replaceAll(',',', ')
+    setForm(prevState => ({
+      ...prevState,
+      [`Site${siteNumber}Floors`]: floorStr
+    }))
+  }, [floors, setForm, siteNumber])
+
+
+  // Push services to "form" state
+  React.useEffect(() => {
+    const serviceArr = []
+    for (const [k, v] of Object.entries(services)) {
+      if (v) serviceArr.push(k)
+    }
+    const serviceStr = serviceArr.toString().replaceAll(',',', ')
+    setForm(prevState => ({
+      ...prevState,
+      [`Site${siteNumber}Services`]: serviceStr
+    }))
+  }, [services, setForm, siteNumber])
+
 
   const icon = <svg xmlns="http://www.w3.org/2000/svg" width="24"
     height="24" fill="black" class="bi bi-geo-alt-fill"
@@ -98,7 +127,7 @@ const AddressTemplate = ({ form, handleFormChange, siteNumber, siteCount }) => {
       </div>
 
 
-      <Columns style={{marginBottom: '-0.5rem'}}>
+      <Columns style={{ marginBottom: '-0.5rem' }}>
         {/*     Floors     */}
         {/******************/}
         <column id={`Site${siteNumber}Floors`}>

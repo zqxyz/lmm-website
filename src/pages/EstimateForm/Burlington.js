@@ -42,7 +42,8 @@ const Burlington = () => {
 
 
   /**
-   *    Synchronize site count state
+   *    Update siteCount
+   *    on ServiceType change 
    */
   React.useEffect(() => {
     if (form.ServiceType === 'LoadingOnly') {
@@ -54,14 +55,16 @@ const Burlington = () => {
 
 
   /**
-   *    Debounce wrapped functions;
-   *    FORMATTING and VALIDATION:
-   *    sets "complete" state object to true if
-   *    conditions are met
+   *        (Debounce-wrapped)
+   *      FORMATTING
+   *          and
+   *        VALIDATION
+   *    Sets "complete" state object to true if
+   *    input requirements are met
    */
-  const debounceTime = 500 // ms before validation is triggered
+  const debounceTime = 500 // ms before functions are triggered
   React.useEffect(() => {
-    const validateForm = () => {
+    const validateForm = () => { // VALIDATION
       const emailRegex = /^([\w.%+-]+)@([\w-]+\.)+([\w]{2,})$/i
       if (form.FirstName !== ''
         && form.LastName !== ''
@@ -88,12 +91,12 @@ const Burlington = () => {
 
 
   /**
-   *    Render sites fieldsets
+   *    Render site (location) fieldsets
    *    based on specified count
    */
   const renderSites = () => {
     // Builds an array to access .map
-    // for simple rendering code
+    // for readable rendering code
     const sites = []
     for (let i = 0; i < siteCount; i++) {
       sites[i] = i + 1;
@@ -103,6 +106,7 @@ const Burlington = () => {
         <AddressTemplate
           key={`address${site}`}
           form={form}
+          setForm={setForm}
           handleFormChange={handleFormChange}
           siteNumber={site}
           siteCount={siteCount}
@@ -118,7 +122,7 @@ const Burlington = () => {
   */
   const renderRooms = () => {
     // Builds an array to access .map
-    // for simple rendering code
+    // for readable rendering code
     const rooms = []
     for (let i = 0; i < roomCount; i++) {
       rooms[i] = i + 1;
@@ -147,25 +151,27 @@ const Burlington = () => {
 
   /**
    *    Form submission
-   *       using mail() api,
+   *       using mail() axios post,
    *         plus
    *     string formatting functions
    */
   const handleSubmit = (event) => {
     event.preventDefault()
 
-    // Timestamp + uniqid clone from PHP (for consistent Invoice ID)
+    // Timestamp
     const now = new Date()
     const timestamp =
       `${now.getMonth() + 1}/${now.getDate()}/${now.getFullYear()} ` +
       `${now.toLocaleTimeString('en-US', {hour: '2-digit', minute: '2-digit', hour12: true})}`
+    
+    // PHP uniqid() clone for consistency with old PHP system
     const uniqid_likePhp = (prefix = "", random = false) => {
       const sec = Date.now() * 1000 + Math.random() * 1000;
       const id = sec.toString(16).replace(/\./g, "").padEnd(14, "0");
       return `${prefix}${id}${random ? `.${Math.trunc(Math.random() * 100000000)}` : ""}`;
     };
 
-    // Combine inventories into a string for submission to mail()
+    // Combine room inventories into a string
     const inventoryString = () => {
       let str = ''
       for (const key in inventory) {
@@ -174,14 +180,16 @@ const Burlington = () => {
       setForm({ ...form, Inventory: str })
     }
 
-    // Build string based on number of sites
+    // Build site/location string based on number of sites
     const siteString = () => {
       let str = ''
       for (let i = 0; i < siteCount; i++) {
-        str += form[`Site${i+1}Street`] + '\n'
-        str += form[`Site${i+1}City`] + ', '
-        str += form[`Site${i+1}State`] + '\xa0\xa0'
-        str += form[`Site${i+1}Zip`]
+        str += form[`Site${i+1}Street`] + '\n' +
+          form[`Site${i+1}City`] + ', ' +
+          form[`Site${i+1}State`] + '\xa0\xa0' +
+          form[`Site${i+1}Zip`] + '\n' +
+          'Floors: ' + form[`Site${i+1}Floors`] + '\n' +
+          'Services: ' + form[`Site${i+1}Services`]
         if (i !== (siteCount - 1)) str += '\n\n'
       }
       return str
