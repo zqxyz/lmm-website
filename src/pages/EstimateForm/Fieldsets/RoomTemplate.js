@@ -26,7 +26,7 @@ const RoomTemplate = ({ inventory, setInventory, roomNumber }) => {
     return () => {
       clearTimeout(timerId)
     }
-  }, [roomName, roomInventory, roomBoxCount])
+  }, [roomName, roomInventory, roomBoxCount, roomNumber, setInventory, inventory])
 
 
   //  Body to render

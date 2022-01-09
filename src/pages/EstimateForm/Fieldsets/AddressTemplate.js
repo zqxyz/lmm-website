@@ -12,6 +12,12 @@ const AddressTemplate = ({ form, handleFormChange, siteNumber, siteCount }) => {
     fourthPlus: false,
     elevator: false
   })
+  const [services, setServices] = React.useState({
+    loading: false,
+    unloading: false,
+    rearranging: false,
+    hoisting: false
+  })
 
   const icon = <svg xmlns="http://www.w3.org/2000/svg" width="24"
     height="24" fill="black" class="bi bi-geo-alt-fill"
@@ -92,10 +98,17 @@ const AddressTemplate = ({ form, handleFormChange, siteNumber, siteCount }) => {
       </div>
 
 
-      {/*     FLOORS     */}
-      {/******************/}
-      <Columns style={{ paddingBottom: '1em' }}>
-        <column>
+      <Columns style={{marginBottom: '-0.5rem'}}>
+        {/*     Floors     */}
+        {/******************/}
+        <column id={`Site${siteNumber}Floors`}>
+          <label
+            style={{ display: 'block' }}
+            htmlFor={`Site${siteNumber}Floors`}
+          >
+            Floors*
+          </label>
+
           <div class="ui checkbox">
             <input
               type="checkbox"
@@ -134,9 +147,7 @@ const AddressTemplate = ({ form, handleFormChange, siteNumber, siteCount }) => {
             />
             <label htmlFor={`site${siteNumber}Second`}>2nd Floor</label>
           </div><br />
-        </column>
 
-        <column>
           <div class="ui checkbox">
             <input
               type="checkbox"
@@ -176,7 +187,76 @@ const AddressTemplate = ({ form, handleFormChange, siteNumber, siteCount }) => {
             <label htmlFor={`site${siteNumber}Elevator`}>Elevator</label>
           </div><br />
         </column>
+
+
+        {/*     Services     */}
+        {/******************/}
+        <column id={`Site${siteNumber}Services`}>
+          <label
+            style={{ display: 'block' }}
+            htmlFor={`Site${siteNumber}Services`}
+          >
+            Services*
+          </label>
+
+          <div class="ui checkbox">
+            <input
+              type="checkbox"
+              name={`Site${siteNumber}Loading`}
+              id={`site${siteNumber}Loading`}
+              checked={services.loading}
+              onChange={() => setServices(prevState =>
+                ({ ...prevState, loading: !services.loading }))
+              }
+            />
+            <label htmlFor={`site${siteNumber}Loading`}>Loading</label>
+          </div><br />
+
+
+          <div class="ui checkbox">
+            <input
+              type="checkbox"
+              name={`Site${siteNumber}Unloading`}
+              id={`site${siteNumber}Unloading`}
+              checked={services.unloading}
+              onChange={() => setServices(prevState =>
+                ({ ...prevState, unloading: !services.unloading }))
+              }
+            />
+            <label htmlFor={`site${siteNumber}Unloading`}>Unloading</label>
+          </div><br />
+
+
+          <div class="ui checkbox">
+            <input
+              type="checkbox"
+              name={`Site${siteNumber}Rearranging`}
+              id={`site${siteNumber}Rearranging`}
+              checked={services.rearranging}
+              onChange={() => setServices(prevState =>
+                ({ ...prevState, rearranging: !services.rearranging }))
+              }
+            />
+            <label htmlFor={`site${siteNumber}Rearranging`}>Rearranging</label>
+          </div><br />
+
+
+          <div class="ui checkbox">
+            <input
+              type="checkbox"
+              name={`Site${siteNumber}Hoisting`}
+              id={`site${siteNumber}Hoisting`}
+              checked={services.hoisting}
+              onChange={() => setServices(prevState =>
+                ({ ...prevState, hoisting: !services.hoisting }))
+              }
+            />
+            <label htmlFor={`site${siteNumber}Hoisting`}>Hoisting</label>
+          </div><br />
+        </column>
       </Columns>
+
+
     </fieldset >
   )
 }

@@ -46,7 +46,7 @@ label, label:active, label:focus, label::selection {
     font-family: 'Rubik', sans-serif;
     color: rgb(58, 58, 58) !important;
     cursor: pointer !important;
-    font-size: 1.15em !important;
+    font-size: 1em;
     margin-bottom: 0.5em !important;
     font-weight: 500 !important;
 }
@@ -91,6 +91,11 @@ input[type="checkbox"]+label:hover {
     text-decoration: underline
 }
 
+.ui.checkbox label {
+    font-size: 1.15em;
+    margin-bottom: 0.6em;
+}
+
 input::placeholder, textarea::placeholder {
     color: #929292 !important;
     font-style: italic;
@@ -103,11 +108,6 @@ input::placeholder, textarea::placeholder {
     margin-bottom: 0.6em;
     -webkit-box-shadow: 5px 5px 8px -2px rgba(0, 0, 0, 0.03) !important;
     box-shadow: 5px 5px 8px -2px rgba(0, 0, 0, 0.03) !important;
-}
-
-.ui.checkbox label {
-    font-size: 1.25em;
-    margin-bottom: 0.6em;
 }
 
 /* IOS Safari fixes */

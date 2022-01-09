@@ -154,14 +154,19 @@ const Burlington = () => {
   const handleSubmit = (event) => {
     event.preventDefault()
 
-    // Timestamp
+    // Timestamp + uniqid clone from PHP (for consistent Invoice ID)
     const now = new Date()
     const timestamp =
-      `${now.getMonth() + 1}/${now.getDay()}/${now.getFullYear()} ` +
-      `${now.toLocaleTimeString('en-US')}`
+      `${now.getMonth() + 1}/${now.getDate()}/${now.getFullYear()} ` +
+      `${now.toLocaleTimeString('en-US', {hour: '2-digit', minute: '2-digit', hour12: true})}`
+    const uniqid_likePhp = (prefix = "", random = false) => {
+      const sec = Date.now() * 1000 + Math.random() * 1000;
+      const id = sec.toString(16).replace(/\./g, "").padEnd(14, "0");
+      return `${prefix}${id}${random ? `.${Math.trunc(Math.random() * 100000000)}` : ""}`;
+    };
 
     // Combine inventories into a string for submission to mail()
-    const formInventory = () => {
+    const inventoryString = () => {
       let str = ''
       for (const key in inventory) {
         str += inventory[key] + "\n\n"
@@ -169,20 +174,44 @@ const Burlington = () => {
       setForm({ ...form, Inventory: str })
     }
 
+    // Build string based on number of sites
+    const siteString = () => {
+      let str = ''
+      for (let i = 0; i < siteCount; i++) {
+        str += form[`Site${i+1}Street`] + '\n'
+        str += form[`Site${i+1}City`] + ', '
+        str += form[`Site${i+1}State`] + '\xa0\xa0'
+        str += form[`Site${i+1}Zip`]
+        if (i !== (siteCount - 1)) str += '\n\n'
+      }
+      return str
+    }
+
     // Submission
     const to = 'code@zquint.xyz'
-    const subject = `802 REF: from ${form.LastName}, ${form.FirstName} @ ${timestamp}`
+    const subject = `802 REF: ${form.LastName}, ${form.FirstName} (${timestamp})`
 
-    const mailBody = // ACTUAL REF EMAIL FORMAT
+    const mailBody = // ACTUAL REF EMAIL FORMAT AND CONTENTS
+      `Invoice ID: ${uniqid_likePhp(form.LastName)}\n\n` +
       // Contact info
-      `Name: ${form.LastName}, ${form.FirstName}` + '\n' +
-      `Phone: ${form.PhoneNumber}` + '\n' +
+      `Name: ${form.LastName}, ${form.FirstName}\n` +
+      `Phone: ${form.PhoneNumber}\n` +
       `${(form.Extension) ? `Extension: ${form.Extension}\n` : ''}` +
-      `Email: ${form.Email}` + '\n' +
+      `Email: ${form.Email}\n` +
+      `Returning customer: ${form.RepeatCustomer}\n` +
       '\n' +
-      // Service Date
-      `Preferred date: ${form.MoveDate}` + '\n' +
-      `Flexibility: ${form.dateWindow}` + '\n';
+      // Service
+      `Preferred date: ${form.MoveDate}\n` +
+      `Flexibility: ${dateWindow}\n` +
+      `Service type: ${form.ServiceType}\n` +
+      `${(otherNotes !== '') ? `Customer notes: ${otherNotes}\n` : ``}` +
+      '\n' +
+      // Locations
+      'Locations:\n-----------------\n' +
+      siteString() + '\n' +
+      // Inventory
+      '\n\nInventory:\n-----------------\n' +
+      inventoryString()
 
     mail(to, subject, mailBody)
   }
