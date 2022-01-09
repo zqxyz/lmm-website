@@ -13,10 +13,16 @@ import RoomTemplate from './Fieldsets/RoomTemplate';
 
 
 const Burlington = () => {
-  const scrollRef = React.useRef()
-  React.useEffect(() => {
-    if (scrollRef.current) scrollRef.current.scrollIntoView({ behavior: "smooth" })
-  }, [])
+  /**
+   *         Scroll on load +
+   *      auto focus first field
+   */
+   const scrollRef = React.useRef()
+   const focusRef = React.useRef()
+   React.useEffect(() => {
+     if (scrollRef.current) scrollRef.current.scrollIntoView({ behavior: "smooth" })
+     if (focusRef.current) focusRef.current.focus()
+   }, [])
 
   /**
    *     State
@@ -260,6 +266,7 @@ const Burlington = () => {
             <Contact
               form={form}
               handleFormChange={handleFormChange}
+              focusRef={focusRef}
               dark
             />
 

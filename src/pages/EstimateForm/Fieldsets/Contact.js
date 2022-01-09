@@ -13,7 +13,7 @@ const formatPhoneNumber = (value) => {
     }-${phoneNumber.slice(6, 10)}`;
 }
 
-const Contact = ({ form, handleFormChange, dark }) => {
+const Contact = ({ form, handleFormChange, dark, focusRef }) => {
   const icon =
     <svg xmlns="http://www.w3.org/2000/svg" width="24"
       height="24" fill="black" class="bi bi-person-fill"
@@ -34,7 +34,9 @@ const Contact = ({ form, handleFormChange, dark }) => {
         <div className="fields">
           <div className="eight wide field">
             <label htmlFor='firstName'>First Name*</label>
-            <input required
+            <input
+              ref={focusRef}
+              required
               type="text"
               className="form-control"
               name="FirstName"

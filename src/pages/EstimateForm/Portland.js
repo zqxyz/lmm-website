@@ -13,13 +13,24 @@ import Container from '../../components/Container';
 // https://smfilestore.blob.core.windows.net/docs/AdvancedWebsiteFormIntegration.pdf
 
 const Portland = () => {
-  const debounceTime = 500 // milliseconds
 
+  /**
+   *         Scroll on load +
+   *      auto focus first field
+   */
   const scrollRef = React.useRef()
+  const focusRef = React.useRef()
   React.useEffect(() => {
     if (scrollRef.current) scrollRef.current.scrollIntoView({ behavior: "smooth" })
+    if (focusRef.current) focusRef.current.focus()
   }, [])
 
+  /**
+   *     State
+   *    Getters
+   *      and
+   *    Setters
+   */
   const [form, setForm] = React.useState({
     FirstName: '',
     LastName: '',
@@ -60,15 +71,13 @@ const Portland = () => {
   const [complete, setComplete] = React.useState(false)
   // const [postResponse, setPostResponse] = React.useState('')
 
-  const URL =
-    `https://api.smartmoving.com/api/leads/from-provider/v2?providerKey=2f400089-28bf-46c7-8a17-adfd01096041`;
-
   /**
    * Formatting and validation with debounce,
    * sets "complete" state object to true if
    * conditions are met
    */
   React.useEffect(() => {
+    const debounceTime = 500 // milliseconds
     const validateForm = () => {
       const emailRegex = /^([\w.%+-]+)@([\w-]+\.)+([\w]{2,})$/i
       if (form.FirstName !== ''
@@ -93,11 +102,18 @@ const Portland = () => {
     }
   }, [form])
 
+
+  /*
+   *    Form change handler for input states
+   */
   const handleFormChange = (event) => {
     const { name, value } = event.target
     setForm(prevState => ({ ...prevState, [name]: value }))
   }
 
+  /**
+   *    Assemble "notes" for API shortcomings
+   */
   React.useEffect(() => {
     const prepareNotes = () => {
       let notes = ''
@@ -110,13 +126,18 @@ const Portland = () => {
       if (Object.values(destinationFloors).includes(true)) {
         notes += `\nDestination floors: ${Object.keys(destinationFloors).filter(k => destinationFloors[k] === true)}`
       }
-
       return notes
     }
-
     setForm(prevState => ({ ...prevState, Notes: prepareNotes() }))
   }, [addlLocationNotes, otherNotes, dateWindow, destinationFloors, originFloors])
 
+
+  /**
+   *    Form submission
+   *     using axios
+   */
+  const URL =
+    `https://api.smartmoving.com/api/leads/from-provider/v2?providerKey=2f400089-28bf-46c7-8a17-adfd01096041`;
   const handleSubmit = (event) => {
     event.preventDefault()
 
@@ -157,6 +178,7 @@ const Portland = () => {
             <Contact
               form={form}
               handleFormChange={handleFormChange}
+              focusRef={focusRef}
             />
 
             <ServiceDate
