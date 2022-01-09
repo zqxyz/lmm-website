@@ -37,6 +37,7 @@ const Join = () => {
       <ContainerSplitRight
         title="Application Form"
         bgColor="rgb(220, 230, 223)"
+        noshadow
       >
         <p>
           This is not a formal application. As a matter of fact, This

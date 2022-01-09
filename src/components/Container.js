@@ -25,13 +25,13 @@ import React from 'react'
  *
  */
 
-const Container = ({ title, bgColor = '#cbd1b6', lightText, id, children }) => {
+const Container = ({ title, bgColor = '#cbd1b6', lightText, noshadow, id, children }) => {
   return (
     <>
       <div
         id={id}
         className={
-          `container${(bgColor === 'dark') ? ' dark' : ''}`
+          `container${(bgColor === 'dark') ? ' dark' : ''}${(noshadow) ? ' noshadow' : ''}`
         }
         style={(bgColor !== 'dark') ? { backgroundColor: bgColor } : null}
       >

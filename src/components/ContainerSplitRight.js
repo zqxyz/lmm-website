@@ -33,12 +33,12 @@ import Container from './Container'
  *
  */
 
-const ContainerSplitRight = ({ title, bgColor = '#cbd1b6', lightText, id, children }) => {
+const ContainerSplitRight = ({ title, bgColor = '#cbd1b6', lightText, noshadow, id, children }) => {
   const subTitle = children[0].props.children
   const content = Array.from(children).splice(1)
 
   return (
-    <Container bgColor={bgColor} lightText={lightText} id={id}>
+    <Container bgColor={bgColor} lightText={lightText} id={id} noshadow={noshadow}>
 
       <div className='ui stackable grid'>
 

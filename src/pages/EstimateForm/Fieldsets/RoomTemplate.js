@@ -7,7 +7,7 @@ const RoomTemplate = ({ inventory, setInventory, roomNumber }) => {
   const [roomBoxCount, setRoomBoxCount] = React.useState('')
 
   // Character enforcement for user input
-  const sanitize = (str) => str.replace(/[^\w'".,&\n() ]/g, "");
+  const sanitize = (str) => str.replace(/[^\w'".,&\-~\n()!?#@* ]/g, "");
   const numbersOnlyEnforce = (str) => str.replace(/[^\d]/g, "");
 
   /**
@@ -67,7 +67,7 @@ const RoomTemplate = ({ inventory, setInventory, roomNumber }) => {
         <textarea
           id={`room${roomNumber}Inventory`}
           name={`Room${roomNumber}Inventory`}
-          rows='3'
+          rows='6'
           placeholder='Please list all furniture and unboxed items to be moved from this room'
           value={sanitize(roomInventory)}
           onChange={(event) => {

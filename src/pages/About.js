@@ -2,6 +2,7 @@ import React from 'react'
 import Container from '../components/Container'
 import ContainerSplitLeft from '../components/ContainerSplitLeft'
 import Focus from '../components/Focus'
+import Link from '../Link'
 
 const About = () => {
   return (
@@ -71,6 +72,7 @@ const About = () => {
 
       <Container
         bgColor='rgb(232, 234, 228)'
+        noshadow
       >
         <p>
           Put simply, we want to change your opinion of movers
@@ -78,13 +80,15 @@ const About = () => {
           to best fit your needs and ensure a positive experience for
           customers and crews alike. From the point you complete our
           estimate form, a member of our dedicated staff will be in
-          contact with you every step of the way.
+          contact with you every step of the way. Get started with
+          our <Link href="/estimate">estimate form</Link>.
         </p>
       </Container>
 
 
       <Focus
-        bgColor='rgb(232, 234, 228)'
+        bgColor='rgb(243, 242, 237)'
+        noshadow
       >
         <p style={{ fontSize: '1.5em' }}>
           "I <em>love</em> lifting heavy awkward things, and running around." - Ned Swain

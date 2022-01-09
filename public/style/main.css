@@ -97,8 +97,8 @@ a:focus {
     opacity: 0.8;
     -ms-filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=80);
     filter: alpha(opacity=80);
-    -webkit-box-shadow: 5px 5px 9px 1px rgba(0, 0, 0, 0.37);
-    box-shadow: 5px 5px 9px 1px rgba(0, 0, 0, 0.1);
+    -webkit-box-shadow: 5px 5px 9px 1px rgba(0, 0, 0, 0.2);
+    box-shadow: 5px 5px 9px 1px rgba(0, 0, 0, 0.2);
     color: rgb(29, 29, 29)
 }
 
@@ -109,8 +109,7 @@ a:focus {
 h1 {
     font-size: 3em;
     color: rgb(37, 37, 37);
-    /* font-family: 'Fira Sans', sans-serif; */
-    font-family: 'Rubik', sans-serif;
+    font-weight: 800;
 }
 
 .bi {
@@ -123,6 +122,13 @@ h1 {
     animation: fadeInAnimation ease 0.2s;
     animation-iteration-count: 1;
     animation-fill-mode: forwards;
+    -webkit-box-shadow: 5px 5px 9px 1px rgba(0, 0, 0, 0.3);
+    box-shadow: 5px 5px 9px 1px rgba(0, 0, 0, 0.3);
+}
+
+.container.noshadow { 
+    -webkit-box-shadow: none !important;
+    box-shadow: none !important;
 }
 
 @keyframes fadeInAnimation {
@@ -153,7 +159,6 @@ h1 {
 .container button.pop {
     -webkit-box-shadow: 6px 6px 4px 0px rgba(35, 37, 28, 0.78) !important;
     box-shadow: 6px 6px 4px 0px rgba(35, 37, 28, 0.4) !important;
-    /* margin-bottom: 1em !important; */
     border: 1px solid rgb(207, 207, 207) !important;
 }
 
@@ -164,7 +169,6 @@ h1 {
 .container button.pop:active {
     -webkit-box-shadow: 2px 2px 4px 0px rgba(35, 37, 28, 0.78) !important;
     box-shadow: 2px 2px 4px 0px rgba(35, 37, 28, 0.4) !important;
-    /* margin-bottom: 1em !important; */
     border: 1px solid rgb(155, 155, 155) !important;
     position: relative;
     top: 2px;

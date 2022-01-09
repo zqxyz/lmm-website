@@ -319,10 +319,9 @@ const Burlington = () => {
 
             <button
               className={`ui ${(complete === true) ? 'blue' : 'grey'} button huge pop`}
-              style={{ margin: '0.75em' }}
-              disabled
+              disabled={!complete}
             >
-              Submit
+              {(!complete) ? 'Complete form before submitting' : 'Submit'}
             </button>
 
           </form>

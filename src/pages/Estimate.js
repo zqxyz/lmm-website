@@ -6,6 +6,12 @@ import Burlington from './EstimateForm/Burlington'
 const Estimate = () => {
   const [branch, setBranch] = React.useState('')
 
+  // Title for this page
+  React.useEffect(()=>{
+    document.title = "Local Muscle - Get a free moving estimate"
+    return ()=> document.title = "Local Muscle Movers"
+  }, [])
+
   const chooseBranchPrompt = () => {
     return (
       <Container
