@@ -145,7 +145,7 @@ h1 {
     text-decoration: underline;
 }
 
-.container img {
+.container img, iframe {
     -webkit-border-radius: 4px;
     -moz-border-radius: 4px;
     border-radius: 4px;
