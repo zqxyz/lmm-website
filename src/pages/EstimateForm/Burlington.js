@@ -17,7 +17,7 @@ const Burlington = () => {
   React.useEffect(() => {
     if (scrollRef.current) scrollRef.current.scrollIntoView({ behavior: "smooth" })
   }, [])
-  
+
   /**
    *     State
    *    Getters
@@ -317,6 +317,7 @@ const Burlington = () => {
             <OtherNotes
               otherNotes={otherNotes}
               setOtherNotes={setOtherNotes}
+              dark
             />
 
             <p>

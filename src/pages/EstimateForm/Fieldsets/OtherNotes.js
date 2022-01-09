@@ -1,7 +1,7 @@
 import React from 'react';
 import SectionHeader from './SectionHeader';
 
-const OtherNotes = ({ otherNotes, setOtherNotes }) => {
+const OtherNotes = ({ otherNotes, setOtherNotes, dark }) => {
   const icon = <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
     fill="black" class="bi bi-card-text" viewBox="0 -1 16 16">
     <path d="M14.5 3a.5.5 0 0 1 .5.5v9a.5.5 0 0 1-.5.5h-13a.5.5 0
@@ -14,7 +14,9 @@ const OtherNotes = ({ otherNotes, setOtherNotes }) => {
     />
   </svg>
   return (
-    <fieldset>
+    <fieldset
+      className={(dark) ? 'dark' : ''}
+    >
       <SectionHeader
         icon={icon}
         title='Other notes'
