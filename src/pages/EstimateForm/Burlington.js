@@ -19,9 +19,9 @@ const Burlington = () => {
    */
    const scrollRef = React.useRef()
    const focusRef = React.useRef()
-   React.useEffect(() => {
-     if (scrollRef.current) scrollRef.current.scrollIntoView({ behavior: "smooth" })
+   React.useEffect(() => { // Chrome quirk: must focus before scrolling
      if (focusRef.current) focusRef.current.focus()
+     if (scrollRef.current) scrollRef.current.scrollIntoView({ behavior: "smooth" })
    }, [])
 
   /**
