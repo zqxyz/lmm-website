@@ -69,7 +69,7 @@ const Portland = () => {
   const [otherNotes, setOtherNotes] = React.useState('')
   const [dateWindow, setDateWindow] = React.useState('')
   const [complete, setComplete] = React.useState(false)
-  // const [postResponse, setPostResponse] = React.useState('')
+  const [postResponse, setPostResponse] = React.useState('')
 
   /**
    * Formatting and validation with debounce,
@@ -143,7 +143,7 @@ const Portland = () => {
 
     axios.post(URL, JSON.stringify(form))
       .then((response) => {
-        // setPostResponse(response.data.leadId);
+        setPostResponse(response.data.leadId);
         alert('Lead created: ' + response.data.leadId)
       })
       .catch(function (error) {
