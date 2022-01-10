@@ -185,10 +185,11 @@ const Burlington = ({setSubmitted}) => {
     // Combine room inventories into a string
     const inventoryString = () => {
       let str = ''
-      for (const key in inventory) {
-        str += inventory[key] + "\n\n"
+      for (const k in inventory) {
+        str += inventory[k] + "\n\n"
       }
-      setForm({ ...form, Inventory: str })
+      return str
+      // setForm({ ...form, Inventory: str })
     }
 
     // Build site/location string based on number of sites
@@ -334,8 +335,7 @@ const Burlington = ({setSubmitted}) => {
 
             <button
               className={`ui ${(complete === true) ? 'blue' : 'grey'} button huge pop`}
-              // disabled={!complete}
-              disabled
+              disabled={!complete}
             >
               {(!complete) ? 'Complete form before submitting' : 'Submit'}
             </button>
