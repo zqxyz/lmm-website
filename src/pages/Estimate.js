@@ -2,9 +2,12 @@ import React from 'react';
 import Container from '../components/Container';
 import Portland from './EstimateForm/Portland';
 import Burlington from './EstimateForm/Burlington'
+import Submitted from './EstimateForm/Submitted';
 
 const Estimate = () => {
   const [branch, setBranch] = React.useState('')
+  const [submitted, setSubmitted] = React.useState(false)
+
 
   // Title for this page
   React.useEffect(() => {
@@ -34,37 +37,42 @@ const Estimate = () => {
   //  Render component based on input
   const renderBranchForm = () => {
     if (branch === '') return chooseBranchPrompt()
-    if (branch === 'portland') return <Portland />
-    if (branch === 'burlington') return <Burlington />
+    if (branch === 'portland') return <Portland setSubmitted={setSubmitted} />
+    if (branch === 'burlington') return <Burlington setSubmitted={setSubmitted} />
   }
 
 
   //  Render body
   return (
-    <>
-      <Container
-        bgColor='rgb(53, 53, 53)'
-      >
-        <center>
-          <button
-            className={`ui ${(branch === 'portland') ? 'blue' : ''} button huge pop`}
-            onClick={() => { setBranch('portland') }}
-            style={{ marginBottom: '0' }}
-          >
-            Portland, ME {(branch === 'portland') ? '✓' : ''}
-          </button>
-          <button
-            className={`ui ${(branch === 'burlington') ? 'blue' : ''} button huge pop`}
-            onClick={() => { setBranch('burlington') }}
-            style={{ marginBottom: '0' }}
-          >
-            Burlington, VT {(branch === 'burlington') ? '✓' : ''}
-          </button>
-        </center>
-      </Container>
+    (submitted
+      ? <Submitted
+        branch={branch}
+      />
+      :
+      <>
+        <Container
+          bgColor='rgb(53, 53, 53)'
+        >
+          <center>
+            <button
+              className={`ui ${(branch === 'portland') ? 'blue' : ''} button huge pop`}
+              onClick={() => { setBranch('portland') }}
+              style={{ marginBottom: '0' }}
+            >
+              Portland, ME {(branch === 'portland') ? '✓' : ''}
+            </button>
+            <button
+              className={`ui ${(branch === 'burlington') ? 'blue' : ''} button huge pop`}
+              onClick={() => { setBranch('burlington') }}
+              style={{ marginBottom: '0' }}
+            >
+              Burlington, VT {(branch === 'burlington') ? '✓' : ''}
+            </button>
+          </center>
+        </Container>
 
-      {renderBranchForm()}
-    </>
+        {renderBranchForm()}
+      </>)
   )
 }
 

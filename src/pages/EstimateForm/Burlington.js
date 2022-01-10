@@ -12,7 +12,7 @@ import NumberOfRooms from './Fieldsets/NumberOfRooms';
 import RoomTemplate from './Fieldsets/RoomTemplate';
 
 
-const Burlington = () => {
+const Burlington = ({setSubmitted}) => {
   /**
    *         Scroll on load +
    *      auto focus first field
@@ -207,8 +207,8 @@ const Burlington = () => {
     }
 
     // Submission
-    const to = 'code@zquint.xyz'
-    const subject = `802 REF: ${form.LastName}, ${form.FirstName} (${timestamp})`
+    const to = 'sales@localmusclemovers.com'
+    const subject = `[test --ignore] 802 REF: ${form.LastName}, ${form.FirstName} (${timestamp})`
 
     const mailBody = // ACTUAL REF EMAIL FORMAT AND CONTENTS
       `Invoice ID: ${uniqid_likePhp(form.LastName)}\n\n` +
@@ -233,6 +233,7 @@ const Burlington = () => {
       inventoryString()
 
     mail(to, subject, mailBody)
+    setSubmitted(true)
   }
 
 

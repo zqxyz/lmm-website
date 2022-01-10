@@ -8,11 +8,13 @@ import Destination from './Fieldsets/Destination';
 import AddlLocation from './Fieldsets/AddlLocation';
 import OtherNotes from './Fieldsets/OtherNotes'
 import Container from '../../components/Container';
+import mail from '../../mail'
+import Submitted from './Submitted';
 
 // API documentation for SmartMoving
 // https://smfilestore.blob.core.windows.net/docs/AdvancedWebsiteFormIntegration.pdf
 
-const Portland = () => {
+const Portland = ({setSubmitted}) => {
 
   /**
    *         Scroll on load +
@@ -69,7 +71,6 @@ const Portland = () => {
   const [otherNotes, setOtherNotes] = React.useState('')
   const [dateWindow, setDateWindow] = React.useState('')
   const [complete, setComplete] = React.useState(false)
-  const [postResponse, setPostResponse] = React.useState('')
 
   /**
    * Formatting and validation with debounce,
@@ -141,99 +142,114 @@ const Portland = () => {
   const handleSubmit = (event) => {
     event.preventDefault()
 
+    // Timestamp
+    const now = new Date()
+    const timestamp =
+      `${now.getMonth() + 1}/${now.getDate()}/${now.getFullYear()} ` +
+      `${now.toLocaleTimeString('en-US', { hour: '2-digit', minute: '2-digit', hour12: true })}`
+
+    // Submit to API
     axios.post(URL, JSON.stringify(form))
       .then((response) => {
-        setPostResponse(response.data.leadId);
-        alert('Lead created: ' + response.data.leadId)
+        setSubmitted(true)
       })
       .catch(function (error) {
         if (error.response.data.message === 'This lead has already been submitted.  Please contact SmartMoving support.') {
-          console.log('Duplicate')
-          alert('Information already submitted')
+          alert('Information already submitted.')
         } else {
-          console.log(error.response.data);
-          console.log(error.response.status);
+          // Rescue submission with an email if API fails
+          let mailBody = ``
+          for (const [k, v] of Object.entries(form)) {
+            mailBody += `${k}: ${v}\n`
+          }
+          mail(
+            'sales@localmusclemovers.com',
+            'SmartMoving Failure Rescue Lead: 207 REF ' + timestamp,
+            'SmartMover API failed, so this lead has been sent to you as backup.\n\n' +
+            mailBody
+          )
+          setSubmitted(true)
         }
       })
   }
 
   return (
-    <>
-      <Container bgColor='rgba(204, 208, 196, 0.8)'>
-        <h1 ref={scrollRef}>Estimate Request Form</h1>
-        <p>
-          Request an estimate for moving service from
-          <span className="cowboy"> Local Muscle </span>
-          in Portland, Maine
-        </p>
-        <p>
-          Required fields marked with *
-        </p>
-        <div
-          class="ui large form"
-          style={{ maxWidth: '800px', margin: '3em auto 0 auto' }}
-        >
-          <form onSubmit={handleSubmit}>
+      <>
+        <Container bgColor='rgba(204, 208, 196, 0.8)'>
+          <h1 ref={scrollRef}>Estimate Request Form</h1>
+          <p>
+            Request an estimate for moving service from
+            <span className="cowboy"> Local Muscle </span>
+            in Portland, Maine
+          </p>
+          <p>
+            Required fields marked with *
+          </p>
+          <div
+            class="ui large form"
+            style={{ maxWidth: '800px', margin: '3em auto 0 auto' }}
+          >
+            <form onSubmit={handleSubmit}>
 
-            <Contact
-              form={form}
-              handleFormChange={handleFormChange}
-              focusRef={focusRef}
-            />
-
-            <ServiceDate
-              form={form}
-              handleFormChange={handleFormChange}
-              dateWindow={dateWindow}
-              setDateWindow={setDateWindow}
-            />
-
-            <ServiceType
-              form={form}
-              setForm={setForm}
-            />
-
-            <Origin
-              form={form}
-              handleFormChange={handleFormChange}
-              originFloors={originFloors}
-              setOriginFloors={setOriginFloors}
-            />
-
-            {(form.ServiceType === 'Moving') ?
-              <Destination
+              <Contact
                 form={form}
                 handleFormChange={handleFormChange}
-                destinationFloors={destinationFloors}
-                setDestinationFloors={setDestinationFloors}
+                focusRef={focusRef}
               />
-              : ''}
 
-            <AddlLocation
-              addlLocationNotes={addlLocationNotes}
-              setAddlLocationNotes={setAddlLocationNotes}
-            />
+              <ServiceDate
+                form={form}
+                handleFormChange={handleFormChange}
+                dateWindow={dateWindow}
+                setDateWindow={setDateWindow}
+              />
 
-            <OtherNotes
-              otherNotes={otherNotes}
-              setOtherNotes={setOtherNotes}
-            />
+              <ServiceType
+                form={form}
+                setForm={setForm}
+              />
 
-            {(complete === false) ? <p>Complete the required fields above to proceed</p> : ''}
-            <button
-              className={`ui ${(complete === true) ? 'blue' : 'grey'} button huge pop`}
-              disabled={!complete}
-            >
-              {(!complete) ? 'Complete form before submitting' : 'Submit'}
-            </button>
+              <Origin
+                form={form}
+                handleFormChange={handleFormChange}
+                originFloors={originFloors}
+                setOriginFloors={setOriginFloors}
+              />
+
+              {(form.ServiceType === 'Moving') ?
+                <Destination
+                  form={form}
+                  handleFormChange={handleFormChange}
+                  destinationFloors={destinationFloors}
+                  setDestinationFloors={setDestinationFloors}
+                />
+                : ''}
+
+              <AddlLocation
+                addlLocationNotes={addlLocationNotes}
+                setAddlLocationNotes={setAddlLocationNotes}
+              />
+
+              <OtherNotes
+                otherNotes={otherNotes}
+                setOtherNotes={setOtherNotes}
+              />
+
+              {(complete === false) ? <p>Complete the required fields above to proceed</p> : ''}
+              <button
+                className={`ui ${(complete === true) ? 'blue' : 'grey'} button huge pop`}
+                disabled={!complete}
+              >
+                {(!complete) ? 'Complete form before submitting' : 'Submit'}
+              </button>
 
 
-          </form>
-        </div>
-      </Container>
+            </form>
+          </div>
+        </Container>
 
 
-    </>
+      </>
   )
 }
 
