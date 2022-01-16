@@ -12,7 +12,7 @@ import Resources from "../pages/Resources"
  * name - displayed name in navigation
  * shortName - minified name for limited screen space
  * path - define url of page; can spoof subdirectory (eg 'resources/interstate')
- * component - page React <Component />
+ * component - page React <Component />, must be imported (above)
  * position - position in navigation bar:
  *              "primary" - left aligned in nav nar or in nav menu on small screens
  *              "secondary" - right aligned in nav nar or in nav menu on small screens

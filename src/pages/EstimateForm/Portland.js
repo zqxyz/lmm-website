@@ -139,6 +139,8 @@ const Portland = ({setSubmitted}) => {
    */
   const URL =
     `https://api.smartmoving.com/api/leads/from-provider/v2?providerKey=2f400089-28bf-46c7-8a17-adfd01096041`;
+    // It's not a big deal if someone snags this key. What are they going to do? Send us job leads?
+    // It's not a secret.
   const handleSubmit = (event) => {
     event.preventDefault()
 
@@ -157,7 +159,7 @@ const Portland = ({setSubmitted}) => {
         if (error.response.data.message === 'This lead has already been submitted.  Please contact SmartMoving support.') {
           alert('Information already submitted.')
         } else {
-          // Rescue submission with an email if API fails
+          // Rescue submission with an email if SmartMoving API fails
           let mailBody = ``
           for (const [k, v] of Object.entries(form)) {
             mailBody += `${k}: ${v}\n`

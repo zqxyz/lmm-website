@@ -5,13 +5,12 @@ import reviewJson from '../../config/reviews.json'
 
 function shuffle(array) {
   let currentIndex = array.length; let randomIndex
-while (currentIndex !== 0) {
+  while (currentIndex !== 0) {
     randomIndex = Math.floor(Math.random() * currentIndex)
     currentIndex--;
     [array[currentIndex], array[randomIndex]] = [
       array[randomIndex], array[currentIndex]]
   }
-
   return array
 }
 
@@ -26,13 +25,10 @@ const Reviews = () => {
       <Columns>
         {reviews.map(review => {
           return (
-            <column
-              key={review.key}
-              // style={{ fontStyle: 'italic' }}
-            >
+            <column key={review.key}>
               "{review.quote}"
               <div style={{ textAlign: 'right', fontWeight: '600' }}>
-                {review.author}
+                -{review.author}
               </div>
             </column>
           )
