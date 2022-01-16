@@ -1,3 +1,5 @@
+### ! Some specific implementation information regarding project structure and components in this readme is outdated. 
+
 # Improvements
 
 The new website is snappier and better optimized than the previous.
