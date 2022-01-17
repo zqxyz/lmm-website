@@ -3,6 +3,7 @@ import Call from "../pages/Call"
 import Estimate from "../pages/Estimate"
 import Join from "../pages/Join"
 import Landing from "../pages/Landing/Landing"
+import Look from "../pages/Look"
 import Resources from "../pages/Resources"
 
 
@@ -61,7 +62,14 @@ const links = [
       "path": "/call",
       "component": <Call />,
       "position": "hidden"
-  }
+  },
+  {
+    "name": "Look",
+    "shortName": null,
+    "path": "/look",
+    "component": <Look />,
+    "position": "hidden"
+}
 ]
 
 export default links

@@ -140,7 +140,7 @@ const Portland = ({setSubmitted}) => {
   const URL =
     `https://api.smartmoving.com/api/leads/from-provider/v2?providerKey=2f400089-28bf-46c7-8a17-adfd01096041`;
     // It's not a big deal if someone snags this key. What are they going to do? Send us job leads?
-    // It's not a secret.
+    // It's not meant to be a secret.
   const handleSubmit = (event) => {
     event.preventDefault()
 

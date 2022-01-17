@@ -203,7 +203,7 @@ A container for evenly divided columns. Fill with 2 to 10 `<column>` elements (n
 
 ## `<Checklist>`
 
-Creates a corny notepad style checklist/todo list. Wrap items in `<>` shorthand fragments.
+Creates a corny notepad style checklist/todo list. Wrap items in `<>` (shorthand fragments).
 
 ## Example
 
