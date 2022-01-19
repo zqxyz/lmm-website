@@ -209,7 +209,7 @@ const Burlington = ({ setSubmitted }) => {
 
     // Submission
     const to = 'sales@localmusclemovers.com'
-    const subject = `[test --ignore] 802 REF: ${form.LastName}, ${form.FirstName} (${timestamp})`
+    const subject = `802 REF: ${form.LastName}, ${form.FirstName} (${timestamp})`
 
     const mailBody = // ACTUAL REF EMAIL FORMAT AND CONTENTS
       `Invoice ID: ${uniqid_likePhp(form.LastName)}\n\n` +
@@ -224,6 +224,7 @@ const Burlington = ({ setSubmitted }) => {
       `Preferred date: ${form.MoveDate}\n` +
       `Flexibility: ${dateWindow}\n` +
       `Service type: ${form.ServiceType}\n` +
+      `Service size: ${form.MoveSize}\n` +
       `${(otherNotes !== '') ? `Customer notes: ${otherNotes}\n` : ``}` +
       '\n' +
       // Locations
