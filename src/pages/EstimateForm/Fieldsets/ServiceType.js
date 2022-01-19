@@ -1,8 +1,23 @@
 import React from 'react';
 import SectionHeader from './SectionHeader';
+import moveSizes from '../../../config/moveSizes.json'
 
 
-const ServiceType = ({ form, setForm, dark }) => {
+
+const ServiceType = ({ form, setForm, dark, handleFormChange }) => {
+
+  const MoveSizeSelect = () => {
+    return (
+      moveSizes.map(size => {
+        return (
+          <option
+            value={size.name}
+          >
+            {`${size.name}${(size.sqft) ? ` (${size.sqft})` : ''}`}
+          </option>)
+      })
+    )
+  }
 
   const setServiceType = evt => {
     const serviceType = evt.target.value
@@ -31,27 +46,64 @@ const ServiceType = ({ form, setForm, dark }) => {
     >
       <SectionHeader
         icon={icon}
-        title='Service Type'
+        title='Service Details'
       />
       <div className="field">
+        <label htmlFor='moveSize'>
+          Size*
+        </label>
+        <select
+          id="moveSize"
+          value={form.MoveSize}
+          onChange={handleFormChange}
+          name='MoveSize'
+          required
+        >
+          <MoveSizeSelect />
+        </select>
+      </div>
+      <div className="field">
+        <label>
+          Type*
+        </label>
         <button
           className={`ui button large std${(form.ServiceType === 'Moving') ? ' blue' : ''}`}
           id="serviceMultiLocation"
           value='Moving'
           onClick={setServiceType}
         >
-          Multiple Location (Moving with our trucks)
+          Moving with our trucks
           {(form.ServiceType === 'Moving') ? ' ✓' : ''}
         </button>
         <br />
         <button
-          className={`ui button large std${(form.ServiceType === 'LoadingOnly') ? ' blue' : ''}`}
+          className={`ui button large std${(form.ServiceType === 'InnerHouse') ? ' blue' : ''}`}
           id="serviceMultiLocation"
-          value='LoadingOnly'
+          value='InnerHouse'
           onClick={setServiceType}
         >
-          Single Location (Rearrangement, U-Haul, Container load)
-          {(form.ServiceType === 'LoadingOnly') ? ' ✓' : ''}
+          Single Location Rearrangement
+          {(form.ServiceType === 'InnerHouse') ? ' ✓' : ''}
+        </button>
+        <br />
+        <button
+          className={`ui button large std${(form.ServiceType === 'LoadOnly') ? ' blue' : ''}`}
+          id="serviceMultiLocation"
+          value='LoadOnly'
+          onClick={setServiceType}
+        >
+          Container/Rental Vehicle Load Only
+          {(form.ServiceType === 'LoadOnly') ? ' ✓' : ''}
+        </button>
+        <br />
+        <button
+          className={`ui button large std${(form.ServiceType === 'UnloadOnly') ? ' blue' : ''}`}
+          id="serviceMultiLocation"
+          value='UnloadOnly'
+          onClick={setServiceType}
+        >
+          Container/Rental Vehicle Unload Only
+          {(form.ServiceType === 'UnloadOnly') ? ' ✓' : ''}
         </button>
       </div>
 

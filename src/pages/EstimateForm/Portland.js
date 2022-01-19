@@ -14,7 +14,7 @@ import Submitted from './Submitted';
 // API documentation for SmartMoving
 // https://smfilestore.blob.core.windows.net/docs/AdvancedWebsiteFormIntegration.pdf
 
-const Portland = ({setSubmitted}) => {
+const Portland = ({ setSubmitted }) => {
 
   /**
    *         Scroll on load +
@@ -41,6 +41,7 @@ const Portland = ({setSubmitted}) => {
     Email: '',
     ServiceType: 'Moving',
     MoveDate: '',
+    MoveSize: 'Single Room or Less',
     OriginStreet: '',
     OriginCity: '',
     OriginState: 'ME',
@@ -139,8 +140,8 @@ const Portland = ({setSubmitted}) => {
    */
   const URL =
     `https://api.smartmoving.com/api/leads/from-provider/v2?providerKey=2f400089-28bf-46c7-8a17-adfd01096041`;
-    // It's not a big deal if someone snags this key. What are they going to do? Send us job leads?
-    // It's not meant to be a secret.
+  // It's not a big deal if someone snags this key. What are they going to do? Send us job leads?
+  // It's not meant to be a secret.
   const handleSubmit = (event) => {
     event.preventDefault()
 
@@ -176,82 +177,83 @@ const Portland = ({setSubmitted}) => {
   }
 
   return (
-      <>
-        <Container bgColor='rgba(204, 208, 196, 0.8)'>
-          <h1 ref={scrollRef}>Estimate Request Form</h1>
-          <p>
-            Request an estimate for moving service from
-            <span className="cowboy"> Local Muscle </span>
-            in Portland, Maine
-          </p>
-          <p>
-            Required fields marked with *
-          </p>
-          <div
-            class="ui large form"
-            style={{ maxWidth: '800px', margin: '3em auto 0 auto' }}
-          >
-            <form onSubmit={handleSubmit}>
+    <>
+      <Container bgColor='rgba(204, 208, 196, 0.8)'>
+        <h1 ref={scrollRef}>Estimate Request Form</h1>
+        <p>
+          Request an estimate for moving service from
+          <span className="cowboy"> Local Muscle </span>
+          in Portland, Maine
+        </p>
+        <p>
+          Required fields marked with *
+        </p>
+        <div
+          class="ui large form"
+          style={{ maxWidth: '800px', margin: '3em auto 0 auto' }}
+        >
+          <form onSubmit={handleSubmit}>
 
-              <Contact
+            <Contact
+              form={form}
+              handleFormChange={handleFormChange}
+              focusRef={focusRef}
+            />
+
+            <ServiceDate
+              form={form}
+              handleFormChange={handleFormChange}
+              dateWindow={dateWindow}
+              setDateWindow={setDateWindow}
+            />
+
+            <ServiceType
+              form={form}
+              setForm={setForm}
+              handleFormChange={handleFormChange}
+            />
+
+            <Origin
+              form={form}
+              handleFormChange={handleFormChange}
+              originFloors={originFloors}
+              setOriginFloors={setOriginFloors}
+            />
+
+            {(form.ServiceType === 'Moving') ?
+              <Destination
                 form={form}
                 handleFormChange={handleFormChange}
-                focusRef={focusRef}
+                destinationFloors={destinationFloors}
+                setDestinationFloors={setDestinationFloors}
               />
+              : ''}
 
-              <ServiceDate
-                form={form}
-                handleFormChange={handleFormChange}
-                dateWindow={dateWindow}
-                setDateWindow={setDateWindow}
-              />
+            <AddlLocation
+              addlLocationNotes={addlLocationNotes}
+              setAddlLocationNotes={setAddlLocationNotes}
+            />
 
-              <ServiceType
-                form={form}
-                setForm={setForm}
-              />
+            <OtherNotes
+              otherNotes={otherNotes}
+              setOtherNotes={setOtherNotes}
+            />
 
-              <Origin
-                form={form}
-                handleFormChange={handleFormChange}
-                originFloors={originFloors}
-                setOriginFloors={setOriginFloors}
-              />
-
-              {(form.ServiceType === 'Moving') ?
-                <Destination
-                  form={form}
-                  handleFormChange={handleFormChange}
-                  destinationFloors={destinationFloors}
-                  setDestinationFloors={setDestinationFloors}
-                />
-                : ''}
-
-              <AddlLocation
-                addlLocationNotes={addlLocationNotes}
-                setAddlLocationNotes={setAddlLocationNotes}
-              />
-
-              <OtherNotes
-                otherNotes={otherNotes}
-                setOtherNotes={setOtherNotes}
-              />
-
-              {(complete === false) ? <p>Complete the required fields above to proceed</p> : ''}
-              <button
-                className={`ui ${(complete === true) ? 'blue' : 'grey'} button huge pop`}
-                disabled={!complete}
-              >
-                {(!complete) ? 'Complete form before submitting' : 'Submit'}
-              </button>
+            {(complete === false) ? <p>Complete the required fields above to proceed</p> : ''}
+            <button
+              className={`ui ${(complete === true) ? 'blue' : 'grey'} button huge pop`}
+              disabled={!complete}
+            >
+              {(!complete) ? 'Complete form before submitting' : 'Submit'}
+            </button>
 
 
-            </form>
-          </div>
-        </Container>
+          </form>
+        </div>
+      </Container>
 
 
-      </>
+    </>
   )
 }
 

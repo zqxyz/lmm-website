@@ -12,17 +12,17 @@ import NumberOfRooms from './Fieldsets/NumberOfRooms';
 import RoomTemplate from './Fieldsets/RoomTemplate';
 
 
-const Burlington = ({setSubmitted}) => {
+const Burlington = ({ setSubmitted }) => {
   /**
    *         Scroll on load +
    *      auto focus first field
    */
-   const scrollRef = React.useRef()
-   const focusRef = React.useRef()
-   React.useEffect(() => { // Chrome quirk: must focus before scrolling
-     if (focusRef.current) focusRef.current.focus()
-     if (scrollRef.current) scrollRef.current.scrollIntoView({ behavior: "smooth" })
-   }, [])
+  const scrollRef = React.useRef()
+  const focusRef = React.useRef()
+  React.useEffect(() => { // Chrome quirk: must focus before scrolling
+    if (focusRef.current) focusRef.current.focus()
+    if (scrollRef.current) scrollRef.current.scrollIntoView({ behavior: "smooth" })
+  }, [])
 
   /**
    *     State
@@ -57,7 +57,7 @@ const Burlington = ({setSubmitted}) => {
    *    on ServiceType change 
    */
   React.useEffect(() => {
-    if (form.ServiceType === 'LoadingOnly') {
+    if (form.ServiceType !== 'Moving') {
       setSiteCount(1)
     } else {
       setSiteCount(2)
@@ -291,12 +291,13 @@ const Burlington = ({setSubmitted}) => {
               : <h1>Locations</h1>
             }
             <div className="ui segment fieldsetGroup">
-              {(form.ServiceType === 'Moving') ?
-                <NumberOfSites
+              {(form.ServiceType !== 'Moving') ?
+                null
+                : <NumberOfSites
                   siteCount={siteCount}
                   setSiteCount={setSiteCount}
                   dark
-                /> : null}
+                />}
               {renderSites()}
               <AddlLocation
                 addlLocationNotes={addlLocationNotes}

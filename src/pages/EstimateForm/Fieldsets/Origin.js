@@ -3,6 +3,7 @@ import States from '../States';
 import Columns from '../../../components/Columns';
 
 const Origin = ({ form, handleFormChange, originFloors, setOriginFloors }) => {
+
   return (
     <fieldset>
       <legend>
@@ -78,7 +79,7 @@ const Origin = ({ form, handleFormChange, originFloors, setOriginFloors }) => {
         </div>
       </div>
 
-      <Columns style={{paddingBottom: '1em'}}>
+      <Columns style={{ paddingBottom: '1em' }}>
         <column>
           <div class="ui checkbox">
             <input
