@@ -333,3 +333,9 @@ Exports a JS function to use Firebase Cloud Function for sending mail (for API s
 
 ### 2.9 🗎 `/src/screenWidth.js`
 Function for rendering content based on screen width in ways not able to be gracefully handled by media queries in stylesheets. Exports `useCurrentWidth()` which returns window width in pixels.
+
+## 3. 📂 `/build`
+Transpiled, ready to deploy build folder created with `npm run build`. This is a 'production' website.
+
+# Editing Content
+[in progress]
