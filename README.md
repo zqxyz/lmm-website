@@ -305,10 +305,10 @@ Some information has been abstracted out from the pages and made plainer in the 
 ### 2.3 📂 `/src/components`
 Components, like `<Container>` and `<Tabs>`, are stored inside this directory.
 
-### 2.3 🗎 `/src/App.js`
+### 2.4 🗎 `/src/App.js`
 This file is the start of the React app code (components, copy, page content). It renders navigation and page contents based on URL.
 
-### 2.4 🗎 `/src/index.js`
+### 2.5 🗎 `/src/index.js`
 This file is the start of the script for the website: Firebase API data is stored here and `App.js` is imported and rendered into `#root` of `index.html`.
 
 ### 2.6 **&** 2.7 🗎 `/src/Link.js` and 🗎 `/src/Route.js`
