@@ -12,7 +12,7 @@ export default function mail (to, subject, message) {
   };
 
   const headers = {
-    headers: {'Access-Control-Allow-Origin': '*'}
+    headers: {'Access-Control-Allow-Origin': `${PROTOCOL}${URL}`}
   };
 
   axios.post(PROTOCOL+URL+ENDPOINT, params, headers)

@@ -26,9 +26,9 @@ The new website is ready for screen readers and other impairment software. Text 
 
 ###
 
-# Editing Page Content
+# JSX
 
-All pages are stored in `src/pages/` as a `.js` file. The home page and estimate pages are nested within folders within that directory, as they are organized into multiple files. We'll go more in depth about each individual page below, in the section labeled **Pages**.
+All pages are stored in `src/pages/` as a `.js` file. The home page and estimate pages are nested within folders within that directory, as they are organized into multiple files. We'll go more in depth about each individual page below, in the section labeled **Editing Content**.
 
 The pages are JSX, (which is very much like good ole HTML). The page at `/call` contains an element made of the following code: 
 
@@ -50,7 +50,7 @@ The pages are JSX, (which is very much like good ole HTML). The page at `/call` 
 
 This page uses the provided `<Container>` component. Note that the C is capitalized for special componenents like this.
 
-First we'll review some provided components and then we'll go over the whole project structure so you know how to add, edit, and remove content, including adding new pages.
+First we'll review some provided components and then we'll go over the whole project structure and expand on editing so you know how to add, edit, and remove content, including adding new pages.
 
 # Layout Components
 
@@ -297,6 +297,19 @@ See https://en.wikipedia.org/wiki/Favicon#Use_of_favicon
 React code belongs here. This will be transpiled, minified, and obfuscated into 2 files. No secrets should be stored anywhere in the code as the code can be easily refactored and values easily extracted. API keys are not secrets, but passwords are definitely secrets.
 
 ### 2.1 📂 `/src/pages`
-Think normal html or php files. This is where the copy lives. This is what the nondeveloper can modify. `About.js`, `Call.js`, `Join.js`, `Resources.js` and `Landing/Landing.js` have been specifically structured to be as easy to modify as possible. We'll go more in depth about each individual page below, in the section labeled **Pages**.
+Think normal html or php files. This is where the copy lives. This is what the nondeveloper can modify. `About.js`, `Call.js`, `Join.js`, `Resources.js` and `Landing/Landing.js` have been specifically structured to be as easy to modify as possible. We'll go more in depth about each individual page below, in the section labeled **Editing Content**.
 
-### 2.1 📂 `/src/pages`
+### 2.2 📂 `/src/config`
+Some information has been abstracted out from the pages and made plainer in the form of a JSON or JS file. See **Editing Content** below.
+
+### 2.3 📂 `/src/components`
+Components, like `<Container>` and `<Tabs>`, are stored inside this directory.
+
+### 2.3 🗎 `/src/App.js`
+This file is the start of the React app code (components, copy, page content). It renders navigation and page contents based on URL.
+
+### 2.4 🗎 `/src/index.js`
+This file is the start of the script for the website: Firebase API data is stored here and `App.js` is imported and rendered into `#root` of `index.html`.
+
+### 2.5 🗎 `/src/mail.js`
+Exports a JS function to use Firebase Cloud Function for sending mail (for API submission failure rescue and Vermont branch's mail based lead intake).
