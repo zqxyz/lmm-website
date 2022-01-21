@@ -1,6 +1,6 @@
 import React from 'react'
 
-const Link = ({ className, href, children, active }) => {
+const Link = ({ className, href, children }) => {
   const onClick = (event) => {
     if (event.metaKey || event.ctrlKey) {
       return

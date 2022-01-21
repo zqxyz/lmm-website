@@ -13,7 +13,7 @@ const Submitted = ({ branch }) => {
       >
         <p>
           Your request has been submitted. Look out for a response from us within
-          {(branch !== 'portland') ? ' 1 to 2 work days.' : ' a few minutes.'}
+          {(branch !== 'portland') ? ' 1 to 2 week days.' : ' a few minutes.'}
         </p>
       </Container>
 

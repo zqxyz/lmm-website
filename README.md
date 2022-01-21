@@ -262,8 +262,8 @@ The project is divided into a fairly standard React structure.
      ┃  ┣ 🗎 App.js [2.4]
      ┃  ┣ 🗎 index.js [2.5]
      ┃  ┣ 🗎 Link.js [2.6]
-     ┃  ┣ 🗎 mail.js [2.7]
-     ┃  ┣ 🗎 Route.js [2.8]
+     ┃  ┣ 🗎 Route.js [2.7]
+     ┃  ┣ 🗎 mail.js [2.8]
      ┃  ┗ 🗎 screenWidth.js [2.9]
      ┗ 📂 build [3]
 
@@ -311,5 +311,25 @@ This file is the start of the React app code (components, copy, page content). I
 ### 2.4 🗎 `/src/index.js`
 This file is the start of the script for the website: Firebase API data is stored here and `App.js` is imported and rendered into `#root` of `index.html`.
 
-### 2.5 🗎 `/src/mail.js`
-Exports a JS function to use Firebase Cloud Function for sending mail (for API submission failure rescue and Vermont branch's mail based lead intake).
+### 2.6 **&** 2.7 🗎 `/src/Link.js` and 🗎 `/src/Route.js`
+PopStateEvent is hijacked and prevented. The browser's history object is modified, and the target content is rendered from cache. `<Link>` is a drop in substitute for `<a>` and must be imported to any page that uses links. Regular `<a>` elements are used for external linking. `<Route>` is used to conditionally render content based on path.
+
+For example, placing this inside App.js:
+
+    <Route path="test">
+        <p>Important horse parade</p>
+    </Route>
+
+Will render `Important horse parade` styled as a paragraph when url `/test` is accessed. That page could be accessed from the following:
+
+    <Link href="/test">
+        Click here
+    </Link>
+
+The actual structure used in App.js and navigation is functionally mapped from `src/config/links.js`. Read more about adding pages in **Editing Content** section, below.
+
+### 2.8 🗎 `/src/mail.js`
+Exports a JS function to use Firebase Cloud Function for sending mail (for API submission failure rescue and Vermont branch's mail based lead intake). Security is handled by Cloud Function.
+
+### 2.9 🗎 `/src/screenWidth.js`
+Function for rendering content based on screen width in ways not able to be gracefully handled by media queries in stylesheets. Exports `useCurrentWidth()` which returns window width in pixels.
