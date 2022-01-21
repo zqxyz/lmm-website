@@ -338,4 +338,4 @@ Function for rendering content based on screen width in ways not able to be grac
 Transpiled, ready to deploy build folder created with `npm run build`. This is a 'production' website.
 
 # Editing Content
-[in progress]
+To edit content, you'll need to ask me politely. More information will come soon.
