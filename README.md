@@ -16,24 +16,21 @@ After the initial load, subsequent navigation from page to page will not require
 
 Rather than leaving standard anchor tags to do their duty, the default PopStateEvent is hijacked and prevented. The browser's history object is modified, and the target content is rendered from cache. It behaves like a normal website, but has the speed of a local document.
 
-In 2021, Local Muscle's most demanding month for bandwidth was August,
-using 12 GB of transfer. With our new website, we are unlikely to ever exceed
-5GB total. That would allow us to utilize Firebase's (where the demo is currently
-hosted) free tier (limited to 10GB/month). That's **free hosting**.
+In 2021, Local Muscle's most demanding month for bandwidth was August, using 12 GB of transfer. With our new website, we are unlikely to ever exceed 5GB total. That would allow us to utilize Firebase's (where the demo is currently hosted) free tier (limited to 10GB/month). That's **free hosting**.
 
-The only costs incurred are from the cloud function (not accessible in this git) handling emails. This should never exceed more than the price of a cup of coffee.
+The only costs incurred are from the cloud function (not accessible in this git) handling emails. This should never exceed more than 1 or 2 dollars.
 
 ## Accessibility
 
-The new website is ready for screen readers and other impairment software. Text tested for contrast compliance. Important screen elements use tabindex for input compatibility.
+The new website is ready for screen readers and other impairment software. Text tested for contrast compliance. Important screen elements use tabindex for input compatibility. The design scales fluidly for users with larger font sizes enabled on their systems.
 
 ###
 
 # Editing Page Content
 
-All pages are store directly in `src/pages/` as a `.js` file. The exception being the home page, which is nested in a folder at `src/pages/Landing/`.
+All pages are stored in `src/pages/` as a `.js` file. The home page and estimate pages are nested within folders within that directory, as they are organized into multiple files.
 
-The pages are JSX, which is very much like normal HTML. The page at `/call` contains an element made of the following code: 
+The pages are JSX, (which is very much like good ole HTML). The page at `/call` contains an element made of the following code: 
 
     <Container
         title='Contacting us by phone'
@@ -53,6 +50,8 @@ The pages are JSX, which is very much like normal HTML. The page at `/call` cont
 
 This page uses the provided `<Container>` component. Note that the C is capitalized for special componenents like this.
 
+First we'll review some provided components and then we'll go over the whole project structure so you know how to add, edit, and remove content, including adding new pages.
+
 # Layout Components
 
 ## `<Container>`
@@ -65,7 +64,10 @@ There are 4 attributes you can pass to a `<Container>`:
 
 **`lightText`** makes text readable against a dark background (used with `bgColor='#000000'`, for example). This is a boolean and does not need a value.
 
+**`noshadow`** don't render a box shadow. This is useful for blending two containers together. This is a boolean and does not need a value.
+
 **`id`** provide a manually set HTML id attribute property.
+
 
 ### Example:
 
@@ -93,7 +95,7 @@ Values may be undefined and will use defaults without error:
 
 `<ContainerSplitRight>` is a specialized version of `<Container>` that places the title to the left, and the main content split to the right, but stacks vertically on small screens (mobile phones).
 
-As an extension of `<Container>`, it receives the same properties **`title`**, **`bgColor`**, **`lightText`**, and **id** but requires additional considerations.
+As an extension of `<Container>`, it receives the properties **`title`**, **`bgColor`**, **`lightText`**, and **`id`** but requires additional considerations.
 
 `<ContainerSplitRight>` _requires_ a `title` property. It also must contain at least two child elements. The first element is used as a subtitle, and placed beneath the title `<h1>`. The first can be any type of element, like a `<button>`, but should not be the primary contents of the container.
 
@@ -214,3 +216,78 @@ Creates a corny notepad style checklist/todo list. Wrap items in `<>` (shorthand
      <>List item three</>
      <>Final list item</>
     </Checklist>
+
+## `<Tabs>`
+
+Seperates information into tabbed sections. Think file folders or browser tabs. Shouldn't be used for more than 3 or 4 tabs.
+
+Provide **`<tab>`** elements as children, and give each a `title` attribute, which will appear as the tab label. Keep tab titles short. One word is best. Two at most.
+
+    <Tabs>
+        <tab title='First tab'>
+            <h2>
+                Some subheading
+            </h2>
+            <p>
+                Body of first tab goes here.
+            </p>
+        </tab>
+        <tab title='Second tab'>
+            <h2>
+                Another subheading
+            </h2>
+            <p>
+                Body of second tab goes here.
+            </p>
+        </tab>
+    </Tabs>
+
+# Project Structure
+
+The project is divided into a fairly standard React structure.
+
+    📦 Project  
+     ┣ 📂 public [1]
+     ┃  ┣ 🗎 index.html [1.1]
+     ┃  ┣ 📂 fonts [1.2]
+     ┃  ┣ 📂 images [1.3]
+     ┃  ┣ 📂 style [1.4]
+     ┃  ┣ 📂 documents [1.5]
+     ┃  ┣ 🗎 robots.txt [1.6]
+     ┃  ┗ 🗎 favicon.ico [1.7]
+     ┣ 📂 src [2]
+     ┃  ┣ 📂 pages [2.1]
+     ┃  ┣ 📂 config [2.2]
+     ┃  ┣ 📂 components [2.3]
+     ┃  ┣ 🗎 App.js [2.4]
+     ┃  ┣ 🗎 index.js [2.5]
+     ┃  ┣ 🗎 Link.js [2.6]
+     ┃  ┣ 🗎 mail.js [2.7]
+     ┃  ┣ 🗎 Route.js [2.8]
+     ┃  ┗ 🗎 screenWidth.js [2.9]
+     ┗ 📂 build [3]
+
+# 1. `/public`
+This folder contains static files, accessible by standard structure-representative URL. For example a file at `public/images/photo.jpg` is accessible at `website.tld/images/photo.jpg`.
+
+## 1.1 `/public/index.html`
+This file is the root of everything. Meta data, default page title, favicon, and stylesheets are loaded here. React will dynamically load everything else into this file at render time.
+
+## 1.2 `/public/fonts`
+Though primary fonts are loaded in at index.html using Google web fonts service, additional fonts may be stored in this folder to load through a stylesheet.
+
+## 1.3 `/public/images`
+All images, content or background, should be stored in this folder and given reasonable, human-readable names.
+
+## 1.4 `/public/style`
+CSS stylesheets are stored here. Stylesheets organization should be adhered to as closely as possible.
+
+## 1.5 `/public/documents`
+PDFs and other documents should be stored here. File names must be human-readable and use underscores and hyphens instead of punctuation or spaces.
+
+## 1.6 `/public/robots.txt`
+See https://moz.com/learn/seo/robotstxt
+
+Note that search engine crawlers will not update changes to this website's page contents for up to 3 weeks. This website however, is well within the "crawl budget" for rendered content.
+
+
