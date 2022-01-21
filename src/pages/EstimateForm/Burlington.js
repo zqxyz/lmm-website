@@ -44,6 +44,7 @@ const Burlington = ({ setSubmitted }) => {
     Extension: '',
     Email: '',
     ServiceType: 'Moving',
+    MoveSize: 'Single Room or Less',
     RepeatCustomer: false,
     MoveDate: '',
     Flexibility: null,
@@ -284,6 +285,7 @@ const Burlington = ({ setSubmitted }) => {
             <ServiceType
               form={form}
               setForm={setForm}
+              handleFormChange={handleFormChange}
               dark
             />
 

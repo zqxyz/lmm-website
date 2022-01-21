@@ -1,4 +1,5 @@
-### ! Some specific implementation information regarding project structure and components in this readme is outdated. 
+[Demo viewable here](https://muscle.zquint.xyz/)
+
 
 # Improvements
 
