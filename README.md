@@ -28,7 +28,7 @@ The new website is ready for screen readers and other impairment software. Text 
 
 # Editing Page Content
 
-All pages are stored in `src/pages/` as a `.js` file. The home page and estimate pages are nested within folders within that directory, as they are organized into multiple files.
+All pages are stored in `src/pages/` as a `.js` file. The home page and estimate pages are nested within folders within that directory, as they are organized into multiple files. We'll go more in depth about each individual page below, in the section labeled **Pages**.
 
 The pages are JSX, (which is very much like good ole HTML). The page at `/call` contains an element made of the following code: 
 
@@ -267,27 +267,36 @@ The project is divided into a fairly standard React structure.
      ┃  ┗ 🗎 screenWidth.js [2.9]
      ┗ 📂 build [3]
 
-# 1. `/public`
+## 1. 📂 `/public`
 This folder contains static files, accessible by standard structure-representative URL. For example a file at `public/images/photo.jpg` is accessible at `website.tld/images/photo.jpg`.
 
-## 1.1 `/public/index.html`
+### 1.1 🗎 `/public/index.html`
 This file is the root of everything. Meta data, default page title, favicon, and stylesheets are loaded here. React will dynamically load everything else into this file at render time.
 
-## 1.2 `/public/fonts`
+### 1.2 📂 `/public/fonts`
 Though primary fonts are loaded in at index.html using Google web fonts service, additional fonts may be stored in this folder to load through a stylesheet.
 
-## 1.3 `/public/images`
+### 1.3 📂 `/public/images`
 All images, content or background, should be stored in this folder and given reasonable, human-readable names.
 
-## 1.4 `/public/style`
+### 1.4 📂 `/public/style`
 CSS stylesheets are stored here. Stylesheets organization should be adhered to as closely as possible.
 
-## 1.5 `/public/documents`
+### 1.5 📂 `/public/documents`
 PDFs and other documents should be stored here. File names must be human-readable and use underscores and hyphens instead of punctuation or spaces.
 
-## 1.6 `/public/robots.txt`
+### 1.6 🗎 `/public/robots.txt`
 See https://moz.com/learn/seo/robotstxt
 
 Note that search engine crawlers will not update changes to this website's page contents for up to 3 weeks. This website however, is well within the "crawl budget" for rendered content.
 
+### 1.7 🗎 `/public/favicon.ico`
+See https://en.wikipedia.org/wiki/Favicon#Use_of_favicon
 
+## 2. 📂 `/src`
+React code belongs here. This will be transpiled, minified, and obfuscated into 2 files. No secrets should be stored anywhere in the code as the code can be easily refactored and values easily extracted. API keys are not secrets, but passwords are definitely secrets.
+
+### 2.1 📂 `/src/pages`
+Think normal html or php files. This is where the copy lives. This is what the nondeveloper can modify. `About.js`, `Call.js`, `Join.js`, `Resources.js` and `Landing/Landing.js` have been specifically structured to be as easy to modify as possible. We'll go more in depth about each individual page below, in the section labeled **Pages**.
+
+### 2.1 📂 `/src/pages`
