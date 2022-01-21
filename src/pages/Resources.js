@@ -67,7 +67,7 @@ const Resources = () => {
               <li>
                 <a
                   target='_blank' rel='noopener noreferrer'
-                  href='/documents/Local_Muscle_In-State_Terms_and_Conditions-Dec2021.pdf'
+                  href='/documents/Local_Muscle_In-State_Terms_and_Conditions-Jan2022.pdf'
                 >
                   In State Terms and Conditions Outline
                 </a>
