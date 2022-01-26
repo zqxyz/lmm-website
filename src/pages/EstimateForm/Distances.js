@@ -11,7 +11,7 @@ const Distances = () => {
       <option value="75 to 100 feet">75 to 100 feet — Length of a tennis court</option>
       <option value="100 to 250 feet">100 to 250 feet — Multiple long hallways</option>
       <option value="250 to 500 feet">250 to 500 feet — Length of a football field</option>
-      <option value="Over 500 feet">Over 500 feet — A journey</option>
+      <option value="Over 500 feet">Over 500 feet — Bit of a journey</option>
     </>
   )
 }
