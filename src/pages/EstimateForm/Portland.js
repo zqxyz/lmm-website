@@ -15,6 +15,13 @@ import mail from '../../mail'
 
 const Portland = ({ setSubmitted }) => {
 
+  const asciiart =
+    '    _   __      __           \n' +
+    '   / | / /___  / /____  _____\n' +
+    '  /  |/ / __ \/ __/ _ \/ ___/\n' +
+    ' / /|  / /_/ / /_/  __(__  ) \n' +
+    '/_/ |_/\____/\__/\___/____/  \n';
+
   /**
    *         Scroll on load +
    *      auto focus first field
@@ -127,7 +134,7 @@ const Portland = ({ setSubmitted }) => {
    */
   React.useEffect(() => {
     const prepareNotes = () => {
-      let notes = ''
+      let notes = '_____________________:\n_____________________\n'
       if (otherNotes.length > 0) notes += `"${otherNotes}"`
       if (addlLocationNotes.length > 0) notes += `\nLocation notes: ${addlLocationNotes}`
       if (dateWindow.length > 0) notes += `\nFlexibility: ${dateWindow}`
