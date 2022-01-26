@@ -1,6 +1,7 @@
 import React from 'react';
 import States from '../States';
 import Columns from '../../../components/Columns';
+import Distances from '../Distances'
 
 const Origin = ({ form, handleFormChange, originFloors, setOriginFloors }) => {
 
@@ -14,7 +15,7 @@ const Origin = ({ form, handleFormChange, originFloors, setOriginFloors }) => {
           6 10zm0-7a3 3 0 1 1 0-6 3 3 0 0 1 0 6z" />
         </svg>
         &nbsp;
-        Origin
+        {(form.ServiceType !== 'Moving') ? 'Address' : 'Origin'}
       </legend>
       <div className="fields">
         <div className="ten wide field">
@@ -79,7 +80,10 @@ const Origin = ({ form, handleFormChange, originFloors, setOriginFloors }) => {
         </div>
       </div>
 
-      <Columns style={{ paddingBottom: '1em' }}>
+      <label>
+        Floors*
+      </label>
+      <Columns style={{ paddingBottom: '1em', paddingTop: '1em' }}>
         <column>
           <div class="ui checkbox">
             <input
@@ -162,6 +166,23 @@ const Origin = ({ form, handleFormChange, originFloors, setOriginFloors }) => {
           </div><br />
         </column>
       </Columns>
+
+      <div className="field">
+        <label htmlFor='originDistance'>
+          Distance*
+        </label>
+        <select required
+          type="text"
+          name="OriginDistance"
+          id="originDistance"
+          placeholder='Unselected'
+          value={form.OriginDistance}
+          onChange={handleFormChange}
+        >
+          <Distances />
+        </select>
+      </div>
+
     </fieldset>
   )
 }

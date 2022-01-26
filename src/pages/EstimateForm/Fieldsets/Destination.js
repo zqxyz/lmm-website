@@ -1,6 +1,7 @@
 import React from 'react';
 import States from '../States';
 import Columns from '../../../components/Columns';
+import Distances from '../Distances'
 
 const Destination = ({ form, handleFormChange, destinationFloors, setDestinationFloors }) => {
   return (
@@ -78,7 +79,11 @@ const Destination = ({ form, handleFormChange, destinationFloors, setDestination
           />
         </div>
       </div>
-      <Columns style={{ paddingBottom: '1em' }}>
+
+      <label>
+        Floors*
+      </label>
+      <Columns style={{ paddingBottom: '1em', paddingTop: '1em' }}>
         <column>
           <div class="ui checkbox">
             <input
@@ -161,6 +166,23 @@ const Destination = ({ form, handleFormChange, destinationFloors, setDestination
           </div><br />
         </column>
       </Columns>
+
+      <div className="field">
+        <label htmlFor='destinationDistance'>
+          Distance*
+        </label>
+        <select required
+          type="text"
+          name="DestinationDistance"
+          id="destinationDistance"
+          placeholder='Unselected'
+          value={form.DestinationDistance}
+          onChange={handleFormChange}
+        >
+          <Distances />
+        </select>
+      </div>
+
     </fieldset>
   )
 }

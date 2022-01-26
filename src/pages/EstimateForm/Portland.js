@@ -9,7 +9,6 @@ import AddlLocation from './Fieldsets/AddlLocation';
 import OtherNotes from './Fieldsets/OtherNotes'
 import Container from '../../components/Container';
 import mail from '../../mail'
-import Submitted from './Submitted';
 
 // API documentation for SmartMoving
 // https://smfilestore.blob.core.windows.net/docs/AdvancedWebsiteFormIntegration.pdf
@@ -97,12 +96,22 @@ const Portland = ({ setSubmitted }) => {
             .substring(0, 10)
         })
       validateForm()
+      if (form.ServiceType !== 'Moving') {
+        setDestinationFloors({...originFloors})
+        setForm(prevState => ({
+          ...prevState,
+          DestinationStreet: form.OriginStreet,
+          DestinationCity: form.OriginCity,
+          DestinationState: form.OriginState,
+          DestinationZip: form.OriginZip,
+        }))
+      }
     }, debounceTime)
 
     return () => {
       clearTimeout(timerId)
     }
-  }, [form])
+  }, [form, originFloors])
 
 
   /*
@@ -159,6 +168,7 @@ const Portland = ({ setSubmitted }) => {
       .catch(function (error) {
         if (error.response.data.message === 'This lead has already been submitted.  Please contact SmartMoving support.') {
           alert('Information already submitted.')
+          setSubmitted(true)
         } else {
           // Rescue submission with an email if SmartMoving API fails
           let mailBody = ``
