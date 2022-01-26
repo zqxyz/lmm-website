@@ -307,7 +307,7 @@ pre {
 /* COLLAPSE */
 @media only screen and (max-width: 767px) {
     body {
-        background-image: none;
+        background-image: url(/images/mobilewall.jpg);
         font-size: 90;
     }
 
