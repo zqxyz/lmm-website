@@ -144,6 +144,8 @@ input[type='text'], textarea, select, input[type='date'] {
         padding: 0 !important;
         border: none !important;
         background: none !important;
+        -webkit-box-shadow: none !important;
+        box-shadow: none !important;
     }
 
     .fieldset {
