@@ -63,7 +63,7 @@ const Join = () => {
       mailBody += `${k}: ${v}\n`
     }
     mail(
-      'code@zquint.xyz',
+      'hiring@localmusclemovers.com',
       'Request for Interview: ' + timestamp,
       'Submitted from localmusclemovers.com: \n\n' +
       mailBody
