@@ -15,13 +15,6 @@ import mail from '../../mail'
 
 const Portland = ({ setSubmitted }) => {
 
-  const asciiart =
-    '    _   __      __           \n' +
-    '   / | / /___  / /____  _____\n' +
-    '  /  |/ / __ \/ __/ _ \/ ___/\n' +
-    ' / /|  / /_/ / /_/  __(__  ) \n' +
-    '/_/ |_/\____/\__/\___/____/  \n';
-
   /**
    *         Scroll on load +
    *      auto focus first field
