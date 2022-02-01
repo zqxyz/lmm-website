@@ -24,6 +24,7 @@ const Join = () => {
       form.LastName !== '' &&
       form.PhoneNumber !== '' &&
       form.Email !== '' &&
+      form.Branch !== '' &&
       form.Info !== ''
     ) {
       setComplete(true)
