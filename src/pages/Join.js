@@ -14,6 +14,7 @@ const Join = () => {
     PhoneNumber: '',
     Extension: '',
     Email: '',
+    Branch: '',
     Info: ''
   })
 
@@ -64,7 +65,7 @@ const Join = () => {
     }
     mail(
       'hiring@localmusclemovers.com',
-      'Request for Interview: ' + timestamp,
+      `[${form.Branch}] Crew application from ${form.FirstName} ${form.LastName}`,
       'Submitted from localmusclemovers.com: \n\n' +
       mailBody
     )
@@ -135,6 +136,49 @@ const Join = () => {
               form={form}
               handleFormChange={handleFormChange}
             />
+
+            <fieldset>
+              <SectionHeader
+                // icon={icon}
+                title='Location'
+              />
+              <div className='fields' style={{ paddingBottom: '0.5em' }}>
+                <div className="field">
+                  <label>
+                    Which branch are you interested in contacting?<br />
+                  </label>
+                </div>
+                <div className="field">
+                  <label htmlFor='branch207'>
+                    Portland, ME
+                  </label>
+                  <input
+                    required
+                    type="radio"
+                    id="branch207"
+                    name="Branch"
+                    rows='5'
+                    value="207"
+                    onChange={handleFormChange}
+                  />
+                </div>
+
+                <div className="field">
+                  <label htmlFor='branch802'>
+                    Burlington, VT
+                  </label>
+                  <input
+                    required
+                    type="radio"
+                    id="branch802"
+                    name="Branch"
+                    rows='5'
+                    value="802"
+                    onChange={handleFormChange}
+                  />
+                </div>
+              </div>
+            </fieldset>
 
             <fieldset>
               <SectionHeader
