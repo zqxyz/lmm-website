@@ -1,0 +1,771 @@
+[
+    {
+        "id": 1,
+        "number": 64,
+        "street": "Elm St",
+        "cityState": "Auburn, ME",
+        "issue": "Bedbugs"
+    },
+    {
+        "id": 2,
+        "number": 100,
+        "street": "Mill St",
+        "cityState": "Auburn, ME",
+        "issue": "Bedbugs"
+    },
+    {
+        "id": 3,
+        "number": 34,
+        "street": "Cedar St",
+        "cityState": "Augusta, ME",
+        "issue": "Bedbugs"
+    },
+    {
+        "id": 4,
+        "number": 30,
+        "street": "North St",
+        "cityState": "Augusta, ME",
+        "issue": "Bedbugs"
+    },
+    {
+        "id": 5,
+        "number": 38,
+        "street": "Northern Ave",
+        "cityState": "Augusta, ME",
+        "issue": "Bedbugs"
+    },
+    {
+        "id": 6,
+        "number": 53,
+        "street": "State St",
+        "cityState": "Augusta, ME",
+        "issue": "Bedbugs"
+    },
+    {
+        "id": 7,
+        "number": 75,
+        "street": "Washington St",
+        "cityState": "Augusta, ME",
+        "issue": "Bedbugs"
+    },
+    {
+        "id": 8,
+        "number": 36,
+        "street": "Water St",
+        "cityState": "Augusta, ME",
+        "issue": "Bedbugs"
+    },
+    {
+        "id": 9,
+        "number": 38,
+        "street": "Water St",
+        "cityState": "Augusta, ME",
+        "issue": "Bedbugs"
+    },
+    {
+        "id": 10,
+        "number": 268,
+        "street": "Odlin Rd",
+        "cityState": "Bangor, ME",
+        "issue": "Bedbugs"
+    },
+    {
+        "id": 11,
+        "number": 20,
+        "street": "Graham St",
+        "cityState": "Biddeford, ME",
+        "issue": "Bedbugs"
+    },
+    {
+        "id": 12,
+        "number": 82,
+        "street": "Hill St",
+        "cityState": "Biddeford, ME",
+        "issue": "Bedbugs"
+    },
+    {
+        "id": 13,
+        "number": 1011,
+        "street": "Narragansett Trail",
+        "cityState": "Buxton, ME",
+        "notes": "Trading Places Storage",
+        "issue": "Challenging address"
+    },
+    {
+        "id": 14,
+        "number": "*",
+        "street": "Balsam Rd",
+        "cityState": "Cape Elizabeth, ME",
+        "issue": "Extreme problems with residents",
+        "action": "No service"
+    },
+    {
+        "id": 15,
+        "number": "*",
+        "street": "Beacon Lane",
+        "cityState": "Cape Elizabeth, ME",
+        "issue": "Extreme problems with residents",
+        "action": "No service"
+    },
+    {
+        "id": 16,
+        "number": "*",
+        "street": "Lighthouse Point",
+        "cityState": "Cape Elizabeth, ME",
+        "issue": "Extreme problems with residents",
+        "action": "No service"
+    },
+    {
+        "id": 17,
+        "number": "*",
+        "street": "Mares Hollow",
+        "cityState": "Cape Elizabeth, ME",
+        "issue": "Extreme problems with residents",
+        "action": "No service"
+    },
+    {
+        "id": 18,
+        "number": "*",
+        "street": "Two Lights",
+        "cityState": "Cape Elizabeth, ME",
+        "issue": "Extreme problems with residents",
+        "action": "No service"
+    },
+    {
+        "id": 19,
+        "number": 5,
+        "street": "Marion Way",
+        "cityState": "Falmouth, ME",
+        "notes": "Blueberry Commons",
+        "issue": "Challenging address"
+    },
+    {
+        "id": 20,
+        "number": 147,
+        "street": "Plummer Rd",
+        "cityState": "Gorham, ME",
+        "issue": "Bedbugs"
+    },
+    {
+        "id": 21,
+        "number": 197,
+        "street": "Bartlett St",
+        "cityState": "Lewiston, ME",
+        "issue": "Bedbugs"
+    },
+    {
+        "id": 22,
+        "number": 214,
+        "street": "Blake St",
+        "cityState": "Lewiston, ME",
+        "issue": "Bedbugs"
+    },
+    {
+        "id": 23,
+        "number": 151,
+        "street": "Horton St",
+        "cityState": "Lewiston, ME",
+        "issue": "Bedbugs"
+    },
+    {
+        "id": 24,
+        "number": 55,
+        "street": "Howe St",
+        "cityState": "Lewiston, ME",
+        "issue": "Bedbugs"
+    },
+    {
+        "id": 25,
+        "number": 110,
+        "street": "Howe St",
+        "cityState": "Lewiston, ME",
+        "issue": "Bedbugs"
+    },
+    {
+        "id": 26,
+        "number": 238,
+        "street": "Main St",
+        "cityState": "Lewiston, ME",
+        "issue": "Bedbugs"
+    },
+    {
+        "id": 27,
+        "number": 78,
+        "street": "Maple St",
+        "cityState": "Lewiston, ME",
+        "issue": "Bedbugs"
+    },
+    {
+        "id": 28,
+        "number": 32,
+        "street": "Oxford St",
+        "cityState": "Lewiston, ME",
+        "issue": "Bedbugs"
+    },
+    {
+        "id": 29,
+        "number": 242,
+        "street": "Park St",
+        "cityState": "Lewiston, ME",
+        "issue": "Bedbugs"
+    },
+    {
+        "id": 30,
+        "number": 45,
+        "street": "Pleasant St",
+        "cityState": "Lewiston, ME",
+        "issue": "Bedbugs"
+    },
+    {
+        "id": 31,
+        "number": 21,
+        "street": "Walnut St",
+        "cityState": "Lewiston, ME",
+        "issue": "Bedbugs"
+    },
+    {
+        "id": 32,
+        "number": 38,
+        "street": "Walnut St",
+        "cityState": "Lewiston, ME",
+        "issue": "Bedbugs"
+    },
+    {
+        "id": 33,
+        "number": 54,
+        "street": "Ware St",
+        "cityState": "Lewiston, ME",
+        "issue": "Bedbugs"
+    },
+    {
+        "id": 35,
+        "number": 60,
+        "street": "Brackett",
+        "cityState": "Portland, ME",
+        "issue": "Bedbugs"
+    },
+    {
+        "id": 36,
+        "number": 60,
+        "street": "Brackett St",
+        "cityState": "Portland, ME",
+        "issue": "Bedbugs"
+    },
+    {
+        "id": 37,
+        "number": 189,
+        "street": "Brackett St",
+        "cityState": "Portland, ME",
+        "issue": "Challenging address"
+    },
+    {
+        "id": 38,
+        "number": 23,
+        "street": "Bramhall St",
+        "cityState": "Portland, ME",
+        "issue": "Challenging address"
+    },
+    {
+        "id": 39,
+        "number": 240,
+        "street": "Brighton Ave",
+        "cityState": "Portland, ME",
+        "notes": "3rd floor",
+        "issue": "Tight stairwell, large items cannot fit",
+        "action": "Warn customer and slightly pad estimate"
+    },
+    {
+        "id": 40,
+        "number": 469,
+        "street": "Brighton Ave",
+        "cityState": "Portland, ME",
+        "issue": "Challenging address"
+    },
+    {
+        "id": 41,
+        "number": 1125,
+        "street": "Brighton Ave",
+        "cityState": "Portland, ME",
+        "issue": "Bedbugs"
+    },
+    {
+        "id": 42,
+        "number": 18,
+        "street": "Casco St",
+        "cityState": "Portland, ME",
+        "issue": "Bedbugs"
+    },
+    {
+        "id": 43,
+        "number": 18,
+        "street": "Casco St",
+        "cityState": "Portland, ME",
+        "issue": "Bedbugs"
+    },
+    {
+        "id": 44,
+        "number": 37,
+        "street": "Casco St",
+        "cityState": "Portland, ME",
+        "notes": "Ambassador",
+        "issue": "Challenging address"
+    },
+    {
+        "id": 45,
+        "number": "*",
+        "street": "Chandler's Wharf",
+        "cityState": "Portland, ME",
+        "issue": "Challenging address"
+    },
+    {
+        "id": 46,
+        "number": 51,
+        "street": "Chestnut",
+        "cityState": "Portland, ME",
+        "issue": "Bedbugs"
+    },
+    {
+        "id": 47,
+        "number": 51,
+        "street": "Chestnut Ave",
+        "cityState": "Portland, ME",
+        "issue": "Challenging address"
+    },
+    {
+        "id": 48,
+        "number": 21,
+        "street": "Chestnut St",
+        "cityState": "Portland, ME",
+        "issue": "Challenging address"
+    },
+    {
+        "id": 49,
+        "number": 305,
+        "street": "Commercial St",
+        "cityState": "Portland, ME",
+        "notes": "Baxter Place",
+        "issue": "Challenging address"
+    },
+    {
+        "id": 50,
+        "number": 146,
+        "street": "Congress St",
+        "cityState": "Portland, ME",
+        "issue": "Challenging address"
+    },
+    {
+        "id": 51,
+        "number": 439,
+        "street": "Congress St",
+        "cityState": "Portland, ME",
+        "issue": "Bedbugs"
+    },
+    {
+        "id": 52,
+        "number": 439,
+        "street": "Congress St",
+        "cityState": "Portland, ME",
+        "notes": "Metropolitan",
+        "issue": "Challenging address, bedbugs"
+    },
+    {
+        "id": 53,
+        "number": 537,
+        "street": "Congress St",
+        "cityState": "Portland, ME",
+        "issue": "Challenging address"
+    },
+    {
+        "id": 54,
+        "number": 633,
+        "street": "Congress St",
+        "cityState": "Portland, ME",
+        "issue": "Bedbugs"
+    },
+    {
+        "id": 55,
+        "number": 638,
+        "street": "Congress St",
+        "cityState": "Portland, ME",
+        "notes": "Lafayette Square",
+        "issue": "Challenging address, bedbug risk"
+    },
+    {
+        "id": 56,
+        "number": "655, 657",
+        "street": "Congress St",
+        "cityState": "Portland, ME",
+        "notes": "Trelawny Building",
+        "issue": "Bedbugs, challenging elevator"
+    },
+    {
+        "id": 57,
+        "number": 743,
+        "street": "Congress St",
+        "cityState": "Portland, ME",
+        "issue": "Bedbugs"
+    },
+    {
+        "id": 58,
+        "number": 553,
+        "street": "Cumberland",
+        "cityState": "Portland, ME",
+        "issue": "Bedbugs"
+    },
+    {
+        "id": 59,
+        "number": 85,
+        "street": "Cumberland Ave",
+        "cityState": "Portland, ME",
+        "issue": "Bedbugs"
+    },
+    {
+        "id": 60,
+        "number": 341,
+        "street": "Cumberland Ave",
+        "cityState": "Portland, ME",
+        "issue": "Tough elevator",
+        "action": "Pad estimate"
+    },
+    {
+        "id": 61,
+        "number": 409,
+        "street": "Cumberland Ave",
+        "cityState": "Portland, ME",
+        "issue": "Challenging address"
+    },
+    {
+        "id": 62,
+        "number": 471,
+        "street": "Cumberland Ave",
+        "cityState": "Portland, ME",
+        "issue": "Challenging address"
+    },
+    {
+        "id": 63,
+        "number": 473,
+        "street": "Cumberland Ave",
+        "cityState": "Portland, ME",
+        "issue": "Challenging address"
+    },
+    {
+        "id": 64,
+        "number": 53,
+        "street": "Danforth St",
+        "cityState": "Portland, ME",
+        "issue": "Challenging address"
+    },
+    {
+        "id": 65,
+        "number": 81,
+        "street": "Danforth St",
+        "cityState": "Portland, ME",
+        "issue": "Challenging address"
+    },
+    {
+        "id": 66,
+        "number": 414,
+        "street": "Danforth St",
+        "cityState": "Portland, ME",
+        "issue": "Challenging address"
+    },
+    {
+        "id": 67,
+        "number": 7,
+        "street": "Deering Street",
+        "cityState": "Portland, ME",
+        "issue": "Bedbugs"
+    },
+    {
+        "id": 68,
+        "number": 56,
+        "street": "Eastern Promenade",
+        "cityState": "Portland, ME",
+        "notes": "Portland House",
+        "issue": "Challenging address"
+    },
+    {
+        "id": 69,
+        "number": 180,
+        "street": "Falmouth",
+        "cityState": "Portland, ME",
+        "notes": "Nathan Clifford School",
+        "issue": "Challenging address"
+    },
+    {
+        "id": 70,
+        "number": 86,
+        "street": "Federal St",
+        "cityState": "Portland, ME",
+        "issue": "Challenging address"
+    },
+    {
+        "id": 71,
+        "number": 97,
+        "street": "Grant St",
+        "cityState": "Portland, ME",
+        "issue": "Challenging address"
+    },
+    {
+        "id": 72,
+        "number": 180,
+        "street": "Grant St",
+        "cityState": "Portland, ME",
+        "issue": "Bedbugs"
+    },
+    {
+        "id": 73,
+        "number": 22,
+        "street": "Hancock",
+        "cityState": "Portland, ME",
+        "issue": "Challenging address"
+    },
+    {
+        "id": 74,
+        "number": 40,
+        "street": "Hanover St",
+        "cityState": "Portland, ME",
+        "issue": "Challenging address"
+    },
+    {
+        "id": 75,
+        "number": 24,
+        "street": "High St",
+        "cityState": "Portland, ME",
+        "issue": "Bedbugs"
+    },
+    {
+        "id": 76,
+        "number": 180,
+        "street": "High St",
+        "cityState": "Portland, ME",
+        "issue": "Challenging address"
+    },
+    {
+        "id": 77,
+        "number": 86,
+        "street": "Holiday Dr",
+        "cityState": "Portland, ME",
+        "notes": "Birchwoods At Canco Assisted Living",
+        "issue": "Challenging address"
+    },
+    {
+        "id": 78,
+        "number": "*",
+        "street": "Houlton St",
+        "cityState": "Portland, ME",
+        "issue": "Challenging for trucks",
+        "action": "Send small trucks only"
+    },
+    {
+        "id": 79,
+        "number": 132,
+        "street": "Marginal Way",
+        "cityState": "Portland, ME",
+        "issue": "Challenging address"
+    },
+    {
+        "id": 80,
+        "number": 85,
+        "street": "Market St",
+        "cityState": "Portland, ME",
+        "issue": "Challenging address"
+    },
+    {
+        "id": 81,
+        "number": 15,
+        "street": "Middle",
+        "cityState": "Portland, ME",
+        "issue": "Challenging address"
+    },
+    {
+        "id": 82,
+        "number": 10,
+        "street": "Moulton Street",
+        "cityState": "Portland, ME",
+        "issue": "Very small elevator",
+        "action": "Increase estimated hours"
+    },
+    {
+        "id": 83,
+        "number": "*",
+        "street": "Munjoy Heights",
+        "cityState": "Portland, ME",
+        "notes": "Munjoy Heights",
+        "issue": "Challenging address"
+    },
+    {
+        "id": 84,
+        "number": 18,
+        "street": "Munjoy St",
+        "cityState": "Portland, ME",
+        "notes": "3rd floor",
+        "issue": "Narrow staircase",
+        "action": "Assess for hoisting"
+    },
+    {
+        "id": 85,
+        "number": 151,
+        "street": "North St",
+        "cityState": "Portland, ME",
+        "issue": "Challenging address"
+    },
+    {
+        "id": 86,
+        "number": 197,
+        "street": "Pine St",
+        "cityState": "Portland, ME",
+        "issue": "Challenging address"
+    },
+    {
+        "id": 87,
+        "number": "*",
+        "street": "Ricker park",
+        "cityState": "Portland, ME",
+        "notes": "Ricker Park",
+        "issue": "Challenging address"
+    },
+    {
+        "id": 88,
+        "number": 131,
+        "street": "Sherman",
+        "cityState": "Portland, ME",
+        "issue": "Bedbugs"
+    },
+    {
+        "id": 89,
+        "number": 145,
+        "street": "Sherman St",
+        "cityState": "Portland, ME",
+        "issue": "Bedbugs"
+    },
+    {
+        "id": 90,
+        "number": 131,
+        "street": "Sherman St, Apt 5",
+        "cityState": "Portland, ME",
+        "issue": "Bedbugs"
+    },
+    {
+        "id": 91,
+        "number": 99,
+        "street": "Silver",
+        "cityState": "Portland, ME",
+        "issue": "Challenging address"
+    },
+    {
+        "id": 92,
+        "number": 145,
+        "street": "Spring St",
+        "cityState": "Portland, ME",
+        "issue": "Bedbugs"
+    },
+    {
+        "id": 93,
+        "number": 21,
+        "street": "State St",
+        "cityState": "Portland, ME",
+        "issue": "Challenging address"
+    },
+    {
+        "id": 94,
+        "number": 75,
+        "street": "State St",
+        "cityState": "Portland, ME",
+        "issue": "Challenging address"
+    },
+    {
+        "id": 95,
+        "number": 100,
+        "street": "State St",
+        "cityState": "Portland, ME",
+        "issue": "Challenging address"
+    },
+    {
+        "id": 96,
+        "number": 286,
+        "street": "State St",
+        "cityState": "Portland, ME",
+        "issue": "Challenging address"
+    },
+    {
+        "id": 97,
+        "number": 605,
+        "street": "Stevens Ave",
+        "cityState": "Portland, ME",
+        "notes": "Motherhouse",
+        "issue": "Challenging address"
+    },
+    {
+        "id": 98,
+        "number": 46,
+        "street": "Turner St",
+        "cityState": "Portland, ME",
+        "issue": "Challenging address"
+    },
+    {
+        "id": 99,
+        "number": 28,
+        "street": "Vesper St",
+        "cityState": "Portland, ME",
+        "issue": "Bedbugs"
+    },
+    {
+        "id": 100,
+        "number": 38,
+        "street": "Vesper St",
+        "cityState": "Portland, ME",
+        "issue": "Bedbugs"
+    },
+    {
+        "id": 101,
+        "number": 1,
+        "street": "Walker St",
+        "cityState": "Portland, ME",
+        "notes": "Walker Terrace",
+        "issue": "Challenging address"
+    },
+    {
+        "id": 102,
+        "number": 505,
+        "street": "Washington Ave",
+        "cityState": "Portland, ME",
+        "issue": "Bedbugs"
+    },
+    {
+        "id": 103,
+        "number": 278,
+        "street": "Woodford St",
+        "cityState": "Portland, ME",
+        "issue": "Challenging address"
+    },
+    {
+        "id": 104,
+        "number": 133,
+        "street": "York",
+        "cityState": "Portland, ME",
+        "issue": "Challenging address"
+    },
+    {
+        "id": 105,
+        "number": 8,
+        "street": "Pleasant Hill",
+        "cityState": "Scarborough, ME",
+        "notes": "Prime Storage",
+        "issue": "Challenging address"
+    },
+    {
+        "id": 106,
+        "number": 36,
+        "street": "A St",
+        "cityState": "South Portland, ME",
+        "issue": "Bedbugs"
+    },
+    {
+        "id": 107,
+        "number": 80,
+        "street": "Mechanic Street",
+        "cityState": "Westbrook, ME",
+        "issue": "Bedbugs"
+    }
+]

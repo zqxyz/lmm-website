@@ -13,6 +13,7 @@ const firebaseConfig = {
 }
 const app = initializeApp(firebaseConfig) // eslint-disable-line
 
+
 ReactDOM.render(
   <App />,
   document.querySelector('#root')

@@ -97,7 +97,7 @@ const Portland = ({ setSubmitted }) => {
         })
       validateForm()
       if (form.ServiceType !== 'Moving') {
-        setDestinationFloors({...originFloors})
+        setDestinationFloors({ ...originFloors })
         setForm(prevState => ({
           ...prevState,
           DestinationStreet: form.OriginStreet,
@@ -127,7 +127,7 @@ const Portland = ({ setSubmitted }) => {
    */
   React.useEffect(() => {
     const prepareNotes = () => {
-      let notes = '_____________________:\n_____________________\n'
+      let notes = ''
       if (otherNotes.length > 0) notes += `"${otherNotes}"`
       if (addlLocationNotes.length > 0) notes += `\nLocation notes: ${addlLocationNotes}`
       if (dateWindow.length > 0) notes += `\nFlexibility: ${dateWindow}`
@@ -141,6 +141,7 @@ const Portland = ({ setSubmitted }) => {
     }
     setForm(prevState => ({ ...prevState, Notes: prepareNotes() }))
   }, [addlLocationNotes, otherNotes, dateWindow, destinationFloors, originFloors])
+
 
 
   /**
@@ -159,6 +160,7 @@ const Portland = ({ setSubmitted }) => {
     const timestamp =
       `${now.getMonth() + 1}/${now.getDate()}/${now.getFullYear()} ` +
       `${now.toLocaleTimeString('en-US', { hour: '2-digit', minute: '2-digit', hour12: true })}`
+
 
     // Submit to API
     axios.post(URL, JSON.stringify(form))
@@ -185,6 +187,22 @@ const Portland = ({ setSubmitted }) => {
         }
       })
   }
+
+
+  // ---------------------------------------------------------------------------
+  // ---------------------------------------------------------------------------
+  // ---------------------------------------------------------------------------
+  // ---------------------------------------------------------------------------
+  // ---------------------------------------------------------------------------
+  // ---------------------------------------------------------------------------
+  // ---------------------------------------------------------------------------
+  // ---------------------------------------------------------------------------
+  // ---------------------------------------------------------------------------
+  // ---------------------------------------------------------------------------
+  // ---------------------------------------------------------------------------
+  // ---------------------------------------------------------------------------
+  // ---------------------------------------------------------------------------
+  // ---------------------------------------------------------------------------
 
   return (
     <>

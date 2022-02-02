@@ -7,6 +7,7 @@ import Resources from "../pages/Resources"
 import Deposit207_160 from "../pages/Deposit/Deposit207_160"
 import Deposit207 from "../pages/Deposit/Deposit207"
 import Deposit802 from "../pages/Deposit/Deposit802"
+import Test from "../pages/Test"
 
 
 /**
@@ -84,6 +85,13 @@ const links = [
         "shortName": null,
         "path": "/deposit-802",
         "component": <Deposit802 />,
+        "position": "hidden"
+    },
+    {
+        "name": "Test",
+        "shortName": null,
+        "path": "/test",
+        "component": <Test />,
         "position": "hidden"
     }
 ]
