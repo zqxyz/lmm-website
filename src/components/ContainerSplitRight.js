@@ -44,9 +44,9 @@ const ContainerSplitRight = ({ title, bgColor = '#cbd1b6', lightText, noshadow, 
 
         <div className='five wide column'>
           <h1 id={`heading-${title.replace(' ', '-')}`}>{title}</h1><br />
-          <div style={{ fontSize: '1.15em'}}>
+          <p>
             {subTitle}
-          </div>
+          </p>
         </div>
 
         <div className='eleven wide column'>

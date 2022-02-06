@@ -6,7 +6,6 @@ ul.checklist {
     -webkit-border-radius: 3px;
     -moz-border-radius: 3px;
     border-radius: 3px;
-    line-height: 1.25em;
 }
 
 ul.checklist li {

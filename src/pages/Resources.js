@@ -110,8 +110,10 @@ const Resources = () => {
                 </a> [External link]
               </li>
             </ul>
+            <p>
             We bill differently for interstate moves, as mandated by law. We will determine a flat rate
             and provide a quote, rather than create an hourly-based estimate.
+            </p>
           </column>
         </Columns>
 

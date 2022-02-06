@@ -132,6 +132,10 @@ h1 {
     font-weight: 700;
 }
 
+li {
+    line-height: 1.4em;
+}
+
 .bi {
     position: relative;
     top: 2px;
@@ -242,6 +246,7 @@ h1 {
 
 .container p {
     font-size: 1.15em;
+    line-height: 1.15em;
 }
 
 .container.picture h1 {
