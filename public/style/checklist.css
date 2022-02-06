@@ -6,6 +6,7 @@ ul.checklist {
     -webkit-border-radius: 3px;
     -moz-border-radius: 3px;
     border-radius: 3px;
+    line-height: 1.25em;
 }
 
 ul.checklist li {
@@ -13,7 +14,8 @@ ul.checklist li {
     position: relative;
     margin-bottom: 5px;
     border-bottom: 1px solid rgb(146, 146, 146) !important;
-    color:rgb(46, 46, 46) !important    
+    color:rgb(46, 46, 46) !important;
+    line-height: 1.5em;
 }
 
 ul.checklist li:before {
