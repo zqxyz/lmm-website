@@ -20,12 +20,11 @@ const Estimate = () => {
   const chooseBranchPrompt = () => {
     return (
       <Container
-        title='Choose a branch'
-        bgColor='#354f3d'
-        lightText
+        title='Choose a branch ⤴'
+        bgColor='#dddfda'
       >
         <p>
-          Choose the branch you'd like to contact using the options above.
+          Choose the branch you'd like to contact using the options above. 
         </p>
         <p>
           If you are unsure which office to contact, select the office closest to your origin address.
@@ -51,18 +50,18 @@ const Estimate = () => {
       :
       <>
         <Container
-          bgColor='rgb(53, 53, 53)'
+          bgColor='#353532'
         >
           <center>
             <button
-              className={`ui ${(branch === 'portland') ? 'blue' : ''} button huge pop`}
+              className={`ui ${(branch === 'portland') ? 'inverted' : 'blue'} button huge pop`}
               onClick={() => { setBranch('portland') }}
               style={{ marginBottom: '0' }}
             >
               Portland, ME {(branch === 'portland') ? '✓' : ''}
             </button>
             <button
-              className={`ui ${(branch === 'burlington') ? 'blue' : ''} button huge pop`}
+              className={`ui ${(branch === 'burlington') ? 'inverted' : 'blue'} button huge pop`}
               onClick={() => { setBranch('burlington') }}
               style={{ marginBottom: '0' }}
             >

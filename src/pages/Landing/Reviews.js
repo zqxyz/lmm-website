@@ -26,7 +26,9 @@ const Reviews = () => {
         {reviews.map(review => {
           return (
             <column key={review.key}>
+              <p>
               "{review.quote}"
+              </p>
               <div style={{ textAlign: 'right', fontWeight: '600' }}>
                 -{review.author}
               </div>

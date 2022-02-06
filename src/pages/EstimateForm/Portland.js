@@ -206,7 +206,7 @@ const Portland = ({ setSubmitted }) => {
 
   return (
     <>
-      <Container bgColor='rgba(204, 208, 196, 0.8)'>
+      <Container bgColor='rgba(164, 168, 163, 0.8)'>
         <h1 ref={scrollRef}>Estimate Request Form</h1>
         <p>
           Request an estimate for moving service from

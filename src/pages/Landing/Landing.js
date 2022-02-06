@@ -28,7 +28,7 @@ const Landing = () => {
       </Banner>
 
 
-      <Container bgColor='dark'>
+      <Container bgColor='#353532' lightText>
         <p style={{ textAlign: 'center' }}>
           At Local Muscle, we understand the serious responsibility
           placed upon us by the pandemic. We closely follow
@@ -39,12 +39,12 @@ const Landing = () => {
 
 
       <Container
-        bgColor='#cbd5ba'
+        bgColor='#e0e5d5'
       >
         <div className='ui stackable grid'>
           <div className='ten wide column'>
             <h1 className='rightUnlessStacked'>Trusted for over a decade</h1>
-            <p>
+            <p style={{textAlign: 'justify'}}>
               We've built a reputation throughout New England as a moving company you can trust.
               Whether you're moving halfway across the country or across the street, we've got
               you covered. Throughout our history we've seen it all, and we use that experience
@@ -61,7 +61,7 @@ const Landing = () => {
 
 
       <Container
-        bgColor='#c6bba6'
+        bgColor='#eceee2'
       >
         <div className='ui stackable grid'>
           <div className='six wide column'>

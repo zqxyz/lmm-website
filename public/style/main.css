@@ -3,10 +3,32 @@
 @import url('./tabs.css');
 @import url('./forms.css');
 
-* {
-    /* font-family: 'Fira Sans', sans-serif; */
-    font-family: 'Rubik', sans-serif;
+@font-face {
+    font-family: 'CMU Serif';
+    src: url(/fonts/cmunrm.woff);
+    font-weight: normal;
+    font-style: normal;
 }
+@font-face {
+    font-family: 'CMU Serif';
+    src: url(/fonts/cmunbx.woff);
+    font-weight: bold;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'CMU Serif';
+    src: url(/fonts/cmunti.woff);
+    font-weight: normal;
+    font-style: italic;
+}
+
+* {
+    /* font-family: 'CMU Serif', serif; */
+    font-family: 'Rubik', sans-serif;
+    font-size: 1em;
+    line-height: 1em;
+}
+
 
 /* Cool fun wacky font */
 @font-face {
@@ -87,12 +109,9 @@ a:focus {
     max-width: calc(1300px - 4em);
     margin: auto;
     bottom: 0;
-    -webkit-border-top-left-radius: 5px;
-    -webkit-border-top-right-radius: 5px;
-    -moz-border-radius-topleft: 5px;
-    -moz-border-radius-topright: 5px;
-    border-top-left-radius: 5px;
-    border-top-right-radius: 5px;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    border-radius: 3px;
     color: rgb(37, 37, 37);
     opacity: 0.8;
     -ms-filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=80);
@@ -107,9 +126,10 @@ a:focus {
 }
 
 h1 {
-    font-size: 3em;
     color: rgb(37, 37, 37);
-    font-weight: 800;
+    font-family: 'Rubik', sans-serif;
+    font-size: 3em;
+    font-weight: 700;
 }
 
 .bi {

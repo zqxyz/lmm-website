@@ -10,7 +10,7 @@ const About = () => {
 
       <Container
         title="Meet the Muscle"
-        bgColor='#696c5d'
+        bgColor='#5d614d'
         lightText
       />
 

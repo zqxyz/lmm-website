@@ -95,7 +95,7 @@ const Join = () => {
 
         <Container
           title="Join Our Crew"
-          bgColor='#8a7c2f'
+          bgColor='#475d4f'
           lightText
         >
           <p>
@@ -105,7 +105,7 @@ const Join = () => {
         </Container>
 
         <Container
-          bgColor='rgb(220, 230, 223)'
+          bgColor='#d1e3d6'
         >
           <p>
             If you’re someone who enjoys physical work and problem-solving in a
@@ -123,10 +123,10 @@ const Join = () => {
 
         <ContainerSplitRight
           title="Application Form"
-          bgColor="rgb(220, 230, 223)"
+          bgColor="#cac3b7"
           noshadow
         >
-          <p>
+          <p className='lightText'>
             This is not a formal application, but it's a great way to
             start the process.
           </p>
