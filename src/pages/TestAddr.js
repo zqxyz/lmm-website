@@ -3,7 +3,7 @@ import axios from 'axios';
 import Container from '../components/Container'
 import Origin from './EstimateForm/Fieldsets/Origin';
 
-const Test = () => {
+const TestAddr = () => {
   const [form, setForm] = React.useState({
     OriginStreet: "",
     OriginCity: '',
@@ -100,4 +100,4 @@ const Test = () => {
   )
 }
 
-export default Test
+export default TestAddr
