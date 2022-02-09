@@ -1,37 +1,23 @@
 import React from 'react';
 
-const RoomTemplate = ({ inventory, setInventory, roomNumber }) => {
-  // Getters and Setters
-  const [roomName, setRoomName] = React.useState('')
-  const [roomInventory, setRoomInventory] = React.useState('')
-  const [roomBoxCount, setRoomBoxCount] = React.useState('')
+const RoomTemplate = ({
+  roomName,
+  setRoomName,
+  roomInventory,
+  setRoomInventory,
+  roomBoxCount,
+  setRoomBoxCount,
+  roomNumber
+}) => {
 
   // Character enforcement for user input
   const sanitize = (str) => str.replace(/[^\w'".,&\-~\n()!?#@* ]/g, "");
   const numbersOnlyEnforce = (str) => str.replace(/[^\d]/g, "");
 
-  /**
-   *      Build inventory string from state
-   *      with debounce
-   */
-  const debounceTime = 500 // ms before validation is triggered
-  React.useEffect(() => {
-    const timerId = setTimeout(() => {
-      let str =
-        roomName + '\n' +
-        roomInventory.replaceAll(", ", '\n') + '\n' +
-        roomBoxCount + ' boxes';
-      setInventory({ ...inventory, [roomNumber]: '\n' + str })
-    }, debounceTime)
-    return () => {
-      clearTimeout(timerId)
-    }
-  }, [roomName, roomInventory, roomBoxCount, roomNumber, setInventory, inventory])
-
 
   //  Body to render
   return (
-    <fieldset className="dark">
+    <fieldset className="dark" key={'roomNumber' + roomNumber}>
       <legend
         align='right'
         style={{ margin: '0' }}
@@ -55,9 +41,10 @@ const RoomTemplate = ({ inventory, setInventory, roomNumber }) => {
         <input
           id={`room${roomNumber}Name`}
           name={`Room${roomNumber}Name`}
+          key={`Room${roomNumber}Name`}
           placeholder='e.g. "Living Room" or "Shed"'
-          value={sanitize(roomName)}
-          onChange={evt => { setRoomName(sanitize(evt.target.value)) }}
+          value={roomName[roomNumber]}
+          onChange={evt => { setRoomName(prevState => ({ ...prevState, [roomNumber]: sanitize(evt.target.value) })) }}
         />
       </div>
       <div className='field' style={{ paddingBottom: '0.5em' }}>
@@ -67,12 +54,11 @@ const RoomTemplate = ({ inventory, setInventory, roomNumber }) => {
         <textarea
           id={`room${roomNumber}Inventory`}
           name={`Room${roomNumber}Inventory`}
+          key={`Room${roomNumber}Inventory`}
           rows='6'
           placeholder='Please list all furniture and unboxed items to be moved from this room'
-          value={sanitize(roomInventory)}
-          onChange={(event) => {
-            setRoomInventory(sanitize(event.target.value))
-          }}
+          value={roomInventory[roomNumber]}
+          onChange={evt => { setRoomInventory(prevState => ({ ...prevState,  [roomNumber]: sanitize(evt.target.value) })) }}
         />
       </div>
       <div className='field' style={{ paddingBottom: '0.5em' }}>
@@ -81,12 +67,13 @@ const RoomTemplate = ({ inventory, setInventory, roomNumber }) => {
         </label>
         <input
           required
-          value={numbersOnlyEnforce(roomBoxCount)}
-          onChange={evt => { setRoomBoxCount(numbersOnlyEnforce(evt.target.value)) }}
+          value={roomBoxCount[roomNumber]}
+          onChange={evt => { setRoomBoxCount(prevState => ({ ...prevState,  [roomNumber]: numbersOnlyEnforce(evt.target.value) })) }}
           autoComplete="off"
           type="text"
           id={`room${roomNumber}BoxCount`}
           name={`Room${roomNumber}BoxCount`}
+          key={`Room${roomNumber}BoxCount`}
           placeholder='Approximatations are fine'
         />
       </div>

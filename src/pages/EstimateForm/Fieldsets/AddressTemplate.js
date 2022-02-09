@@ -20,13 +20,21 @@ const AddressTemplate = ({ form, setForm, handleFormChange, siteNumber, siteCoun
   })
 
 
+  React.useEffect(() => {
+    setForm(prevState => ({
+      ...prevState,
+      [`Site${siteNumber}State`]: 'VT'
+    }))
+  }, [setForm, siteNumber])
+
+
   // Push floors to "form" state
   React.useEffect(() => {
     const floorArr = []
     for (const [k, v] of Object.entries(floors)) {
       if (v) floorArr.push(k)
     }
-    const floorStr = floorArr.toString().replaceAll(',',', ')
+    const floorStr = floorArr.toString().replaceAll(',', ', ')
     setForm(prevState => ({
       ...prevState,
       [`Site${siteNumber}Floors`]: floorStr
@@ -40,7 +48,7 @@ const AddressTemplate = ({ form, setForm, handleFormChange, siteNumber, siteCoun
     for (const [k, v] of Object.entries(services)) {
       if (v) serviceArr.push(k)
     }
-    const serviceStr = serviceArr.toString().replaceAll(',',', ')
+    const serviceStr = serviceArr.toString().replaceAll(',', ', ')
     setForm(prevState => ({
       ...prevState,
       [`Site${siteNumber}Services`]: serviceStr

@@ -36,7 +36,62 @@ const Burlington = ({ setSubmitted }) => {
   const [dateWindow, setDateWindow] = React.useState('')
   const [siteCount, setSiteCount] = React.useState(2)
   const [roomCount, setRoomCount] = React.useState(1)
-  const [inventory, setInventory] = React.useState({})
+
+  const [roomName, setRoomName] = React.useState({
+    1: '',
+    2: '',
+    3: '',
+    4: '',
+    5: '',
+    6: '',
+    7: '',
+    8: '',
+    9: '',
+    10: '',
+    11: '',
+    12: '',
+    13: '',
+    14: '',
+    15: '',
+    16: '',
+  })
+  const [roomInventory, setRoomInventory] = React.useState({
+    1: '',
+    2: '',
+    3: '',
+    4: '',
+    5: '',
+    6: '',
+    7: '',
+    8: '',
+    9: '',
+    10: '',
+    11: '',
+    12: '',
+    13: '',
+    14: '',
+    15: '',
+    16: '',
+  })
+  const [roomBoxCount, setRoomBoxCount] = React.useState({
+    1: '',
+    2: '',
+    3: '',
+    4: '',
+    5: '',
+    6: '',
+    7: '',
+    8: '',
+    9: '',
+    10: '',
+    11: '',
+    12: '',
+    13: '',
+    14: '',
+    15: '',
+    16: '',
+  })
+
   const [form, setForm] = React.useState({
     FirstName: '',
     LastName: '',
@@ -102,6 +157,7 @@ const Burlington = ({ setSubmitted }) => {
   }, [form])
 
 
+
   /**
    *    Render site (location) fieldsets
    *    based on specified count
@@ -143,8 +199,12 @@ const Burlington = ({ setSubmitted }) => {
       return (
         <RoomTemplate
           key={`room${room}`}
-          inventory={inventory}
-          setInventory={setInventory}
+          roomName={roomName}
+          setRoomName={setRoomName}
+          roomInventory={roomInventory}
+          setRoomInventory={setRoomInventory}
+          roomBoxCount={roomBoxCount}
+          setRoomBoxCount={setRoomBoxCount}
           roomNumber={room}
         />
       )
@@ -186,11 +246,13 @@ const Burlington = ({ setSubmitted }) => {
     // Combine room inventories into a string
     const inventoryString = () => {
       let str = ''
-      for (const k in inventory) {
-        str += inventory[k] + "\n\n"
+      for (let i = 1; i <= roomCount; i++) {
+        str +=
+        roomName[i] + "\n" +
+        roomInventory[i] + "\n" +
+        roomBoxCount[i] + "\n\n"
       }
       return str
-      // setForm({ ...form, Inventory: str })
     }
 
     // Build site/location string based on number of sites
@@ -231,6 +293,7 @@ const Burlington = ({ setSubmitted }) => {
       // Locations
       'Locations:\n-----------------\n' +
       siteString() + '\n' +
+      "\nAdditional location notes: " + addlLocationNotes +
       // Inventory
       '\n\nInventory:\n-----------------\n' +
       inventoryString()
