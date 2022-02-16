@@ -35,7 +35,7 @@ const Call = () => {
               <p>
                 {/* Forms a tel link on small screens only */}
                 {(width < 768) ? <>Call <a href="tel:2073909090">207-390-9090</a></>
-                  : <>Call 207-390-9090</>}
+                  : <>Call 207-370-9090</>}
               </p>
             </center>
           </column>
