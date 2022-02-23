@@ -21,7 +21,7 @@ const About = () => {
       >
         <p>
           No doubt we're well acquainted with storage units. Ten years
-          ago our story started in one! Founding partner Alex Sargent
+          ago our story started in one. Founding partner Alex Sargent
           got the idea to start a moving company after overhearing
           complaints about the moving experience and attitude of the
           movers people had hired. Ned Swain, a frequent customer,
