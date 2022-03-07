@@ -16,7 +16,8 @@ const TestAddr = () => {
 
   function checkAdd(form) {
     const PROTOCOL = 'https://'
-    const URL = 'us-central1-localmuscledemo.cloudfunctions.net';
+    // const URL = 'us-central1-localmuscledemo.cloudfunctions.net';
+    const URL = 'break'; // This can't be accesible right now
     const ENDPOINT = '/addressCheck'
   
     const params = { ...form };
