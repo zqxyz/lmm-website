@@ -44,7 +44,7 @@ const Landing = () => {
         <div className='ui stackable grid'>
           <div className='ten wide column'>
             <h1 className='rightUnlessStacked'>Trusted for over a decade</h1>
-            <p style={{textAlign: 'justify'}}>
+            <p className='rightUnlessStacked'>
               We've built a reputation throughout New England as a moving company you can trust.
               Whether you're moving halfway across the country or across the street, we've got
               you covered. Throughout our history we've seen it all, and we use that experience
