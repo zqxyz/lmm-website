@@ -3,7 +3,7 @@ import States from '../States';
 import Columns from '../../../components/Columns';
 import Distances from '../Distances'
 
-const Destination = ({ form, handleFormChange, destinationFloors, setDestinationFloors }) => {
+const Destination = ({ form, handleFormChange, destinationFloors, setDestinationFloors, defaultState }) => {
   return (
     <fieldset>
       <legend>
@@ -57,7 +57,7 @@ const Destination = ({ form, handleFormChange, destinationFloors, setDestination
             className="form-control"
             name="DestinationState"
             id="destinationState"
-            placeholder='ME'
+            placeholder={defaultState}
             value={form.DestinationState}
             onChange={handleFormChange}
           >

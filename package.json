@@ -18,6 +18,7 @@
   },
   "scripts": {
     "start": "react-scripts start",
+    "restart": "react-scripts restart",
     "startLaptop": "NODE_OPTIONS=--openssl-legacy-provider react-scripts start",
     "build": "GENERATE_SOURCEMAP=false react-scripts build",
     "test": "react-scripts test",

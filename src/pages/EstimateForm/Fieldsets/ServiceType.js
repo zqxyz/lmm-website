@@ -1,23 +1,10 @@
 import React from 'react';
 import SectionHeader from './SectionHeader';
-import moveSizes from '../../../config/moveSizes.json'
 
 
 
-const ServiceType = ({ form, setForm, dark, handleFormChange }) => {
+const ServiceType = ({ form, setForm, dark, handleFormChange, moveSize, setMoveSize }) => {
 
-  const MoveSizeSelect = () => {
-    return (
-      moveSizes.map(size => {
-        return (
-          <option
-            value={size.name}
-          >
-            {`${size.name}${(size.sqft) ? ` (${size.sqft})` : ''}`}
-          </option>)
-      })
-    )
-  }
 
   const setServiceType = evt => {
     const serviceType = evt.target.value
@@ -53,13 +40,94 @@ const ServiceType = ({ form, setForm, dark, handleFormChange }) => {
           Size*
         </label>
         <select
-          id="moveSize"
-          value={form.MoveSize}
-          onChange={handleFormChange}
-          name='MoveSize'
           required
+          value={moveSize}
+          onChange={(e) => setMoveSize(e.target.value)}
+          id="moveSize"
+          name='MoveSize'
         >
-          <MoveSizeSelect />
+          <option selected hidden>
+            Select a size
+          </option>
+          <option value="Single Room or Less">
+            Single Room or Less (Under 600 SQFT)
+          </option >
+          <option disabled>---</option>
+          <option value="Small Commercial Space">
+            Small Commercial Space (Under 600 SQFT)
+          </option>
+          <option value="Medium Commerical Space">
+            Medium Commerical Space (600-1000 SQFT)
+          </option>
+          <option value="Large Commercial Space">
+            Large Commercial Space (1000-1500 SQFT)
+          </option>
+          <option value="Very Large Commercial Space">
+            Very Large Commercial Space (1500 - 2000 SQFT)
+          </option>
+          <option value="Jumbo Commercial Space">
+            Jumbo Commercial Space (Over 2000 SQFT)
+          </option>
+          <option disabled>---</option>
+          <option value="Studio Apartment">
+            Studio Apartment (Under 600 SQFT)
+          </option>
+          <option value="1 Bedroom Apartment">
+            1 Bedroom Apartment (600 - 1000 SQFT)
+          </option>
+          <option value="2 Bedroom Apartment">
+            2 Bedroom Apartment (1001 - 1400 SQFT)
+          </option>
+          <option value="3 Bedroom Apartment">
+            3 Bedroom Apartment (1401 - 2000 SQFT)
+          </option>
+          <option disabled>---</option>
+          <option value="1 Bedroom House">
+            1 Bedroom House (800 - 1000 SQFT)
+          </option>
+          <option value="1 Bedroom House (Large)">
+            1 Bedroom House (Large) (1000 - 1200 SQFT)
+          </option>
+          <option value="2 Bedroom House">
+            2 Bedroom House (1400 - 1600 SQFT)
+          </option>
+          <option value="2 Bedroom House (Large)">
+            2 Bedroom House (Large) (1600 - 1800 SQFT)
+          </option>
+          <option value="3 Bedroom House">
+            3 Bedroom House (2000 - 2200 SQFT)
+          </option>
+          <option value="3 Bedroom House (Large)">
+            3 Bedroom House (Large) (2200 - 2400 SQFT)
+          </option>
+          <option value="4 Bedroom House">
+            4 Bedroom House (2600 - 2800 SQFT)
+          </option>
+          <option value="4 Bedroom House (Large)">
+            4 Bedroom House (Large) (2800 - 3000 SQFT)
+          </option>
+          <option value="5 Bedroom House">
+            5 Bedroom House (3300 - 3600 SQFT)
+          </option>
+          <option value="5 Bedroom House (Large)">
+            5 Bedroom House (Large) (3600 - 4000 SQFT)
+          </option>
+          <option disabled>---</option>
+          <option value="5 x 10 Storage Unit">
+            5 x 10 Storage Unit
+          </option>
+          <option value="5 x 15 Storage Unit">
+            5 x 15 Storage Unit
+          </option>
+          <option value="10 x 10 Storage Unit">
+            10 x 10 Storage Unit
+          </option>
+          <option value="10 x 15 Storage Unit">
+            10 x 15 Storage Unit
+          </option>
+          <option value="10 x 20 Storage Unit">
+            10 x 20 Storage Unit
+          </option>
         </select>
       </div>
       <div className="field">

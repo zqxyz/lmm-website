@@ -3,7 +3,7 @@ import States from '../States';
 import Columns from '../../../components/Columns';
 import Distances from '../Distances'
 
-const Origin = ({ form, handleFormChange, originFloors, setOriginFloors }) => {
+const Origin = ({ form, handleFormChange, originFloors, setOriginFloors, defaultState }) => {
 
   return (
     <fieldset>
@@ -57,7 +57,7 @@ const Origin = ({ form, handleFormChange, originFloors, setOriginFloors }) => {
             className="form-control"
             name="OriginState"
             id="originState"
-            placeholder='ME'
+            placeholder={defaultState}
             value={form.OriginState}
             onChange={handleFormChange}
           >

@@ -40,7 +40,6 @@ const Portland = ({ setSubmitted }) => {
     Email: '',
     ServiceType: 'Moving',
     MoveDate: '',
-    MoveSize: 'Single Room or Less',
     OriginStreet: '',
     OriginCity: '',
     OriginState: 'ME',
@@ -70,6 +69,7 @@ const Portland = ({ setSubmitted }) => {
   const [addlLocationNotes, setAddlLocationNotes] = React.useState('')
   const [otherNotes, setOtherNotes] = React.useState('')
   const [dateWindow, setDateWindow] = React.useState('')
+  const [moveSize, setMoveSize] = React.useState('')
   const [complete, setComplete] = React.useState(false)
 
   /**
@@ -149,7 +149,9 @@ const Portland = ({ setSubmitted }) => {
    *     using axios
    */
   const URL =
-    `https://api.smartmoving.com/api/leads/from-provider/v2?providerKey=2f400089-28bf-46c7-8a17-adfd01096041`;
+    'https://api.smartmoving.com/api/leads/from-provider/v2?' +
+    'providerKey=2f400089-28bf-46c7-8a17-adfd01096041' +
+    '&branchId=c0122ec1-7c93-4c98-b990-adfd00fe08b4';
   // It's not a big deal if someone snags this key. What are they going to do? Send us job leads?
   // It's not meant to be a secret.
   const handleSubmit = (event) => {
@@ -238,6 +240,8 @@ const Portland = ({ setSubmitted }) => {
             <ServiceType
               form={form}
               setForm={setForm}
+              moveSize={moveSize}
+              setMoveSize={setMoveSize}
               handleFormChange={handleFormChange}
             />
 
@@ -246,6 +250,7 @@ const Portland = ({ setSubmitted }) => {
               handleFormChange={handleFormChange}
               originFloors={originFloors}
               setOriginFloors={setOriginFloors}
+              defaultState='ME'
             />
 
             {(form.ServiceType === 'Moving') ?
@@ -254,6 +259,7 @@ const Portland = ({ setSubmitted }) => {
                 handleFormChange={handleFormChange}
                 destinationFloors={destinationFloors}
                 setDestinationFloors={setDestinationFloors}
+                defaultState='ME'
               />
               : ''}
 

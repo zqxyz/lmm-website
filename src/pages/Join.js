@@ -53,12 +53,6 @@ const Join = () => {
     />
   </svg>
 
-  // Timestamp
-  const now = new Date()
-  const timestamp =
-    `${now.getMonth() + 1}/${now.getDate()}/${now.getFullYear()} ` +
-    `${now.toLocaleTimeString('en-US', { hour: '2-digit', minute: '2-digit', hour12: true })}`
-
   function submit() {
     let mailBody = "";
     for (const [k, v] of Object.entries(form)) {
