@@ -40,6 +40,7 @@ const Burlington = ({ setSubmitted }) => {
     Email: '',
     ServiceType: 'Moving',
     MoveDate: '',
+    MoveSize: '',
     OriginStreet: '',
     OriginCity: '',
     OriginState: 'VT',
@@ -141,6 +142,14 @@ const Burlington = ({ setSubmitted }) => {
     }
     setForm(prevState => ({ ...prevState, Notes: prepareNotes() }))
   }, [addlLocationNotes, otherNotes, dateWindow, destinationFloors, originFloors])
+
+
+  /**
+   *    Place value of moveSize into form.MoveSize
+   */
+  React.useEffect(() => {
+    setForm(prevState => ({...prevState, MoveSize: moveSize}))
+  }, [moveSize])
 
 
 

@@ -40,6 +40,7 @@ const Portland = ({ setSubmitted }) => {
     Email: '',
     ServiceType: 'Moving',
     MoveDate: '',
+    MoveSize: '',
     OriginStreet: '',
     OriginCity: '',
     OriginState: 'ME',
@@ -112,6 +113,14 @@ const Portland = ({ setSubmitted }) => {
       clearTimeout(timerId)
     }
   }, [form, originFloors])
+
+
+ /*
+  *    Place value of moveSize into form.MoveSize
+  */
+  React.useEffect(() => {
+    setForm(prevState => ({ ...prevState, MoveSize: moveSize }))
+  }, [moveSize])
 
 
   /*
