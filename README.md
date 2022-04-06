@@ -18,7 +18,7 @@ Rather than leaving standard anchor tags to do their duty, the default PopStateE
 
 In 2021, Local Muscle's most demanding month for bandwidth was August, using 12 GB of transfer. With our new website, we are unlikely to ever exceed 5GB total. That would allow us to utilize Firebase's (where the demo is currently hosted) free tier (limited to 10GB/month). That's **free hosting**.
 
-The only costs incurred are from the cloud function (not accessible in this git) handling emails. This should never exceed more than 1 or 2 dollars.
+The only costs incurred are from the cloud function (not accessible in this git) handling emails. This should never exceed more than a couple cents.
 
 ## Accessibility
 
