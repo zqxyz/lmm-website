@@ -135,43 +135,53 @@ const ServiceType = ({ form, setForm, dark, handleFormChange, moveSize, setMoveS
           Type*
         </label>
         <button
-          className={`ui button large std${(form.ServiceType === 'Moving') ? ' blue' : ''}`}
+          className={`ui labeled icon std large button${(form.ServiceType === 'Moving') ? ' green' : ' '}`}
           id="serviceMultiLocation"
           value='Moving'
           onClick={setServiceType}
         >
           Moving with our trucks
-          {(form.ServiceType === 'Moving') ? ' ✓' : ''}
+          {(form.ServiceType === 'Moving') ?
+            <i class="check icon"></i>
+            : <i class="icon"></i>}
+
+
         </button>
         <br />
         <button
-          className={`ui button large std${(form.ServiceType === 'InnerHouse') ? ' blue' : ''}`}
+          className={`ui labeled icon std large button${(form.ServiceType === 'InnerHouse') ? ' green' : ' '}`}
           id="serviceMultiLocation"
           value='InnerHouse'
           onClick={setServiceType}
         >
           Single Location Rearrangement
-          {(form.ServiceType === 'InnerHouse') ? ' ✓' : ''}
+          {(form.ServiceType === 'InnerHouse') ?
+            <i class="check icon"></i>
+            : <i class="icon"></i>}
         </button>
         <br />
         <button
-          className={`ui button large std${(form.ServiceType === 'LoadOnly') ? ' blue' : ''}`}
+          className={`ui labeled icon std large button${(form.ServiceType === 'LoadOnly') ? ' green' : ' '}`}
           id="serviceMultiLocation"
           value='LoadOnly'
           onClick={setServiceType}
         >
           Container/Rental Vehicle Load Only
-          {(form.ServiceType === 'LoadOnly') ? ' ✓' : ''}
+          {(form.ServiceType === 'LoadOnly') ?
+            <i class="check icon"></i>
+            : <i class="icon"></i>}
         </button>
         <br />
         <button
-          className={`ui button large std${(form.ServiceType === 'UnloadOnly') ? ' blue' : ''}`}
+          className={`ui labeled icon std large button${(form.ServiceType === 'UnloadOnly') ? ' green' : ' '}`}
           id="serviceMultiLocation"
           value='UnloadOnly'
           onClick={setServiceType}
         >
           Container/Rental Vehicle Unload Only
-          {(form.ServiceType === 'UnloadOnly') ? ' ✓' : ''}
+          {(form.ServiceType === 'UnloadOnly') ?
+            <i class="check icon"></i>
+            : <i class="icon"></i>}
         </button>
       </div>
 
