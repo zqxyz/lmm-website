@@ -142,7 +142,7 @@ const ServiceType = ({ form, setForm, dark, handleFormChange, moveSize, setMoveS
         >
           Moving with our trucks
           {(form.ServiceType === 'Moving') ?
-            <i class="check icon"></i>
+            <i class="circle icon"></i>
             : <i class="icon"></i>}
 
 
@@ -156,7 +156,7 @@ const ServiceType = ({ form, setForm, dark, handleFormChange, moveSize, setMoveS
         >
           Single Location Rearrangement
           {(form.ServiceType === 'InnerHouse') ?
-            <i class="check icon"></i>
+            <i class="circle icon"></i>
             : <i class="icon"></i>}
         </button>
         <br />
@@ -168,7 +168,7 @@ const ServiceType = ({ form, setForm, dark, handleFormChange, moveSize, setMoveS
         >
           Container/Rental Vehicle Load Only
           {(form.ServiceType === 'LoadOnly') ?
-            <i class="check icon"></i>
+            <i class="circle icon"></i>
             : <i class="icon"></i>}
         </button>
         <br />
@@ -180,7 +180,7 @@ const ServiceType = ({ form, setForm, dark, handleFormChange, moveSize, setMoveS
         >
           Container/Rental Vehicle Unload Only
           {(form.ServiceType === 'UnloadOnly') ?
-            <i class="check icon"></i>
+            <i class="circle icon"></i>
             : <i class="icon"></i>}
         </button>
       </div>
