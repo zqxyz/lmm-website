@@ -115,9 +115,9 @@ const Portland = ({ setSubmitted }) => {
   }, [form, originFloors])
 
 
- /*
-  *    Place value of moveSize into form.MoveSize
-  */
+  /*
+   *    Place value of moveSize into form.MoveSize
+   */
   React.useEffect(() => {
     setForm(prevState => ({ ...prevState, MoveSize: moveSize }))
   }, [moveSize])
@@ -224,6 +224,17 @@ const Portland = ({ setSubmitted }) => {
           <span className="cowboy"> Local Muscle </span>
           in Portland, Maine
         </p>
+
+        <p style={{
+          background: '#222',
+          color: 'white',
+          padding: '1em',
+          fontWeight: '600',
+          backgroundColor: 'rgb(139, 122, 56)'
+        }}>
+          Local Muscle Portland has no availability left in April.
+        </p>
+
         <p>
           Required fields marked with *
         </p>
