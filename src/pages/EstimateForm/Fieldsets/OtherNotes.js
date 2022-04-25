@@ -23,7 +23,7 @@ const OtherNotes = ({ otherNotes, setOtherNotes, dark }) => {
       />
       <div className='field' style={{ paddingBottom: '0.5em' }}>
         <label htmlFor='otherNotes'>
-          Optional - Summary of service or anything else we should know<br />
+          Please summarize or clarify what you are looking for<br />
         </label>
         <textarea
           id="otherNotes"
