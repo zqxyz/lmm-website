@@ -89,7 +89,7 @@ const Join = () => {
 
         <Container
           title="Join Our Crew"
-          bgColor='#475d4f'
+          bgColor='#6e6454'
           lightText
         >
           <p>
@@ -99,7 +99,7 @@ const Join = () => {
         </Container>
 
         <Container
-          bgColor='#d1e3d6'
+          bgColor='#cdc4b6'
         >
           <p>
             If you’re someone who enjoys physical work and problem-solving in a
@@ -117,7 +117,7 @@ const Join = () => {
 
         <ContainerSplitRight
           title="Application Form"
-          bgColor="#cac3b7"
+          bgColor="#cdc4b6"
           noshadow
         >
           <p className='lightText'>
