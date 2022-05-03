@@ -9,6 +9,7 @@ import AddlLocation from './Fieldsets/AddlLocation';
 import OtherNotes from './Fieldsets/OtherNotes'
 import Container from '../../components/Container';
 import mail from '../../mail'
+import Alert802 from './Alert802';
 
 // API documentation for SmartMoving
 // https://smfilestore.blob.core.windows.net/docs/AdvancedWebsiteFormIntegration.pdf
@@ -148,7 +149,7 @@ const Burlington = ({ setSubmitted }) => {
    *    Place value of moveSize into form.MoveSize
    */
   React.useEffect(() => {
-    setForm(prevState => ({...prevState, MoveSize: moveSize}))
+    setForm(prevState => ({ ...prevState, MoveSize: moveSize }))
   }, [moveSize])
 
 
@@ -224,6 +225,10 @@ const Burlington = ({ setSubmitted }) => {
           <span className="cowboy"> Local Muscle </span>
           in Burlington, Maine
         </p>
+
+        {/* Availability notice  */}
+        <Alert802 />
+
         <p>
           Required fields marked with *
         </p>
