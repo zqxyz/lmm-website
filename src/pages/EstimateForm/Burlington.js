@@ -223,7 +223,7 @@ const Burlington = ({ setSubmitted }) => {
         <p>
           Request an estimate for moving service from
           <span className="cowboy"> Local Muscle </span>
-          in Burlington, Maine
+          in Burlington, Vermont
         </p>
 
         {/* Availability notice  */}
